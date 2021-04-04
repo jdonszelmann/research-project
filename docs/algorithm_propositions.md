@@ -9,7 +9,9 @@ matching) which can be used to solve *MAPF*
 
 ## A* + Independence detection + Operator decomposition
 
-(standley, 2010)
+[(Standley, 2010)](../tex/bibliography.bib)
+
+properties: optimal
 
 Use A* for each agent to find a path from their
 start to finish. Operator decomposition adds to 
@@ -31,4 +33,7 @@ interfere.
 
 ## M*
 
+[(Wagner et al, 2011)](../tex/bibliography.bib)
+
+properties: complete, optimal
 
