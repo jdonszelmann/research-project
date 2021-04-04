@@ -1,7 +1,7 @@
 # Project summary
 
 
-## *Tuss*
+## *TUSS*
 
 * NS Trains are parked on a *shunting yard* at night
 * Routing of trains to this *shunting yard* is an NP-Hard planning 

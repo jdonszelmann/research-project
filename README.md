@@ -7,6 +7,6 @@ by Jonathan Donszelmann (Q4 study year 2020/2021)
 
 ## Description
 
-A summary of the original project definition summary is [available here](docs/project_summary.md)
+A summary of the original project definition summary is [available here](docs/project_definition_summary.md)
 
 
