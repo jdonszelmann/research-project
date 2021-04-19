@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
-  </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
   </component>
-  <component name="CargoProjects">
-    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="89b125e8-15a7-49eb-978f-ffcf063bc69b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/mapf/agent.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mapf/astar_od_id.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mapf/distance_heuristic.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mapf/graphlike.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mapf/grid.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mapf/mapf_problem.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mapf/mod.rs" afterDir="false" />
+    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/python/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/research-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/research-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/algorithm_propositions.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/algorithm_propositions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traintype.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/traintype.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapf/agent.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapf/astar_od_id.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapf/distance_heuristic.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapf/graphlike.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapf/grid.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapf/mapf_problem.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapf/mod.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/train.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traintype.rs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tex/bibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/tex/bibliography.bib" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Rust File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -45,150 +40,60 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="48dknh4w" />
+    <option name="directoryName" value="77mj5ble" />
   </component>
-  <component name="ProjectId" id="1qg7bbpso1xjUaQ2NJ32SDTfPjV" />
+  <component name="ProjectId" id="1r9ZZ4wdUC9TpLsC3gOnyEqGhKS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Cargo.Test">
-    <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="run --package research-project --bin research-project" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="test" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="run" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Cargo.Run" />
-      <item itemvalue="Cargo.Test" />
-    </list>
-  </component>
-  <component name="RustProjectSettings">
-    <option name="toolchainHomeDirectory" value="/usr/bin" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="89b125e8-15a7-49eb-978f-ffcf063bc69b" name="Default Changelist" comment="" />
-      <created>1617489451971</created>
+      <changelist id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="" />
+      <created>1618390318065</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617489451971</updated>
-      <workItem from="1617489453273" duration="23777000" />
+      <updated>1618390318065</updated>
+      <workItem from="1618390324651" duration="229000" />
+      <workItem from="1618410691660" duration="44000" />
+      <workItem from="1618667369383" duration="3895000" />
+      <workItem from="1618755256584" duration="10485000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="424" y="198" width="1071" height="707" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617530919664">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state x="424" y="198" width="1071" height="707" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1921.2124@0.0.1921.2124" timestamp="1617530919664" />
-    <state x="680" y="659" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617533844132">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state x="680" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1617491658572" />
-    <state x="680" y="659" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1921.2124@0.0.1921.2124" timestamp="1617533844132" />
-    <state x="773" y="490" key="#com.intellij.ide.util.MemberChooser" timestamp="1617566273846">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state x="773" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1617495101902" />
-    <state x="773" y="490" key="#com.intellij.ide.util.MemberChooser/0.0.1921.2124@0.0.1921.2124" timestamp="1617566273846" />
-    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1617568205172">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1921.2124@0.0.1921.2124" timestamp="1617568205172" />
-    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1617568205172">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1921.2124@0.0.1921.2124" timestamp="1617568205172" />
-    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1617568205172">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1921.2124@0.0.1921.2124" timestamp="1617568205172" />
-    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1617568205172">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1921.2124@0.0.1921.2124" timestamp="1617568205172" />
-    <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1617532734975">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.bottom/0.0.1921.2124@0.0.1921.2124" timestamp="1617532734975" />
-    <state width="1874" height="354" key="GridCell.Tab.1.center" timestamp="1617532734975">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.center/0.0.1921.2124@0.0.1921.2124" timestamp="1617532734975" />
-    <state width="1874" height="354" key="GridCell.Tab.1.left" timestamp="1617532734974">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.left/0.0.1921.2124@0.0.1921.2124" timestamp="1617532734974" />
-    <state width="1874" height="354" key="GridCell.Tab.1.right" timestamp="1617532734975">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.right/0.0.1921.2124@0.0.1921.2124" timestamp="1617532734975" />
-    <state x="624" y="484" width="673" height="1378" key="run.anything.popup" timestamp="1617567721016">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state x="624" y="238" width="672" height="677" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1617495017474" />
-    <state x="624" y="484" width="673" height="1378" key="run.anything.popup/0.0.1921.2124@0.0.1921.2124" timestamp="1617567721016" />
-    <state x="623" y="1080" width="673" height="1042" key="search.everywhere.popup" timestamp="1617568079158">
-      <screen x="0" y="0" width="1921" height="2124" />
-    </state>
-    <state x="623" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1617491713167" />
-    <state x="623" y="1080" width="673" height="1042" key="search.everywhere.popup/0.0.1921.2124@0.0.1921.2124" timestamp="1617568079158" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
