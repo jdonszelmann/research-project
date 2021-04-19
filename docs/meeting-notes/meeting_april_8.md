@@ -3,6 +3,3 @@
 
 Meeting: every week at least one hour
 Done in week 11
-
-
-
