@@ -9,6 +9,14 @@ class State(ABC, Hashable):
     def __eq__(self, other: State):
         pass
 
+    def next(self, parent: State):
+        """
+        Optional next method. Called once on every child when it is made with it's parent.
+        :param parent: parent state
+        :return: nothing
+        """
+        return
+
 
 class Problem(ABC):
     @abstractmethod

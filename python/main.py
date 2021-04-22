@@ -1,87 +1,25 @@
-from __future__ import annotations
-from typing import Tuple, List, Iterable
-from python.mstar.planner.problem import Problem
-from python.mstar.planner.problem import State
-from python.mstar.planner.astar import AStar
+from mapfmclient import Solution, Problem, MapfBenchmarker
 
-from mapfmclient import MapfBenchmarker, MarkedLocation, Problem as cProblem, Solution
+from python.independent import independent
+from python.standard_astar import standard_astar
 
 
-class MapfmState(State):
-    def __init__(self, x: int, y: int):
-        self.x = x
-        self.y = y
-
-    def __hash__(self) -> int:
-        return tuple.__hash__((self.x, self.y))
-
-    def __eq__(self, other: MapfmState):
-        return self.x == other.x and self.y == other.y
-
-    def to_tuple(self) -> Tuple[int, int]:
-        return self.x, self.y
-
-    def __repr__(self):
-        return f"MapfmState( {self.x} {self.y} )"
-
-class MapfmProblem(Problem):
-    def __init__(self, start: MarkedLocation, end: MarkedLocation, grid: List[List[int]], width: int, height: int):
-        self.start = start
-        self.end = end
-        self.grid = grid
-        self.width = width
-        self.height = height
-
-    def wall_at(self, x: int, y: int) -> bool:
-        return self.grid[y][x] == 1
-
-    def neighbours(self, parent: MapfmState) -> Iterable[Tuple[MapfmState, int]]:
-        res = []
-
-        if parent.y > 0 and not self.wall_at(parent.x, parent.y - 1):
-            res.append(MapfmState(parent.x, parent.y - 1))
-
-        if parent.y < self.height - 1 and not self.wall_at(parent.x, parent.y + 1):
-            res.append(MapfmState(parent.x, parent.y + 1))
-
-        if parent.x > 0 and not self.wall_at(parent.x - 1, parent.y):
-            res.append(MapfmState(parent.x - 1, parent.y))
-
-        if parent.x < self.width - 1 and not self.wall_at(parent.x + 1, parent.y):
-            res.append(MapfmState(parent.x + 1, parent.y))
-
-        return map(lambda i: (i, 1), res)
-
-    def initial_state(self) -> MapfmState:
-        return MapfmState(self.start.x, self.start.y)
-
-    def final_state(self, state: MapfmState) -> bool:
-        return state.x == self.end.x and state.y == self.end.y
-
-    def heuristic(self, state: MapfmState) -> int:
-        return abs(state.x - self.end.y) + abs(state.y - self.end.y)
-
-
-def solve(problem: cProblem):
-    start = problem.starts[0]
-    goal = problem.goals[0]
-
-    p = MapfmProblem(start, goal, problem.grid, problem.width, problem.height)
-    s = AStar().search(p)
-
-    return Solution.from_paths([list(map(MapfmState.to_tuple, s))])
+def solve(problem: Problem) -> Solution:
+    return standard_astar(problem)
 
 
 if __name__ == '__main__':
     benchmarker = MapfBenchmarker(
         "5rtVuya7FkKNoU6J",
-        2,
-        "A* Single agent",
+        # "R5KpjLYp54YJz2KN",
+        3,
+        "A* Multi agent",
         "0.0.1",
         True,
         solver=solve,
         cores=1,
-        baseURL="https://mapf.nl"
+        baseURL="https://mapf.nl",
+        # baseURL="http://localhost:8080",
     )
     benchmarker.run()
 
