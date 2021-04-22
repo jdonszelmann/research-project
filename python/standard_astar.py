@@ -52,7 +52,6 @@ class MapfmProblem(Problem):
         self.height = height
 
         self.startstate = MapfmState(map(lambda i: (i.x, i.y), starts))
-        self.endstate = MapfmState(map(lambda i: (i.x, i.y), ends))
 
     def wall_at(self, x: int, y: int) -> bool:
         return self.grid[y][x] == 1
@@ -109,7 +108,7 @@ class MapfmProblem(Problem):
             return res, acc
 
         ret = [
-            (lambda c, accumulated_cost: (MapfmState(n, accumulated_cost), c)) (*cost(n, parent, self.ends, self.starts))
+            (lambda c, accumulated_cost: (MapfmState(n, accumulated_cost), c))(*cost(n, parent, self.ends, self.starts))
             for n in neighbours
             if len(set(n)) == len(n) and swapping(n, parent.coords)
         ]
@@ -121,8 +120,13 @@ class MapfmProblem(Problem):
 
     def final_state(self, state: MapfmState) -> bool:
         num_correct = 0
+        seen = set()
         for index, coord in enumerate(state.coords):
             c = self.starts[index].color
+            if coord in seen:
+                return False
+
+            seen.add(coord)
 
             for i in self.ends:
                 if i.x == coord.x and i.y == coord.y and c == i.color:
@@ -131,14 +135,23 @@ class MapfmProblem(Problem):
         return num_correct == len(state.coords)
 
     def heuristic(self, state: MapfmState) -> int:
-        return 0
+        res = 0
+        for index, coord in enumerate(state.coords):
+            c = self.starts[index].color
+            best = None
+            for i in self.ends:
+                if c == i.color:
+                    dist = abs(i.x - coord.x) + abs(i.y - coord.y)
+                    if best is None or best < dist:
+                        best = dist
+            res += best
+        return res
 
 
 def standard_astar(problem: cProblem) -> Solution:
     starts = problem.starts
-    goals = [[g for g in problem.goals if g.color == i.color][0] for i in starts]
 
-    p = MapfmProblem(starts, goals, problem.grid, problem.width, problem.height)
+    p = MapfmProblem(starts, problem.goals, problem.grid, problem.width, problem.height)
     solution = AStar().search(p)
 
     paths = [[] for _ in solution[0].coords]
@@ -153,5 +166,8 @@ def standard_astar(problem: cProblem) -> Solution:
     #     print(i)
 
     return Solution.from_paths(paths)
-
+    # return Solution.from_paths([
+    #     [(0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 2), (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2), (6, 3)],
+    #     [(6, 1), (6, 2), (5, 2), (4, 2), (3, 2), (2, 2), (1, 2), (0, 2), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3)]
+    # ])
 
