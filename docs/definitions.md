@@ -10,3 +10,5 @@
 | *SIC* | (sum of individual costs) is the sum of the costs of the path of each agent in the *MAPF* algorithm. |
 | *makespan* | The largest cost of the path, out of all agents |
 | *matching* | [summary](matching.md) |
+| *TAPF* | Task assignment pathfinding, also called *MAPFM* in my work |
+| *Anonymous MAPF* | MAPFM with one color/team |

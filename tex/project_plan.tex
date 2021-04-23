@@ -1,0 +1,323 @@
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{babel}
+\usepackage[style=numeric,style=ieee]{biblatex}
+\usepackage[nottoc]{tocbibind}
+\usepackage{csquotes}
+\usepackage{longtable}
+ \usepackage{hyperref}
+ 
+% bibliography
+\addbibresource{bibliography.bib}
+
+% Formatting
+\setlength{\parindent}{0em}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+
+
+
+\makeatletter
+
+\title{Research Plan for Matching in Multi Agent Pathfinding using M*}
+\author{Jonathan Dönszelmann}
+
+\newcommand{\namelistlabel}[1]{\mbox{#1}\hfil}
+\newenvironment{namelist}[1]{%1
+\begin{list}{}
+    {
+        \let\makelabel\namelistlabel
+        \settowidth{\labelwidth}{#1}
+        \setlength{\leftmargin}{1.1\labelwidth}
+    }
+  }{
+\end{list}}
+
+\begin{document}
+\maketitle
+
+\begin{namelist}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\item[{\bf Title:}]
+	Matching in Multi Agent Pathfinding using M*
+\item[{\bf Author:}]
+	Jonathan Dönszelmann
+\item[{\bf Responsible Professor:}]
+	Mathijs de Weerdt
+\item[{\bf Other Supervisor:}]
+	Jesse Mulderij
+% \item[{\bf (Required for final version) Examiner:}]
+% 	Another Professor (\emph{interested, but not involved})
+\item[{\bf Peer group members:}]
+	Robbin Baauw, Thom van der Woude, Ivar de Bruin, Jaap de Jong
+\end{namelist}
+
+\tableofcontents
+\noindent\rule{\textwidth}{1pt}
+
+\section{Background of the research}
+
+\subsection{Definition of Multi agent pathfinding}
+Stern (2019) \cite{mapf_definition_stern_2019} defines a multi agent pathfinding (in this plan abbreviated to \textit{MAPF}) as a problem of $n$ so-called agents \footnote{Agents can be thought of as robots travelling through a graph} and the following tuple:
+
+$$
+\langle G, s, t \rangle
+$$
+
+\begin{itemize}
+    \item $G$ is a graph $\langle V, E \rangle$ 
+    \item $V$ is a set of vertices
+    \item $E$ is a set of edges between vertices
+    \item $s$ is a list of $n$ vertices where every $s_i$ is a starting position for an agent $a_i$
+    \item $t$ is a list of $n$ vertices where every $t_i$ is a target position for an agent $a_i$
+\end{itemize}
+
+
+An algorithm to solve \textit{MAPF} finds solutions such that each agent moves from their starting position
+to their target position. Each agent $a_i$ has a path $\pi_i$. Each path $\pi_i$ is a list of positions, defining where each agent $a_i$ is at a moment $x$ (referred to as $pi_i[x]$). The cost of a path $\pi_i$ is it's length.
+
+However, while moving, there are a number of conflicts that are to be avoided by the agents.
+
+\begin{itemize}
+    \item Edge conflict: two agents are on the same edge $E$ at a timestep $x$ ($\pi_i[x] = \pi_j[x]$ and $\pi_i[x+1] = \pi_j[x+1]$)
+    \item Vertex conflict: two agents are on the same vertex $V$ at a timestep $x$ ($\pi_i[x] = \pi_j[x]$)
+    \item Swapping: two agents swap vertices at a timestep $x$ ($\pi_i[x] = \pi_j[x+1]$ and $\pi_i[x+1] = \pi_j[x]$)
+    \item Following conflict: an agent travels to a vertex from which another agent leaves in the same timestep ($\pi_i[x+1] = \pi_j[x]$)
+    \item Cycle conflict: a number of agents larger than 2 all swap vertices such that each of the agents lands on a vertex another agent in the set just left.
+\end{itemize}
+
+Summarised, these conflicts define that in \textit{MAPF} it's not allowed for agents to collide in any way. Notable is that some definitions of \textit{MAPF} allow for some of the conflicts defined above to be broken. For example, in previous research that attempted to add waypoints to \textit{MAPF}, the following and cycle constraint were dropped. Their reasoning for this was that when seeing agents as being point-like, and are following each other, they are never actually colliding.
+
+\paragraph{}
+
+Algorithms solving \textit{MAPF} are minimising either the \textit{makespan}, which is the cost of the longest single path, or the \textit{sum of costs} which is the combined cost of all agent's paths.
+
+\subsection{Matching}
+Matching in a bipartite graph is the problem of finding a set of connections between two parts of a graph. No vertex in one part of the graph may be connected to another part of the graph by two edges in the matching. Adding matching to \textit{MAPF} (in this plan referred to as \textit{MMAPF}) alters the original problem definition in the following way:
+
+$$
+\langle G, s, t, sc, tc \rangle
+$$
+
+Two variables are added to the definition of this problem:
+
+\begin{itemize}
+    \item $sc$ is an array of colours $sc_i$ for each starting vertex $s_i$
+    \item $tc$ is an array of colours $tc_i$ for each target vertex $t_i$
+\end{itemize}
+
+For a solution to \textit{MMAPF}, it does not matter which agent $a_i$ travels to which target $t_i$. In stead, an agent $a_i$ can travel to any $t_i$ as long as $sc_i = tc_i$.
+
+However, \textit{MMAPF} is not yet fully defined. For example, is it allowed for there to be more target positions than there are agents? Or conversely, is it allowed for there to be fewer target positions than there are agents.
+
+\subsection{Algorithms}
+
+A number of algorithms exist to solve the \textit{MAPF} problem. These include A* with operator decomposition and independence detection (\textit{A*+OD+ID}) \cite{AStarIDOD_standley_2010}, \textit{M*} \cite{mstar_wagner_2011}, \textit{Conflict based search} \cite{conflict_based_search_sharon_2015} and \textit{Branch and cut and price} \cite{bcp_lam_2019}. 
+
+However, to solve the \textit{MMAPF}, no algorithm currently exists. Planned is that through this research, and other similar research by peers, each of these algorithms will be adapted to be able to solve \textit{MMAPF}.
+
+\subsubsection*{M*}
+
+\textit{M*}, as previously described, is an algorithm designed to solve \textit{MAPF}. I will briefly outline it's workings as this is the algorithm I will be proposing to adapt to be able to use matching. 
+
+\textit{M*} solves MAPF by planning paths for each agent individually using \textit{A*} pathfinding. However, when it detects that two agents will be in conflict with each other, it will for a short time, plan the paths of these two agents together in such a way that the conflict is resolved. This is very similar to what (\textit{A*+OD+ID}) does. But in (\textit{A*+OD+ID}), when two agents are in conflict their entire path will be planned together, while in \textit{M*}, paths can be planned independently again after the conflict.
+
+\textit{M*} without extensions, guarantees to generate optimal paths for \textit{MAPF}. However, in previous research extending \textit{MAPF} to allow for waypoints to be added to  paths, optimality could no longer be guaranteed (in certain cases). \cite{MSTAR_waypoints_van_dijk_2020}
+
+\subsection{Applications and related problems}
+
+\textit{MAPF} is a problem which very naturally applies to railways. Trains moving around shunting yards are like agents. They can not collide or move past each other as they are bound to the tracks they ride on. But in shunting yards, it's usually less important which exact train moves where, and more important what type of train moves somewhere. For example, if trains are the same length, then it does not matter very much which one goes where in the shunting yard as long as they both end up somewhere with enough space. 
+
+When trains are stored and serviced in shunting yard, they need to be moved around. From their parking space, to servicing stations, and back to service to transport people. The scheduling problem that arises is called the Train unit Shunting problem (here abbreviated as \textit{TUSP}). To find relaxations to the \textit{TUSP} problem, Mulderij used \textit{MAPF} \cite{TUSS_MAPF_mulderij_2020}. In his work he describes that extensions to \textit{MAPF} (such as matching) are necessary to make this viable. That is in fact the root of this planned research.
+
+
+\section*{Research Question}
+
+During this research, I will be answering the following question:
+
+\begin{displayquote}
+    Can \textit{M*} be adapted to efficiently find optimal solutions to the \textit{MMAPF} problem?
+\end{displayquote}
+
+To answer this question, I think I will need to answer the following sub questions. However, while researching, it is possible that more of these will arise. If so, and if they fall in the scope of the project, they may be added to these.
+
+\begin{itemize}
+    \item Can \textit{M*} be adapted to do matching
+    \item Are \textit{M*} solutions still optimal with matching?
+    \item How does the runtime cost of adding matching to \textit{M*} compare to adding matching to other base algorithms?
+    \item Are there heuristics which can improve the runtime of \textit{M*} with matching?
+    \item What happens when the number of agents is no longer equal to the number of target locations?
+\end{itemize}
+
+The last subquestion I find especially interesting as real life scenarios (with for example shunting yards) will certainly have situations in which the number of agents is not equal to the number of target locations. 
+
+From now on, I will call the algorithm I will be developing to solve \textit{MMAPF} using \textit{M*} as base algorithm \textit{M*MMAPF}
+
+\section{Method}
+
+In chronological order, this is how I intend to go about researching the previously stated subquestions:
+
+\begin{itemize}
+    \item Implement \textit{M*} for plain \textit{MAPF} problems to get a starting point from which can be extended. 
+    \item Extend this \textit{MAPF} solver to also solve \textit{MMAPF}.
+    \item Create a number of benchmarks to quantitatively evaluate the performance of this algorithm.
+    \item Compare \textit{M*} to the algorithms developed by peers by running them on these same benchmarks.
+    \item Research ways to improve the runtime of \textit{M*MMAPF}, for example by using better heuristics.
+    \item Research possibilities to allow for a different number of agents than there are 
+\end{itemize}
+
+To fairly compare benchmarks, I will be working on an online system to compare \textit{MMAPF} algorithms, adapted from a similar website used in 2020 by a group researching waypoints in multi agent pathfinding. This will not be a part of the research, but I believe that it will be very valuable when comparing our algorithms.
+
+\section{Planning of the research project}
+
+\begin{center}
+\begin{longtable}[c]{ | c | c | }
+ \hline
+ \multicolumn{2}{| c |}{Planning}\\
+ \hline
+ week 1 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Kick off
+        \item Lecture Research methods
+        \item Create planning for week 1 (Monday)
+        \item Assignment Information literacy (Tuesday)
+        \item Distribute base algorithms
+        \item Create research plan
+        \item Benchmarking website
+        \item Meeting with supervisor (Thursday)
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\ 
+  \hline
+ week 2 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Prepare presentation of research plan.
+        \item Presentation of research plan (Thursday)
+        \item Start implementing base algorithm
+        \item Lecture responsible research
+        \item Meeting with supervisor (Thursday)
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\ 
+  \hline
+ week 3 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Lecture Academic communication skills (Friday)
+        \item Implement base algorithm
+        \item Research extending to \textit{MMAPF}
+        \item Meeting with supervisor (Thursday)
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\ 
+  \hline
+ week 4 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Session responsible research (Monday)
+        \item Meeting with supervisor (Thursday)
+        \item Extend the algorithm to be able to solve \textit{MMAPF}.
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\ 
+  \hline
+ week 5 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Session Academic communication skills (Monday)
+        \item Prepare midterm presentation (before Wednesday)
+        \item Midterm presentation (Wednesday)
+        \item Meeting with supervisor (Thursday)
+        \item Create benchmarks and start comparing to other algorithms (made by peers).
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\ 
+  \hline
+ week 6 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Meeting with supervisor (Thursday)
+        \item Session Academic communication skills (Friday)
+        \item Find ways to improve runtime performance of \textit{M*MAPF}
+        \item Start working on the basics of the final paper.
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\  
+  \hline
+ week 7 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Quantitative evaluation and comparison with other algorithms. 
+        \item Possibly extend to solve \textit{MMAPF} with a different number of agents than targets.
+        \item Work on paper for draft deadline.
+        \item Meeting with supervisor (Thursday)
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\ 
+  \hline
+ week 8 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Paper draft v1 (Monday)
+        \item Peer review paper draft v1 (Thursday)
+        \item Meeting with supervisor (Thursday)
+        \item Improve paper for draft 2.
+        \item Find more ways to improve \textit{M*MMAPF}
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\  
+  \hline
+   week 9 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Paper draft v2 (Wednesday)
+        \item Final work on paper.
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\  
+  \hline
+   week 10 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Submit final paper version (day tbd?)
+        \item Create poster and work on poster presentation.
+        \item Meeting with supervisor (Thursday)
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\  
+  \hline
+   week 11 & \begin{minipage}{5in}
+    \vskip 4pt
+    \begin{itemize}
+        \item Session Academic communication skills (Monday)
+        \item submission poster (Tuesday)
+        \item poster presentation (Thursday or Friday)
+        \item Meeting with examiner
+    \end{itemize}
+   \vskip 4pt
+ \end{minipage}
+ \\  
+  \hline
+\end{longtable}
+\end{center}
+
+
+\medskip
+\printbibliography
+
+
+\end{document}

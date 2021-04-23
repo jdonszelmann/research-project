@@ -58,7 +58,6 @@ class AStar(Planner):
                 print(curr.cost)
                 return curr.backtrack()
 
-
             neighbours = problem.neighbours(curr.state)
 
             for (n, cost) in neighbours:

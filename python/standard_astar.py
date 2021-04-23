@@ -107,9 +107,12 @@ class MapfmProblem(Problem):
 
             return res, acc
 
+        a = list(neighbours)
+        print(len(a))
+
         ret = [
             (lambda c, accumulated_cost: (MapfmState(n, accumulated_cost), c))(*cost(n, parent, self.ends, self.starts))
-            for n in neighbours
+            for n in a
             if len(set(n)) == len(n) and swapping(n, parent.coords)
         ]
 
@@ -170,4 +173,3 @@ def standard_astar(problem: cProblem) -> Solution:
     #     [(0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 2), (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2), (6, 3)],
     #     [(6, 1), (6, 2), (5, 2), (4, 2), (3, 2), (2, 2), (1, 2), (0, 2), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3)]
     # ])
-
