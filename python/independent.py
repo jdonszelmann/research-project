@@ -1,10 +1,12 @@
 from __future__ import annotations
 from typing import Tuple, List, Iterable
-from python.mstar.planner.problem import Problem
-from python.mstar.planner.problem import State
-from python.mstar.planner.astar import AStar
+from python.planner import State
 
-from mapfmclient import MarkedLocation, Problem as cProblem, Solution
+from mapfmclient import MarkedLocation, Problem, Solution
+
+from python.algorithm import MapfAlgorithm
+from python.planner.astar import AStar
+from python.planner.problem import AStarProblem
 
 
 class MapfmState(State):
@@ -25,7 +27,7 @@ class MapfmState(State):
         return f"MapfmState( {self.x} {self.y} )"
 
 
-class MapfmProblem(Problem):
+class MapfmProblem(AStarProblem):
     def __init__(self, start: MarkedLocation, end: MarkedLocation, grid: List[List[int]], width: int, height: int):
         self.start = start
         self.end = end
@@ -63,11 +65,17 @@ class MapfmProblem(Problem):
         return abs(state.x - self.end.y) + abs(state.y - self.end.y)
 
 
-def independent(problem: cProblem) -> Solution:
-    solutions = []
-    for (start, goal) in zip(problem.starts, problem.goals):
-        p = MapfmProblem(start, goal, problem.grid, problem.width, problem.height)
-        solutions.append(AStar().search(p))
+class Independent(MapfAlgorithm):
 
-    return Solution.from_paths([list(map(MapfmState.to_tuple, s)) for s in solutions])
+    def solve(self, problem: Problem) -> Solution:
+        solutions = []
+        for (start, goal) in zip(problem.starts, problem.goals):
+            p = MapfmProblem(start, goal, problem.grid, problem.width, problem.height)
+            solutions.append(AStar().search(p))
+
+        return Solution.from_paths([list(map(MapfmState.to_tuple, s)) for s in solutions])
+
+    @property
+    def name(self) -> str:
+        return "AStar independent agent planning"
 

@@ -2,42 +2,13 @@ from __future__ import annotations
 
 from itertools import product
 from typing import Tuple, List, Iterable, Optional
-from python.mstar.planner.problem import Problem
-from python.mstar.planner.problem import State
-from python.mstar.planner.astar import AStar
+from python.planner import State
 
 from mapfmclient import MarkedLocation, Problem as cProblem, Solution
-
-
-class Coord:
-    def __init__(self, x: int, y: int):
-        self.x = x
-        self.y = y
-
-    def __hash__(self) -> int:
-        return tuple.__hash__((self.x, self.y))
-
-    def __eq__(self, other: Coord):
-        return (self.x, self.y) == (other.x, other.y)
-
-    def __repr__(self):
-        return f"Coord({self.x}, {self.y})"
-
-    def __iter__(self):
-        yield self.x
-        yield self.y
-
-    def any_negative(self) -> bool:
-        return self.x < 0 or self.y < 0
-
-    def out_of_bounds(self, width, height) -> bool:
-        return self.any_negative() or self.x >= width or self.y >= height
-
-    def __sub__(self, other):
-        return Coord(self.x - other.x, self.y - other.y)
-
-    def __add__(self, other):
-        return Coord(self.x + other.x, self.y + other.y)
+from python.coord import Coord
+from python.algorithm import MapfAlgorithm
+from python.planner.astar import AStar
+from python.planner.problem import AStarProblem
 
 
 class MapfmState(State):
@@ -59,7 +30,7 @@ class MapfmState(State):
         return [starts[i].color for i in range(len(self.coords))]
 
 
-class MapfmProblem(Problem):
+class MapfmProblem(AStarProblem):
     def __init__(self, starts: List[MarkedLocation], ends: List[MarkedLocation], grid: List[List[int]], width: int,
                  height: int):
         self.starts = starts
@@ -68,12 +39,12 @@ class MapfmProblem(Problem):
         self.width = width
         self.height = height
 
-        self.startstate = MapfmState(map(lambda i: (i.x, i.y), starts))
+        self.start_state = MapfmState(map(lambda i: (i.x, i.y), starts))
 
     def wall_at(self, x: int, y: int) -> bool:
         return self.grid[y][x] == 1
 
-    def on_final(self, coord: Coord, color: int, index=0) -> bool:
+    def on_final(self, coord: Coord, color: int) -> bool:
         for i in self.ends:
             if i.x == coord.x and i.y == coord.y and i.color == color:
                 return True
@@ -132,14 +103,14 @@ class MapfmProblem(Problem):
         return next_states
 
     def initial_state(self) -> MapfmState:
-        return self.startstate
+        return self.start_state
 
     def final_state(self, state: MapfmState) -> bool:
         if self.has_double(state.coords):
             return False
 
         for index, (coord, color) in enumerate(zip(state.coords, state.colors(self.starts))):
-            if not self.on_final(coord, color, index):
+            if not self.on_final(coord, color):
                 return False
 
         return True
@@ -158,25 +129,20 @@ class MapfmProblem(Problem):
         return res
 
 
-def matching_astar(problem: cProblem) -> Solution:
-    starts = problem.starts
+class MatchingAStar(MapfAlgorithm):
+    def solve(self, problem: cProblem) -> Solution:
+        starts = problem.starts
 
-    p = MapfmProblem(starts, problem.goals, problem.grid, problem.width, problem.height)
-    solution = AStar().search(p)
+        p = MapfmProblem(starts, problem.goals, problem.grid, problem.width, problem.height)
+        solution = AStar().search(p)
 
-    paths = [[] for _ in solution[0].coords]
-    for path in solution:
-        for index, coord in enumerate(path.coords):
-            paths[index].append((coord.x, coord.y))
+        paths = [[] for _ in solution[0].coords]
+        for path in solution:
+            for index, coord in enumerate(path.coords):
+                paths[index].append((coord.x, coord.y))
 
-    # print()
-    # print([(i.x, i.y) for i in starts])
-    # print([(i.x, i.y) for i in goals])
-    # for i in paths:
-    #     print(i)
+        return Solution.from_paths(paths)
 
-    return Solution.from_paths(paths)
-    # return Solution.from_paths([
-    #     [(0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 2), (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2), (6, 3)],
-    #     [(6, 1), (6, 2), (5, 2), (4, 2), (3, 2), (2, 2), (1, 2), (0, 2), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3), (0, 3)]
-    # ])
+    @property
+    def name(self) -> str:
+        return "AStar + Matching"

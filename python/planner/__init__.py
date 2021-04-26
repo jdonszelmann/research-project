@@ -1,6 +1,6 @@
 from typing import List
 
-from python.mstar.planner.problem import State, Problem
+from python.planner.problem import State, Problem
 
 
 class Planner:
