@@ -1,18 +1,15 @@
 import heapq
 from typing import List
 
-from python.queue import PriorityQueue, T, UniqueIdentifier
+from python.priority_queue import PriorityQueue, T, UniqueIdentifier
 
 
 class SimplePriorityQueue(PriorityQueue):
     def __init__(self):
         self.pq: List[T] = []
 
-    def __contains__(self, item: UniqueIdentifier) -> bool:
-        for i in self.pq:
-            if i.identifier == item.identifier:
-                return True
-        return False
+    def __contains__(self, item: T) -> bool:
+        return item in self.pq
 
     def enqueue(self, item: T):
         heapq.heappush(self.pq, item)

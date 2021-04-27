@@ -1,11 +1,10 @@
+from abc import ABCMeta, abstractmethod
 from typing import List
 
-from python.planner.problem import State, Problem
+from python.planner.problem import Problem, State
 
 
-class Planner:
-    def __init__(self):
-        pass
+class Planner(metaclass=ABCMeta):
 
-    def search(self, problem: Problem) -> List[State]:
-        raise NotImplemented
+    @abstractmethod
+    def search(self, problem: Problem) -> List[State]: ...

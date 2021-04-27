@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 mapfmclient = "*"
+np = "*"
+numpy = "*"
+scikit-learn = "*"
 
 [dev-packages]
 

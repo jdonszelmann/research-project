@@ -8,10 +8,10 @@ from mapfmclient import MarkedLocation, Solution, Problem as cProblem
 
 from .agent import Agent
 from .algorithm import MapfAlgorithm
-from python.planner.astar import AStar
-from python.planner import State
+from python.astar.astar import AStar
 from python.coord import Coord
-from .planner.problem import AStarProblem
+from .astar.problem import AStarProblem
+from .planner import State
 
 
 class BetterMatchingAStarState(State):

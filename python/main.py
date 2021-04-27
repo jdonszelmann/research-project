@@ -1,10 +1,10 @@
-from mapfmclient import Solution, Problem, MapfBenchmarker
+from mapfmclient import MapfBenchmarker
 
 from python.algorithm import MapfAlgorithm
 from python.independent import Independent
 from python.matching_astar import MatchingAStar
 from python.better_matching_astar import BetterMatchingAStar
-from python.mstar_solver import MStarSolver
+from python.mstar_solver import MStar
 
 
 def submit(algorithm: MapfAlgorithm):
@@ -24,4 +24,4 @@ def submit(algorithm: MapfAlgorithm):
 
 
 if __name__ == '__main__':
-    submit(MStarSolver())
+    submit(MStar())

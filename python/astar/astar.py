@@ -1,11 +1,12 @@
 from __future__ import annotations
 from typing import Optional, List, Type, TypeVar
 
+from python.astar.no_solution import NoSolutionError
+from python.astar.problem import AStarProblem
 from python.planner import Planner
-from python.planner.no_solution import NoSolutionError
-from python.planner.problem import State, AStarProblem
-from python.queue import PriorityQueue, Comparable
-from python.queue.simple import SimplePriorityQueue
+from python.planner.problem import State
+from python.priority_queue import PriorityQueue, Comparable
+from python.priority_queue.simple import SimplePriorityQueue
 
 S = TypeVar("S", bound=State)
 

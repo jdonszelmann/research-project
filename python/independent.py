@@ -1,12 +1,12 @@
 from __future__ import annotations
 from typing import Tuple, List, Iterable
-from python.planner import State
 
 from mapfmclient import MarkedLocation, Problem, Solution
 
 from python.algorithm import MapfAlgorithm
-from python.planner.astar import AStar
-from python.planner.problem import AStarProblem
+from python.astar.astar import AStar
+from python.astar.problem import AStarProblem
+from python.planner.problem import State
 
 
 class MapfmState(State):

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from ctypes import Union
+
 
 class Coord:
     def __init__(self, x: int, y: int):
@@ -25,8 +27,14 @@ class Coord:
     def out_of_bounds(self, width, height) -> bool:
         return self.any_negative() or self.x >= width or self.y >= height
 
-    def __sub__(self, other: Coord):
+    def __sub__(self, other: Coord) -> Coord:
         return Coord(self.x - other.x, self.y - other.y)
 
-    def __add__(self, other):
+    def __add__(self, other: Coord) -> Coord:
         return Coord(self.x + other.x, self.y + other.y)
+
+    def __mul__(self, other: Union[Coord, int]) -> Coord:
+        if isinstance(other, int):
+            return Coord(self.x * other, self.y * other)
+        else:
+            return Coord(self.x * other.x, self.y * other.y)
