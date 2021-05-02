@@ -1,14 +1,15 @@
 from __future__ import annotations
 
+import time
 from itertools import product
 from typing import Optional, List, Tuple, Set, Iterable, Iterator
 
 from mapfmclient import MarkedLocation
 
-from python.agent import Agent
+from python.agent import Agent, UncalculatedAgent
 from python.astar.no_solution import NoSolutionError
-from python.coord import Coord
-from python.mstar_temp.identifier import Identifier
+from python.mstar.identifier import Identifier
+from python.mstar.visualizer import Visualizer
 from python.priority_queue.fast_contains import FastContainsPriorityQueue
 
 
@@ -24,7 +25,7 @@ class State:
         self.heuristic = None
 
     def __hash__(self):
-        return hash(self.identifier)
+        return hash(self.identifier.partial)
 
     def copy(self) -> State:
         s = State(self.identifier)
@@ -67,7 +68,8 @@ class State:
         if self.parent is not None:
             self.parent.backtrack(res)
 
-        res.append(self)
+        if self.is_standard:
+            res.append(self)
 
         return res
 
@@ -130,7 +132,7 @@ class MStar:
         self.heuristic_shortest_path_cost = get_shortest_path_cost
         self.state_cache = StateCache()
 
-    def search(self, OD=True) -> List[State]:
+    def search(self, OD=True, visualizer: Optional[Visualizer] = None) -> List[State]:
         pq = FastContainsPriorityQueue()
         start_identifier = Identifier.from_marked_locations(self.starts)
 
@@ -144,28 +146,69 @@ class MStar:
         else:
             expand_function = self.expand_joint_actions
 
+        # print()
+
         while not pq.empty():
             curr = pq.dequeue()
 
             # TODO: matching
             if self.final_state(curr):
+                if visualizer is not None:
+                    visualizer.grid.end_sim()
+
                 return curr.backtrack()
 
-            for new_identifier in expand_function(curr):
+            if visualizer is not None:
+                visualizer.submit_state(curr)
+                start = time.time()
+                print(f"start expand at t=0")
+
+            # print(curr.identifier.partial, len(curr.collision_set), len(curr.back_set))
+            #
+            # print(end="")
+            expansion = expand_function(curr, debug=visualizer is not None)
+
+            if visualizer is not None:
+                print(f"expanded {len(expansion)} nodes at t={time.time() - start}")
+
+            for new_identifier in expansion:
+
+                #if visualizer is not None:
+                #    print(f"get state cache at t={time.time() - start}")
+
                 # Intermediate states not part of back propagation
                 # For standard states only
                 new = self.state_cache.get(new_identifier)
+
+                #if visualizer is not None:
+                #    print(f"find collisions at t={time.time() - start}")
+
                 col = self.collisions(curr.identifier.actual, new.identifier.actual)
 
                 if new.is_standard:
                     new.add_back_set(curr)
                     new.merge_collision_sets(col)
+
+                    #if visualizer is not None:
+                    #   print(f"start backprop at t={time.time() - start}")
+
                     self.backprop(curr, new.collision_set, pq)
-                if (len(col) == 0 or not new.is_standard) and curr.cost + self.get_move_cost(curr, new) < new.cost:
-                    new.cost = curr.cost + self.get_move_cost(curr, new)
+                    # if visualizer is not None:
+                    #    print(f"end backprop at t={time.time() - start}")
+
+                if (len(col) == 0 or not new.is_standard) and \
+                        curr.cost + (cost := self.get_move_cost(curr, new)) < new.cost:
+                    new.cost = curr.cost + cost
+
                     new.heuristic = self.heuristic(new.identifier)
                     new.parent = curr
                     pq.enqueue(new)
+
+            if visualizer is not None:
+                print(f"end expand at t={time.time() - start}")
+
+        if visualizer is not None:
+            visualizer.grid.end_sim()
 
         raise NoSolutionError
 
@@ -183,10 +226,10 @@ class MStar:
         total_cost = 0
         for i, pos in enumerate(identifier.partial):
             # TODO: probably for OD
-            # if pos == "_":
-            #     total_cost += self.heuristic_shortest_path_cost(i, vertex_pos[i])
-            # else:
-            total_cost += self.heuristic_shortest_path_cost(i, pos)
+            if pos == UncalculatedAgent:
+                total_cost += self.heuristic_shortest_path_cost(i, identifier.actual[i])
+            else:
+                total_cost += self.heuristic_shortest_path_cost(i, pos)
         return total_cost
 
     @classmethod
@@ -238,7 +281,6 @@ class MStar:
         # It is possible for old_state and new_state to both be standard nodes. Need to account for this in cost
         # Due to subdimensional expansion, expanded node neighbours are not always 1 apart.
         # eg. expanding a standard node where x agents follow individually optimal policies
-        end = list(self.ends)
         if old_state.is_standard:
             if new_state.is_standard:
                 cost = self.v_len
@@ -254,110 +296,146 @@ class MStar:
                 # vk should be root node of vn
                 assert old_state.identifier.actual == new_state.identifier.actual
                 cnt_vn = 0
-                for g, new_agent, old_agent in zip(end, new_state.identifier.partial, old_state.identifier.partial):
-                    if not new_agent == '_':
-                        if new_agent == g and old_agent == g:  # if agent stayed on goal
+                for new_agent, old_agent in zip(
+                        new_state.identifier.partial,
+                        old_state.identifier.partial
+                ):
+                    if not new_agent == UncalculatedAgent:
+                        if self.on_final(old_agent) and self.on_final(new_agent):  # if agent stayed on goal
                             cnt_vn += 0
                         else:
                             cnt_vn += 1
                 cost = cnt_vn
         else:
             if new_state.is_standard:
-                num_pos_canged = 0
+                num_pos_changed = 0
                 cost = 0
-                for gp, old_agent, new_agent, pk_root in zip(end, old_state.identifier[0], new_state.identifier[0], old_state.identifier[1]):
-                    if old_agent == '_':
-                        assert not new_agent == "_"
-                        num_pos_canged += 1
-                        if new_agent == gp and pk_root == gp:
+                for old_agent, new_agent, pk_root in zip(
+                        old_state.identifier.partial,
+                        new_state.identifier.partial,
+                        old_state.identifier.actual
+                ):
+                    if old_agent == UncalculatedAgent:
+                        assert new_agent != UncalculatedAgent
+                        num_pos_changed += 1
+                        if self.on_final(old_agent) and self.on_final(pk_root):
                             cost += 0
                         else:
                             cost += 1
-                assert num_pos_canged == 1
+                assert num_pos_changed == 1
             else:
-                num_pos_canged = 0
+                num_pos_changed = 0
                 cost = 0
-                for gp, old_agent, new_agent, pk_root in zip(end, old_state.identifier[0], new_state.identifier[0], old_state.identifier[1]):
-                    if old_agent == '_' and not new_agent == "_":
-                        num_pos_canged += 1
-                        if new_agent == gp and pk_root == gp:
+                for old_agent, new_agent, pk_root in zip(
+                        old_state.identifier.partial,
+                        new_state.identifier.partial,
+                        old_state.identifier.actual,
+                ):
+                    if old_agent == UncalculatedAgent and not new_agent == UncalculatedAgent:
+                        num_pos_changed += 1
+                        if self.on_final(old_agent) and self.on_final(pk_root):
                             cost += 0
                         else:
                             cost += 1
-                assert num_pos_canged == 1
+                assert num_pos_changed == 1
 
-        assert cost >= 0  # vn should always be of higher count
+        # assert cost >= 0  # vn should always be of higher count
         return cost
 
-    def expand_OD(self, v) -> Identifier:
-        (inter_tup, vertex_pos_tup) = v.identifier
-        collision_set = set()
-        next_inter_tup = []  # list(inter_tup)
-        # If standard node create next intermediate node base
-        # else convert current inter_tup to list
-        if "_" not in inter_tup:
-            assert v.is_standard
-            collision_set = v.collision_set
-            for i, p in enumerate(inter_tup):
+    def expand_OD(self, state: State, debug=False) -> Iterable[Identifier]:
+        next_partial = []
+
+        # TODO: not O(n)
+        if UncalculatedAgent not in state.identifier.partial:
+            # we're at a standard node, make a new partial node
+            assert state.is_standard
+
+            collision_set = state.collision_set
+            for i, p in enumerate(state.identifier.partial):
                 if i in collision_set:
-                    next_inter_tup.append("_")
+                    next_partial.append(UncalculatedAgent)
                 else:
                     n_pos = self.get_next_joint_policy_position(i, p, self.ends[i])
-                    next_inter_tup.append(n_pos[-1])
+                    next_partial.append(n_pos[-1])
         else:
-            next_inter_tup = list(inter_tup)
+            # we're already at a partial node, expand it
+            next_partial = list(state.identifier.partial)
 
-        # Deterimine intermediate node level
-        this_inter_level = None
-        for i, p in enumerate(next_inter_tup):
-            if p == '_':
-                this_inter_level = i
+        # Determine intermediate node level
+        last_partial_index = None
+        i = 0
+        for i, p in enumerate(next_partial):
+            if p == UncalculatedAgent:
+                last_partial_index = i
                 break
 
-        all_next_inter_tup = []
-        if this_inter_level is not None:
+        next_states = []
+        if last_partial_index is None:
+            # there's no uncalculated part found, so this node must be complete
+            # so next partial isn't actually partial in this case
+            assert UncalculatedAgent not in next_partial
+            next_states.append(tuple(next_partial))
+        else:
             # if not a standard vertex
-            pos = vertex_pos_tup[this_inter_level]
-            positions_taken = [p for p in next_inter_tup if p != '_']
-            n_pos = self.expand_position(i, pos)
-            valid_n_pos = [p for p in n_pos if not p in positions_taken]
+            actual_pos = state.identifier.actual[last_partial_index]
+            positions_taken = [p for p in next_partial if p != UncalculatedAgent]
+            # TODO: does i matter?
+            n_pos = self.expand_position(i, actual_pos)
+            valid_n_pos = [p for p in n_pos if p not in positions_taken]
 
             if len(valid_n_pos) == 0:
                 return []
             for p in valid_n_pos:
-                next_inter_tup[this_inter_level] = p
-                all_next_inter_tup.append(tuple(next_inter_tup))
-        else:
-            all_next_inter_tup.append(tuple(next_inter_tup))
-            assert not "_" in next_inter_tup  # should be standard node
+                next_partial[last_partial_index] = p
+                next_states.append(tuple(next_partial))
 
         # Make v_id's:
         v_ids = []
-        for inter_v in all_next_inter_tup:
-            if not "_" in inter_v:
-                v_ids.append((tuple(inter_v), tuple(inter_v)))
+        for inter_v in next_states:
+            inter_v: Tuple[Agent]
+            if UncalculatedAgent not in inter_v:
+                v_ids.append(Identifier(tuple(inter_v), tuple(inter_v)))
             else:
-                v_ids.append((tuple(inter_v), vertex_pos_tup))
+                v_ids.append(Identifier(tuple(inter_v), state.identifier.actual))
 
         return v_ids
 
-    def expand_joint_actions(self, state: State) -> Iterable[Identifier]:
+    def expand_joint_actions(self, state: State, debug=False) -> Iterable[Identifier]:
+        if debug:
+            start = time.time()
+            print("----------------")
+            print("EXPANSION at t=0")
+
         assert state.is_standard, "used expand joint actions with non-standard node"
 
         all_positions = []
         collisions = state.collision_set
 
+        if debug:
+            print(f"finding new agent positions at {time.time() - start}")
+
         for i, p in enumerate(state.identifier.actual):
             if i in collisions:
-                all_positions.append(self.expand_position(i, p))
+                res = self.expand_position(p)
             else:
-                all_positions.append(self.get_next_joint_policy_position(i, p))
+                res = self.get_next_joint_policy_position(p)
 
+            all_positions.append(res)
+
+        if debug:
+            print(all_positions)
+            print(f"Calculating joint positions at {time.time() - start}")
         joint_positions = product(*all_positions)
+
+        if debug:
+            print(f"Calculating ids at {time.time() - start}")
 
         next_v_id = []
         for j_pos in joint_positions:
             j_pos: Tuple[Agent]
             next_v_id.append(Identifier(j_pos, j_pos))
+
+        if debug:
+            print(f"found expansion of size {len(next_v_id)} at {time.time() - start}")
 
         return next_v_id

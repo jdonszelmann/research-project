@@ -1,18 +1,21 @@
 from __future__ import annotations
 
-from collections import deque
+from collections import deque, defaultdict
 import copy
 import heapq
 import time
 from itertools import product
-from typing import Iterable, Dict, List
+from typing import Iterable, Dict, List, Optional
 
 from mapfmclient import MarkedLocation
 
 from python.agent import Agent
 from python.coord import Coord
-from python.mstar_temp.mstar import MStar
+from python.mstar.mstar import MStar
 import numpy as np
+
+from python.mstar.visualizer import Visualizer
+from python.mstar.visualizer.grid import Grid
 
 
 class Heuristics:
@@ -40,54 +43,35 @@ class Heuristics:
     # all the directions you can move in
     directions = [Coord(0, 0), Coord(0, -1), Coord(0, 1), Coord(1, 0), Coord(-1, 0)]
 
-    def __init__(self, grid, starts: List[MarkedLocation], goals: List[MarkedLocation], width: int, height: int ):
+    def __init__(self, grid, starts: List[MarkedLocation], goals: List[MarkedLocation], width: int, height: int):
         self.grid = grid
         self.width = width
         self.height = height
         self.starts = starts
         self.goals = goals
 
-        self.start_coords = [Coord(i.x, i.y) for i in starts]
-        self.goal_coords = [Coord(i.x, i.y) for i in goals]
-
         self.width = width
         self.height = height
 
         self.joint_policy_graphs = None
 
-    def get_blocking_obs(self, agent_pos, goal_pos):
-        '''If no path from agent to goal can be found,
-            the locations of the objects in way of the shortest path
-            from agent to goal is returned '''
-        _, path = self.a_star_search2(agent_pos, goal_pos, ignore=["agent"])
-        obs_in_way = []
-        if len(path) == 0:
-            _, path = self.a_star_search2(agent_pos, goal_pos, ignore=["agent", "obstacle"])
-            path = path[1:-1]  # remove start and end
-            for p in path:
-                obs_types = [ob.type for ob in self.grid[p[0], p[1]]]
-                if "obstacle" in obs_types:
-                    obs_in_way.append(p)
-        return obs_in_way
-
-    def init_joint_policy_graphs(self, starts, ends):
-        '''Performs BFS for each agent and stores the result
-            in a dictionary. '''
+    def init_joint_policy_graphs(self, starts: List[MarkedLocation], ends: List[MarkedLocation]):
+        """Performs BFS for each agent and stores the result
+            in a dictionary. """
         assert type(starts) == list, Exception("start parameter has to be list")
         assert type(ends) == list, Exception("end parameter has to be list")
         assert len(starts) == len(ends), Exception("start and end positions have to be of same length")
 
-        self.joint_policy_graphs = {}
-        for i, (start, goal) in enumerate(zip(starts, ends)):
-            assert isinstance(start, Coord) and isinstance(goal, Coord)
+        self.joint_policy_graphs = defaultdict(list)
+        for (start, goal) in zip(starts, ends):
+            # assert isinstance(start, Coord) and isinstance(goal, Coord)
             # self.joint_policy_graphs[i] = self.dijkstra_search(p_end, p_start)
-            self.joint_policy_graphs[i] = self.BFS(goal)
+            self.joint_policy_graphs[goal.color].append(self.BFS(Coord(goal.x, goal.y)))
 
     def wall_at(self, coord: Coord) -> bool:
         return self.grid[coord.y][coord.x] == 1
 
     def BFS(self, start_pos: Coord) -> Dict:
-
         visited = dict()
         q = deque()
         start_node = self.Node(start_pos, 0, None)
@@ -102,40 +86,47 @@ class Heuristics:
                         q.append(self.Node(n, curr.move_cost + 1, curr.pos))
         return visited
 
-    def expand_position(self, agent_index: int, agent: Agent):
-        '''Returns a list of possible next positions for an agent (ignoring other agents) '''
-        # assert not self.dijkstra_search is None
-        assert agent_index in self.joint_policy_graphs
-        this_graph = self.joint_policy_graphs[agent_index]
-        next_postions = (agent.location + d for d in self.directions)
+    def expand_position(self, agent: Agent):
+        """Returns a list of possible next positions for an agent (ignoring other agents) """
+        assert agent.color in self.joint_policy_graphs
+        this_color_graphs = self.joint_policy_graphs[agent.color]
+
+        next_positions = (agent.location + d for d in self.directions)
         neighbours = [
             agent.with_new_position(n_pos)
-            for n_pos in next_postions
-            if n_pos in this_graph
+            for n_pos in next_positions
+            if any(n_pos in i for i in this_color_graphs)
         ]
         return neighbours
 
-    def get_next_joint_policy_position(self,
-                                       agent_index: int,
-                                       agent: Agent,
-                                       goal_pos: Coord = None) -> List[Agent]:
-        '''Returns the shortest path next position for an agent'''
-        # assert not self.dijkstra_search is None
-        assert agent_index in self.joint_policy_graphs
+    def get_next_joint_policy_position(self, agent: Agent) -> List[Agent]:
+        """Returns the shortest path next position for an agent"""
+        assert agent.color in self.joint_policy_graphs
 
-        this_graph = self.joint_policy_graphs[agent_index]
+        same_color_graphs = self.joint_policy_graphs[agent.color]
+        assert len(same_color_graphs) != 0
 
-        assert agent.location in this_graph
+        next_positions = [agent.location + d for d in self.directions]
 
-        next_postions = [agent.location + d for d in self.directions]
-        next_position_costs = {
-            this_graph[n_pos].move_cost: n_pos
-            for n_pos in next_postions
-            if n_pos in this_graph
-        }
-        min_cost = min(next_position_costs.keys())
-        min_cost_next_pos = next_position_costs[min_cost]
-        return [agent.with_new_position(min_cost_next_pos)]
+        chosen = set()
+
+        for this_graph in same_color_graphs:
+            assert agent.location in this_graph
+
+            next_position_costs = {}
+            for n_pos in next_positions:
+                if n_pos in this_graph:
+                    cost = this_graph[n_pos].move_cost
+                    if cost not in next_position_costs or next_position_costs[cost] not in chosen:
+                        next_position_costs[cost] = n_pos
+
+            curr_min_cost = min(next_position_costs.keys())
+            curr_min_cost_next_pos = next_position_costs[curr_min_cost]
+
+            chosen.add(curr_min_cost_next_pos)
+
+        print(len(chosen))
+        return [agent.with_new_position(i) for i in chosen]
 
     def get_SIC(self, vertex):
         vertex = vertex.v
@@ -146,36 +137,38 @@ class Heuristics:
             SIC += self.joint_policy_graphs[i][pos].move_cost
         return SIC
 
-    def get_shorterst_path_cost(self, agent_id, position: Agent):
-        return self.joint_policy_graphs[agent_id][position.location].move_cost
+    def get_shorterst_path_cost(self, agent_id, agent: Agent):
+        min = float("inf")
+        for i in self.joint_policy_graphs[agent.color]:
+            c = i[agent.location].move_cost
+            if c < min:
+                min = c
 
-    # def mstar_search4_OD(self, start, end, inflation = 1.0, memory_limit = None, return_time_taken=False):
-    def ODmstar(self, start, end, inflation=1.0, memory_limit=None, return_time_taken=False):
-        if self.joint_policy_graphs is None:
-            self.init_joint_policy_graphs(start, end)
-        else:
-            pass
-        t2 = time.time()
-        mstar = MStar(start, end, self.expand_position, self.get_next_joint_policy_position,
-                      self.get_shorterst_path_cost)
-        all_actions = mstar.search(OD=True)
-        time_taken = time.time() - t2
-        if return_time_taken:
-            return all_actions, time_taken
-        else:
-            return all_actions
+        return min
 
-    # def mstar_search4_Not_OD(self, start, end):
-    def mstar_Not_OD(self):
+    def m_star_od(self, visualizer: Optional[Visualizer] = None):
         if self.joint_policy_graphs is None:
-            self.init_joint_policy_graphs(self.start_coords, self.goal_coords)
-        else:
-            pass
-            # print("Joint policy graphs already present...re-using graphs")
-        mstar = MStar(self.starts, self.goals, self.expand_position, self.get_next_joint_policy_position,
-                      self.get_shorterst_path_cost)
-        all_actions = mstar.search(OD=False)
-        return all_actions
+            self.init_joint_policy_graphs(self.starts, self.goals)
+        m_star = MStar(self.starts,
+                       self.goals,
+                       self.expand_position,
+                       self.get_next_joint_policy_position,
+                       self.get_shorterst_path_cost
+                       )
+        solution = m_star.search(OD=True, visualizer=visualizer)
+        return solution
+
+    def m_star(self, visualizer: Optional[Visualizer] = None):
+        if self.joint_policy_graphs is None:
+            self.init_joint_policy_graphs(self.starts, self.goals)
+        m_star = MStar(self.starts,
+                       self.goals,
+                       self.expand_position,
+                       self.get_next_joint_policy_position,
+                       self.get_shorterst_path_cost
+                       )
+        solution = m_star.search(OD=False, visualizer=visualizer)
+        return solution
 
     # def mstar_search_ODrMstar(self, start, end, inflation=1.0, return_time_taken=False):
     #     t_hldr1 = time.time()
@@ -385,7 +378,6 @@ class Heuristics:
         (dx, dy) = self.add_tup(curr_pos, self.mult_tup(goal_pos, -1))
         path_len = abs(dx) + abs(dy)
         return path_len
-
 
     def _is_colliding(self, v):
         hldr = set()

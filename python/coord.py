@@ -38,3 +38,6 @@ class Coord:
             return Coord(self.x * other, self.y * other)
         else:
             return Coord(self.x * other.x, self.y * other.y)
+
+
+UncalculatedCoord = Coord(-1, -1)

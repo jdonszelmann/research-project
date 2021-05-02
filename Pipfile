@@ -7,7 +7,7 @@ name = "pypi"
 mapfmclient = "*"
 np = "*"
 numpy = "*"
-scikit-learn = "*"
+pyglet = "*"
 
 [dev-packages]
 

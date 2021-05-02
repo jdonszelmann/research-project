@@ -4,7 +4,7 @@ from python.algorithm import MapfAlgorithm
 from python.mstar.heuristic import Heuristics
 
 
-class MStar(MapfAlgorithm):
+class MStarOD(MapfAlgorithm):
     def solve(self, problem: Problem) -> Solution:
         solution = Heuristics(
             problem.grid,
@@ -12,7 +12,7 @@ class MStar(MapfAlgorithm):
             problem.goals,
             problem.width,
             problem.height,
-        ).m_star()
+        ).m_star_od()
 
         paths = [[] for _ in solution[0].identifier.actual]
         for path in solution:
@@ -23,4 +23,4 @@ class MStar(MapfAlgorithm):
 
     @property
     def name(self) -> str:
-        return "M*"
+        return "M* + OD"
