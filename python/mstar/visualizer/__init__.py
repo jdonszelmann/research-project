@@ -36,3 +36,6 @@ class Visualizer:
 
         pyglet.app.run()
 
+    def end_sim(self):
+        pass
+        # self.grid.end_sim()

@@ -11,35 +11,14 @@ from mapfmclient import MarkedLocation
 
 from python.agent import Agent
 from python.coord import Coord
+from python.mstar.bfsnode import BFSNode
 from python.mstar.mstar import MStar
 import numpy as np
 
 from python.mstar.visualizer import Visualizer
-from python.mstar.visualizer.grid import Grid
 
 
 class Heuristics:
-    class Node:
-        def __init__(self, pos: Coord, move_cost, prev_pos):
-            self.pos = pos
-            self.move_cost = move_cost
-            self.prev_pos = prev_pos
-
-        def __gt__(self, other: Heuristics.Node) -> bool:
-            return self.move_cost > other.move_cost
-
-        def __ge__(self, other: Heuristics.Node) -> bool:
-            return self.move_cost >= other.move_cost
-
-        def __lt__(self, other: Heuristics.Node) -> bool:
-            return self.move_cost < other.move_cost
-
-        def __le__(self, other: Heuristics.Node) -> bool:
-            return self.move_cost <= other.move_cost
-
-        def __eq__(self, other: Heuristics.Node) -> bool:
-            return self.move_cost == other.move_cost
-
     # all the directions you can move in
     directions = [Coord(0, 0), Coord(0, -1), Coord(0, 1), Coord(1, 0), Coord(-1, 0)]
 
@@ -74,7 +53,7 @@ class Heuristics:
     def BFS(self, start_pos: Coord) -> Dict:
         visited = dict()
         q = deque()
-        start_node = self.Node(start_pos, 0, None)
+        start_node = BFSNode(start_pos, 0, None)
         q.append(start_node)
 
         while len(q) != 0:
@@ -83,7 +62,7 @@ class Heuristics:
                 visited[curr.pos] = curr
                 for n in self.get_empty_neighbours(curr.pos):
                     if n not in visited:
-                        q.append(self.Node(n, curr.move_cost + 1, curr.pos))
+                        q.append(BFSNode(n, curr.move_cost + 1, curr.pos))
         return visited
 
     def expand_position(self, agent: Agent):
