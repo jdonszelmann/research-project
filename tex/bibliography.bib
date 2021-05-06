@@ -31,6 +31,26 @@
     organization={IEEE},
 }
 
+% TAPF using CBS
+@inproceedings{optimal_TAPF_brown_2020,
+  title={Optimal Sequential Task Assignment and Path Finding for Multi-Agent Robotic Assembly Planning},
+  author={Brown, Kyle and Peltzer, Oriana and Sehr, Martin A and Schwager, Mac and Kochenderfer, Mykel J},
+  booktitle={2020 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={441--447},
+  year={2020},
+  organization={IEEE}
+}
+
+% TAPF
+@article{optimal_TAPF_ma_2016,
+  title={Optimal target assignment and path finding for teams of agents},
+  author={Ma, Hang and Koenig, Sven},
+  journal={arXiv preprint arXiv:1612.05693},
+  year={2016}
+}
+
+
+
 @article{mapf_definition_stern_2019,
     title={Multi-agent pathfinding: Definitions, variants, and benchmarks},
     author={Stern, Roni and Sturtevant, Nathan and Felner, Ariel and Koenig, Sven and Ma, Hang and Walker, Thayne and Li, Jiaoyang and Atzmon, Dor and Cohen, Liron and Kumar, TK and others},
@@ -38,6 +58,8 @@
     year={2019},
 }
 
+% has descriptions of all kinds of algorithms, like M*, A*ODID, rM*, link to rM*OD, and CBS
+% also has a description of conflict avoidance tables
 @article{conflict_based_search_sharon_2015,
   title={Conflict-based search for optimal multi-agent pathfinding},
   author={Sharon, Guni and Stern, Roni and Felner, Ariel and Sturtevant, Nathan R},
@@ -109,3 +131,44 @@
   pages={39--40},
   year={2012}
 }
+
+% OD in (r)M*
+@inproceedings{odrm_ferner_2013,
+  title={ODrM* optimal multirobot path planning in low dimensional search spaces},
+  author={Ferner, Cornelia and Wagner, Glenn and Choset, Howie},
+  booktitle={2013 IEEE International Conference on Robotics and Automation},
+  pages={3854--3859},
+  year={2013},
+  organization={IEEE}
+}
+
+% MAPF for warehouses
+@article{warehouses_li_2020,
+  title={Lifelong multi-agent path finding in large-scale warehouses},
+  author={Li, Jiaoyang and Tinka, Andrew and Kiesel, Scott and Durham, Joseph W and Kumar, TK and Koenig, Sven},
+  journal={arXiv preprint arXiv:2005.07371},
+  year={2020}
+}
+
+% MAPF for autonomous cars
+@inproceedings{autonomous_cars_mahdavi_2019,
+  title={Distributed coordination of autonomous guided vehicles in multi-agent systems with shared resources},
+  author={Mahdavi, Atefeh and Carvalho, Marco},
+  booktitle={2019 SoutheastCon},
+  pages={1--7},
+  year={2019},
+  organization={IEEE}
+}
+
+% proof that MAPF is pspace-hard
+@article{complexity_mapf_hopcroft_1984,
+  title={On the Complexity of Motion Planning for Multiple Independent Objects; PSPACE-Hardness of the" Warehouseman's Problem"},
+  author={Hopcroft, John E and Schwartz, Jacob Theodore and Sharir, Micha},
+  journal={The International Journal of Robotics Research},
+  volume={3},
+  number={4},
+  pages={76--88},
+  year={1984},
+  publisher={Sage Publications Sage CA: Thousand Oaks, CA}
+}
+
