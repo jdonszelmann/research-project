@@ -1,0 +1,144 @@
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{babel}
+\usepackage[style=numeric,style=ieee]{biblatex}
+\usepackage[nottoc]{tocbibind}
+\usepackage{csquotes}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[center]{titlesec}
+\usepackage{multicol}
+\usepackage{title}
+
+% bibliography
+\addbibresource{bibliography.bib}
+
+% Formatting
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\geometry{verbose,tmargin=2cm,bmargin=3cm,lmargin=3.2cm,rmargin=3.2cm}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\section}
+  {\normalfont\scshape\centering}{\thesection.}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\scshape}{\thesubsection.}{1em}{}
+\titlespacing*{\section}
+  {0pt}{0\baselineskip}{-0.4\baselineskip}
+\titlespacing*{\subsection}
+  {0pt}{0\baselineskip}{-0.7\baselineskip}
+ 
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\makeatletter
+
+\renewenvironment{abstract}{\centerline{\Large\bf
+Abstract}\vspace{0.5ex}\begin{quote}}{\par\end{quote}\vskip 1ex}
+
+
+\title{Matching in Multi Agent Pathfinding using M*}
+\author{
+    Jonathan Dönszelmann$^1$\and
+    Jesse Mulderij$^1$\and
+    Mathijs de Weerdt$^1$
+    \affiliations
+    $^1$TU Delft\\
+    \emails
+    jdonszelmann@student.tudelft.nl \\
+    \{m.m.deweerdt, j.mulderij\}@tudelft.nl
+}
+
+
+\begin{document}
+\maketitle
+ 
+\begin{multicols}{2}
+ 
+\begin{abstract}
+    Todo
+\end{abstract}
+
+\section*{Introduction}
+
+A large number of real-world situations require the planning of collisionless routes for multiple agents. For example, the routing of trains over a rail network \cite{TUSS_MAPF_mulderij_2020}, directing robots in warehouses \cite{warehouses_li_2020}, or making sure autonomous cars do not collide on the road \cite{autonomous_cars_mahdavi_2019}. Problems of this nature are called \textit{Multi agent pathfinding} problems, which in this paper will often be abbreviated as \textit{MAPF}. Solving \textit{MAPF} problems has been proven to be \textbf{PSPACE-hard} \cite{complexity_mapf_hopcroft_1984}. 
+
+One algorithm to solve \textit{MAPF} is called \textit{M*} \cite{mstar_wagner_2011}. A standard \textit{A*} algorithm as described by Standley \cite{AStarIDOD_standley_2010} plans agents together. This means that in each timestep, the number of possible next states grows exponentially with the number of agents. In \textit{M*}, agents follow an individually optimal path, and in each timestep, only the subset of agents which is part of a collision is jointly planned.
+
+A related problem to \textit{MAPF} is the Task Assignment and Pathfinding problem (often abbreviated as \textit{TAPF}). In \textit{TAPF}, agents are grouped into teams. Each team has the same number of goals as the team is large. Which agent ends up on which goal position does not matter. Algorithms solving \textit{TAPF} need to find a \textit{matching} between agents and goal positions of the same team, which produces the shortest paths for all agents. Essentially, \textit{TAPF} is an extention of \textit{MAPF} with the addition of matching. From now on, this problem will be referred to as \textit{MAPFM}.
+
+In this paper, \textit{MAPFM} will be defined, and then it will be investigated if it's possible to extend \textit{M*} to solve \textit{MAPFM} problems. To do this, two methods will be proposed. These two methods will be compared, both to each other, and to a number other algorithms solving \textit{MAPFM}. As well as this  comparison, a number of extensions to \textit{M*} will be investigated applied to both \textit{MAPFM}, and regular \textit{MAPF} problems to improve the runtime performance of \textit{M*}.
+
+\section{Prior work}
+
+
+\section{Problem definition}
+
+Stern \cite{mapf_definition_stern_2019} defines the Multi Agent pathfinding problem as follows:
+
+$$
+\langle G, s, g \rangle
+$$
+
+\begin{itemize}
+    \item $G$ is a graph $\langle V, E \rangle$ 
+    \begin{itemize}
+        \item $V$ is a set of vertices
+        \item $E$ is a set of edges between vertices
+    \end{itemize}
+
+    \item $s$ is a list of $k$ vertices where every $s_i$ is a starting position for an agent $a_i$
+    \item $g$ is a list of $k$ vertices where every $g_i$ is a target position for an agent $a_i$
+\end{itemize}
+
+Though algorithms presented in this paper would work on any graph $G$, in most examples given, $G$ is simplified to be a 4-connected grid.
+
+In this paper, this definition of \textit{MAPF} is expanded with matching. The resulting problem is called \textit{MAPFM}, and has the following definition:
+
+$$
+\langle G, s, g, sc, gc \rangle
+$$
+
+\begin{itemize}
+    \item $sc$ is an array of colours $sc_i$ for each starting vertex $s_i$
+    \item $gc$ is an array of colours $gc_i$ for each target vertex $g_i$
+\end{itemize}
+
+In \textit{MAPFM}, agents travel from start locations to goal locations (just like in \textit{MAPF}). However, an agent's goal vertex is any goal with the same colour as the agent's start vertex. 
+
+Vertex conflicts and edge conflicts are disallowed in \textit{MAPFM}, and the \textit{sum of individual costs} is optimised (as defined in \cite{mapf_definition_stern_2019}). 
+
+
+
+\section{M* and matching}
+
+\subsection{Unified matching}
+\subsection{Prematching}
+
+\section{Extensions to M*}
+
+\subsection{Recursive M*}
+\subsection{Operator decomposition}
+\subsection{Collision avoidance tables}
+\subsection{Matching Pruning}
+
+\section{Other algorithms}
+
+\section{Responsible research}
+
+\section{Conclusion}
+
+\end{multicols}
+
+\medskip
+\printbibliography
+
+\end{document}
