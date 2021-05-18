@@ -12,3 +12,7 @@ class MapfAlgorithm(ABC):
     @abstractmethod
     def name(self) -> str:
         raise NotImplemented
+
+    @property
+    def version(self) -> str:
+        return "0.0.1"

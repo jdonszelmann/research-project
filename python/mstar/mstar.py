@@ -54,8 +54,6 @@ class MStar:
         else:
             expand_function = self.expand_joint_actions
 
-        # print()
-
         while not pq.empty():
             curr = pq.dequeue()
 
@@ -66,43 +64,30 @@ class MStar:
 
                 return curr.backtrack()
 
-            if visualizer is not None:
-                visualizer.submit_state(curr)
-                start = time.time()
-                print(f"start expand at t=0")
-
-            # print(curr.identifier.partial, len(curr.collision_set), len(curr.back_set))
-            #
-            # print(end="")
             expansion = expand_function(curr, debug=visualizer is not None)
 
-            if visualizer is not None:
-                print(f"expanded {len(expansion)} nodes at t={time.time() - start}")
-
             for new_identifier in expansion:
-
-                #if visualizer is not None:
-                #    print(f"get state cache at t={time.time() - start}")
-
                 # Intermediate states not part of back propagation
                 # For standard states only
                 new = self.state_cache.get(new_identifier)
 
-                #if visualizer is not None:
-                #    print(f"find collisions at t={time.time() - start}")
-
-                col = self.collisions(curr.identifier.actual, new.identifier.actual)
-
                 if new.is_standard:
+                    col = self.collisions(curr.identifier.actual, new.identifier.actual)
+
                     new.add_back_set(curr)
                     new.merge_collision_sets(col)
 
-                    #if visualizer is not None:
-                    #   print(f"start backprop at t={time.time() - start}")
+                    if curr.is_standard:
+                        self.backprop(curr, new.collision_set, pq)
+                    else:
+                        p = curr
+                        while p is not None and not p.is_standard:
+                            p = p.parent
 
-                    self.backprop(curr, new.collision_set, pq)
-                    # if visualizer is not None:
-                    #    print(f"end backprop at t={time.time() - start}")
+                        if p is not None:
+                            self.backprop(p, new.collision_set, pq)
+                else:
+                    col = []
 
                 if (len(col) == 0 or not new.is_standard) and \
                         curr.cost + (cost := self.get_move_cost(curr, new)) < new.cost:
@@ -111,9 +96,6 @@ class MStar:
                     new.heuristic = self.heuristic(new.identifier)
                     new.parent = curr
                     pq.enqueue(new)
-
-            if visualizer is not None:
-                print(f"end expand at t={time.time() - start}")
 
         if visualizer is not None:
             visualizer.end_sim()
@@ -124,7 +106,7 @@ class MStar:
         if v_k.is_standard:
             if not c_l.issubset(v_k.collision_set):
                 v_k.merge_collision_sets(c_l)
-                if not v_k in pq:
+                if v_k not in pq:
                     v_k.heuristic = self.heuristic(v_k.identifier)
                     pq.enqueue(v_k)
                 for v_m in v_k.get_back_set():

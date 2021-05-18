@@ -1,6 +1,8 @@
 from python.mstar.identifier import Identifier
 from python.mstar.state import State
-from math import inf
+from typing import Type, TypeVar
+
+T = TypeVar("T", bound=State)
 
 
 class StateCache:
@@ -8,13 +10,13 @@ class StateCache:
         self.cache = dict()
         # self.intermediate = use_intermediate_nodes
 
-    def get(self, identifier: Identifier) -> State:
+    def get(self, identifier: Identifier, constructor: Type[T] = State, insert: bool = True) -> T:
         if identifier in self.cache:
             return self.cache[identifier]
-        else:
-            self.cache[identifier] = State(identifier)
+        elif insert:
+            self.cache[identifier] = constructor(identifier)
             return self.cache[identifier]
 
-    def reset_costs(self):
+    def reset(self):
         for i in self.cache.values():
-            i.cost = inf
+            i.reset()

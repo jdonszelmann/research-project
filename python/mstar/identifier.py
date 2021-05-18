@@ -8,7 +8,7 @@ from python.agent import Agent
 
 
 class Identifier:
-    def __init__(self, partial: Tuple[Agent], actual: Tuple[Agent]):
+    def __init__(self, partial: Tuple[Agent, ...], actual: Tuple[Agent, ...]):
         self.partial = tuple(partial)
         self.actual = tuple(actual)
 

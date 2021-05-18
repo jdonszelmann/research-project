@@ -54,7 +54,6 @@ def matchings(starts: List[MarkedLocation], goals: List[MarkedLocation]) -> Iter
 
 
 class PrematchMStar:
-
     directions = [Coord(0, 0), Coord(0, -1), Coord(0, 1), Coord(1, 0), Coord(-1, 0)]
 
     def __init__(self, grid, starts: List[MarkedLocation], goals: List[MarkedLocation], width: int, height: int):
@@ -70,7 +69,7 @@ class PrematchMStar:
         self.joint_policy_graphs: Dict[Coord, Dict[Coord, BFSNode]] = None
 
         self.v_len = len(starts)
-        self.state_cache = StateCache()
+        self.state_cache: StateCache = StateCache()
 
         self.init_joint_policy_graphs(self.starts, self.goals)
 
@@ -88,7 +87,7 @@ class PrematchMStar:
     def wall_at(self, coord: Coord) -> bool:
         return self.grid[coord.y][coord.x] == 1
 
-    def BFS(self, start_pos: Coord) -> Dict[Coord, BFSNode]:
+    def BFS(self, start_pos: Coord) -> dict[Coord, BFSNode]:
         visited = {}
         q = deque()
         start_node = BFSNode(start_pos, 0, None)
@@ -129,19 +128,19 @@ class PrematchMStar:
 
         matchings_lst = list(matchings(self.starts, self.goals))
 
-        for i in tqdm(matchings_lst):
+        for i in tqdm(matchings_lst, disable=True):
             best_case_cost = self.best_case_path(i)
             if shortest_path_cost is not None and best_case_cost >= shortest_path_cost:
                 continue
 
-            self.state_cache.reset_costs()
+            self.state_cache.reset()
 
             try:
-                path = self.mstar(i, od=od, visualizer=visualizer)
+                path = self.mstar(self.starts, i, od=od, visualizer=visualizer)
                 if shortest_path is None or len(shortest_path) > len(path):
                     shortest_path = path
                     shortest_path_cost = self.path_cost(path)
-                    print(f"found with cost {shortest_path_cost}")
+                    # print(f"found with cost {shortest_path_cost}")
 
             except NoSolutionError:
                 print("no solution")
@@ -152,9 +151,13 @@ class PrematchMStar:
         else:
             return shortest_path
 
-    def mstar(self, goal_pos: List[MarkedLocation], od=False, visualizer: Optional[Visualizer] = None):
+    def mstar(self,
+              start_pos: list[MarkedLocation],
+              goal_pos: list[MarkedLocation],
+              od=False,
+              visualizer: Optional[Visualizer] = None):
         pq = FastContainsPriorityQueue()
-        start_identifier = Identifier.from_marked_locations(self.starts)
+        start_identifier = Identifier.from_marked_locations(start_pos)
         goal_identifier = Identifier.from_marked_locations(goal_pos)
 
         start_state = self.state_cache.get(start_identifier)
@@ -183,35 +186,18 @@ class PrematchMStar:
                 print(f"start expand at t=0")
 
             expansion = expand_function(curr, goal_pos, debug=visualizer is not None)
-            #print("---")
-            #print(f"curr: {curr.identifier.actual}")
-            #print(f"cost: {curr.cost}, heur: {curr.heuristic}")
-            #print(f"collision: {[i for i in curr.collision_set]}")
-            #col = [f"{k}: {v}" for k, v in curr.back_set.items()]
-            #print(f"back: {col}")
-            #print(f"expansion: {len(expansion)} queue: {len(pq.pq)} back_set: {len(curr.back_set)} {len([i for i in curr.back_set.values()])}, {time.time() - start}s")
             if visualizer is not None:
                 print(f"expanded {len(expansion)} nodes at t={time.time() - start}")
 
-            #print("expansion:")
+            # print("expansion:")
             for new_identifier in expansion:
-                #input()
-                #print("---")
-                #print(new_identifier.partial)
-                #print(new_identifier.actual)
-
-
-                # Intermediate states not part of back propagation
-                # For standard states only
                 new = self.state_cache.get(new_identifier)
 
-                col = self.collisions(curr.identifier.actual, new.identifier.actual)
-                #print(f"collisions: {col}")
-
                 if new.is_standard:
+                    col = self.collisions(curr.identifier.actual, new.identifier.actual)
+
                     new.add_back_set(curr)
                     new.merge_collision_sets(col)
-
 
                     # if visualizer is not None:
                     #   print(f"start backprop at t={time.time() - start}")
@@ -226,6 +212,8 @@ class PrematchMStar:
                             self.backprop(p, new.collision_set, pq, goal_pos)
                     # if visualizer is not None:
                     #    print(f"end backprop at t={time.time() - start}")
+                else:
+                    col = []
 
                 if (len(col) == 0 or not new.is_standard) and \
                         curr.cost + (cost := self.get_move_cost(goal_identifier, curr, new)) < new.cost:
@@ -234,17 +222,14 @@ class PrematchMStar:
                     new.heuristic = self.heuristic(new.identifier, goal_pos)
                     new.parent = curr
 
-                    #print("insert with:")
-                    #print(f"cost: {new.cost}, heur: {new.heuristic}")
+                    # print("insert with:")
+                    # print(f"cost: {new.cost}, heur: {new.heuristic}")
 
                     pq.enqueue(new)
                 else:
                     pass
-                    #print("no insert (col)")
+                    # print("no insert (col)")
 
-            #print("---")
-            #print("end expand")
-            #input()
             if visualizer is not None:
                 print(f"end expand at t={time.time() - start}")
 
@@ -253,15 +238,31 @@ class PrematchMStar:
 
         raise NoSolutionError
 
-    def backprop(self, v_k, c_l, pq, goal_pos: List[MarkedLocation]):
-        if v_k.is_standard:
-            if not c_l.issubset(v_k.collision_set):
-                v_k.merge_collision_sets(c_l)
-                if not v_k in pq:
-                    v_k.heuristic = self.heuristic(v_k.identifier, goal_pos)
-                    pq.enqueue(v_k)
-                for v_m in v_k.get_back_set():
-                    self.backprop(v_m, v_k.collision_set, pq, goal_pos)
+    def backprop(self, v_k: State, c_l, pq, goal_pos: List[MarkedLocation]):
+        self.iterative_backprop(v_k, c_l, pq, goal_pos)
+        # if v_k.is_standard:
+        #     if not c_l.issubset(v_k.collision_set):
+        #         v_k.merge_collision_sets(c_l)
+        #         if v_k not in pq:
+        #             v_k.heuristic = self.heuristic(v_k.identifier, goal_pos)
+        #             pq.enqueue(v_k)
+        #         for v_m in v_k.get_back_set():
+        #             self.backprop(v_m, v_k.collision_set, pq, goal_pos)
+
+    def iterative_backprop(self, parent_state: State, current_collision_set, pq, goal_pos: List[MarkedLocation]):
+        todo = [(parent_state, current_collision_set)]
+
+        while len(todo) != 0:
+            (parent_state, current_collision_set) = todo.pop()
+
+            if parent_state.is_standard:
+                if not current_collision_set.issubset(parent_state.collision_set):
+                    parent_state.merge_collision_sets(current_collision_set)
+                    if parent_state not in pq:
+                        parent_state.heuristic = self.heuristic(parent_state.identifier, goal_pos)
+                        pq.enqueue(parent_state)
+                    for v_m in parent_state.get_back_set():
+                        todo.append((v_m, parent_state.collision_set))
 
     def goal_for(self, agent_id, goal_pos: List[MarkedLocation]) -> Coord:
         ml = goal_pos[agent_id]

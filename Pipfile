@@ -8,6 +8,9 @@ mapfmclient = "*"
 np = "*"
 numpy = "*"
 pyglet = "*"
+pygame = "*"
+imageio = "*"
+matplotlib = "*"
 
 [dev-packages]
 

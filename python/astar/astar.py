@@ -65,7 +65,7 @@ class AStar(Planner):
             seen.add(curr.state)
 
             if problem.final_state(curr.state):
-                print(curr.cost)
+                # print(curr.cost)
                 return curr.backtrack()
 
             neighbours = problem.neighbours(curr.state)

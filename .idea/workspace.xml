@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
@@ -7,18 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/mstar/bfsnode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/prematch/mstar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/statecache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/prematch_mstar_solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/prematch_mstar_solver_od.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/visual_prematch_mstar_solver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/heuristic.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/heuristic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/mstar.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/mstar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/visualizer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/visualizer/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/poster/css/phone.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/poster/css/phone.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +36,17 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/python/priority_queue/fast_contains.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tex/bibliography.bib" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/mstar/prematch/mstar.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/solvers/prematch_mstar_solver.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/solvers/prematch_recursive_mstar_solver_od.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/mstar/state.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/mstar/prematch/recursive_mstar.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/mstar/statecache.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="77mj5ble" />
   </component>
@@ -59,27 +63,94 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/poster/assets" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/poster/assets" />
+      <recent name="$PROJECT_DIR$/python/solvers" />
+      <recent name="$PROJECT_DIR$/python/mstar/prematch" />
       <recent name="$PROJECT_DIR$/python" />
       <recent name="$PROJECT_DIR$/python/mstar/visualizer/assets" />
-      <recent name="$PROJECT_DIR$/python/planner" />
-      <recent name="$PROJECT_DIR$/python/queue" />
-      <recent name="$PROJECT_DIR$/python/mstar/planner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/python/planner" />
-      <recent name="$PROJECT_DIR$/python" />
-      <recent name="$PROJECT_DIR$/python/positioning" />
-      <recent name="$PROJECT_DIR$/docs/papers" />
+      <recent name="$PROJECT_DIR$/assets/poster/js" />
+      <recent name="$PROJECT_DIR$/assets/poster/css" />
+      <recent name="$PROJECT_DIR$/assets/poster/assets" />
+      <recent name="$PROJECT_DIR$/tex/rendered" />
+      <recent name="$PROJECT_DIR$/python/solvers" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.generate_map (1)">
+    <configuration name="generate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assets/poster/matchings" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assets/poster/matchings/generate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="generate_map (1)" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/randomize" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/randomize/generate_map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="generate_map" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/random" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/random/generate_map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,10 +173,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
+    <configuration name="main (no assert)" type="PythonConfigurationType" factoryName="Python" singleton="false">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -114,6 +188,28 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/main.py" />
       <option name="PARAMETERS" value="-O" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/main.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -145,11 +241,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.main (no assert)" />
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.odmstar_example" />
+      <item itemvalue="Python.generate" />
+      <item itemvalue="Python.generate_map" />
+      <item itemvalue="Python.generate_map (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.generate_map (1)" />
+        <item itemvalue="Python.generate_map" />
+        <item itemvalue="Python.generate" />
         <item itemvalue="Python.odmstar_example" />
         <item itemvalue="Python.main (1)" />
       </list>
@@ -172,7 +275,23 @@
       <workItem from="1619773427364" duration="33105000" />
       <workItem from="1619896579217" duration="249000" />
       <workItem from="1619896836978" duration="81000" />
-      <workItem from="1619896929590" duration="45491000" />
+      <workItem from="1619896929590" duration="51225000" />
+      <workItem from="1620141538497" duration="11332000" />
+      <workItem from="1620371474249" duration="5175000" />
+      <workItem from="1620470349811" duration="10338000" />
+      <workItem from="1620649156895" duration="2355000" />
+      <workItem from="1620720365297" duration="21637000" />
+      <workItem from="1620831263976" duration="11000" />
+      <workItem from="1620836142971" duration="5916000" />
+      <workItem from="1620848488812" duration="6539000" />
+      <workItem from="1620918846579" duration="45641000" />
+      <workItem from="1621013811757" duration="41000" />
+      <workItem from="1621013861991" duration="14773000" />
+      <workItem from="1621076278718" duration="21663000" />
+      <workItem from="1621164720378" duration="6378000" />
+      <workItem from="1621171284532" duration="2813000" />
+      <workItem from="1621174524886" duration="18108000" />
+      <workItem from="1621245030192" duration="39929000" />
     </task>
     <servers />
   </component>
@@ -211,7 +330,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/mstar/mstar.py</url>
-          <line>249</line>
+          <line>231</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -235,44 +354,50 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/mstar/mstar.py</url>
-          <line>75</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/mstar/visualizer/grid.py</url>
           <line>301</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/mstar/heuristic.py</url>
-          <line>91</line>
-          <option name="timeStamp" value="68" />
+          <url>file://$PROJECT_DIR$/python/mstar/prematch/recursive_mstar.py</url>
+          <line>580</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/mstar/heuristic.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="69" />
+          <url>file://$PROJECT_DIR$/python/mstar/prematch/recursive_mstar.py</url>
+          <line>360</line>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/mstar/prematch/mstar.py</url>
-          <line>172</line>
+          <url>file://$PROJECT_DIR$/python/mstar/prematch/recursive_mstar.py</url>
+          <line>384</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/mstar/prematch/mstar.py</url>
-          <line>131</line>
+          <url>file://$PROJECT_DIR$/python/mstar/prematch/recursive_mstar.py</url>
+          <line>349</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/mstar/prematch/mstar.py</url>
-          <line>184</line>
+          <url>file://$PROJECT_DIR$/assets/poster/matchings/generate.py</url>
+          <line>16</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/mstar/prematch/mstar.py</url>
-          <line>207</line>
+          <line>135</line>
           <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/randomize/generate_map.py</url>
+          <line>307</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="r&gt;100" language="Python" />
+          <url>file://$PROJECT_DIR$/python/mstar/prematch/mstar.py</url>
+          <line>242</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -286,7 +411,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/research_project$odmstar_example.coverage" NAME="odmstar_example Coverage Results" MODIFIED="1619612615436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
-    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1620125697597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1621240968833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/research_project$generate_map.coverage" NAME="generate_map Coverage Results" MODIFIED="1621237268882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/random" />
+    <SUITE FILE_PATH="coverage/research_project$generate_map__1_.coverage" NAME="generate_map (1) Coverage Results" MODIFIED="1621356322346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/randomize" />
     <SUITE FILE_PATH="coverage/research_project$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1619544557512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar_temp" />
+    <SUITE FILE_PATH="coverage/research_project$generate.coverage" NAME="generate Coverage Results" MODIFIED="1621234837959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assets/poster/matchings" />
   </component>
 </project>

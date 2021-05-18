@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import List, Optional
+from typing import List, Optional, Set
 
 from python.mstar.identifier import Identifier
 
@@ -10,7 +10,7 @@ from math import inf
 class State:
     def __init__(self, identifier: Identifier):
         self.identifier = identifier
-        self.collision_set = set()
+        self.collision_set: Set[int] = set()
         self.back_set = {}
 
         self.parent = None
@@ -25,6 +25,9 @@ class State:
             self.hash = hash(self.identifier.partial)
 
         return self.hash
+
+    def reset(self):
+        self.cost = inf
 
     def copy(self) -> State:
         s = State(self.identifier)
@@ -48,14 +51,13 @@ class State:
         """
         return self.identifier.partial == self.identifier.actual
 
-    def merge_collision_sets(self, other_collision_set):
+    def merge_collision_sets(self, other_collision_set: Set[int]):
         self.collision_set = self.collision_set.union(other_collision_set)
 
-    def is_collision_subset(self, other_set):
+    def is_collision_subset(self, other_set) -> bool:
         return other_set.issubset(self.collision_set)
 
     def add_back_set(self, state: State):
-        assert isinstance(state, type(self))
         self.back_set[state.identifier] = state
 
     def get_back_set(self):

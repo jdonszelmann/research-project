@@ -1,18 +1,18 @@
 from mapfmclient import Problem, Solution
 
 from python.algorithm import MapfAlgorithm
-from python.mstar.heuristic import Heuristics
+from python.mstar.prematch.mstar import PrematchMStar
 
 
-class MStarOD(MapfAlgorithm):
+class PrematchMStarOD(MapfAlgorithm):
     def solve(self, problem: Problem) -> Solution:
-        solution = Heuristics(
+        solution = PrematchMStar(
             problem.grid,
             problem.starts,
             problem.goals,
             problem.width,
             problem.height,
-        ).m_star_od()
+        ).search_matchings(od=True)
 
         paths = [[] for _ in solution[0].identifier.actual]
         for path in solution:
@@ -23,4 +23,8 @@ class MStarOD(MapfAlgorithm):
 
     @property
     def name(self) -> str:
-        return "M* + OD"
+        return "prematch M* + OD"
+
+    @property
+    def version(self):
+        return "0.0.2"

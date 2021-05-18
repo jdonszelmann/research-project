@@ -6,12 +6,12 @@ from typing import Iterable, Tuple, List
 
 from mapfmclient import MarkedLocation, Solution, Problem as cProblem
 
-from .agent import Agent
-from .algorithm import MapfAlgorithm
+from python.agent import Agent
+from python.algorithm import MapfAlgorithm
 from python.astar.astar import AStar
 from python.coord import Coord
-from .astar.problem import AStarProblem
-from .planner import State
+from python.astar.problem import AStarProblem
+from python.planner import State
 
 
 class BetterMatchingAStarState(State):
@@ -158,4 +158,4 @@ class BetterMatchingAStar(MapfAlgorithm):
 
     @property
     def name(self) -> str:
-        return "Better AStar + Matching"
+        return "AStar"

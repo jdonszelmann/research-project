@@ -1,4 +1,10 @@
 
-* Fix project plan
-* Load all benchmarks from [this paper](papers/MAPF-definition.md) in the website
-* Implement M*
+* Conflict avoidance tables
+* rM*
+* EPA?
+* fix optimality issues
+* Paper
+    + names of comparing algorithms
+    + existing algorithms
+    + train types
+    + relevance of matching

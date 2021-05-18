@@ -1,0 +1,32 @@
+
+.twocolimg {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.twocolimg > *{
+    width: 50%;
+}
+
+.twocolimg > * *{
+    width: 100%;
+}
+
+.threecolimg {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.threecolimg > *{
+    width: 33.33%;
+}
+
+.threecolimg > * *{
+    width: 100%;
+}

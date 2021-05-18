@@ -104,7 +104,7 @@ class Heuristics:
 
             chosen.add(curr_min_cost_next_pos)
 
-        print(len(chosen))
+        # print(len(chosen))
         return [agent.with_new_position(i) for i in chosen]
 
     def get_SIC(self, vertex):
