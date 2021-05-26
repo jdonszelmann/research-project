@@ -10,8 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/poster/css/presentation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/poster/js/pres_mode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/poster/css/phone.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/poster/css/phone.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/poster/css/columns.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/poster/css/columns.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/poster/css/desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/poster/css/desktop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/poster/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/poster/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +41,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/python/priority_queue/fast_contains.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tex/bibliography.bib" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/python/mstar/prematch/mstar.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/python/solvers/prematch_mstar_solver.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tex/bibliography.bib" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/python/solvers/prematch_recursive_mstar_solver_od.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/python/mstar/state.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/python/mstar/prematch/recursive_mstar.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/python/mstar/statecache.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/priority_queue/fast_contains.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/solvers/prematch_mstar_solver.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/python/main.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/mstar/statecache.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/python/mstar/prematch/recursive_mstar.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="77mj5ble" />
@@ -291,7 +295,8 @@
       <workItem from="1621164720378" duration="6378000" />
       <workItem from="1621171284532" duration="2813000" />
       <workItem from="1621174524886" duration="18108000" />
-      <workItem from="1621245030192" duration="39929000" />
+      <workItem from="1621245030192" duration="48216000" />
+      <workItem from="1621536896525" duration="55000" />
     </task>
     <servers />
   </component>
@@ -408,13 +413,5 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/research_project$odmstar_example.coverage" NAME="odmstar_example Coverage Results" MODIFIED="1619612615436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
-    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1621240968833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
-    <SUITE FILE_PATH="coverage/research_project$generate_map.coverage" NAME="generate_map Coverage Results" MODIFIED="1621237268882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/random" />
-    <SUITE FILE_PATH="coverage/research_project$generate_map__1_.coverage" NAME="generate_map (1) Coverage Results" MODIFIED="1621356322346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/randomize" />
-    <SUITE FILE_PATH="coverage/research_project$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1619544557512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar_temp" />
-    <SUITE FILE_PATH="coverage/research_project$generate.coverage" NAME="generate Coverage Results" MODIFIED="1621234837959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assets/poster/matchings" />
   </component>
 </project>

@@ -1,0 +1,132 @@
+
+.presentation {
+    width: 100vw;
+    max-width:100%;
+    height: 100vh;
+    max-height:100%;
+}
+
+.presentation_only {
+    display: none;
+}
+
+.presentation .presentation_only {
+    display: block;
+}
+
+.presentation body {
+    font-size: 20px;
+}
+
+.presentation h1 {
+    font-size: 40px;
+}
+
+.presentation h2 {
+    display: none;
+}
+
+.presentation .content-item {
+    border-left: none;
+    justify-content: space-around !important;
+}
+
+.presentation .content-item p {
+    display: none;
+    text-align: center !important;
+}
+
+
+.presentation #controls {
+    display: none !important;
+}
+
+.presentation .mapf-image {
+    width: 20%;
+}
+
+.presentation .twocolimg {
+    width: 40%;
+}
+
+.presentation .graphs {
+    width: 60%;
+}
+
+#online-version {
+    width: 80%;
+    padding: 3vw;
+}
+
+#online-version {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #662C40;
+    padding: 3vw;
+}
+
+#online-version a {
+    white-space: nowrap;
+    color: #00A6D6;
+    font-weight: bold;
+}
+
+
+
+#state0 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #232323;
+
+    z-index: 11;
+
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+    font-family: monospace;
+}
+
+/*#state1 {*/
+/*    position: fixed;*/
+/*    width: 33%;*/
+/*    height: 100%;*/
+/*    background-color: #232323;*/
+
+/*    z-index: 7;*/
+
+/*    display: none;*/
+
+/*}*/
+
+/*#state2 {*/
+/*    position: fixed;*/
+/*    width: 33%;*/
+/*    height: 100%;*/
+/*    background-color: #232323;*/
+
+/*    z-index: 7;*/
+
+/*    display: none;*/
+
+/*    left: 33%;*/
+/*}*/
+
+/*#state3 {*/
+/*    position: fixed;*/
+/*    width: 33%;*/
+/*    height: 100%;*/
+/*    background-color: #232323;*/
+
+/*    z-index: 7;*/
+
+/*    display: none;*/
+
+/*    left: 66%;*/
+/*}*/

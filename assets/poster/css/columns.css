@@ -12,7 +12,7 @@
 }
 
 .twocolimg > * *{
-    width: 100%;
+    width: 100% !important;
 }
 
 .threecolimg {
@@ -28,5 +28,5 @@
 }
 
 .threecolimg > * *{
-    width: 100%;
+    width: 100% !important;
 }
