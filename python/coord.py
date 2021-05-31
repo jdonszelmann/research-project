@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from ctypes import Union
 
+from mapfmclient import MarkedLocation
+
 
 class Coord:
     def __init__(self, x: int, y: int):
@@ -38,6 +40,14 @@ class Coord:
             return Coord(self.x * other, self.y * other)
         else:
             return Coord(self.x * other.x, self.y * other.y)
+
+    def manhattan_distance(self, other: Coord) -> int:
+        diff = other.__sub__(self)
+        return abs(diff.x) + abs(diff.y)
+
+    @classmethod
+    def from_marked_location(cls, m: MarkedLocation) -> Coord:
+        return cls(m.x, m.y)
 
 
 UncalculatedCoord = Coord(-1, -1)

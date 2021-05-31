@@ -180,6 +180,8 @@ class PrematchMStar:
 
                 return curr.backtrack()
 
+            print(curr)
+
             if visualizer is not None:
                 visualizer.submit_state(curr)
                 start = time.time()
