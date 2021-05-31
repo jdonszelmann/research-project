@@ -43,7 +43,7 @@ class MatchingWithHeuristic:
 def mstar(cfg: Config, problem: Problem) -> Optional[Path]:
     grid = Grid(problem.grid)
 
-    state_cache = StateCache(State)
+    state_cache = StateCache(cfg, State)
     path_cache = PathCache(
         cfg,
         grid,

@@ -10,32 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/collisionset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/collisionset_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/expand.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/expand_od.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/find_path.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/goal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/grid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/heuristic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/identifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/matchings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/optimal_path.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/path.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/path_cache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/statecache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/solvers/configurable_mstar_solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/research-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/research-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/coord.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/coord.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/identifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/identifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/prematch/mstar.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/prematch/mstar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/collisionset.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/collisionset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/collisionset_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/collisionset_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/find_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/find_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/statecache.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/statecache.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +70,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/python/mstar/rewrite" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -109,29 +92,7 @@
       <recent name="$PROJECT_DIR$/python/solvers" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for collisionset_test.TestRecursiveCollisionSet.tests_from_colliding_indices">
-    <configuration name="generate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="research-project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assets/poster/matchings" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assets/poster/matchings/generate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="generate_map (1)" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,7 +181,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="odmstar_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="scratch_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -228,18 +189,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/temp" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp/odmstar_example.py" />
-      <option name="PARAMETERS" value="--map_shape 32 --n_agents 20 --obj_density 0.2 --inflation 1.1" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for collisionset_test.TestRecursiveCollisionSet" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/mstar/rewrite" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;collisionset_test.TestRecursiveCollisionSet&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests for collisionset_test.TestRecursiveCollisionSet.tests_from_colliding_indices" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -260,19 +236,19 @@
     <list>
       <item itemvalue="Python.main (no assert)" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.generate" />
       <item itemvalue="Python.generate_map (1)" />
       <item itemvalue="Python.generate_map" />
-      <item itemvalue="Python.odmstar_example" />
       <item itemvalue="Python tests.Unittests for collisionset_test.TestRecursiveCollisionSet.tests_from_colliding_indices" />
+      <item itemvalue="Python.scratch_1" />
+      <item itemvalue="Python tests.Unittests for collisionset_test.TestRecursiveCollisionSet" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for collisionset_test.TestRecursiveCollisionSet" />
+        <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python tests.Unittests for collisionset_test.TestRecursiveCollisionSet.tests_from_colliding_indices" />
         <item itemvalue="Python.generate_map (1)" />
         <item itemvalue="Python.generate_map" />
-        <item itemvalue="Python.generate" />
-        <item itemvalue="Python.odmstar_example" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +295,7 @@
       <workItem from="1622390738805" duration="3517000" />
       <workItem from="1622405948306" duration="202000" />
       <workItem from="1622406301223" duration="3000" />
-      <workItem from="1622449654374" duration="7241000" />
+      <workItem from="1622449654374" duration="11164000" />
     </task>
     <servers />
   </component>
@@ -428,19 +404,24 @@
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/mstar/rewrite/find_path.py</url>
-          <line>134</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/mstar/prematch/mstar.py</url>
           <line>174</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/mstar/rewrite/collisionset.py</url>
-          <line>87</line>
+          <line>95</line>
           <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/mstar/rewrite/collisionset.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/mstar/rewrite/state.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -458,8 +439,10 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/research_project$Unittests_for_collisionset_test_TestRecursiveCollisionSet_tests_from_colliding_indices.coverage" NAME="Unittests for collisionset_test.TestRecursiveCollisionSet.tests_from_colliding_indices Coverage Results" MODIFIED="1622459022621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar/rewrite" />
-    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1622458019501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/research_project$Unittests_for_collisionset_test_TestRecursiveCollisionSet_tests_from_colliding_indices.coverage" NAME="Unittests for collisionset_test.TestRecursiveCollisionSet.tests_from_colliding_indices Coverage Results" MODIFIED="1622462557257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar/rewrite" />
+    <SUITE FILE_PATH="coverage/research_project$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1622463163216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1622464806416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/research_project$generate_map__1_.coverage" NAME="generate_map (1) Coverage Results" MODIFIED="1622299858723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/randomize" />
+    <SUITE FILE_PATH="coverage/research_project$Unittests_for_collisionset_test_TestRecursiveCollisionSet.coverage" NAME="Unittests for collisionset_test.TestRecursiveCollisionSet Coverage Results" MODIFIED="1622463955502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar/rewrite" />
   </component>
 </project>

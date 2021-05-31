@@ -5,8 +5,9 @@ from typing import Optional
 from math import inf
 
 from python.mstar.rewrite.identifier import Identifier
-from python.mstar.rewrite.collisionset import NormalCollisionSet, CollisionSet
+from python.mstar.rewrite.collisionset import NormalCollisionSet, CollisionSet, RecursiveCollisionSet
 from python.mstar.rewrite.path import Path
+from python.mstar.rewrite.config import Config
 
 from typing import TYPE_CHECKING
 
@@ -15,13 +16,23 @@ if TYPE_CHECKING:
 
 
 class State:
-    def __init__(self, identifier: Identifier):
+    def __init__(self, cfg: Optional[Config], identifier: Identifier, collision_set: Optional[CollisionSet] = None):
         self.identifier: Identifier = identifier
 
-        self.collision_set: CollisionSet = NormalCollisionSet()
+        if cfg is not None and cfg.recursive:
+            self.collision_set: CollisionSet = RecursiveCollisionSet()
+        elif cfg is not None and not cfg.recursive:
+            self.collision_set: CollisionSet = NormalCollisionSet()
+        else:
+            assert collision_set is not None
+            self.collision_set: CollisionSet = collision_set
+
         self.back_set = {}
 
+        # sometimes called back pointer
         self.parent = None
+
+        # used with recursive m*. sometimes called fwd pointer
         self.child = None
 
         self.cost = inf
@@ -39,12 +50,10 @@ class State:
         self.cost = inf
 
     def copy(self) -> State:
-        s = State(self.identifier)
+        s = State(None, self.identifier, self.collision_set)
         s.cost = self.cost
         s.heuristic = self.heuristic
         s.parent = self.parent
-        # TODO: Copy?
-        s.collision_set = self.collision_set
         s.back_set = self.back_set.copy()
         return s
 

@@ -74,6 +74,14 @@ class RecursiveCollisionSet(CollisionSet):
 
         self.set: frozenset[frozenset[int]] = inp
 
+    def __repr__(self):
+        return "RecursiveCollisionSet({" + ", ".join(
+            "{" + ", ".join(repr(j) for j in i) + "}" for i in self.set
+        ) + "})"
+
+    def __eq__(self, other):
+        return self.set == other.set
+
     @classmethod
     def from_colliding_indices(cls, indices: list[tuple[int, int]]):
         sets: list[frozenset] = []
@@ -91,15 +99,42 @@ class RecursiveCollisionSet(CollisionSet):
         return any(agent.index in s for s in self.set)
 
     def subset(self, other: RecursiveCollisionSet) -> bool:
-        raise NotImplemented
+        """
+        True if this set is a subset of another set
+        """
+
+        for s in self.set:
+            for os in other.set:
+                if s.issubset(os):
+                    break
+            else:
+                return False
+        return True
 
     def merge(self, other: RecursiveCollisionSet) -> RecursiveCollisionSet:
-        raise NotImplemented
+        sets: list[frozenset] = list(self.set)
+
+        # merge
+        for i in other.set:
+            for index, s in enumerate(sets):
+                if any(item in s for item in i):
+                    sets[index] = s.union(frozenset(i))
+                    break
+            else:
+                sets.append(frozenset(i))
+
+        # filter overlapping
+        merged_set = frozenset(
+            i
+            for i in sets
+            if not any(i.issubset(j) for j in sets if j is not i)
+        )
+        return self.__class__(merged_set)
 
     def is_colliding(self, agent: Agent) -> bool:
-        raise NotImplemented
+        return any(agent.index in s for s in self.set)
 
     def __len__(self) -> int:
-        raise NotImplemented
+        return sum(len(s) for s in self.set)
 
 

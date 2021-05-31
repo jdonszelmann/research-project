@@ -175,6 +175,9 @@ def find_path(
             else:
                 collisions = None
 
+            # if collisions is not None and len(collisions) != 0:
+            #     print(collisions)
+
             if collisions is None or len(collisions) == 0 or not new_state.is_standard:
                 if curr_state.cost + (cost := transition_cost(curr_state, new_state, num_agents, goal)) < new_state.cost:
                     new_state.cost = curr_state.cost + cost
