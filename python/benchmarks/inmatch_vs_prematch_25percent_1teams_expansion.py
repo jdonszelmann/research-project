@@ -51,6 +51,9 @@ def run_benchmark():
     inmatch: dict[int, list[Optional[float]]] = {}
     prematch: dict[int, list[Optional[float]]] = {}
 
+    inmatch_exp: dict[int, list[int]] = {}
+    prematch_exp: dict[int, list[int]] = {}
+
     all_problems = [[i[1] for i in parser.parse_batch(name.name)] for name in batchdir.iterdir() if name.is_dir()]
     all_problems.sort(key=lambda i: len(i[0].goals))
 
@@ -59,28 +62,32 @@ def run_benchmark():
             num_agents = len(problems[0].goals)
 
             if num_agents <= 1 or sum(1 for i in inmatch[num_agents - 1] if i is not None) != 0:
-                _ = run_with_timeout(p, ConfigurableMStar(
+                path = run_with_timeout(p, ConfigurableMStar(
                     inmatch_config
                 ), problems, 2 * 60)
 
                 tqdm.write(str(inmatch_config.expansions))
-                inmatch[num_agents] = copy.deepcopy(inmatch_config.expansions)
+                inmatch_exp[num_agents] = copy.deepcopy(inmatch_config.expansions)
+
+                inmatch[num_agents] = path
             else:
                 inmatch[num_agents] = [None for i in range(len(problems))]
 
             if num_agents <= 1 or sum(1 for i in prematch[num_agents - 1] if i is not None) != 0:
-                _ = run_with_timeout(p, ConfigurableMStar(
+                path = run_with_timeout(p, ConfigurableMStar(
                     prematch_config
                 ), problems, 2 * 60)
 
                 tqdm.write(str(inmatch_config.expansions))
-                prematch[num_agents] = copy.deepcopy(prematch_config.expansions)
+                prematch_exp[num_agents] = copy.deepcopy(prematch_config.expansions)
+
+                prematch[num_agents] = path
             else:
                 prematch[num_agents] = [None for i in range(len(problems))]
 
 
-    tqdm.write(str(inmatch))
-    tqdm.write(str(prematch))
+    tqdm.write(str(inmatch_exp))
+    tqdm.write(str(prematch_exp))
 
     output_data(batchdir / "results_inmatch_expansion.txt", inmatch)
     output_data(batchdir / "results_prematch_expansion.txt", inmatch)
