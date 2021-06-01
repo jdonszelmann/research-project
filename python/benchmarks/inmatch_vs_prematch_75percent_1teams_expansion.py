@@ -67,6 +67,7 @@ def run_benchmark():
                     inmatch_config
                 ), problems, 2 * 60)
 
+                print(path)
                 tqdm.write("\n")
                 tqdm.write(f"{len(inmatch_config.expansions), sum(inmatch_config.expansions)}")
                 tqdm.write("\n")
@@ -83,6 +84,7 @@ def run_benchmark():
                     prematch_config
                 ), problems, 2 * 60)
 
+                print(path)
                 tqdm.write("\n")
                 tqdm.write(f"{len(prematch_config.expansions), sum(prematch_config.expansions)}")
                 tqdm.write("\n")
