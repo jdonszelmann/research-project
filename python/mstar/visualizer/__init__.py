@@ -1,15 +1,15 @@
 from __future__ import annotations
 
-import threading
-import time
+# import threading
+# import time
 from collections import Callable
 
-import pyglet.app
+# import pyglet.app
 
-from python.mstar.visualizer.controls import Controls
-from python.mstar.visualizer.grid import Grid
-from python.mstar.visualizer.window import Window
-from threading import Thread
+# from python.mstar.visualizer.controls import Controls
+# from python.mstar.visualizer.grid import Grid
+# from python.mstar.visualizer.window import Window
+# from threading import Thread
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -18,23 +18,26 @@ if TYPE_CHECKING:
 
 class Visualizer:
     def __init__(self, *args, **kwargs):
-        self.grid = Grid(
-            *args,
-            **kwargs,
-        )
-        self.controls = Controls(self.grid)
-        self.window = Window(self.grid, self.controls)
+        pass
+        # self.grid = Grid(
+        #     *args,
+        #     **kwargs,
+        # )
+        # self.controls = Controls(self.grid)
+        # self.window = Window(self.grid, self.controls)
 
     def submit_state(self, state: State):
-        self.grid.submit_state(state)
+        pass
+        # self.grid.submit_state(state)
 
     @staticmethod
     def run(func: Callable, *args, **kwargs):
-        t = Thread(target=func, args=args, kwargs=kwargs)
-        t.daemon = False
-        t.start()
-
-        pyglet.app.run()
+        pass
+        # t = Thread(target=func, args=args, kwargs=kwargs)
+        # t.daemon = False
+        # t.start()
+        #
+        # pyglet.app.run()
 
     def end_sim(self):
         pass
