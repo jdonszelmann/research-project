@@ -9,29 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_3teams.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/parse_map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/run_with_timeout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/find_path_params.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/recurse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mstar/rewrite/state_cache_cache.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/collisionset.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/collisionset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/expand.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/expand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/expand_od.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/expand_od.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/find_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/find_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/goal.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/goal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/solvers/configurable_mstar_solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/solvers/configurable_mstar_solver.py" afterDir="false" />
-    </list>
+    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -308,7 +286,7 @@
       <workItem from="1622390738805" duration="3517000" />
       <workItem from="1622405948306" duration="202000" />
       <workItem from="1622406301223" duration="3000" />
-      <workItem from="1622449654374" duration="37670000" />
+      <workItem from="1622449654374" duration="38051000" />
     </task>
     <servers />
   </component>
@@ -457,6 +435,6 @@
     <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1622537336951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/research_project$generate_map__1_.coverage" NAME="generate_map (1) Coverage Results" MODIFIED="1622299858723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/randomize" />
     <SUITE FILE_PATH="coverage/research_project$Unittests_for_collisionset_test_TestRecursiveCollisionSet.coverage" NAME="Unittests for collisionset_test.TestRecursiveCollisionSet Coverage Results" MODIFIED="1622463955502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar/rewrite" />
-    <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_full_25percent.coverage" NAME="inmatch_vs_prematch_75percent_3teams Coverage Results" MODIFIED="1622545196268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_full_25percent.coverage" NAME="inmatch_vs_prematch_75percent_3teams Coverage Results" MODIFIED="1622545254975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
   </component>
 </project>
