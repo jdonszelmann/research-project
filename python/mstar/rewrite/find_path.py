@@ -152,6 +152,10 @@ def find_path(
         else:
             expansion = expand(curr_state, params)
 
+        if params.cfg.report_expansions:
+            params.cfg.report_expansion(len(list(expansion)))
+
+
         for new_identifier in expansion:
             new_state = params.state_cache.get(new_identifier)
 

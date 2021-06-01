@@ -25,7 +25,8 @@ class Config:
             recursive: bool = False,
             matching_strategy: MatchingStrategy = MatchingStrategy.Prematch,
             max_memory_usage: int = 3 * GigaByte,
-            debug: bool = False
+            debug: bool = False,
+            report_expansions: bool = False,
     ):
         self.operator_decomposition = operator_decomposition
         self.precompute_paths = precompute_paths
@@ -39,6 +40,12 @@ class Config:
 
         self.max_memory_usage = max_memory_usage
         self.debug = debug
+
+        self.report_expansions = report_expansions
+        self.expansions = []
+
+    def report_expansion(self, size: int):
+        self.expansions.append(size)
 
     @property
     def prematch(self) -> bool:

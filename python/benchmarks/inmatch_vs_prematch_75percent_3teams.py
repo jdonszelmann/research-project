@@ -4,6 +4,7 @@ from typing import Optional
 from mapfmclient import Problem
 from tqdm import tqdm
 
+from python.benchmarks.graph_output import graph_results
 from python.benchmarks.map import MapGenerator
 import pathlib
 
@@ -47,11 +48,18 @@ def run_benchmark():
     batchdir = this_dir / name
     parser = MapParser(batchdir)
 
+    if (batchdir / "results_inmatch.txt").exists():
+        print("data exists")
+        return
+    if (batchdir / "results_prematch.txt").exists():
+        print("data exists")
+        return
+
     # num agents : solutions
     inmatch: dict[int, list[Optional[float]]] = {}
     prematch: dict[int, list[Optional[float]]] = {}
 
-    all_problems = [[i[1] for i in parser.parse_batch(name.name)] for name in batchdir.iterdir()]
+    all_problems = [[i[1] for i in parser.parse_batch(name.name)] for name in batchdir.iterdir() if name.is_dir()]
     all_problems.sort(key=lambda i: len(i[0].goals))
 
     with Pool(processes) as p:
@@ -87,7 +95,7 @@ def run_benchmark():
                         precompute_heuristic=True,
                         collision_avoidance_table=False,
                         recursive=False,
-                        matching_strategy=MatchingStrategy.SortedPruningPrematch,
+                        matching_strategy=MatchingStrategy.Prematch,
                         max_memory_usage=3 * GigaByte,
                         debug=False,
                     )
@@ -101,8 +109,23 @@ def run_benchmark():
     tqdm.write(str(inmatch))
     tqdm.write(str(prematch))
 
+    output_data(batchdir / "results_inmatch.txt", inmatch)
+    output_data(batchdir / "results_prematch.txt", inmatch)
+
+
+def output_data(file: pathlib.Path, data: dict[int, list[float]]):
+    with open(file, "w") as f:
+        for i, r in sorted([(a, b) for a, b in data.items()], key=lambda x: x[0]):
+            f.write(f"{i}: {r}")
 
 
 if __name__ == '__main__':
+    batchdir = this_dir / name
+
     generate_maps()
     run_benchmark()
+
+    graph_results(
+        # ("results_inmatch.txt", "inmatch"),
+        (batchdir / "results_prematch.txt", "pruning prematch")
+    )
