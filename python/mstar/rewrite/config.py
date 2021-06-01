@@ -46,7 +46,6 @@ class Config:
 
     def report_expansion(self, size: int):
         self.expansions.append(size)
-        print(self.expansions)
 
     @property
     def prematch(self) -> bool:
