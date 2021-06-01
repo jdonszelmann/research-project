@@ -56,7 +56,7 @@ def run_benchmark():
     all_problems = [[i[1] for i in parser.parse_batch(name.name)] for name in batchdir.iterdir() if name.is_dir()]
     all_problems.sort(key=lambda i: len(i[0].goals))
     with open(batchdir / "results_inmatch_expansion.txt", "w") as imf:
-        with open(batchdir / "results_inmatch_expansion.txt", "w") as pmf:
+        with open(batchdir / "results_prematch_expansion.txt", "w") as pmf:
 
             with Pool(processes) as p:
                 for problems in tqdm(all_problems):
@@ -67,9 +67,9 @@ def run_benchmark():
                             inmatch_config
                         ), problems, 2 * 60)
 
-                        tqdm.write("\n\n\n")
-                        tqdm.write(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
-                        tqdm.write("\n\n\n")
+                        print("\n\n\n")
+                        print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
+                        print("\n\n\n")
 
                         inmatch[num_agents] = expansions
                         imf.writelines([f"{num_agents}: {expansions}"])
@@ -81,9 +81,9 @@ def run_benchmark():
                             prematch_config
                         ), problems, 2 * 60)
 
-                        tqdm.write("\n\n\n")
-                        tqdm.write(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
-                        tqdm.write("\n\n\n")
+                        print("\n\n\n")
+                        print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
+                        print("\n\n\n")
 
                         pmf.writelines([f"{num_agents}: {expansions}"])
                         prematch[num_agents] = expansions
