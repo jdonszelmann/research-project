@@ -87,7 +87,7 @@ def run_benchmark():
                         precompute_heuristic=True,
                         collision_avoidance_table=False,
                         recursive=False,
-                        matching_strategy=MatchingStrategy.Prematch,
+                        matching_strategy=MatchingStrategy.SortedPruningPrematch,
                         max_memory_usage=3 * GigaByte,
                         debug=False,
                     )
