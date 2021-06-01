@@ -15,7 +15,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "inmatch_vs_prematch_75percent_3teams_maps"
-processes = 12
+processes = 10
 
 def generate_maps():
     path = this_dir / name
@@ -91,7 +91,7 @@ def run_benchmark():
                     )
                 ), problems, 2 * 60)
 
-                tqdm.write(f"inmatch with {num_agents} agents: {sols_prematch}")
+                tqdm.write(f"prematch with {num_agents} agents: {sols_prematch}")
                 prematch[num_agents] = sols_prematch
             else:
                 prematch[num_agents] = [None for i in range(len(problems))]
