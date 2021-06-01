@@ -69,6 +69,8 @@ def run_benchmark():
 
                 print("\n")
                 print(len(inmatch_config.expansions), sum(inmatch_config.expansions))
+                print("\n")
+
                 inmatch_exp[num_agents] = copy.deepcopy(inmatch_config.expansions)
                 inmatch_config.expansions = []
 
@@ -83,6 +85,8 @@ def run_benchmark():
 
                 print("\n")
                 print(len(prematch_config.expansions), sum(prematch_config.expansions))
+                print("\n")
+
                 prematch_exp[num_agents] = copy.deepcopy(prematch_config.expansions)
                 prematch_config.expansions = []
 
