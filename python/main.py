@@ -25,7 +25,7 @@ def submit(algorithm: MapfAlgorithm):
         #         num_teams=2,
         #     ),
         # ),cp5
-        11,
+        59,
         algorithm.name,
         algorithm.version,
         True,
@@ -51,8 +51,8 @@ if __name__ == '__main__':
         precompute_paths=False,
         precompute_heuristic=True,
         collision_avoidance_table=False,
-        recursive=True,
-        matching_strategy=MatchingStrategy.SortedPruningPrematch,
+        recursive=False,
+        matching_strategy=MatchingStrategy.Inmatch,
         max_memory_usage=3 * GigaByte,
         debug=False,
     )))

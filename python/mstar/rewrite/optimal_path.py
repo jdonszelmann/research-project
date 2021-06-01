@@ -51,22 +51,22 @@ class OptimalPath:
         return min_cost, agent.with_new_position(min_cost_neighbour)
 
     def best_move_inmatch(self, agent: Agent) -> list[Agent]:
-        # return [
-        #     self.__find_best_move_internal(agent, distance_to_goal)[1]
-        #     for distance_to_goal in self.path_cache.paths_for_colour(agent.colour)
-        # ]
+        return [
+            self.__find_best_move_internal(agent, distance_to_goal)[1]
+            for distance_to_goal in self.path_cache.paths_for_colour(agent.colour)
+        ]
 
 
-        cost, best_move = min(
-            (
-                self.__find_best_move_internal(agent, distance_to_goal)
-                for distance_to_goal in self.path_cache.paths_for_colour(agent.colour)
-            ),
-
-            key=lambda i: i[0]
-        )
-
-        return [best_move]
+        # cost, best_move = min(
+        #     (
+        #         self.__find_best_move_internal(agent, distance_to_goal)
+        #         for distance_to_goal in self.path_cache.paths_for_colour(agent.colour)
+        #     ),
+        #
+        #     key=lambda i: i[0]
+        # )
+        #
+        # return [best_move]
 
 
     def best_move_prematch(self, agent: Agent) -> list[Agent]:
