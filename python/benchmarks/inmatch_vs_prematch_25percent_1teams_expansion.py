@@ -28,6 +28,7 @@ inmatch_config = Config(
     matching_strategy=MatchingStrategy.Inmatch,
     max_memory_usage=3 * GigaByte,
     debug=False,
+    report_expansions=True,
 )
 
 
@@ -40,6 +41,7 @@ prematch_config = Config(
     matching_strategy=MatchingStrategy.Prematch,
     max_memory_usage=3 * GigaByte,
     debug=False,
+    report_expansions=True,
 )
 
 
@@ -68,6 +70,7 @@ def run_benchmark():
 
                 tqdm.write(str(inmatch_config.expansions))
                 inmatch_exp[num_agents] = copy.deepcopy(inmatch_config.expansions)
+                inmatch_config.expansions = []
 
                 inmatch[num_agents] = path
             else:
@@ -78,8 +81,10 @@ def run_benchmark():
                     prematch_config
                 ), problems, 2 * 60)
 
-                tqdm.write(str(inmatch_config.expansions))
+                tqdm.write(str(prematch_config.expansions))
                 prematch_exp[num_agents] = copy.deepcopy(prematch_config.expansions)
+                prematch_config.expansions = []
+
 
                 prematch[num_agents] = path
             else:
