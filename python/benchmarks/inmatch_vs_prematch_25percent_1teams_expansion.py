@@ -67,6 +67,7 @@ def run_benchmark():
                             inmatch_config
                         ), problems, 2 * 60)
 
+                        print([i for i in range(1000)])
                         print("\n\n\n")
                         print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
                         print("\n\n\n")
@@ -81,6 +82,7 @@ def run_benchmark():
                             prematch_config
                         ), problems, 2 * 60)
 
+                        print([i for i in range(1000)])
                         print("\n\n\n")
                         print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
                         print("\n\n\n")
