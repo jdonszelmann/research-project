@@ -58,6 +58,7 @@ def run_benchmark():
         for problems in tqdm(all_problems):
             num_agents = len(problems[0].goals)
 
+            print("inmatch")
             if num_agents <= 1 or sum(1 for i in inmatch[num_agents - 1] if i is not None) != 0:
                 sols_inmatch = run_with_timeout(p, ConfigurableMStar(
                     Config(
@@ -77,6 +78,7 @@ def run_benchmark():
             else:
                 inmatch[num_agents] = [None for i in range(len(problems))]
 
+            print("prematch")
             if num_agents > 1 and sum(1 for i in prematch[num_agents - 1] if i is not None) != 0:
                 sols_prematch = run_with_timeout(p, ConfigurableMStar(
                     Config(
