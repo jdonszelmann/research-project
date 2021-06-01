@@ -68,7 +68,7 @@ def run_benchmark():
                     inmatch_config
                 ), problems, 2 * 60)
 
-                print(inmatch_config.expansions)
+                print(len(inmatch_config.expansions), sum(inmatch_config.expansions))
                 inmatch_exp[num_agents] = copy.deepcopy(inmatch_config.expansions)
                 inmatch_config.expansions = []
 
@@ -81,7 +81,7 @@ def run_benchmark():
                     prematch_config
                 ), problems, 2 * 60)
 
-                print(prematch_config.expansions)
+                print(len(prematch_config.expansions), sum(prematch_config.expansions))
                 prematch_exp[num_agents] = copy.deepcopy(prematch_config.expansions)
                 prematch_config.expansions = []
 
@@ -89,8 +89,6 @@ def run_benchmark():
             else:
                 prematch[num_agents] = [None for i in range(len(problems))]
 
-    tqdm.write(str(inmatch_exp))
-    tqdm.write(str(prematch_exp))
 
     output_data(batchdir / "results_inmatch_expansion.txt", inmatch)
     output_data(batchdir / "results_prematch_expansion.txt", inmatch)
