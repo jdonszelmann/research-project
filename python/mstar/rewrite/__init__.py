@@ -4,6 +4,7 @@ from mapfmclient import Problem, MarkedLocation
 from tqdm import tqdm
 
 from python.mstar.rewrite.config import Config, MatchingStrategy
+from python.mstar.rewrite.find_path_params import FindPathParams
 from python.mstar.rewrite.grid import Grid
 from python.mstar.rewrite.heuristic import Heuristic
 from python.mstar.rewrite.identifier import Identifier
@@ -15,6 +16,7 @@ from python.mstar.rewrite.state import State
 from python.mstar.rewrite.statecache import StateCache
 from python.mstar.rewrite.goal import StateGoal, AllAgentGoal
 from python.mstar.rewrite.matchings import matchings
+from python.mstar.rewrite.state_cache_cache import StateCacheCache
 
 
 class MatchingWithHeuristic:
@@ -39,6 +41,11 @@ class MatchingWithHeuristic:
         if cfg.pruning_prematch:
             self.heuristic_value = self.heuristic.heuristic(start_state)
 
+        if cfg.recursive:
+            self.state_cache_cache = StateCacheCache(self.goal_state, state_cache)
+        else:
+            self.state_cache_cache = None
+
 
 def mstar(cfg: Config, problem: Problem) -> Optional[Path]:
     grid = Grid(problem.grid)
@@ -54,6 +61,7 @@ def mstar(cfg: Config, problem: Problem) -> Optional[Path]:
     start_state = state_cache.get(start_identifier)
 
     num_agents = len(problem.starts)
+
 
     if cfg.prematch:
 
@@ -78,15 +86,20 @@ def mstar(cfg: Config, problem: Problem) -> Optional[Path]:
             state_cache.reset()
 
             found_path = find_path(
-                cfg,
-                start_state, matching.goal,
+                start_state,
 
-                num_agents=num_agents,
+                FindPathParams(
+                    cfg=cfg,
+                    goal=matching.goal,
 
-                grid=grid,
-                optimal_path=matching.optimal_path,
-                state_cache=state_cache,
-                heuristic=matching.heuristic,
+                    num_agents=num_agents,
+
+                    grid=grid,
+                    optimal_path=matching.optimal_path,
+                    state_cache=state_cache,
+                    heuristic=matching.heuristic,
+                    state_cache_cache=matching.state_cache_cache,
+                )
             )
 
             if found_path is not None:
@@ -108,13 +121,18 @@ def mstar(cfg: Config, problem: Problem) -> Optional[Path]:
         heuristic = Heuristic(cfg, optimal_path)
 
         return find_path(
-            cfg,
-            start_state, goal,
+            start_state,
 
-            num_agents=num_agents,
+            FindPathParams(
+                cfg=cfg,
+                goal=goal,
 
-            grid=grid,
-            optimal_path=optimal_path,
-            state_cache=state_cache,
-            heuristic=heuristic,
+                num_agents=num_agents,
+
+                grid=grid,
+                optimal_path=optimal_path,
+                state_cache=state_cache,
+                heuristic=heuristic,
+                state_cache_cache=None,  # only valid with prematching
+            )
         )

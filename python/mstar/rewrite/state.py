@@ -12,6 +12,7 @@ from python.mstar.rewrite.config import Config
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
+    from python.mstar.rewrite.goal import StateGoal
     from python.mstar.rewrite.heuristic import Heuristic
 
 
@@ -114,3 +115,23 @@ class State:
 
     def __repr__(self):
         return f"cost: {self.cost}, heuristic: {self.heuristic}, identifier: {self.identifier}"
+
+    def has_child(self) -> bool:
+        return self.child is not None
+
+    def has_parent(self) -> bool:
+        return self.parent is not None
+
+    def set_child_pointers(self):
+        curr = self
+        while curr.has_parent():
+            parent = curr.parent
+            parent.child = curr
+            curr = parent
+
+    def find_deepest_child(self):
+        curr = self
+        while curr.has_child():
+            curr = curr.child
+
+        return curr

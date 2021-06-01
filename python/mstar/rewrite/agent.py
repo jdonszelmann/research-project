@@ -48,7 +48,7 @@ class Agent:
 
     def __repr__(self):
         if self.is_uncalculated():
-            return "UncalculatedAgent    "
+            return "UncalculatedAgent"
         else:
             return f"Agent({self.location}, {self.accumulated_cost}, {self.index})"
 

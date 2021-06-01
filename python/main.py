@@ -25,7 +25,7 @@ def submit(algorithm: MapfAlgorithm):
         #         num_teams=2,
         #     ),
         # ),cp5
-        16,
+        11,
         algorithm.name,
         algorithm.version,
         True,

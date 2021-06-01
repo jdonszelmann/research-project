@@ -1,14 +1,11 @@
 from typing import Optional
 
-from python.mstar.rewrite.config import Config
+from python.mstar.rewrite.find_path_params import FindPathParams
 from python.mstar.rewrite.heuristic import Heuristic
-from python.mstar.rewrite.grid import Grid
 from python.mstar.rewrite.state import State
-from python.mstar.rewrite.statecache import StateCache
 from python.mstar.rewrite.expand import expand
 from python.mstar.rewrite.expand_od import expand_od
 from python.mstar.rewrite.goal import Goal
-from python.mstar.rewrite.optimal_path import OptimalPath
 from python.mstar.rewrite.path import Path
 from python.mstar.rewrite.collisionset import CollisionSet
 from python.priority_queue.fast_contains import FastContainsPriorityQueue
@@ -25,10 +22,10 @@ def find_collisions(curr_state: State, new_state: State) -> CollisionSet:
     for a1 in range(len(curr_agents)):
         for a2 in range(min(a1, len(new_agents))):
             if new_agents[a1] == new_agents[a2]:
-                res.append((a1, a2))
+                res.append((new_agents[a1].index, new_agents[a2].index))
 
             elif curr_agents[a1] == new_agents[a2] and new_agents[a1] == curr_agents[a2]:
-                res.append((a1, a2))
+                res.append((new_agents[a1].index, new_agents[a2].index))
 
     return curr_state.collision_set.__class__.from_colliding_indices(res)
 
@@ -94,64 +91,69 @@ def transition_cost(
         return cost
     elif not curr_state.is_standard and new_state.is_standard:
         cost = 0
-        for curr_agent, new_agent in zip(
+        for curr_agent, new_agent, curr_agent_actual in zip(
                 curr_state.identifier.partial,
                 new_state.identifier.partial,
+                curr_state.identifier.actual,
         ):
             if curr_agent.is_uncalculated() and \
-                    not (goal.on_goal(curr_agent) and goal.on_goal(new_agent)):
+                    not (goal.on_goal(curr_agent_actual) and goal.on_goal(new_agent)):
                 cost += 1
         return cost
     else:
         cost = 0
-        for curr_agent, new_agent in zip(
+        for curr_agent, new_agent, curr_agent_actual in zip(
                 curr_state.identifier.partial,
                 new_state.identifier.partial,
+                curr_state.identifier.actual,
         ):
             if curr_agent.is_uncalculated() and \
                     not new_agent.is_uncalculated() and \
-                    not (goal.on_goal(curr_agent) and goal.on_goal(new_agent)):
+                    not (goal.on_goal(curr_agent_actual) and goal.on_goal(new_agent)):
                 cost += 1
         return cost
 
 
 def find_path(
-        cfg: Config,
         start: State,
-        goal: Goal,
 
-        num_agents: int,
-
-        grid: Grid,
-        optimal_path: OptimalPath,
-        state_cache: StateCache,
-        heuristic: Heuristic,
+        params: FindPathParams
 ) -> Optional[Path]:
     pq = FastContainsPriorityQueue()
     start.cost = 0
-    start.set_heuristic(heuristic)
+    start.set_heuristic(params.heuristic)
     pq.enqueue(start)
 
     while not pq.empty():
-        if not cfg.memory_usage_ok():
+        if not params.cfg.memory_usage_ok():
             tqdm.write("memory limiter")
             return None
 
         curr_state: State = pq.dequeue()
 
-        if cfg.debug:
+        if params.cfg.debug:
             tqdm.write(repr(curr_state))
 
-        if goal.is_goal(curr_state):
+        if params.goal.is_goal(curr_state):
+            if params.cfg.recursive:
+                curr_state.set_child_pointers()
+
             return curr_state.backtrack()
 
-        if cfg.operator_decomposition:
-            expansion = expand_od(curr_state, grid, optimal_path)
+        if params.cfg.recursive and curr_state.has_child():
+            curr_state.set_child_pointers()
+            child = curr_state.find_deepest_child()
+            assert params.goal.is_goal(child)
+            return child.backtrack()
+
+
+        if params.cfg.operator_decomposition:
+            expansion = expand_od(params.cfg, curr_state, params)
         else:
-            expansion = expand(curr_state, grid, optimal_path)
+            expansion = expand(curr_state, params)
 
         for new_identifier in expansion:
-            new_state = state_cache.get(new_identifier)
+            new_state = params.state_cache.get(new_identifier)
 
             collisions: Optional[CollisionSet]
             if new_state.is_standard:
@@ -164,14 +166,14 @@ def find_path(
                 new_state.merge_collision_sets(collisions)
 
                 if curr_state.is_standard:
-                    backprop(curr_state, new_state, pq, heuristic)
+                    backprop(curr_state, new_state, pq, params.heuristic)
                 else:
                     p = curr_state
                     while p is not None and not p.is_standard:
                         p = p.parent
 
                     if p is not None:
-                        backprop(p, new_state, pq, heuristic)
+                        backprop(p, new_state, pq, params.heuristic)
             else:
                 collisions = None
 
@@ -179,9 +181,9 @@ def find_path(
             #     print(collisions)
 
             if collisions is None or len(collisions) == 0 or not new_state.is_standard:
-                if curr_state.cost + (cost := transition_cost(curr_state, new_state, num_agents, goal)) < new_state.cost:
+                if curr_state.cost + (cost := transition_cost(curr_state, new_state, params.num_agents, params.goal)) < new_state.cost:
                     new_state.cost = curr_state.cost + cost
-                    new_state.set_heuristic(heuristic)
+                    new_state.set_heuristic(params.heuristic)
 
                     new_state.parent = curr_state
 

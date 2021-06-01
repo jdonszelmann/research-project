@@ -16,11 +16,11 @@ class ConfigurableMStar(MapfAlgorithm):
         self.cfg = cfg
 
     def solve(self, problem: Problem) -> Solution:
-        start = time.time()
+        # start = time.time()
 
         solution = mstar(self.cfg, problem)
 
-        tqdm.write(f"{(time.time() - start) * 1000}ms")
+        # tqdm.write(f"{(time.time() - start) * 1000}ms")
 
         if solution is None:
             tqdm.write("no solution")

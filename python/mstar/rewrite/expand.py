@@ -1,9 +1,9 @@
 from typing import Iterable
 
+from python.mstar.rewrite.find_path_params import FindPathParams
 from python.mstar.rewrite.agent import Agent
 from python.mstar.rewrite.grid import Grid
 from python.mstar.rewrite.identifier import Identifier
-from python.mstar.rewrite.optimal_path import OptimalPath
 from python.mstar.rewrite.state import State
 
 import itertools
@@ -21,7 +21,7 @@ def expand_position(agent: Agent, grid: Grid) -> list[Agent]:
     ]
 
 
-def expand(curr_state: State, grid: Grid, optimal_path: OptimalPath) -> Iterable[Identifier]:
+def expand(curr_state: State, params: FindPathParams) -> Iterable[Identifier]:
     """
     Expand a state into it's children states
     """
@@ -32,11 +32,11 @@ def expand(curr_state: State, grid: Grid, optimal_path: OptimalPath) -> Iterable
 
         # if an agent is colliding, expand it fully
         if curr_state.collision_set.is_colliding(agent):
-            res = expand_position(agent, grid)
+            res = expand_position(agent, params.grid)
 
         # otherwise, expand following the individually optimal path
         else:
-            res = optimal_path.best_move(agent)
+            res = params.optimal_path.best_move(agent)
 
         per_agent_expansion.append(res)
 

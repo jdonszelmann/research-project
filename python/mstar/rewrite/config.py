@@ -34,6 +34,9 @@ class Config:
         self.recursive = recursive
         self.matching_strategy = matching_strategy
 
+        if self.recursive:
+            assert not self.inmatch, "matching strategy cannot be inmatch when using recursive M*"
+
         self.max_memory_usage = max_memory_usage
         self.debug = debug
 

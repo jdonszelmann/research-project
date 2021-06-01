@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from abc import ABCMeta, abstractmethod
-from typing import Optional
+from typing import Optional, Iterator
 
 import itertools
 
@@ -137,4 +137,9 @@ class RecursiveCollisionSet(CollisionSet):
     def __len__(self) -> int:
         return sum(len(s) for s in self.set)
 
+    def num_groups(self) -> int:
+        return len(self.set)
+
+    def groups(self) -> Iterator[frozenset[int]]:
+        yield from self.set
 
