@@ -152,7 +152,6 @@ def find_path(
         else:
             expansion = expand(curr_state, params)
 
-        print(f"expansion {params.cfg.report_expansions}")
         if params.cfg.report_expansions:
             params.cfg.report_expansion(len(list(expansion)))
 
