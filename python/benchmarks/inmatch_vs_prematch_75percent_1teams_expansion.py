@@ -69,7 +69,7 @@ def run_benchmark():
 
                         print([i for i in range(1000)])
                         print("\n\n\n")
-                        print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
+                        print(f"{sum(len(i) for i in expansions if i is not None), sum(sum(i) for i in expansions if i is not None)}")
                         print("\n\n\n")
 
                         inmatch[num_agents] = expansions
@@ -84,7 +84,7 @@ def run_benchmark():
 
                         print([i for i in range(1000)])
                         print("\n\n\n")
-                        print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
+                        print(f"{sum(len(i) for i in expansions if i is not None), sum(sum(i) for i in expansions if i is not None)}")
                         print("\n\n\n")
 
                         pmf.writelines([f"{num_agents}: {expansions}"])
