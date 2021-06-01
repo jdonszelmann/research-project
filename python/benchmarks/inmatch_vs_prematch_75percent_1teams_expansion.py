@@ -3,6 +3,7 @@ from typing import Optional
 
 from tqdm import tqdm
 
+from python.benchmarks.graph_output import graph_results
 from python.benchmarks.inmatch_vs_prematch_75percent_1teams import generate_maps
 import pathlib
 
@@ -12,10 +13,11 @@ from python.mstar.rewrite import Config, MatchingStrategy
 from python.mstar.rewrite.config import GigaByte
 from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
+import copy
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "inmatch_vs_prematch_75percent_1teams_maps"
-processes = 10
+processes = 3
 
 inmatch_config = Config(
     operator_decomposition=False,
@@ -54,7 +56,7 @@ def run_benchmark():
     all_problems = [[i[1] for i in parser.parse_batch(name.name)] for name in batchdir.iterdir() if name.is_dir()]
     all_problems.sort(key=lambda i: len(i[0].goals))
     with open(batchdir / "results_inmatch_expansion.txt", "w") as imf:
-        with open(batchdir / "results_inmatch_expansion.txt", "w") as pmf:
+        with open(batchdir / "results_prematch_expansion.txt", "w") as pmf:
 
             with Pool(processes) as p:
                 for problems in tqdm(all_problems):
@@ -65,6 +67,7 @@ def run_benchmark():
                             inmatch_config
                         ), problems, 2 * 60)
 
+                        print([i for i in range(1000)])
                         print("\n\n\n")
                         print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
                         print("\n\n\n")
@@ -79,6 +82,7 @@ def run_benchmark():
                             prematch_config
                         ), problems, 2 * 60)
 
+                        print([i for i in range(1000)])
                         print("\n\n\n")
                         print(f"{sum(len(i) for i in expansions), sum(sum(i) for i in expansions)}")
                         print("\n\n\n")

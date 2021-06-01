@@ -17,7 +17,7 @@ import copy
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "inmatch_vs_prematch_25percent_1teams_maps"
-processes = 10
+processes = 3
 
 inmatch_config = Config(
     operator_decomposition=False,
