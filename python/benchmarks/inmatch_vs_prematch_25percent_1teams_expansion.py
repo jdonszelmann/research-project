@@ -3,7 +3,7 @@ from typing import Optional
 
 from tqdm import tqdm
 
-from python.benchmarks.graph_output import graph_results
+from python.benchmarks.graph_expansion import graph_results
 from python.benchmarks.inmatch_vs_prematch_25percent_1teams import generate_maps
 import pathlib
 
@@ -53,6 +53,13 @@ def run_benchmark():
     inmatch: dict[int, list[Optional[list[int]]]] = {}
     prematch: dict[int, list[Optional[list[int]]]] = {}
 
+    if (batchdir / "results_inmatch_expansion.txt").exists():
+        print("data exists")
+        return
+    if (batchdir / "results_prematch_expansion.txt").exists():
+        print("data exists")
+        return
+
     all_problems = [[i[1] for i in parser.parse_batch(name.name)] for name in batchdir.iterdir() if name.is_dir()]
     all_problems.sort(key=lambda i: len(i[0].goals))
     with open(batchdir / "results_inmatch_expansion.txt", "w") as imf:
@@ -73,7 +80,7 @@ def run_benchmark():
                         print("\n\n\n")
 
                         inmatch[num_agents] = expansions
-                        imf.writelines([f"{num_agents}: {expansions}"])
+                        imf.write(f"{num_agents}: {expansions}\n")
                     else:
                         inmatch[num_agents] = [None for i in range(len(problems))]
 
@@ -87,7 +94,7 @@ def run_benchmark():
                         print(f"{sum(len(i) for i in expansions if i is not None), sum(sum(i) for i in expansions if i is not None)}")
                         print("\n\n\n")
 
-                        pmf.writelines([f"{num_agents}: {expansions}"])
+                        pmf.write(f"{num_agents}: {expansions}\n")
                         prematch[num_agents] = expansions
                     else:
                         prematch[num_agents] = [None for i in range(len(problems))]
@@ -102,7 +109,8 @@ if __name__ == '__main__':
     generate_maps()
     run_benchmark()
 
-    # graph_results(
-    #     # ("results_inmatch_tmp.txt", "inmatch"),
-    #     (batchdir / "results_prematch.txt", "pruning prematch")
-    # )
+    graph_results(
+        (batchdir / "results_inmatch_expansion.txt", "inmatch"),
+        (batchdir / "results_prematch_expansion.txt", "prematch"),
+        batchdir / f"{name}_expansion.png"
+    )
