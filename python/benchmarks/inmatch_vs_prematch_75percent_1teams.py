@@ -125,6 +125,8 @@ if __name__ == '__main__':
     run_benchmark()
 
     graph_results(
-        # ("results_inmatch_tmp.txt", "inmatch"),
-        (batchdir / "results_prematch.txt", "pruning prematch")
+        (batchdir / "results_inmatch.txt", "inmatch"),
+        (batchdir / "results_prematch.txt", "prematch"),
+        batchdir / f"{name}.png"
+
     )

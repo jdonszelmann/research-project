@@ -121,7 +121,7 @@ def graph_results(*args):
                 timesxdata,
                 times10pydata,
                 times90pydata,
-                color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=50/100)
+                color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=30/100)
             )
             # times.plot(
             #     "--",
