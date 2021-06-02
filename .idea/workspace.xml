@@ -85,7 +85,7 @@
       <recent name="$PROJECT_DIR$/python/solvers" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.inmatch_vs_prematch_25percent_1teams_expansion">
+  <component name="RunManager" selected="Python.inmatch_vs_prematch_75percent_1teams_expansion">
     <configuration name="inmatch_vs_prematch_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,6 +147,28 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="inmatch_vs_prematch_75percent_1teams_expansion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_expansion.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -218,37 +240,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for collisionset_test.TestRecursiveCollisionSet" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="research-project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/mstar/rewrite" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;collisionset_test.TestRecursiveCollisionSet&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main (no assert)" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.inmatch_vs_prematch_75percent_3teams" />
       <item itemvalue="Python.inmatch_vs_prematch_25percent_3teams" />
       <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams" />
-      <item itemvalue="Python tests.Unittests for collisionset_test.TestRecursiveCollisionSet" />
       <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams_expansion" />
+      <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams_expansion" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams_expansion" />
         <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams_expansion" />
         <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams" />
         <item itemvalue="Python.inmatch_vs_prematch_25percent_3teams" />
         <item itemvalue="Python.inmatch_vs_prematch_75percent_3teams" />
-        <item itemvalue="Python tests.Unittests for collisionset_test.TestRecursiveCollisionSet" />
       </list>
     </recent_temporary>
   </component>
