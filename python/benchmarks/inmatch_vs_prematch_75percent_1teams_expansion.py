@@ -103,6 +103,6 @@ if __name__ == '__main__':
     run_benchmark()
 
     # graph_results(
-    #     # ("results_inmatch.txt", "inmatch"),
+    #     # ("results_inmatch_tmp.txt", "inmatch"),
     #     (batchdir / "results_prematch.txt", "pruning prematch")
     # )

@@ -49,6 +49,7 @@ def run_benchmark():
     if (batchdir / "results_inmatch.txt").exists():
         print("data exists")
         return
+
     if (batchdir / "results_prematch.txt").exists():
         print("data exists")
         return
@@ -64,25 +65,25 @@ def run_benchmark():
         for problems in tqdm(all_problems):
             num_agents = len(problems[0].goals)
 
-            print("inmatch")
-            if num_agents <= 1 or sum(1 for i in inmatch[num_agents - 1] if i is not None) != 0:
-                sols_inmatch = run_with_timeout(p, ConfigurableMStar(
-                    Config(
-                        operator_decomposition=False,
-                        precompute_paths=False,
-                        precompute_heuristic=True,
-                        collision_avoidance_table=False,
-                        recursive=False,
-                        matching_strategy=MatchingStrategy.Inmatch,
-                        max_memory_usage=3 * GigaByte,
-                        debug=False,
-                    )
-                ), problems, 2 * 60)
-
-                tqdm.write(f"inmatch with {num_agents} agents: {sols_inmatch}")
-                inmatch[num_agents] = sols_inmatch
-            else:
-                inmatch[num_agents] = [None for i in range(len(problems))]
+            # print("inmatch")
+            # if num_agents <= 1 or sum(1 for i in inmatch[num_agents - 1] if i is not None) != 0:
+            #     sols_inmatch = run_with_timeout(p, ConfigurableMStar(
+            #         Config(
+            #             operator_decomposition=False,
+            #             precompute_paths=False,
+            #             precompute_heuristic=True,
+            #             collision_avoidance_table=False,
+            #             recursive=False,
+            #             matching_strategy=MatchingStrategy.Inmatch,
+            #             max_memory_usage=3 * GigaByte,
+            #             debug=False,
+            #         )
+            #     ), problems, 2 * 60)
+            #
+            #     tqdm.write(f"inmatch with {num_agents} agents: {sols_inmatch}")
+            #     inmatch[num_agents] = sols_inmatch
+            # else:
+            #     inmatch[num_agents] = [None for i in range(len(problems))]
 
             print("prematch")
             if num_agents <= 1 or sum(1 for i in prematch[num_agents - 1] if i is not None) != 0:
@@ -107,14 +108,14 @@ def run_benchmark():
     tqdm.write(str(inmatch))
     tqdm.write(str(prematch))
 
-    output_data(batchdir / "results_inmatch.txt", inmatch)
-    output_data(batchdir / "results_prematch.txt", inmatch)
+    output_data(batchdir / "results_inmatch_tmp.txt", inmatch)
+    output_data(batchdir / "results_prematch.txt", prematch)
 
 
 def output_data(file: pathlib.Path, data: dict[int, list[float]]):
     with open(file, "w") as f:
         for i, r in sorted([(a, b) for a, b in data.items()], key=lambda x: x[0]):
-            f.write(f"{i}: {r}")
+            f.write(f"{i}: {r}\n")
 
 
 if __name__ == '__main__':
@@ -124,6 +125,6 @@ if __name__ == '__main__':
     run_benchmark()
 
     graph_results(
-        # ("results_inmatch.txt", "inmatch"),
-        (batchdir / "results_prematch.txt", "pruning prematch")
+        (batchdir / "results_inmatch.txt", "inmatch"),
+        (batchdir / "results_prematch.txt", "prematch")
     )

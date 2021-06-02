@@ -20,7 +20,7 @@ def rgb_to_colour(r, g, b):
 
 
 def average(l: list) -> float:
-    return sum(l) / len(l)
+    return sum(l) / len(l) if len(l) != 0 else -1
 
 
 def graph_results(*args):

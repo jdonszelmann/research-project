@@ -47,7 +47,7 @@ def run_benchmark():
     batchdir = this_dir / name
     parser = MapParser(batchdir)
 
-    if (batchdir / "results_inmatch.txt").exists():
+    if (batchdir / "results_inmatch_tmp.txt").exists():
         print("data exists")
         return
     if (batchdir / "results_prematch.txt").exists():
@@ -108,14 +108,14 @@ def run_benchmark():
     tqdm.write(str(inmatch))
     tqdm.write(str(prematch))
 
-    output_data(batchdir / "results_inmatch.txt", inmatch)
-    output_data(batchdir / "results_prematch.txt", inmatch)
+    output_data(batchdir / "results_inmatch_tmp.txt", inmatch)
+    output_data(batchdir / "results_prematch.txt", prematch)
 
 
 def output_data(file: pathlib.Path, data: dict[int, list[float]]):
     with open(file, "w") as f:
         for i, r in sorted([(a, b) for a, b in data.items()], key=lambda x: x[0]):
-            f.write(f"{i}: {r}")
+            f.write(f"{i}: {r}\n")
 
 
 if __name__ == '__main__':
@@ -125,6 +125,6 @@ if __name__ == '__main__':
     run_benchmark()
 
     graph_results(
-        # ("results_inmatch.txt", "inmatch"),
+        # ("results_inmatch_tmp.txt", "inmatch"),
         (batchdir / "results_prematch.txt", "pruning prematch")
     )
