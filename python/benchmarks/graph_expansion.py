@@ -20,6 +20,7 @@ def graph_results(*args):
 
     expansions.xaxis.set_major_locator(MaxNLocator(integer=True))
     expansions.set_ylabel("number of expanded states")
+    expansions.set_yscale('log')
 
     expansions.set_xlabel("number of agents")
 
