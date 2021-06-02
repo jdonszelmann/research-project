@@ -413,7 +413,6 @@ if __name__ == '__main__':
         plt.ylabel("% solved in 30 seconds")
         plt.xlabel("number of agents")
         plt.xticks([i for i in range(1, 12)])
-        plt.tight_layout()
         # plt.xlim(1, 10)
         for (name, dp), color in zip(copy.deepcopy(dict(data)).items(), colors):
             if len(data[0]) != 0 and type(name) == str:

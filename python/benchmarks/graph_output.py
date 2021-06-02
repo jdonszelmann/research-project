@@ -48,12 +48,12 @@ def percentile(l: list[float], perc: float) -> float:
 def graph_results(*args):
     plt.style.use('seaborn-whitegrid')
 
-    plt.rcParams["figure.figsize"] = (7, 7)
+    plt.rcParams["figure.figsize"] = (7, 5)
     plt.rcParams['font.size'] = '14'
     plt.tight_layout(pad=0)
     plt.margins(0, 0)
 
-    fig, (percentage, times) = plt.subplots(2, 1)
+    fig, (percentage, times) = plt.subplots(2, 1, sharex=True)
 
     plt.subplots_adjust(hspace=0.3)
 
@@ -61,8 +61,11 @@ def graph_results(*args):
     times.set_title("time to solution (10, 50 and 90th percentile)")
 
     percentage.xaxis.set_major_locator(MaxNLocator(integer=True))
+    percentage.set_ylabel("% solved")
     times.xaxis.set_major_locator(MaxNLocator(integer=True))
 
+    times.set_xlabel("number of agents")
+    times.set_ylabel("seconds")
     percentage.set_ylim(0, 105)
 
     save_location = args[-1]
@@ -86,14 +89,15 @@ def graph_results(*args):
 
                 solved_times = [i for i in after_list if i is not None]
 
-                percentagexdata.append(num_agents)
-                percentageydata.append(fraction_solved * 100)
+                if fraction_solved != 0:
+                    percentagexdata.append(num_agents)
+                    percentageydata.append(fraction_solved * 100)
 
-                if len(solved_times) != 0:
-                    timesxdata.append(num_agents)
-                    times10pydata.append(percentile(solved_times, 10))
-                    times50pydata.append(percentile(solved_times, 50))
-                    times90pydata.append(percentile(solved_times, 90))
+                    if len(solved_times) != 0:
+                        timesxdata.append(num_agents)
+                        times10pydata.append(percentile(solved_times, 10))
+                        times50pydata.append(percentile(solved_times, 50))
+                        times90pydata.append(percentile(solved_times, 90))
 
             percentage.plot(
                 percentagexdata,
