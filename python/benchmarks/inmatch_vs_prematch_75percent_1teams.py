@@ -4,7 +4,7 @@ from typing import Optional
 from mapfmclient import Problem
 from tqdm import tqdm
 
-from python.benchmarks.graph_output import graph_results
+from python.benchmarks.graph_expansion import graph_results
 from python.benchmarks.map import MapGenerator
 import pathlib
 
