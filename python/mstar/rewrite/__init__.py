@@ -80,7 +80,7 @@ def mstar(cfg: Config, problem: Problem) -> Optional[Path]:
             if cfg.pruning_prematch:
                 # if cfg.debug:
                 if best_path is not None and matching.heuristic_value >= best_path.cost:
-                    tqdm.write("pruned")
+                    #tqdm.write("pruned")
                     continue
 
             state_cache.reset()

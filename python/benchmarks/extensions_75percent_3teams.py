@@ -16,7 +16,7 @@ from python.mstar.rewrite.config import GigaByte
 from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "extensions_75percent_3teams_maps"
+name = "extensions_75percent_1teams_maps"
 processes = 10
 
 
@@ -89,7 +89,6 @@ if __name__ == '__main__':
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
-
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -110,7 +109,6 @@ if __name__ == '__main__':
         batchdir / f"{name}.png",
         save=False,
     )
-
 
     files.append(run(
         Config(
@@ -133,7 +131,6 @@ if __name__ == '__main__':
         save=False,
     )
 
-
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -155,7 +152,6 @@ if __name__ == '__main__':
         save=False,
     )
 
-
     files.append(run(
         Config(
             operator_decomposition=True,
@@ -163,7 +159,7 @@ if __name__ == '__main__':
             precompute_heuristic=False,
             collision_avoidance_table=False,
             recursive=False,
-            matching_strategy=MatchingStrategy.Prematch,
+            matching_strategy=MatchingStrategy.SortedPruningPrematch,
             max_memory_usage=3 * GigaByte,
             debug=False,
             report_expansions=True,
@@ -177,29 +173,6 @@ if __name__ == '__main__':
         save=False,
     )
 
-
-    files.append(run(
-        Config(
-            operator_decomposition=False,
-            precompute_paths=False,
-            precompute_heuristic=True,
-            collision_avoidance_table=False,
-            recursive=False,
-            matching_strategy=MatchingStrategy.Prematch,
-            max_memory_usage=3 * GigaByte,
-            debug=False,
-            report_expansions=True,
-        ),
-        "precompute heuristic"
-    ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-    )
-
-
     files.append(run(
         Config(
             operator_decomposition=True,
@@ -212,7 +185,7 @@ if __name__ == '__main__':
             debug=False,
             report_expansions=True,
         ),
-        "pruning, sorting and OD"
+        "precompute heuristic"
     ))
 
     graph_results(
