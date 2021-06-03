@@ -52,7 +52,7 @@ def run(config: Config, bm_name: str):
 
     if fname.exists():
         print(f"data exists for {bm_name}")
-        return
+        return fname, bm_name
 
     # num agents : solutions
     results: dict[int, list[Optional[float]]] = {}
