@@ -106,9 +106,9 @@ if __name__ == '__main__':
 
     generate_maps()
     run_benchmark()
-    #
-    # graph_results(
-    #     (batchdir / "results_inmatch_expansion.txt", "inmatch"),
-    #     (batchdir / "results_prematch_expansion.txt", "prematch"),
-    #     batchdir / f"{name}_expansion.png"
-    # )
+
+    graph_results(
+        (batchdir / "results_inmatch_expansion.txt", "inmatch"),
+        (batchdir / "results_prematch_expansion.txt", "prematch"),
+        batchdir / f"{name}_expansion.png"
+    )
