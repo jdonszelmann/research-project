@@ -6,7 +6,7 @@ from matplotlib.ticker import MaxNLocator
 from python.benchmarks.graph_times import rgb_to_colour, colors, average
 
 
-def graph_results(*args):
+def graph_results(*args, save=True):
     plt.style.use('seaborn-whitegrid')
 
     plt.rcParams["figure.figsize"] = (7, 5)
@@ -58,4 +58,5 @@ def graph_results(*args):
 
     plt.legend()
     plt.show()
-    fig.savefig(save_location, bbox_inches="tight", pad_inches=0)
+    if save:
+        fig.savefig(save_location, bbox_inches="tight", pad_inches=0)

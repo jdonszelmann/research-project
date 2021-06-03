@@ -105,6 +105,13 @@ if __name__ == '__main__':
         "no extensions"
     ))
 
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+    )
+
+
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -119,6 +126,13 @@ if __name__ == '__main__':
         ),
         "pruning"
     ))
+
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+    )
+
 
     files.append(run(
         Config(
@@ -135,6 +149,13 @@ if __name__ == '__main__':
         "pruning and sorting"
     ))
 
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+    )
+
+
     files.append(run(
         Config(
             operator_decomposition=True,
@@ -150,6 +171,13 @@ if __name__ == '__main__':
         "OD"
     ))
 
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+    )
+
+
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -164,6 +192,13 @@ if __name__ == '__main__':
         ),
         "precompute heuristic"
     ))
+
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+    )
+
 
     files.append(run(
         Config(
@@ -182,5 +217,6 @@ if __name__ == '__main__':
 
     graph_results(
         *files,
-        batchdir / f"{name}.png"
+        batchdir / f"{name}.png",
+        save=True,
     )

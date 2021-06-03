@@ -45,7 +45,7 @@ def percentile(l: list[float], perc: float) -> float:
     return v1 * f + v2 * (1 - f)
 
 
-def graph_results(*args):
+def graph_results(*args, save=True):
     plt.style.use('seaborn-whitegrid')
 
     plt.rcParams["figure.figsize"] = (7, 5)
@@ -139,4 +139,5 @@ def graph_results(*args):
 
     plt.legend()
     plt.show()
-    fig.savefig(save_location, bbox_inches="tight", pad_inches=0)
+    if save:
+        fig.savefig(save_location, bbox_inches="tight", pad_inches=0)
