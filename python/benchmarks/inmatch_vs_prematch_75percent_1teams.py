@@ -1,10 +1,9 @@
 from multiprocessing import Pool
 from typing import Optional
 
-from mapfmclient import Problem
 from tqdm import tqdm
 
-from python.benchmarks.graph_expansion import graph_results
+from python.benchmarks.graph_times import graph_results
 from python.benchmarks.map import MapGenerator
 import pathlib
 
