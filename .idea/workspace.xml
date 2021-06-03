@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/graph_expansion.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/graph_expansion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/graph_times.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/graph_times.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.inmatch_vs_prematch_25percent_1teams_expansion">
-    <configuration name="extensions_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="extensions_25percent_3teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,7 +101,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
@@ -250,13 +249,13 @@
       <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams_expansion" />
       <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams_expansion" />
       <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams" />
-      <item itemvalue="Python.extensions_25percent_1teams" />
+      <item itemvalue="Python.extensions_25percent_3teams" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams_expansion" />
         <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams_expansion" />
-        <item itemvalue="Python.extensions_25percent_1teams" />
+        <item itemvalue="Python.extensions_25percent_3teams" />
         <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams" />
         <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams" />
       </list>

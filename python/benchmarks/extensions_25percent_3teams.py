@@ -16,7 +16,7 @@ from python.mstar.rewrite.config import GigaByte
 from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "extensions_25percent_1teams_maps"
+name = "extensions_25percent_3teams_maps"
 processes = 10
 
 
