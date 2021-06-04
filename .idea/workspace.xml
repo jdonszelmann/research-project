@@ -9,10 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_pruning and sorting_backup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +83,7 @@
       <recent name="$PROJECT_DIR$/tex/rendered" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.extensions_25percent_3teams">
+  <component name="RunManager" selected="Python.extensions_75percent_3teams">
     <configuration name="extensions_25percent_3teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +106,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="inmatch_vs_prematch_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="extensions_75percent_3teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,10 +119,10 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -244,19 +241,19 @@
     <list>
       <item itemvalue="Python.main (no assert)" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams" />
       <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams_expansion" />
       <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams_expansion" />
       <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams" />
       <item itemvalue="Python.extensions_25percent_3teams" />
+      <item itemvalue="Python.extensions_75percent_3teams" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.extensions_75percent_3teams" />
         <item itemvalue="Python.extensions_25percent_3teams" />
         <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams_expansion" />
         <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams_expansion" />
         <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams" />
-        <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams" />
       </list>
     </recent_temporary>
   </component>
@@ -449,7 +446,7 @@
     <SUITE FILE_PATH="coverage/research_project$generate_map__1_.coverage" NAME="generate_map (1) Coverage Results" MODIFIED="1622299858723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/randomize" />
     <SUITE FILE_PATH="coverage/research_project$Unittests_for_collisionset_test_TestRecursiveCollisionSet.coverage" NAME="Unittests for collisionset_test.TestRecursiveCollisionSet Coverage Results" MODIFIED="1622463955502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar/rewrite" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_1teams.coverage" NAME="inmatch_vs_prematch_25percent_1teams Coverage Results" MODIFIED="1622652840172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/research_project$extensions_25percent_1teams.coverage" NAME="extensions_25percent_3teams Coverage Results" MODIFIED="1622739796348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$extensions_25percent_1teams.coverage" NAME="extensions_25percent_3teams Coverage Results" MODIFIED="1622765015554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_full_25percent.coverage" NAME="inmatch_vs_prematch_75percent_3teams Coverage Results" MODIFIED="1622628923733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
   </component>
 </project>
