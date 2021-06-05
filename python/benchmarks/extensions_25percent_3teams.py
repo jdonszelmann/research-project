@@ -180,51 +180,6 @@ if __name__ == '__main__':
     )
 
 
-    # files.append(run(
-    #     Config(
-    #         operator_decomposition=True,
-    #         precompute_paths=False,
-    #         precompute_heuristic=False,
-    #         collision_avoidance_table=False,
-    #         recursive=False,
-    #         matching_strategy=MatchingStrategy.SortedPruningPrematch,
-    #         max_memory_usage=3 * GigaByte,
-    #         debug=False,
-    #         report_expansions=True,
-    #     ),
-    #     "OD"
-    # ))
-    #
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
-
-    files.append(run(
-        Config(
-            operator_decomposition=True,
-            precompute_paths=False,
-            precompute_heuristic=True,
-            collision_avoidance_table=False,
-            recursive=False,
-            matching_strategy=MatchingStrategy.SortedPruningPrematch,
-            max_memory_usage=3 * GigaByte,
-            debug=False,
-            report_expansions=True,
-        ),
-        "precompute heuristic"
-    ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -240,13 +195,6 @@ if __name__ == '__main__':
         "precomputed heuristic"
     ))
 
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
     files.append(run(
         Config(
             operator_decomposition=True,
@@ -261,13 +209,6 @@ if __name__ == '__main__':
         ),
         "operator decomposition"
     ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
 
 
     graph_results(
