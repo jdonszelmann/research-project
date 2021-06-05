@@ -16,8 +16,8 @@ from python.mstar.rewrite.config import GigaByte
 from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "extensions_25percent_3teams_maps"
-processes = 6
+name = "extensions_75percent_1teams_maps"
+processes = 10
 
 
 def generate_maps():
@@ -36,25 +36,12 @@ def generate_maps():
             200,  # number of maps
             20, 20,  # size
             i,  # number of agents
-            3,  # number of teams
+            1,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
-            max_neighbors=3
+            max_neighbors=1
         )
-
-
-def read_from_file(filename: pathlib.Path, wanted_num_agents: int) -> list[Optional[float]]:
-    with open(filename, "r") as f:
-        for l in [l.strip() for l in f.readlines() if l.strip() != ""]:
-            before, after = l.split(":")
-            after_list = eval(after)
-            num_agents = int(before)
-            if num_agents == wanted_num_agents:
-                return after_list
-
-    raise Exception("number of agents not found in file")
-
 
 
 def run(config: Config, bm_name: str):
@@ -77,13 +64,6 @@ def run(config: Config, bm_name: str):
         for problems in tqdm(all_problems):
             num_agents = len(problems[0].goals)
 
-            partname = pathlib.Path(str(fname) + f".{num_agents}agents")
-            if partname.exists():
-                print(f"found data for part {num_agents}")
-                results[num_agents] = read_from_file(partname, num_agents)
-                continue
-
-
             if num_agents <= 1 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
                 sols_inmatch = run_with_timeout(p, ConfigurableMStar(
                     config
@@ -94,7 +74,6 @@ def run(config: Config, bm_name: str):
             else:
                 results[num_agents] = [None for i in range(len(problems))]
 
-            output_data(partname, results)
 
     tqdm.write(str(results))
 
@@ -109,7 +88,6 @@ if __name__ == '__main__':
 
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
-
 
     files.append(run(
         Config(
@@ -133,7 +111,6 @@ if __name__ == '__main__':
         bounds=False,
     )
 
-
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -155,7 +132,6 @@ if __name__ == '__main__':
         save=False,
         bounds=False,
     )
-
 
     files.append(run(
         Config(
@@ -179,52 +155,6 @@ if __name__ == '__main__':
         bounds=False,
     )
 
-
-    # files.append(run(
-    #     Config(
-    #         operator_decomposition=True,
-    #         precompute_paths=False,
-    #         precompute_heuristic=False,
-    #         collision_avoidance_table=False,
-    #         recursive=False,
-    #         matching_strategy=MatchingStrategy.SortedPruningPrematch,
-    #         max_memory_usage=3 * GigaByte,
-    #         debug=False,
-    #         report_expansions=True,
-    #     ),
-    #     "OD"
-    # ))
-    #
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
-
-    files.append(run(
-        Config(
-            operator_decomposition=True,
-            precompute_paths=False,
-            precompute_heuristic=True,
-            collision_avoidance_table=False,
-            recursive=False,
-            matching_strategy=MatchingStrategy.SortedPruningPrematch,
-            max_memory_usage=3 * GigaByte,
-            debug=False,
-            report_expansions=True,
-        ),
-        "precompute heuristic"
-    ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -237,7 +167,7 @@ if __name__ == '__main__':
             debug=False,
             report_expansions=True,
         ),
-        "precomputed heuristic"
+        "precompute heuristic"
     ))
 
     graph_results(
@@ -261,14 +191,6 @@ if __name__ == '__main__':
         ),
         "operator decomposition"
     ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
 
     graph_results(
         *files,
