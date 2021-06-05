@@ -17,7 +17,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "extensions_25percent_3teams_maps"
-processes = 6
+processes = 1
 
 
 def generate_maps():
@@ -180,21 +180,21 @@ if __name__ == '__main__':
     )
 
 
-    files.append(run(
-        Config(
-            operator_decomposition=True,
-            precompute_paths=False,
-            precompute_heuristic=False,
-            collision_avoidance_table=False,
-            recursive=False,
-            matching_strategy=MatchingStrategy.SortedPruningPrematch,
-            max_memory_usage=3 * GigaByte,
-            debug=False,
-            report_expansions=True,
-        ),
-        "OD"
-    ))
-
+    # files.append(run(
+    #     Config(
+    #         operator_decomposition=True,
+    #         precompute_paths=False,
+    #         precompute_heuristic=False,
+    #         collision_avoidance_table=False,
+    #         recursive=False,
+    #         matching_strategy=MatchingStrategy.SortedPruningPrematch,
+    #         max_memory_usage=3 * GigaByte,
+    #         debug=False,
+    #         report_expansions=True,
+    #     ),
+    #     "OD"
+    # ))
+    #
     graph_results(
         *files,
         batchdir / f"{name}.png",
@@ -217,6 +217,57 @@ if __name__ == '__main__':
         ),
         "precompute heuristic"
     ))
+
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+        bounds=False,
+    )
+
+    files.append(run(
+        Config(
+            operator_decomposition=False,
+            precompute_paths=False,
+            precompute_heuristic=True,
+            collision_avoidance_table=False,
+            recursive=False,
+            matching_strategy=MatchingStrategy.SortedPruningPrematch,
+            max_memory_usage=3 * GigaByte,
+            debug=False,
+            report_expansions=True,
+        ),
+        "precomputed heuristic"
+    ))
+
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+        bounds=False,
+    )
+
+    files.append(run(
+        Config(
+            operator_decomposition=True,
+            precompute_paths=False,
+            precompute_heuristic=True,
+            collision_avoidance_table=False,
+            recursive=False,
+            matching_strategy=MatchingStrategy.SortedPruningPrematch,
+            max_memory_usage=3 * GigaByte,
+            debug=False,
+            report_expansions=True,
+        ),
+        "operator decomposition"
+    ))
+
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+        bounds=False,
+    )
 
 
     graph_results(

@@ -125,9 +125,9 @@ def find_path(
     pq.enqueue(start)
 
     while not pq.empty():
-        if not params.cfg.memory_usage_ok():
-            tqdm.write("memory limiter")
-            return None
+        # if not params.cfg.memory_usage_ok():
+        #     tqdm.write("memory limiter")
+        #     return None
 
         curr_state: State = pq.dequeue()
 

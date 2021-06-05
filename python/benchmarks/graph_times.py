@@ -58,7 +58,11 @@ def graph_results(*args, save=True, bounds=True, fill_between=False):
     plt.subplots_adjust(hspace=0.3)
 
     percentage.set_title("% solved out of 200 maps")
-    times.set_title("time to solution (10, 50 and 90th percentile)")
+    if bounds:
+        times.set_title("time to solution (10, 50 and 90th percentile)")
+    else:
+        times.set_title("mean time to solution")
+
 
     percentage.xaxis.set_major_locator(MaxNLocator(integer=True))
     percentage.set_ylabel("% solved")
