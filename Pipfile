@@ -11,8 +11,6 @@ pyglet = "*"
 pygame = "*"
 imageio = "*"
 matplotlib = "*"
-optional = "*"
-pathlib = "*"
 
 [dev-packages]
 
