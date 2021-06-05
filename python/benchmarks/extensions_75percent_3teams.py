@@ -4,6 +4,7 @@ from typing import Optional
 from mapfmclient import Problem
 from tqdm import tqdm
 
+from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.inmatch_vs_prematch_75percent_1teams import output_data
 from python.benchmarks.map import MapGenerator
@@ -64,6 +65,12 @@ def run(config: Config, bm_name: str):
         for problems in tqdm(all_problems):
             num_agents = len(problems[0].goals)
 
+            partname = pathlib.Path(str(fname) + f".{num_agents}agents")
+            if partname.exists():
+                print(f"found data for part {num_agents}")
+                results[num_agents] = read_from_file(partname, num_agents)
+                continue
+
             if num_agents <= 1 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
                 sols_inmatch = run_with_timeout(p, ConfigurableMStar(
                     config
@@ -74,13 +81,13 @@ def run(config: Config, bm_name: str):
             else:
                 results[num_agents] = [None for i in range(len(problems))]
 
+            output_data(partname, results)
 
     tqdm.write(str(results))
 
     output_data(fname, results)
 
     return fname, bm_name
-
 
 
 if __name__ == '__main__':
@@ -155,11 +162,12 @@ if __name__ == '__main__':
         bounds=False,
     )
 
+
     files.append(run(
         Config(
-            operator_decomposition=True,
+            operator_decomposition=False,
             precompute_paths=False,
-            precompute_heuristic=False,
+            precompute_heuristic=True,
             collision_avoidance_table=False,
             recursive=False,
             matching_strategy=MatchingStrategy.SortedPruningPrematch,
@@ -167,7 +175,7 @@ if __name__ == '__main__':
             debug=False,
             report_expansions=True,
         ),
-        "OD"
+        "precomputed heuristic"
     ))
 
     graph_results(
@@ -176,6 +184,7 @@ if __name__ == '__main__':
         save=False,
         bounds=False,
     )
+
 
     files.append(run(
         Config(
@@ -189,7 +198,7 @@ if __name__ == '__main__':
             debug=False,
             report_expansions=True,
         ),
-        "precompute heuristic"
+        "operator decomposition"
     ))
 
     graph_results(

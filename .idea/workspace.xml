@@ -10,7 +10,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE_APACHE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE_MIT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/meeting-notes/meeting_april_8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/Generalizations.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/MAPF-definition.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/MAPF-netflow.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/TAPF.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/delay_probabilities.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/meta-agents.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/mstar-od.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/papers/mstar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams_maps/results_precompute heuristic.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams_maps/operator_decomposition.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/Cargo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/agent.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/astar_od_id.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/distance_heuristic.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/graphlike.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/grid.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/mapf_problem.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/mod.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/mapf/mstar.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/train.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust/src/traintype.rs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/token" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
@@ -85,7 +116,7 @@
       <recent name="$PROJECT_DIR$/tex/rendered" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.extensions_25percent_3teams">
+  <component name="RunManager" selected="Python.main">
     <configuration name="extensions_25percent_3teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,7 +155,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -251,8 +282,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.extensions_25percent_3teams" />
         <item itemvalue="Python.extensions_75percent_3teams" />
+        <item itemvalue="Python.extensions_25percent_3teams" />
         <item itemvalue="Python.inmatch_vs_prematch_25percent_1teams_expansion" />
         <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams_expansion" />
         <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams" />
@@ -307,7 +338,7 @@
       <workItem from="1622721869314" duration="18000" />
       <workItem from="1622788105129" duration="5323000" />
       <workItem from="1622817169475" duration="139000" />
-      <workItem from="1622840362018" duration="19519000" />
+      <workItem from="1622840362018" duration="23363000" />
     </task>
     <servers />
   </component>
@@ -448,7 +479,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/research_project$extensions_25percent_3teams.coverage" NAME="extensions_25percent_3teams Coverage Results" MODIFIED="1622913659273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_3teams.coverage" NAME="inmatch_vs_prematch_25percent_3teams Coverage Results" MODIFIED="1622628926488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1622903146665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1622917746138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams.coverage" NAME="inmatch_vs_prematch_75percent_1teams Coverage Results" MODIFIED="1622706147351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams_expansion.coverage" NAME="inmatch_vs_prematch_75percent_1teams_expansion Coverage Results" MODIFIED="1622730461387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$Unittests_for_collisionset_test_TestRecursiveCollisionSet.coverage" NAME="Unittests for collisionset_test.TestRecursiveCollisionSet Coverage Results" MODIFIED="1622463955502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar/rewrite" />
@@ -458,7 +489,7 @@
     <SUITE FILE_PATH="coverage/research_project$Unittests_for_collisionset_test_TestRecursiveCollisionSet_tests_from_colliding_indices.coverage" NAME="Unittests for collisionset_test.TestRecursiveCollisionSet.tests_from_colliding_indices Coverage Results" MODIFIED="1622462557257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/mstar/rewrite" />
     <SUITE FILE_PATH="coverage/research_project$scratch_1.coverage" NAME="scratch_1 Coverage Results" MODIFIED="1622463163216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/research_project$generate_map__1_.coverage" NAME="generate_map (1) Coverage Results" MODIFIED="1622299858723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/randomize" />
-    <SUITE FILE_PATH="coverage/research_project$extensions_75percent_3teams.coverage" NAME="extensions_75percent_3teams Coverage Results" MODIFIED="1622807133504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$extensions_75percent_3teams.coverage" NAME="extensions_75percent_3teams Coverage Results" MODIFIED="1622914966818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_full_25percent.coverage" NAME="inmatch_vs_prematch_75percent_3teams Coverage Results" MODIFIED="1622628923733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
   </component>
 </project>
