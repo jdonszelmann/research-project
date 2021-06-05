@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -308,7 +307,7 @@
       <workItem from="1622721869314" duration="18000" />
       <workItem from="1622788105129" duration="5323000" />
       <workItem from="1622817169475" duration="139000" />
-      <workItem from="1622840362018" duration="19484000" />
+      <workItem from="1622840362018" duration="19519000" />
     </task>
     <servers />
   </component>
