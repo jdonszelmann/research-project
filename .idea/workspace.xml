@@ -10,29 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precomputed heuristic.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precomputed heuristic.txt.12agents" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precomputed heuristic.txt.13agents" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precomputed heuristic.txt.14agents" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precomputed heuristic.txt.15agents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.10agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.11agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.12agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.13agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.14agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.15agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.1agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.3agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.5agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.6agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.7agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.8agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/results_precompute heuristic.txt.9agents" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -330,7 +308,7 @@
       <workItem from="1622721869314" duration="18000" />
       <workItem from="1622788105129" duration="5323000" />
       <workItem from="1622817169475" duration="139000" />
-      <workItem from="1622840362018" duration="18981000" />
+      <workItem from="1622840362018" duration="19484000" />
     </task>
     <servers />
   </component>
@@ -469,7 +447,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/research_project$extensions_25percent_3teams.coverage" NAME="extensions_25percent_3teams Coverage Results" MODIFIED="1622913130956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$extensions_25percent_3teams.coverage" NAME="extensions_25percent_3teams Coverage Results" MODIFIED="1622913659273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_3teams.coverage" NAME="inmatch_vs_prematch_25percent_3teams Coverage Results" MODIFIED="1622628926488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1622903146665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams.coverage" NAME="inmatch_vs_prematch_75percent_1teams Coverage Results" MODIFIED="1622706147351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
