@@ -117,6 +117,7 @@ def output_data(file: pathlib.Path, data: dict[int, list[float]]):
             f.write(f"{i}: {r}\n")
 
 
+
 if __name__ == '__main__':
     batchdir = this_dir / name
 

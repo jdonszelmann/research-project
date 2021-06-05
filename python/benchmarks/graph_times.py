@@ -45,7 +45,7 @@ def percentile(l: list[float], perc: float) -> float:
     return v1 * f + v2 * (1 - f)
 
 
-def graph_results(*args, save=True):
+def graph_results(*args, save=True, bounds=True, fill_between=False):
     plt.style.use('seaborn-whitegrid')
 
     plt.rcParams["figure.figsize"] = (7, 5)
@@ -69,6 +69,7 @@ def graph_results(*args, save=True):
     percentage.set_ylim(0, 105)
 
     save_location = args[-1]
+    ppydata = []
 
     for plt_index, (fn, label) in enumerate(args[:-1]):
         with open(fn, "r") as f:
@@ -107,6 +108,25 @@ def graph_results(*args, save=True):
                 linewidth=3,
             )
 
+            if fill_between:
+                if not ppydata:
+                    percentage.fill_between(
+                        percentagexdata,
+                        0,
+                        percentageydata,
+                        color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=50/100)
+                    )
+                else:
+                    while len(ppydata) < len(percentageydata):
+                        ppydata.append(0)
+                    percentage.fill_between(
+                        percentagexdata,
+                        ppydata,
+                        percentageydata,
+                        color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=50 / 100)
+                    )
+
+                ppydata = percentageydata
 
             times.plot(
                 timesxdata,
@@ -116,13 +136,13 @@ def graph_results(*args, save=True):
                 linewidth=3,
             )
 
-
-            times.fill_between(
-                timesxdata,
-                times10pydata,
-                times90pydata,
-                color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=50/100)
-            )
+            if bounds:
+                times.fill_between(
+                    timesxdata,
+                    times10pydata,
+                    times90pydata,
+                    color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=50/100)
+                )
             # times.plot(
             #     "--",
             #     color=rgb_to_colour(*colors[plt_index]),

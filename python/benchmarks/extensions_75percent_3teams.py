@@ -108,6 +108,7 @@ if __name__ == '__main__':
         *files,
         batchdir / f"{name}.png",
         save=False,
+        bounds=False,
     )
 
     files.append(run(
@@ -129,6 +130,7 @@ if __name__ == '__main__':
         *files,
         batchdir / f"{name}.png",
         save=False,
+        bounds=False,
     )
 
     files.append(run(
@@ -150,6 +152,7 @@ if __name__ == '__main__':
         *files,
         batchdir / f"{name}.png",
         save=False,
+        bounds=False,
     )
 
     files.append(run(
@@ -171,6 +174,7 @@ if __name__ == '__main__':
         *files,
         batchdir / f"{name}.png",
         save=False,
+        bounds=False,
     )
 
     files.append(run(
@@ -192,4 +196,5 @@ if __name__ == '__main__':
         *files,
         batchdir / f"{name}.png",
         save=True,
+        bounds=False,
     )
