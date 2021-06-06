@@ -1,0 +1,6 @@
+pygame~=2.0.1
+imageio~=2.9.0
+mapfmclient~=0.2.5
+tqdm~=4.60.0
+numpy~=1.20.3
+matplotlib~=3.4.2

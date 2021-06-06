@@ -1,4 +1,6 @@
+import pathlib as pathlib
 from mapfmclient import MapfBenchmarker, ProgressiveDescriptor, BenchmarkDescriptor, Problem, MarkedLocation
+import pathlib
 
 from python.algorithm import MapfAlgorithm
 from python.mstar.rewrite import Config
@@ -12,11 +14,15 @@ from python.solvers.prematch_recursive_mstar_solver_od import RMStarOD
 from python.solvers.mstar_solver import MStar
 from python.solvers.better_matching_astar import BetterMatchingAStar
 
+this_dir = pathlib.Path(__file__).parent.absolute()
+
+with open(this_dir / ".." / "token", "r") as f:
+    token = f.read()
+
 
 def submit(algorithm: MapfAlgorithm):
     benchmarker = MapfBenchmarker(
-        "5rtVuya7FkKNoU6J",
-        # "R5KpjLYp54YJz2KN",
+        token,
         # BenchmarkDescriptor(
         #     2801,
         #     progressive_descriptor=ProgressiveDescriptor(
@@ -32,8 +38,6 @@ def submit(algorithm: MapfAlgorithm):
         solver=algorithm.solve,
         cores=1,
         baseURL="https://mapf.nl",
-        # baseURL="http://localhost:40000",
-        # baseURL="http://localhost:8080",
     )
     benchmarker.run()
 
