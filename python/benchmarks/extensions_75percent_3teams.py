@@ -18,7 +18,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "extensions_75percent_3teams_maps"
-processes = 10
+processes = 6
 
 
 def generate_maps():
