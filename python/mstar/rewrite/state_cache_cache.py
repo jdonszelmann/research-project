@@ -17,8 +17,8 @@ class StateCacheCache:
             StateCache
         ] = {}
 
-        agents = state.identifier.actual
-        self.cache[frozenset(agent.index for agent in agents)] = cache
+        # agents = state.identifier.actual
+        # self.cache[frozenset(agent.index for agent in agents)] = cache
 
     def add(self, item: frozenset[int], cache: StateCache):
         self.cache[item] = cache

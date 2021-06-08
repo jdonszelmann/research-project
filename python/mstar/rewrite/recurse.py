@@ -67,6 +67,8 @@ def optimal_policy(disjoint_collision_group: frozenset[int],
 
     sub_goal = params.goal.for_agents(associated_agents)
 
+    print(disjoint_collision_group)
+
     assert len(disjoint_collision_group) == len(associated_agents)
 
     subgraph: dict[int, Agent]

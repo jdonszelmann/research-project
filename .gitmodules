@@ -1,0 +1,3 @@
+[submodule "python/benchmarks/comparison/matching-epea-star"]
+	path = python/benchmarks/comparison/matching-epea-star
+	url = git@github.com:jaapdejong15/matching-epea-star.git

@@ -181,6 +181,7 @@ def find_path(
             else:
                 collisions = None
 
+
             # if collisions is not None and len(collisions) != 0:
             #     print(collisions)
 
