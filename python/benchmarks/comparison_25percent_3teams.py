@@ -29,7 +29,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 20
+    num = 15
 
     dirnames = [n.name for n in batchdir.iterdir() if n.is_dir()]
 
