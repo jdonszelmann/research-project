@@ -103,30 +103,30 @@ if __name__ == '__main__':
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
-    # files.append(run(
-    #     lambda: ConfigurableMStar(
-    #         Config(
-    #             operator_decomposition=True,
-    #             precompute_paths=False,
-    #             precompute_heuristic=True,
-    #             collision_avoidance_table=False,
-    #             recursive=False,
-    #             matching_strategy=MatchingStrategy.SortedPruningPrematch,
-    #             max_memory_usage=3 * GigaByte,
-    #             debug=False,
-    #             report_expansions=False,
-    #         ),
-    #     ),
-    #     "M*"
-    # ))
-    #
-    #
-    # graph_results(
-    #     *files,
-    #     batchdir / f"{name}.png",
-    #     save=False,
-    #     bounds=False,
-    # )
+    files.append(run(
+        lambda: ConfigurableMStar(
+            Config(
+                operator_decomposition=True,
+                precompute_paths=False,
+                precompute_heuristic=True,
+                collision_avoidance_table=False,
+                recursive=False,
+                matching_strategy=MatchingStrategy.SortedPruningPrematch,
+                max_memory_usage=3 * GigaByte,
+                debug=False,
+                report_expansions=False,
+            ),
+        ),
+        "M*"
+    ))
+
+
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+        bounds=False,
+    )
 
     files.append(run(
         lambda: EPEAStar(),
