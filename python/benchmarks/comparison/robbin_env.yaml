@@ -1,0 +1,26 @@
+solver: MCF
+
+run-benchmark: no
+
+benchmark:
+    root: []
+    samples: 0
+    cores: 0
+    timeout: 0
+
+server-problem:
+    id: []
+    debug: yes
+    base-url: https://mapf.nl/
+    api-token: abcdefg
+    cores: 1
+
+debug:
+    ct-visualize: no
+    nf-visualize: no
+    log-solution: no
+    profile: no
+    print-memory: no
+    intermediates:
+        save: no
+        load_path: ""

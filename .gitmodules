@@ -1,3 +1,6 @@
 [submodule "python/benchmarks/comparison/matching-epea-star"]
 	path = python/benchmarks/comparison/matching-epea-star
 	url = git@github.com:jaapdejong15/matching-epea-star.git
+[submodule "python/benchmarks/comparison/CSE3000-RP"]
+	path = python/benchmarks/comparison/CSE3000-RP
+	url = git@github.com:RobbinBaauw/CSE3000-RP.git

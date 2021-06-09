@@ -11,6 +11,9 @@ pyglet = "*"
 pygame = "*"
 imageio = "*"
 matplotlib = "*"
+pyyaml = "*"
+pygraphviz = "*"
+gurobipy = "*"
 
 [dev-packages]
 
