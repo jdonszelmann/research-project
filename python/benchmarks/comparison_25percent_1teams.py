@@ -19,7 +19,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "comparison_25percent_1teams_maps"
-processes = 6
+processes = 2
 
 
 def generate_maps():
@@ -29,7 +29,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 15
+    num = 25
 
     dirnames = [n.name for n in batchdir.iterdir() if n.is_dir()]
 
@@ -103,30 +103,30 @@ if __name__ == '__main__':
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
-    files.append(run(
-        lambda: ConfigurableMStar(
-            Config(
-                operator_decomposition=True,
-                precompute_paths=False,
-                precompute_heuristic=True,
-                collision_avoidance_table=False,
-                recursive=False,
-                matching_strategy=MatchingStrategy.SortedPruningPrematch,
-                max_memory_usage=3 * GigaByte,
-                debug=False,
-                report_expansions=False,
-            ),
-        ),
-        "M*"
-    ))
+    # files.append(run(
+    #     lambda: ConfigurableMStar(
+    #         Config(
+    #             operator_decomposition=True,
+    #             precompute_paths=False,
+    #             precompute_heuristic=True,
+    #             collision_avoidance_table=False,
+    #             recursive=False,
+    #             matching_strategy=MatchingStrategy.SortedPruningPrematch,
+    #             max_memory_usage=3 * GigaByte,
+    #             debug=False,
+    #             report_expansions=False,
+    #         ),
+    #     ),
+    #     "M*"
+    # ))
 
 
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
+    # graph_results(
+    #     *files,
+    #     batchdir / f"{name}.png",
+    #     save=False,
+    #     bounds=False,
+    # )
 
     files.append(run(
         lambda: EPEAStar(),
