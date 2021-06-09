@@ -103,7 +103,7 @@ def graph_results(*args, save=True, bounds=True, fill_between=False):
                         times10pydata.append(percentile(solved_times, 10))
                         times50pydata.append(percentile(solved_times, 50))
                         times90pydata.append(percentile(solved_times, 90))
-                else:
+                elif len(percentageydata) > 0 and percentageydata[-1] != 0:
                     percentagexdata.append(num_agents)
                     percentageydata.append(0)
 
