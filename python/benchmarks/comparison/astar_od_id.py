@@ -21,7 +21,7 @@ modules = get_src_modules()
 heuristic_type = HeuristicType.Exhaustive
 enable_cat = True
 enable_id = True
-enable_sorting = False
+enable_sorting = True
 
 
 class AStarODID(MapfAlgorithm):
