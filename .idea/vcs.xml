@@ -2,6 +2,17 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/cbc-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/cgl-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/clp-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/coinutils-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/osi-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python/benchmarks/comparison/matching-epea-star" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/temp" vcs="Git" />
   </component>
 </project>
