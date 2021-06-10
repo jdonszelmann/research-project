@@ -167,4 +167,4 @@ def graph_results(*args, save=True, bounds=True, fill_between=False):
     plt.legend()
     plt.show()
     if save:
-        fig.savefig(save_location, bbox_inches="tight", pad_inches=0)
+        fig.savefig(save_location, bbox_inches="tight", pad_inches=0, format='eps')
