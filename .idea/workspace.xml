@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams_maps/results_pruning and sorting.txt.9agents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" afterDir="false" />
@@ -18,8 +19,6 @@
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/src/google/protobuf/stubs/port.h" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/src/google/protobuf/stubs/port.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/zconf.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps/comparison_25percent_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps/comparison_25percent_3teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/graph_times.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/graph_times.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <recent name="$PROJECT_DIR$/assets/poster/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.comparison_25percent_1teams">
+  <component name="RunManager" selected="Python.extensions_25percent_1teams">
     <configuration name="comparison_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -308,8 +307,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.comparison_25percent_1teams" />
         <item itemvalue="Python.extensions_25percent_1teams" />
+        <item itemvalue="Python.comparison_25percent_1teams" />
         <item itemvalue="Python.comparison_75percent_3teams" />
         <item itemvalue="Python.comparison_25percent_3teams" />
         <item itemvalue="Python.extensions_25percent_3teams" />
@@ -367,7 +366,7 @@
       <workItem from="1622840362018" duration="29892000" />
       <workItem from="1622929148153" duration="14316000" />
       <workItem from="1623003715701" duration="4141000" />
-      <workItem from="1623141193255" duration="52218000" />
+      <workItem from="1623141193255" duration="54337000" />
     </task>
     <servers />
   </component>
