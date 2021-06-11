@@ -4,3 +4,6 @@
 [submodule "python/benchmarks/comparison/CSE3000-RP"]
 	path = python/benchmarks/comparison/CSE3000-RP
 	url = git@github.com:RobbinBaauw/CSE3000-RP.git
+[submodule "python/benchmarks/comparison/Astar-OD-ID"]
+	path = python/benchmarks/comparison/Astar-OD-ID
+	url = git@github.com:ivardb/Astar-OD-ID.git
