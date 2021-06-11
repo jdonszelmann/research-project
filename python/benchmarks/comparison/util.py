@@ -13,9 +13,9 @@ def get_src_modules():
     return modules
 
 
-def solve_with_modules(modules, fn):
+def solve_with_modules(modules, fn, *args, **kwargs):
     old = sys.modules
     sys.modules = modules
-    res = fn()
+    res = fn(*args, **kwargs)
     sys.modules = old
     return res
