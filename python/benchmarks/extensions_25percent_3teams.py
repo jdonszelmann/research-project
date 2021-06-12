@@ -126,14 +126,6 @@ if __name__ == '__main__':
         "no extensions"
     ))
 
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
-
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -149,14 +141,6 @@ if __name__ == '__main__':
         "pruning"
     ))
 
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
-
     files.append(run(
         Config(
             operator_decomposition=False,
@@ -171,14 +155,6 @@ if __name__ == '__main__':
         ),
         "pruning and sorting"
     ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
 
     files.append(run(
         Config(
@@ -213,7 +189,7 @@ if __name__ == '__main__':
 
     graph_results(
         *files,
-        batchdir / f"{name}.png",
+        batchdir / f"{name}",
         save=True,
         bounds=False,
     )

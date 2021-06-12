@@ -27,7 +27,7 @@ class ICTS(MapfAlgorithm):
                 prune=True,
                 enhanced=True,
                 pruned_child_gen=False,
-                id=True,
+                id=False,
                 conflict_avoidance=True,
                 enumerative=True,
                 debug=False,

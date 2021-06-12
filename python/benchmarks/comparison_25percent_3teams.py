@@ -20,7 +20,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "comparison_25percent_3teams_maps"
-processes = 2
+processes = 10
 
 
 def generate_maps():
@@ -121,49 +121,20 @@ if __name__ == '__main__':
         "M*"
     ))
 
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
     files.append(run(
         lambda: EPEAStar(),
         "EPEA*"
     ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
 
     files.append(run(
         lambda: CBS(),
         "CBS"
     ))
 
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
-
     files.append(run(
         lambda: AStarODID(),
         "A*-OD-ID"
     ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}.png",
-        save=False,
-        bounds=False,
-    )
 
     files.append(run(
         lambda: ICTS(),
@@ -172,7 +143,7 @@ if __name__ == '__main__':
 
     graph_results(
         *files,
-        batchdir / f"{name}.png",
+        batchdir / f"{name}",
         save=True,
         bounds=False,
     )
