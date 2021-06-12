@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
+import numpy as np
 
 colors = [
     (204, 68, 82),

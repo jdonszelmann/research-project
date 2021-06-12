@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/icts-m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/icts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps/results_ICTS.txt.8agents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/install.cmake" afterDir="false" />
@@ -23,13 +19,7 @@
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/src/google/protobuf/stubs/port.h" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/src/google/protobuf/stubs/port.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/zconf.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps/comparison_25percent_1teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps/comparison_25percent_1teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams_maps/comparison_75percent_1teams_maps.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/graph_times.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/graph_times.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,15 +74,15 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/comparison" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/python/benchmarks/comparison" />
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps" />
+      <recent name="$PROJECT_DIR$/python/benchmarks/comparison" />
       <recent name="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams_maps" />
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams_maps" />
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams_maps" />
@@ -105,7 +95,7 @@
       <recent name="$PROJECT_DIR$/assets/poster/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.comparison_75percent_1teams">
+  <component name="RunManager" selected="Python.comparison_25percent_1teams">
     <configuration name="comparison_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -318,8 +308,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.comparison_75percent_3teams" />
         <item itemvalue="Python.comparison_25percent_1teams" />
+        <item itemvalue="Python.comparison_75percent_3teams" />
         <item itemvalue="Python.comparison_25percent_3teams" />
         <item itemvalue="Python.extensions_25percent_1teams" />
         <item itemvalue="Python.extensions_25percent_3teams" />
@@ -377,7 +367,7 @@
       <workItem from="1622840362018" duration="29892000" />
       <workItem from="1622929148153" duration="14316000" />
       <workItem from="1623003715701" duration="4141000" />
-      <workItem from="1623141193255" duration="78609000" />
+      <workItem from="1623141193255" duration="84302000" />
     </task>
     <servers />
   </component>
@@ -524,7 +514,7 @@
     <SUITE FILE_PATH="coverage/research_project$extensions_25percent_3teams.coverage" NAME="extensions_25percent_3teams Coverage Results" MODIFIED="1623226033024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_75percent_3teams.coverage" NAME="comparison_75percent_3teams Coverage Results" MODIFIED="1623443973839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_3teams.coverage" NAME="inmatch_vs_prematch_25percent_3teams Coverage Results" MODIFIED="1622628926488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/research_project$comparison_25percent_1teams.coverage" NAME="comparison_25percent_1teams Coverage Results" MODIFIED="1623443945163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$comparison_25percent_1teams.coverage" NAME="comparison_25percent_1teams Coverage Results" MODIFIED="1623481588827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1623142642654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams.coverage" NAME="inmatch_vs_prematch_75percent_1teams Coverage Results" MODIFIED="1622706147351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams_expansion.coverage" NAME="inmatch_vs_prematch_75percent_1teams_expansion Coverage Results" MODIFIED="1622730461387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
