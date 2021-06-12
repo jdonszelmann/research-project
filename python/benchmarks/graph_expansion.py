@@ -9,7 +9,7 @@ from python.benchmarks.graph_times import rgb_to_colour, colors, average
 def graph_results(*args, save=True):
     plt.style.use('seaborn-whitegrid')
 
-    plt.rcParams["figure.figsize"] = (7, 5)
+    plt.rcParams["figure.figsize"] = (7, 4)
     plt.rcParams['font.size'] = '14'
     plt.tight_layout(pad=0)
     plt.margins(0, 0)
@@ -19,7 +19,7 @@ def graph_results(*args, save=True):
     expansions.set_title("average expansion size")
 
     expansions.xaxis.set_major_locator(MaxNLocator(integer=True))
-    expansions.set_ylabel("number of expanded states")
+    expansions.set_ylabel("average expansion size")
     expansions.set_yscale('log')
     expansions.set_ylim(1, 10**5)
 
@@ -59,4 +59,5 @@ def graph_results(*args, save=True):
     plt.legend()
     plt.show()
     if save:
-        fig.savefig(save_location, bbox_inches="tight", pad_inches=0)
+        fig.savefig(f"{save_location}.eps", bbox_inches="tight", pad_inches=0, format='eps')
+        fig.savefig(f"{save_location}.png", bbox_inches="tight", pad_inches=0, format='png')

@@ -192,4 +192,5 @@ if __name__ == '__main__':
         batchdir / f"{name}",
         save=True,
         bounds=False,
+        legend=False,
     )

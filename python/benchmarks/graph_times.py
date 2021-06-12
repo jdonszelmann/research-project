@@ -52,6 +52,7 @@ def graph_results(*args,
                   fill_between=False,
                   graph_times=False,
                   graph_percentage=True,
+                  legend=True,
                   ):
     plt.style.use('seaborn-whitegrid')
 
@@ -81,9 +82,9 @@ def graph_results(*args,
         percentage.set_title("% solved out of 200 maps")
     if graph_times:
         if bounds:
-            times.set_title("time to solution (10, 50 and 90th percentile)")
+            times.set_title("time to solution of solved maps")
         else:
-            times.set_title("mean time to solution")
+            times.set_title("mean time to solution of solved maps")
 
     if graph_percentage:
         percentage.xaxis.set_major_locator(MaxNLocator(integer=True))
@@ -180,21 +181,10 @@ def graph_results(*args,
                         times90pydata,
                         color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=50/100)
                     )
-            # times.plot(
-            #     "--",
-            #     color=rgb_to_colour(*colors[plt_index]),
-            #     linewidth=1,
-            # )
-            #
-            # times.plot(
-            #     timesxdata,
-            #     times90pydata,
-            #     "--",
-            #     color=rgb_to_colour(*colors[plt_index]),
-            #     linewidth=1,
-            # )
 
-    plt.legend()
+
+    if legend:
+        plt.legend()
     plt.show()
     if save:
         fig.savefig(f"{save_location}.eps", bbox_inches="tight", pad_inches=0, format='eps')

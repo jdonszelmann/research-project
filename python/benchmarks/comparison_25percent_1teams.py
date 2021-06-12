@@ -20,7 +20,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "comparison_25percent_1teams_maps"
-processes = 2
+processes = 8
 
 
 def generate_maps():
