@@ -61,7 +61,7 @@ def graph_results(*args,
         plt.rcParams["figure.figsize"] = (7, 5)
         fig, (percentage, times) = plt.subplots(2, 1, sharex=True)
     elif graph_times or graph_percentage:
-        plt.rcParams["figure.figsize"] = (7, 4)
+        plt.rcParams["figure.figsize"] = (7, 3)
         fig, (subplt) = plt.subplots(1, 1)
         if graph_percentage:
             percentage = subplt

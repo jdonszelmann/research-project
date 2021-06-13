@@ -98,7 +98,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
 
 
 
-if __name__ == '__main__':
+def main():
     batchdir = this_dir / name
 
     generate_maps()
@@ -147,4 +147,8 @@ if __name__ == '__main__':
         save=True,
         bounds=False,
     )
+
+
+if __name__ == '__main__':
+     main()
 

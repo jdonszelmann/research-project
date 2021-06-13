@@ -91,7 +91,7 @@ def run(config: Config, bm_name: str):
 
 
 
-if __name__ == '__main__':
+def main():
     batchdir = this_dir / name
 
     generate_maps()
@@ -179,3 +179,7 @@ if __name__ == '__main__':
         bounds=False,
         legend = False,
     )
+
+
+if __name__ == '__main__':
+    main()

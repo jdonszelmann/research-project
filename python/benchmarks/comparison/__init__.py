@@ -1,4 +1,4 @@
-from .cbs import CBM
+from .cbm import CBM
 from .epeastar import EPEAStar
 from .astar_od_id import AStarODID
 

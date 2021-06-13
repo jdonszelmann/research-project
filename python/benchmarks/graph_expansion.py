@@ -9,7 +9,7 @@ from python.benchmarks.graph_times import rgb_to_colour, colors, average
 def graph_results(*args, save=True):
     plt.style.use('seaborn-whitegrid')
 
-    plt.rcParams["figure.figsize"] = (7, 4)
+    plt.rcParams["figure.figsize"] = (7, 3)
     plt.rcParams['font.size'] = '14'
     plt.tight_layout(pad=0)
     plt.margins(0, 0)

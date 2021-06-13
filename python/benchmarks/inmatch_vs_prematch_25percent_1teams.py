@@ -117,7 +117,7 @@ def output_data(file: pathlib.Path, data: dict[int, list[float]]):
             f.write(f"{i}: {r}\n")
 
 
-if __name__ == '__main__':
+def main():
     batchdir = this_dir / name
 
     generate_maps()
@@ -128,3 +128,7 @@ if __name__ == '__main__':
         (batchdir / "results_prematch.txt", "prematch"),
         batchdir / f"{name}"
     )
+
+
+if __name__ == '__main__':
+    main()

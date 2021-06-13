@@ -101,7 +101,7 @@ def run_benchmark():
 
 
 
-if __name__ == '__main__':
+def main():
     batchdir = this_dir / name
 
     generate_maps()
@@ -112,3 +112,7 @@ if __name__ == '__main__':
         (batchdir / "results_prematch_expansion.txt", "prematch"),
         batchdir / f"{name}_expansion"
     )
+
+
+if __name__ == '__main__':
+    main()

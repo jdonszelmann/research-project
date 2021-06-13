@@ -98,7 +98,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
 
 
 
-if __name__ == '__main__':
+def main():
     batchdir = this_dir / name
 
     generate_maps()
@@ -121,49 +121,20 @@ if __name__ == '__main__':
         "M*"
     ))
 
-
-    graph_results(
-        *files,
-        batchdir / f"{name}",
-        save=False,
-        bounds=False,
-    )
-
     files.append(run(
         lambda: EPEAStar(),
         "EPEA*"
     ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}",
-        save=False,
-        bounds=False,
-    )
 
     files.append(run(
         lambda: CBM(),
         "CBM"
     ))
 
-    graph_results(
-        *files,
-        batchdir / f"{name}",
-        save=False,
-        bounds=False,
-    )
-
     files.append(run(
         lambda: AStarODID(),
         "A*-OD-ID"
     ))
-
-    graph_results(
-        *files,
-        batchdir / f"{name}",
-        save=False,
-        bounds=False,
-    )
 
     files.append(run(
         lambda: ICTS(),
@@ -176,3 +147,7 @@ if __name__ == '__main__':
         save=True,
         bounds=False,
     )
+
+
+if __name__ == '__main__':
+    main()
