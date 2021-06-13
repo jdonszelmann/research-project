@@ -4,7 +4,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import EPEAStar, CBS, AStarODID
+from python.benchmarks.comparison import EPEAStar, CBM, AStarODID
 from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
@@ -124,7 +124,7 @@ if __name__ == '__main__':
 
     graph_results(
         *files,
-        batchdir / f"{name}.png",
+        batchdir / f"{name}",
         save=False,
         bounds=False,
     )
@@ -136,19 +136,19 @@ if __name__ == '__main__':
 
     graph_results(
         *files,
-        batchdir / f"{name}.png",
+        batchdir / f"{name}",
         save=False,
         bounds=False,
     )
 
     files.append(run(
-        lambda: CBS(),
-        "CBS"
+        lambda: CBM(),
+        "CBM"
     ))
 
     graph_results(
         *files,
-        batchdir / f"{name}.png",
+        batchdir / f"{name}",
         save=False,
         bounds=False,
     )
@@ -160,7 +160,7 @@ if __name__ == '__main__':
 
     graph_results(
         *files,
-        batchdir / f"{name}.png",
+        batchdir / f"{name}",
         save=False,
         bounds=False,
     )
@@ -172,7 +172,7 @@ if __name__ == '__main__':
 
     graph_results(
         *files,
-        batchdir / f"{name}.png",
+        batchdir / f"{name}",
         save=True,
         bounds=False,
     )

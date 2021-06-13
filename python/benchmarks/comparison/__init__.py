@@ -1,5 +1,5 @@
-from .cbs import CBS
+from .cbs import CBM
 from .epeastar import EPEAStar
 from .astar_od_id import AStarODID
 
-__all__ = ["EPEAStar", "CBS", "AStarODID", "ICTS"]
+__all__ = ["EPEAStar", "CBM", "AStarODID", "ICTS"]

@@ -16,7 +16,7 @@ sys.path.pop(0)
 modules = get_src_modules()
 
 
-class CBS(MapfAlgorithm):
+class CBM(MapfAlgorithm):
     def solve(self, problem: Problem) -> Solution:
         def solve_cbs():
             with open(this_dir / "robbin_env.yaml") as file:

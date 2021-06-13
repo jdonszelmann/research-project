@@ -4,7 +4,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import EPEAStar, CBS, AStarODID
+from python.benchmarks.comparison import EPEAStar, CBM, AStarODID
 from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
@@ -127,8 +127,8 @@ if __name__ == '__main__':
     ))
 
     files.append(run(
-        lambda: CBS(),
-        "CBS"
+        lambda: CBM(),
+        "CBM"
     ))
 
     files.append(run(
