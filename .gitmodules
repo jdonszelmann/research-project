@@ -7,3 +7,6 @@
 [submodule "python/benchmarks/comparison/Astar-OD-ID"]
 	path = python/benchmarks/comparison/Astar-OD-ID
 	url = git@github.com:ivardb/Astar-OD-ID.git
+[submodule "python/benchmarks/comparison/icts-m"]
+	path = python/benchmarks/comparison/icts-m
+	url = https://github.com/tbvanderwoude/icts-m

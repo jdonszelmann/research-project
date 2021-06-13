@@ -4,7 +4,7 @@ from typing import Optional
 from mapfmclient import Problem
 from tqdm import tqdm
 
-from python.benchmarks.graph_output import graph_results
+from python.benchmarks.graph_times import graph_results
 from python.benchmarks.map import MapGenerator
 import pathlib
 
@@ -127,5 +127,5 @@ if __name__ == '__main__':
     graph_results(
         (batchdir / "results_inmatch.txt", "inmatch"),
         (batchdir / "results_prematch.txt", "prematch"),
-        batchdir / f"{name}.png"
+        batchdir / f"{name}"
     )

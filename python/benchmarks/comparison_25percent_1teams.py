@@ -5,6 +5,7 @@ from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
 from python.benchmarks.comparison import EPEAStar, CBS, AStarODID
+from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.inmatch_vs_prematch_75percent_1teams import output_data
@@ -19,7 +20,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "comparison_25percent_1teams_maps"
-processes = 2
+processes = 8
 
 
 def generate_maps():
@@ -155,6 +156,18 @@ if __name__ == '__main__':
     files.append(run(
         lambda: AStarODID(),
         "A*-OD-ID"
+    ))
+
+    graph_results(
+        *files,
+        batchdir / f"{name}.png",
+        save=False,
+        bounds=False,
+    )
+
+    files.append(run(
+        lambda: ICTS(),
+        "ICTS"
     ))
 
     graph_results(

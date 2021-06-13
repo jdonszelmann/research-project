@@ -110,5 +110,5 @@ if __name__ == '__main__':
     graph_results(
         (batchdir / "results_inmatch_expansion.txt", "inmatch"),
         (batchdir / "results_prematch_expansion.txt", "prematch"),
-        batchdir / f"{name}_expansion.png"
+        batchdir / f"{name}_expansion"
     )
