@@ -30,7 +30,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 15
+    num = 25
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -148,5 +148,5 @@ def main():
     )
 
 
-if __name__ == '__main__':
+if _g_name__ == '__main__':
     main()
