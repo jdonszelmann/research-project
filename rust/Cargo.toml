@@ -3,7 +3,7 @@ name = "mstar"
 version = "0.1.0"
 authors = ["jonay2000 <jonabent@gmail.com>"]
 edition = "2018"
-license = "MIT OR Apache"
+license = "MIT OR Apache-2.0"
 description = "Rust implementation of the M* algorithm."
 
 
