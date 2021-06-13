@@ -32,7 +32,7 @@ def generate_maps():
 
     num = 15
 
-    dirnames = [n.name for n in batchdir.iterdir() if n.is_dir()]
+    dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
     for i in tqdm(range(1, num + 1)):
         if any(f"A{i}" in dirname for dirname in dirnames):
