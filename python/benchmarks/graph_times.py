@@ -101,6 +101,8 @@ def graph_results(*args,
     save_location = args[-1]
     ppydata = []
 
+    longest = 0
+
     for plt_index, (fn, label) in enumerate(args[:-1]):
         with open(fn, "r") as f:
             if graph_percentage:
@@ -113,7 +115,9 @@ def graph_results(*args,
                 times50pydata = []
                 times90pydata = []
 
-            for l in [l.strip() for l in f.readlines() if l.strip() != ""]:
+            lines = f.readlines()
+            longest = max(longest, len(lines))
+            for l in [l.strip() for l in lines if l.strip() != ""]:
                 before, after = l.split(":")
                 after_list = eval(after)
                 num_agents = int(before)
@@ -182,6 +186,10 @@ def graph_results(*args,
                         color=rgb_to_colour(*lighten(*colors[plt_index], 0.2), transparency_fraction=50/100)
                     )
 
+    if graph_percentage:
+        percentage.set_xlim(0, longest + 1)
+    else:
+        times.set_xlim(0, longest + 1)
 
     if legend:
         plt.legend()

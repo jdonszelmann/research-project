@@ -1,15 +1,13 @@
+
 from multiprocessing import Pool
 from typing import Optional, Callable
 
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import EPEAStar, CBM, AStarODID
-from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.inmatch_vs_prematch_75percent_1teams import output_data
-from python.benchmarks.map import MapGenerator
 import pathlib
 
 from python.benchmarks.parse_map import MapParser
@@ -19,40 +17,8 @@ from python.mstar.rewrite.config import GigaByte
 from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_75percent_3teams_maps"
+name = "comparison_obstacle_3teams_maps"
 processes = 8
-
-
-def generate_maps():
-    path = this_dir / name
-    try:
-        path.mkdir(parents=True)
-    except FileExistsError:
-        pass
-
-    num = 25
-
-    dirnames = [n.name for n in path.iterdir() if n.is_dir()]
-
-    for i in tqdm(range(1, num + 1)):
-        if any(f"A{i}" in dirname for dirname in dirnames):
-            tqdm.write(f"maps for {i} agents already generated")
-            continue
-        else:
-            tqdm.write(f"generating {path}")
-
-        map_generator = MapGenerator(path)
-        map_generator.generate_even_batch(
-            200,  # number of maps
-            20, 20,  # size
-            i,  # number of agents
-            3,  # number of teams
-            prefix=name,
-            min_goal_distance=0,
-            open_factor=0.65,
-            max_neighbors=1,
-        )
-
 
 def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
     batchdir = this_dir / name
@@ -100,7 +66,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
 def main():
     batchdir = this_dir / name
 
-    generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
     files.append(run(
@@ -120,26 +85,6 @@ def main():
         "M*"
     ))
 
-    files.append(run(
-        lambda: EPEAStar(),
-        "EPEA*"
-    ))
-
-    files.append(run(
-        lambda: CBM(),
-        "CBM"
-    ))
-
-    files.append(run(
-        lambda: AStarODID(),
-        "A*-OD-ID"
-    ))
-
-    files.append(run(
-        lambda: ICTS(),
-        "ICTS"
-    ))
-
     graph_results(
         *files,
         batchdir / f"{name}",
@@ -150,3 +95,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
