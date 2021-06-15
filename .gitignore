@@ -2,3 +2,4 @@ rust/target
 token
 __pycache__
 *.pyc
+target

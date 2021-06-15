@@ -1,1 +1,0 @@
-/home/jonathan/src/research-project/target/debug/mstar: /home/jonathan/src/research-project/rust/src/coordinate.rs /home/jonathan/src/research-project/rust/src/grid.rs /home/jonathan/src/research-project/rust/src/main.rs build.rs

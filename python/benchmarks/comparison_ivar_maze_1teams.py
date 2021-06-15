@@ -18,7 +18,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "comparison_maze_1teams_maps"
-processes = 8
+processes = 1
 
 def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
     batchdir = this_dir / name
