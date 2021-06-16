@@ -89,6 +89,8 @@ def graph_results(*args,
     if graph_percentage:
         percentage.xaxis.set_major_locator(MaxNLocator(integer=True))
         percentage.set_ylabel("% solved")
+        if not graph_times:
+            percentage.set_xlabel("number of agents")
 
     if graph_times:
         times.xaxis.set_major_locator(MaxNLocator(integer=True))
