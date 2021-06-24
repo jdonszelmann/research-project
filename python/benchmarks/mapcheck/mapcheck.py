@@ -37,10 +37,17 @@ if __name__ == '__main__':
             for dir in d.iterdir():
                 if dir.is_dir():
                     numbers = []
+                    num_ok = 0
                     for file in dir.iterdir():
                         if file.name.endswith(".map"):
                             p = MapParser(this_dir).parse_map(str(file))
 
                             num_three_neighbour_squares = three_neighbour_squares(p.grid)
                             numbers.append(num_three_neighbour_squares)
-                    f.write(f"{len(p.starts)}: {numbers}\n")
+
+                            if num_three_neighbour_squares >= len(p.starts):
+                                num_ok += 1
+                            else:
+                                print(f"error (possibly unsolvable: {file})")
+
+                    f.write(f"{len(p.starts)}: {numbers} : {num_ok / len(numbers)}\n")
