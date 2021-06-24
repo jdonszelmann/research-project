@@ -146,6 +146,7 @@ def main():
         batchdir / f"{name}",
         save=True,
         bounds=False,
+        legend=False,
     )
 
 

@@ -76,7 +76,7 @@ def mstar(cfg: Config, problem: Problem) -> Optional[Path]:
             all_matchings.sort(key=lambda i: i.heuristic_value)
 
 
-        for matching in tqdm(all_matchings, disable=True):
+        for matching in tqdm(all_matchings, disable=False):
             if cfg.pruning_prematch:
                 # if cfg.debug:
                 if best_path is not None and matching.heuristic_value >= best_path.cost:

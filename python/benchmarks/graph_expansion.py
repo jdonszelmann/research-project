@@ -6,7 +6,7 @@ from matplotlib.ticker import MaxNLocator
 from python.benchmarks.graph_times import rgb_to_colour, colors, average
 
 
-def graph_results(*args, save=True):
+def graph_results(*args, save=True, legend=True):
     plt.style.use('seaborn-whitegrid')
 
     plt.rcParams["figure.figsize"] = (7, 3)
@@ -16,7 +16,7 @@ def graph_results(*args, save=True):
 
     fig, expansions = plt.subplots(1, 1)
 
-    expansions.set_title("average expansion size")
+    expansions.set_title("average branching factor")
 
     expansions.xaxis.set_major_locator(MaxNLocator(integer=True))
     expansions.set_ylabel("average expansion size")
@@ -56,7 +56,8 @@ def graph_results(*args, save=True):
             )
 
 
-    plt.legend()
+    if legend:
+        plt.legend()
     plt.show()
     if save:
         fig.savefig(f"{save_location}.eps", bbox_inches="tight", pad_inches=0, format='eps')

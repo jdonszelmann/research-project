@@ -126,7 +126,8 @@ def main():
     graph_results(
         (batchdir / "results_inmatch.txt", "inmatch"),
         (batchdir / "results_prematch.txt", "prematch"),
-        batchdir / f"{name}"
+        batchdir / f"{name}",
+        legend=False,
     )
 
 

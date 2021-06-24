@@ -16,7 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/all_plots/symlink.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/benchmarks/mapcheck/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/benchmarks/mapcheck/mapcheck.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" afterDir="false" />
@@ -25,33 +26,34 @@
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/src/google/protobuf/stubs/port.h" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/src/google/protobuf/stubs/port.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/zlib-src/zconf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps/comparison_25percent_1teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps/comparison_25percent_1teams_maps.eps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps/comparison_25percent_1teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps/comparison_25percent_1teams_maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps/comparison_25percent_3teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps/comparison_25percent_3teams_maps.eps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps/comparison_25percent_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps/comparison_25percent_3teams_maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams_maps/comparison_75percent_1teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams_maps/comparison_75percent_1teams_maps.eps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams_maps/comparison_75percent_1teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_1teams_maps/comparison_75percent_1teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams_maps/comparison_75percent_3teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams_maps/comparison_75percent_3teams_maps.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams_maps/comparison_75percent_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams_maps/comparison_75percent_3teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams_maps/extensions_25percent_1teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams_maps/extensions_25percent_1teams_maps.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams_maps/extensions_25percent_1teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_1teams_maps/extensions_25percent_1teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/extensions_25percent_3teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/extensions_25percent_3teams_maps.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/extensions_25percent_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_25percent_3teams_maps/extensions_25percent_3teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams_maps/extensions_75percent_1teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams_maps/extensions_75percent_1teams_maps.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams_maps/extensions_75percent_1teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_1teams_maps/extensions_75percent_1teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams_maps/extensions_75percent_3teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams_maps/extensions_75percent_3teams_maps.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams_maps/extensions_75percent_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/extensions_75percent_3teams_maps/extensions_75percent_3teams_maps.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/graph_times.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/graph_times.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_maze_3teams_maps/comparison_maze_3teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_maze_3teams_maps/comparison_maze_3teams_maps.eps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_maze_3teams_maps/comparison_maze_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_maze_3teams_maps/comparison_maze_3teams_maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/graph_expansion.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/graph_expansion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_expansion.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_expansion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps.eps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps_expansion.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps_expansion.eps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps_expansion.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_1teams_maps/inmatch_vs_prematch_25percent_1teams_maps_expansion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_3teams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_3teams_maps/inmatch_vs_prematch_25percent_3teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_3teams_maps/inmatch_vs_prematch_25percent_3teams_maps.eps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_3teams_maps/inmatch_vs_prematch_25percent_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_25percent_3teams_maps/inmatch_vs_prematch_25percent_3teams_maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps.eps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps_expansion.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps_expansion.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_3teams_maps/inmatch_vs_prematch_75percent_3teams_maps.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_3teams_maps/inmatch_vs_prematch_75percent_3teams_maps.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_3teams_maps/inmatch_vs_prematch_75percent_3teams_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_3teams_maps/inmatch_vs_prematch_75percent_3teams_maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps_expansion.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams_maps/inmatch_vs_prematch_75percent_1teams_maps_expansion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/mstar/rewrite/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/mstar/rewrite/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,19 +109,26 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/comparison_maze_1teams_maps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/mampcheck" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python/benchmarks/mampcheck" />
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison_maze_1teams_maps" />
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison_obstacle_3teams_maps" />
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison_obstacle_1teams_maps" />
       <recent name="$PROJECT_DIR$/python/benchmarks" />
-      <recent name="$PROJECT_DIR$/python/benchmarks/comparison_75percent_3teams_maps" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison" />
@@ -129,13 +138,8 @@
       <recent name="$PROJECT_DIR$/assets/poster/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.all_benchmarks">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="all_benchmarks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.mapcheck (1)">
+    <configuration name="comparison_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -148,7 +152,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/all_benchmarks.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="comparison_25percent_3teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,94 +205,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="comparison_ivar_maze_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="research-project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_ivar_maze_1teams.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="comparison_ivar_maze_3teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="research-project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_ivar_maze_3teams.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="comparison_ivar_obstacle_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="research-project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_ivar_obstacle_1teams.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="comparison_ivar_obstacle_3teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="research-project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_ivar_obstacle_3teams.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="extensions_75percent_1teams" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,6 +222,50 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="inmatch_vs_prematch_75percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/inmatch_vs_prematch_75percent_1teams.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (no assert) (1)" type="PythonConfigurationType" factoryName="Python" singleton="false">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/main.py" />
+      <option name="PARAMETERS" value="-O" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -333,25 +315,70 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="mapcheck (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks/mapcheck" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/mapcheck/mapcheck.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mapcheck" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks/mampcheck" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/mampcheck/mapcheck.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Python.comparison_75percent_1teams" />
+      <item itemvalue="Python.extensions_75percent_1teams" />
+      <item itemvalue="Python.main (no assert) (1)" />
       <item itemvalue="Python.main (no assert)" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.extensions_75percent_1teams" />
-      <item itemvalue="Python.comparison_75percent_1teams" />
-      <item itemvalue="Python.comparison_ivar_obstacle_3teams" />
-      <item itemvalue="Python.comparison_ivar_obstacle_1teams" />
-      <item itemvalue="Python.comparison_ivar_maze_3teams" />
-      <item itemvalue="Python.comparison_ivar_maze_1teams" />
+      <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams" />
+      <item itemvalue="Python.comparison_25percent_3teams" />
+      <item itemvalue="Python.comparison_25percent_1teams" />
       <item itemvalue="Python.yapf" />
-      <item itemvalue="Python.all_benchmarks" />
+      <item itemvalue="Python.mapcheck" />
+      <item itemvalue="Python.mapcheck (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.all_benchmarks" />
-        <item itemvalue="Python.comparison_ivar_maze_1teams" />
-        <item itemvalue="Python.comparison_ivar_maze_3teams" />
-        <item itemvalue="Python.comparison_ivar_obstacle_3teams" />
-        <item itemvalue="Python.comparison_ivar_obstacle_1teams" />
+        <item itemvalue="Python.mapcheck (1)" />
+        <item itemvalue="Python.mapcheck" />
+        <item itemvalue="Python.comparison_25percent_1teams" />
+        <item itemvalue="Python.comparison_25percent_3teams" />
+        <item itemvalue="Python.inmatch_vs_prematch_75percent_1teams" />
       </list>
     </recent_temporary>
   </component>
@@ -417,7 +444,11 @@
       <workItem from="1623602016432" duration="974000" />
       <workItem from="1623603005545" duration="3057000" />
       <workItem from="1623613907945" duration="9584000" />
-      <workItem from="1623761260103" duration="2793000" />
+      <workItem from="1623761260103" duration="6509000" />
+      <workItem from="1623928409090" duration="2610000" />
+      <workItem from="1623939043833" duration="84000" />
+      <workItem from="1624390258097" duration="6926000" />
+      <workItem from="1624532289703" duration="1078000" />
     </task>
     <servers />
   </component>
@@ -557,10 +588,22 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/research_project$comparison_75percent_3teams.coverage" NAME="comparison_75percent_3teams Coverage Results" MODIFIED="1623677095233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/research_project$comparison_ivar_maze_3teams.coverage" NAME="comparison_ivar_maze_3teams Coverage Results" MODIFIED="1623688974462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$symlink.coverage" NAME="symlink Coverage Results" MODIFIED="1623844216762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/all_plots" />
+    <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_3teams.coverage" NAME="inmatch_vs_prematch_25percent_3teams Coverage Results" MODIFIED="1624392094485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$comparison_25percent_1teams.coverage" NAME="comparison_25percent_1teams Coverage Results" MODIFIED="1624398264160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_obstacle_3teams.coverage" NAME="comparison_ivar_obstacle_3teams Coverage Results" MODIFIED="1623688931448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/research_project$all_benchmarks.coverage" NAME="all_benchmarks Coverage Results" MODIFIED="1623843819523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1624437745715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams.coverage" NAME="inmatch_vs_prematch_75percent_1teams Coverage Results" MODIFIED="1624392096968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$mapcheck.coverage" NAME="mapcheck Coverage Results" MODIFIED="1624532844554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/mampcheck" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_obstacle_1teams.coverage" NAME="comparison_ivar_obstacle_1teams Coverage Results" MODIFIED="1623688911598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams_expansion.coverage" NAME="inmatch_vs_prematch_75percent_1teams_expansion Coverage Results" MODIFIED="1624390449335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_1teams.coverage" NAME="inmatch_vs_prematch_25percent_1teams Coverage Results" MODIFIED="1624392090951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_1teams_expansion.coverage" NAME="inmatch_vs_prematch_25percent_1teams_expansion Coverage Results" MODIFIED="1624390443966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$comparison_ivar_maze_3teams.coverage" NAME="comparison_ivar_maze_3teams Coverage Results" MODIFIED="1623928874546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1624398262106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$all_benchmarks.coverage" NAME="all_benchmarks Coverage Results" MODIFIED="1623843819523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$mapcheck__1_.coverage" NAME="mapcheck (1) Coverage Results" MODIFIED="1624533304421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/mapcheck" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_maze_1teams.coverage" NAME="comparison_ivar_maze_1teams Coverage Results" MODIFIED="1623761314156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/research_project$comparison_75percent_1teams.coverage" NAME="comparison_75percent_1teams Coverage Results" MODIFIED="1624398258829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
   </component>
 </project>

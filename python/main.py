@@ -31,7 +31,7 @@ def submit(algorithm: MapfAlgorithm):
         #         num_teams=2,
         #     ),
         # ),cp5
-        10,
+        81,
         algorithm.name,
         algorithm.version,
         True,
@@ -43,23 +43,23 @@ def submit(algorithm: MapfAlgorithm):
 
 
 if __name__ == '__main__':
-    # submit(BetterMatchingAStar())
+    submit(BetterMatchingAStar())
     # submit(RMStarOD())
     # submit(PrematchMStarOD())
     # submit(PrematchMStar())
     # submit(VisualPrematchMStar())
     # submit(MStar())
     # submit(MStarOD())
-    submit(ConfigurableMStar(Config(
-        operator_decomposition=False,
-        precompute_paths=False,
-        precompute_heuristic=True,
-        collision_avoidance_table=False,
-        recursive=True,
-        matching_strategy=MatchingStrategy.SortedPruningPrematch,
-        max_memory_usage=3 * GigaByte,
-        debug=False,
-    )))
+    # submit(ConfigurableMStar(Config(
+    #     operator_decomposition=True,
+    #     precompute_paths=False,
+    #     precompute_heuristic=True,
+    #     collision_avoidance_table=False,
+    #     recursive=False,
+    #     matching_strategy=MatchingStrategy.Prematch,
+    #     max_memory_usage=3 * GigaByte,
+    #     debug=False,
+    # )))
 
     # m = MStar()
     # s = m.solve(Problem(
