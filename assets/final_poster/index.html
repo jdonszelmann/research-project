@@ -1,0 +1,153 @@
+<html id="html">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/phone.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/desktop.css">
+        <link rel="stylesheet" href="css/columns.css">
+        <link rel="stylesheet" href="css/poster.css">
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="js/dom-to-image.js"></script>
+<!--        <script src="js/pres_mode.js"></script>-->
+    </head>
+
+    <body id="body">
+        <div id="header">
+            <div class="no-mobile-only download_button" onclick="do_print()">Download poster</div>
+            <div class="tudelft">
+                <h1 class="no-mobile-only">TU Delft</h1>
+            </div>
+
+            <div id="title">
+                <h1>Matching in Multi-Agent Pathfinding using M*</h1>
+                <div id="author-parent">
+                    <div class="author" onclick="location.href = 'mailto://J.B.donszelmann@student.tudelft.nl';">Jonathan Dönselmann <span>&lt;J.B.donszelmann@student.tudelft.nl&gt;</span></div>
+                </div>
+            </div>
+
+            <div id="names">
+                <div>
+                    <div>Supervisors:</div>
+                    <div class="nameitem" onclick="location.href = 'mailto://M.M.deWeerdt@tudelft.nl';"><span>Mathijs de Weerdt</span> <span class="email">&lt;M.M.deWeerdt@tudelft.nl&gt;</span></div>
+                    <div class="nameitem" onclick="location.href = 'mailto://J.Mulderij@tudelft.nl';"><span>Jesse Mulderij</span> <span class="email">&lt;J.Mulderij@tudelft.nl&gt;</span></div>
+                </div>
+            </div>
+
+            <h1 class="mobile-only tudelft">TU Delft</h1>
+            <div class="mobile-only download_button" onclick="do_print()">Download poster</div>
+        </div>
+
+        <div id="content">
+            <div class="content-item">
+                <h2>Multi agent pathfinding</h2>
+                <div class="threecolimg poster_only">
+                    <figure>
+                        <img src="assets/multi_agent_pathfinding_start.png" class="mapf-image">
+                        <figcaption>A start state</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/multi_agent_pathfinding_end.png" class="mapf-image">
+                        <figcaption>A goal state</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/multi_agent_pathfinding_illegal.png" class="mapf-image redborder">
+                        <figcaption>An illegal action</figcaption>
+                    </figure>
+                </div>
+                <div class="twocolimg web_only">
+                    <figure>
+                        <div class="gif">
+                            <img src="assets/multi-agent-pathfinding.gif" class="mapf-image dynamic">
+                            <img src="assets/multi-agent-pathfinding-static.png" class="mapf-image static">
+                            <figcaption>A solution to MAPF</figcaption>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <div class="gif" style="width: 100%">
+                            <img src="assets/multi-agent-pathfinding-illegal.gif" class="dynamic redborder">
+                            <img src="assets/multi-agent-pathfinding-illegal-static.png" class="static redborder">
+                        </div>
+                        <figcaption>An invalid solution to MAPF</figcaption>
+                    </figure>
+                </div>
+
+
+                <p>
+                    Multi agent pathfinding (MAPF) is finding collision-free paths for multiple agents.
+
+                </p>
+
+                <figure class="web_only">
+                    <div class="gif">
+                        <img src="assets/multiple-teams.gif" class="mapf-image dynamic">
+                        <img src="assets/multiple-teams-static.png" class="mapf-image static">
+                        <figcaption>There can be multiple teams</figcaption>
+                    </div>
+                </figure>
+
+                <figure class="poster_only">
+                    <img src="assets/multiple-teams-static.png" class="mapf-image">
+                    <figcaption>There can be multiple teams</figcaption>
+                </figure>
+
+            </div>
+            <div class="content-item">middle</div>
+            <div class="content-item">right</div>
+        </div>
+
+        <script>
+            function mobileCheck() {
+              return window.innerWidth < window.innerHeight;
+            }
+
+            function resize() {
+                if (mobileCheck()) {
+                    document.getElementById("html").classList.add("mobile");
+                } else {
+                    document.getElementById("html").classList.remove("mobile");
+                }
+            }
+            window.addEventListener("resize", resize);
+            resize();
+
+            async function do_print() {
+                const body = document.getElementById("body");
+                document.getElementById("html").classList.remove("mobile");
+
+                body.classList.add("poster")
+
+                const dataUrl = await domtoimage.toPng(body)
+
+                body.classList.remove("poster")
+
+                const link = document.createElement('a');
+                link.download = 'poster.png';
+                link.href = dataUrl;
+                link.click();
+
+                resize();
+            }
+
+            // window.onload = function () {
+            //     const elems = document.getElementsByClassName("gif");
+            //     for (let i = 0; i < elems.length; i++) {
+            //         elems[i].addEventListener("mouseover", function () {
+            //             const imgs = elems[i].getElementsByTagName("img")
+            //             for (let j = 0; j < imgs.length; j++) {
+            //                 const img = imgs[j]
+            //                 img.src = img.src.replace(/\?.*$/,"")+"?x="+Math.random();
+            //             }
+            //         })
+            //     }
+            // }
+        </script>
+    </body>
+</html>
+
+

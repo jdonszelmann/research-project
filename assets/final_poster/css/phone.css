@@ -1,0 +1,67 @@
+
+.mobile {
+    font-size: 20px !important;
+}
+
+.mobile body {
+    color: white;
+    font-size: 20px;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.mobile .mobile-only {
+    display: block !important;
+}
+
+.mobile .no-mobile-only {
+    display: none !important;
+}
+
+.mobile body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.mobile #header {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+
+    font-size: smaller;
+}
+
+.mobile #header h1 {
+    font-size: 30px;
+}
+
+
+.mobile #author {
+
+}
+
+.mobile #content {
+    padding-top: 40px;
+    display: block;
+
+    height: auto;
+    padding-bottom: 5vw;
+}
+
+.mobile .content-item {
+    height: auto;
+    text-align: center;
+}
+
+.mobile .mapf-image {
+
+}
+
+.mobile #names * {
+    align-self: flex-start;
+    text-align: center;
+    font-size: 13px;
+}

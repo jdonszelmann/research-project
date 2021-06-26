@@ -23,7 +23,7 @@ colliding agents and in a sense locally increase the dimensionality of the searc
 # Paper
 
 This repository is the source code used to gather results for a paper. This is my
-bachelors project for the TU Delft. The paper can be found [here](tex/rendered/paper.pdf)
+bachelors project for the TU Delft. The paper can be found [here](tex/rendered/Research%20Project%20CSE3000%20final.pdf)
 or in the TU Delft repositories [SOON]()
 
 # Online benchmarks

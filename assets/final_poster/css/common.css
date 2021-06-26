@@ -1,0 +1,161 @@
+:root {
+    --light-red: #ae4b6c;
+    --red: #723147;
+    --dark-red: #31152B;
+    --white: #FBF9FF;
+    --gray: #232323;
+    --light-gray: #505050;
+    --black: #000000;
+    --brown: #E0CD9B;
+    --alabaster: #B9CBC0;
+    --blue: #003249;
+
+    --accent-1: rgb(204, 68, 82);
+    --accent-2: rgb(36, 97, 128);
+    --accent-3: rgb(128, 29, 39);
+    --accent-4: rgb(47, 152, 204);
+    --accent-5: rgb(17, 128, 42);
+    --accent-6: rgb(67, 204, 98);
+    --accent-7: rgb(57, 204, 174);
+    --accent-8: rgb(102, 82, 74);
+    --accent-9: rgb(128, 124, 23);
+    --accent-10: rgb(204, 111, 78);
+}
+
+
+body, html {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--alabaster);
+    color: var(--black);
+
+    font-family: "Source Code Pro", monospace;
+
+    overflow-x: hidden;
+}
+
+#content {
+    display: grid;
+    grid-template-columns:  33vw 33vw  33vw;
+}
+
+.content-item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#content h1 {
+    text-align: center;
+}
+
+#content h2 {
+    text-align: center;
+}
+
+#header h1 {
+    font-size: 1.6vw;
+}
+
+#header {
+    height: fit-content;
+    display: grid;
+    grid-template-columns:  12.5vw 12.5vw  50vw 25vw;
+    grid-auto-flow: column;
+
+    font-size: 1vw;
+
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+#names {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#names * {
+    align-self: flex-start;
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+.nameitem {
+    border-radius: 0.2vw;
+    padding: 0.2vw;
+    cursor: pointer;
+}
+
+#author-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.author {
+    border-radius: 0.2vw;
+    padding: 0.2vw;
+    margin-bottom: 0.2vw;
+    cursor: pointer;
+    color: white;
+}
+
+
+.nameitem:hover, .author:hover {
+    background-color: var(--light-gray);
+}
+
+#title {
+    text-align: center;
+    color: var(--light-red);
+}
+
+.tudelft {
+    color: #00A6D6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gif {
+    text-align: center;
+    position: relative;
+}
+
+.gif:hover .static {
+    display: none;
+}
+
+.gif:not(:hover) .dynamic {
+    display: none;
+}
+
+.mapf-image {
+    width: 60%;
+}
+
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
