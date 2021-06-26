@@ -20,7 +20,11 @@
         <div id="header">
             <div class="no-mobile-only download_button" onclick="do_print()">Download poster</div>
             <div class="tudelft">
-                <h1 class="no-mobile-only">TU Delft</h1>
+                <h1 class="no-mobile-only" onclick="location.href = 'https://tudelft.nl';">TU Delft</h1>
+
+                <div id="interactive-version" class="poster_only">
+                    An interactive version of this poster can be found at <a>https://midterm-poster.jdonszelmann.nl</a>
+                </div>
             </div>
 
             <div id="title">
@@ -38,63 +42,112 @@
                 </div>
             </div>
 
-            <h1 class="mobile-only tudelft">TU Delft</h1>
-            <div class="mobile-only download_button" onclick="do_print()">Download poster</div>
+            <h1 class="mobile-only tudelft web_only">TU Delft</h1>
+            <div class="mobile-only download_button web_only" onclick="do_print()">Download poster</div>
         </div>
 
         <div id="content">
             <div class="content-item">
-                <h2>Multi agent pathfinding</h2>
-                <div class="threecolimg poster_only">
-                    <figure>
-                        <img src="assets/multi_agent_pathfinding_start.png" class="mapf-image">
-                        <figcaption>A start state</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="assets/multi_agent_pathfinding_end.png" class="mapf-image">
-                        <figcaption>A goal state</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="assets/multi_agent_pathfinding_illegal.png" class="mapf-image redborder">
-                        <figcaption>An illegal action</figcaption>
-                    </figure>
-                </div>
-                <div class="twocolimg web_only">
-                    <figure>
-                        <div class="gif">
-                            <img src="assets/multi-agent-pathfinding.gif" class="mapf-image dynamic">
-                            <img src="assets/multi-agent-pathfinding-static.png" class="mapf-image static">
-                            <figcaption>A solution to MAPF</figcaption>
-                        </div>
-                    </figure>
 
-                    <figure>
-                        <div class="gif" style="width: 100%">
-                            <img src="assets/multi-agent-pathfinding-illegal.gif" class="dynamic redborder">
-                            <img src="assets/multi-agent-pathfinding-illegal-static.png" class="static redborder">
-                        </div>
-                        <figcaption>An invalid solution to MAPF</figcaption>
-                    </figure>
-                </div>
-
-
-                <p>
-                    Multi agent pathfinding (MAPF) is finding collision-free paths for multiple agents.
-
-                </p>
-
-                <figure class="web_only">
-                    <div class="gif">
-                        <img src="assets/multiple-teams.gif" class="mapf-image dynamic">
-                        <img src="assets/multiple-teams-static.png" class="mapf-image static">
-                        <figcaption>There can be multiple teams</figcaption>
+                <div class="block">
+                    <h2>Multi agent pathfinding</h2>
+                    <div class="threecolimg poster_only">
+                        <figure>
+                            <img src="assets/multi_agent_pathfinding_start.png" class="mapf-image">
+                            <figcaption>A start state</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/multi_agent_pathfinding_end.png" class="mapf-image">
+                            <figcaption>A goal state</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/multi_agent_pathfinding_illegal.png" class="mapf-image redborder">
+                            <figcaption>An illegal action</figcaption>
+                        </figure>
                     </div>
-                </figure>
+                    <div class="twocolimg web_only rounded">
+                        <figure>
+                            <div class="gif">
+                                <img src="assets/multi-agent-pathfinding.gif" class="mapf-image dynamic">
+                                <img src="assets/multi-agent-pathfinding-static.png" class="mapf-image static">
+                                <figcaption>A solution to MAPF</figcaption>
+                            </div>
+                        </figure>
 
-                <figure class="poster_only">
-                    <img src="assets/multiple-teams-static.png" class="mapf-image">
-                    <figcaption>There can be multiple teams</figcaption>
-                </figure>
+                        <figure>
+                            <div class="gif" style="width: 100%">
+                                <img src="assets/multi-agent-pathfinding-illegal.gif" class="dynamic redborder">
+                                <img src="assets/multi-agent-pathfinding-illegal-static.png" class="static redborder">
+                            </div>
+                            <figcaption>An invalid solution to MAPF</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <p>
+                        Multi agent pathfinding (MAPF) is finding collision-free paths for multiple agents.
+
+                    </p>
+                </div>
+
+                <div class="block">
+                    <h2>Matching in MAPF</h2>
+
+                    <figure class="web_only">
+                        <div class="gif rounded">
+                            <img src="assets/matchings.gif" class="mapf-image dynamic">
+                            <img src="assets/matchings-static.png" class="mapf-image static">
+                            <figcaption>All matchings between two sets of 3 nodes</figcaption>
+                        </div>
+                    </figure>
+
+                    <div class="twocolimg poster_only">
+                        <figure>
+                            <img src="assets/matchings-one.png" class="mapf-image">
+                            <figcaption>A trivial matching</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/matchings-two.png" class="mapf-image">
+                            <figcaption>A more complex matching</figcaption>
+                        </figure>
+                    </div>
+
+                    <p>
+                        Grouping agents in MAPF into teams gives MAPFM, MAPF with matching.
+                        Agents travel to a goal of their team. An assignment of agents to goals is called a matching.
+                    </p>
+
+                    <div class="twocolimg web_only rounded">
+                        <figure>
+                            <div class="gif">
+                                <img src="assets/MAPF-matching-long.gif" class="mapf-image dynamic">
+                                <img src="assets/MAPF-matching-long-static.png" class="mapf-image static">
+                                <figcaption>A possible matching</figcaption>
+                            </div>
+                        </figure>
+
+                        <figure>
+                            <div class="gif" style="width: 100%">
+                                <img src="assets/MAPF-matching-short.gif" class="dynamic">
+                                <img src="assets/MAPF-matching-short-static.png" class="static">
+                            </div>
+                            <figcaption>A shorter matching</figcaption>
+                        </figure>
+                    </div>
+                    <div class="twocolimg poster_only">
+
+                        <figure>
+                            <img src="assets/mapf-matching-two.png" class="mapf-image">
+                            <figcaption>A possible matching</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/mapf-matching-one.png" class="mapf-image">
+                            <figcaption>Another, shorter, matching</figcaption>
+                        </figure>
+                    </div>
+                    <p></p>
+                </div>
+
 
             </div>
             <div class="content-item">middle</div>
@@ -124,7 +177,7 @@
 
                 const dataUrl = await domtoimage.toPng(body)
 
-                body.classList.remove("poster")
+                // body.classList.remove("poster")
 
                 const link = document.createElement('a');
                 link.download = 'poster.png';
@@ -133,19 +186,6 @@
 
                 resize();
             }
-
-            // window.onload = function () {
-            //     const elems = document.getElementsByClassName("gif");
-            //     for (let i = 0; i < elems.length; i++) {
-            //         elems[i].addEventListener("mouseover", function () {
-            //             const imgs = elems[i].getElementsByTagName("img")
-            //             for (let j = 0; j < imgs.length; j++) {
-            //                 const img = imgs[j]
-            //                 img.src = img.src.replace(/\?.*$/,"")+"?x="+Math.random();
-            //             }
-            //         })
-            //     }
-            // }
         </script>
     </body>
 </html>

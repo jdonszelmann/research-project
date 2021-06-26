@@ -3,30 +3,38 @@
     width: 1189mm !important;
     height: 841mm !important;
 
+    max-width: 1189mm !important;
+    min-height: 841mm !important;
+
     font-size: 11mm !important;
 }
-
 
 .poster h1 {
     font-size: 25mm !important;
 }
 
+.poster #header {
+    grid-template-columns:  25% 50% 25% !important;
+    width: 1189mm !important;
+}
+
+.poster #names *, .poster .author {
+    font-size: 11mm !important;
+}
+
 .poster h2 {
     font-size: 20mm !important;
     line-height: 20mm !important;
-    padding-bottom: 5mm;
-    padding-top: 5mm;
-    margin: 0;
-}
-
-.poster .content-item + .content-item {
-    border-left: 5mm solid black !important;
+    /*padding-bottom: 10mm;*/
+    /*padding-top: 10mm;*/
+    /*margin: 0;*/
 }
 
 .poster .content-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .poster .download_button {
@@ -35,6 +43,7 @@
 
 
 .poster #content {
+    grid-template-columns:  33% 33% 33%;
 }
 
 body:not(.poster) .poster_only {
@@ -45,12 +54,22 @@ body:not(.poster) .poster_only {
     display: none !important;
 }
 
+.poster p {
+    padding-left: 12mm;
+    padding-right: 12mm;
+}
+
+.poster .block {
+    border-radius: 15mm;
+    margin: 10mm 3mm 3mm;
+}
+
 #interactive-version {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #662C40;
-    padding: 20mm;
+    font-size: 10mm;
+    margin-bottom: 10mm;
 }
 
 #interactive-version a {

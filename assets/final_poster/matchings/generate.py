@@ -32,7 +32,7 @@ def matchings(indices: list[int]) -> Iterator[list[int]]:
 
 pygame.init()
 
-n = 4
+n = 3
 width = 1000
 height = (width / 4) * n
 node_size = height / (3 * n)
@@ -51,7 +51,7 @@ colors = [
     (204, 111, 78),
 ]
 
-bg = (0xF9, 0xE4, 0xAD)
+bg = (0x22, 0x27, 0x2e)
 line_color = (0x72, 0x31, 0x47)
 
 clock = pygame.time.Clock()
