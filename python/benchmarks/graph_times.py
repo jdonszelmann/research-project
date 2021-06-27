@@ -14,6 +14,7 @@ colors = [
     (128, 124, 23),
     (204, 111, 78),
 ]
+background = (34, 39, 46)
 
 
 def lighten(r, g, b, amount):
@@ -46,6 +47,8 @@ def percentile(l: list[float], perc: float) -> float:
     return v1 * f + v2 * (1 - f)
 
 
+black = True
+
 def graph_results(*args,
                   save=True,
                   bounds=True,
@@ -56,12 +59,31 @@ def graph_results(*args,
                   ):
     plt.style.use('seaborn-whitegrid')
 
+    if black:
+        plt.rcParams['axes.facecolor'] = rgb_to_colour(*background)
+        plt.rcParams['axes.edgecolor'] = '#FFFFFF'
+        plt.rcParams['axes.labelcolor'] = '#FFFFFF'
+        plt.rcParams['figure.facecolor'] = rgb_to_colour(*background)
+        plt.rcParams['xtick.color'] = '#FFFFFF'
+        plt.rcParams['ytick.color'] = '#FFFFFF'
+        plt.grid(color='#FFFFFF', linestyle='-', linewidth=0.7)
+        plt.rcParams['font.size'] = '20'
+        plt.rcParams['legend.frameon'] = 'True'
+
 
     if graph_times and graph_percentage:
-        plt.rcParams["figure.figsize"] = (7, 5)
+        if black:
+            plt.rcParams["figure.figsize"] = (9, 5)
+        else:
+            plt.rcParams["figure.figsize"] = (7, 5)
+
         fig, (percentage, times) = plt.subplots(2, 1, sharex=True)
     elif graph_times or graph_percentage:
-        plt.rcParams["figure.figsize"] = (7, 3)
+        if black:
+            plt.rcParams["figure.figsize"] = (8, 4)
+        else:
+            plt.rcParams["figure.figsize"] = (7, 3)
+
         fig, (subplt) = plt.subplots(1, 1)
         if graph_percentage:
             percentage = subplt
@@ -70,13 +92,15 @@ def graph_results(*args,
     else:
         assert False, "should graph something"
 
-    plt.rcParams['font.size'] = '14'
+    if not black:
+        plt.rcParams['font.size'] = '14'
 
 
     if graph_percentage and graph_times:
-        plt.subplots_adjust(hspace=0.3)
-        plt.tight_layout(pad=0)
-        plt.margins(0, 0)
+        if not black:
+            plt.subplots_adjust(hspace=0.3)
+            plt.tight_layout(pad=0)
+            plt.margins(0, 0)
 
     if graph_percentage:
         percentage.set_title("% solved out of 200 maps")
@@ -102,6 +126,8 @@ def graph_results(*args,
 
     save_location = args[-1]
     ppydata = []
+
+    plt.tight_layout()
 
     longest = 0
 
@@ -195,7 +221,13 @@ def graph_results(*args,
 
     if legend:
         plt.legend()
+    if black:
+        plt.legend(facecolor=rgb_to_colour(*background), labelcolor='w', prop={'size': 13})
     plt.show()
     if save:
-        fig.savefig(f"{save_location}.eps", bbox_inches="tight", pad_inches=0, format='eps')
-        fig.savefig(f"{save_location}.png", bbox_inches="tight", pad_inches=0, format='png')
+        if black:
+            # fig.savefig(f"{save_location}.black.eps", bbox_inches="tight", pad_inches=0, format='eps')
+            fig.savefig(f"{save_location}.black.png", bbox_inches="tight", pad_inches=0, format='png')
+        else:
+            fig.savefig(f"{save_location}.eps", bbox_inches="tight", pad_inches=0, format='eps')
+            fig.savefig(f"{save_location}.png", bbox_inches="tight", pad_inches=0, format='png')

@@ -6,15 +6,20 @@
         <link rel="stylesheet" href="css/desktop.css">
         <link rel="stylesheet" href="css/columns.css">
         <link rel="stylesheet" href="css/poster.css">
+<!--        <link rel="stylesheet" href="css/presentation.css">-->
 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>M* MAPFM</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="js/dom-to-image.js"></script>
-<!--        <script src="js/pres_mode.js"></script>-->
+        <script src="js/pres_mode.js"></script>
     </head>
+
+    <div id="waiting-screen">
+        <h1>Creating poster...</h1>
+    </div>
 
     <body id="body">
         <div id="header">
@@ -86,7 +91,6 @@
 
                     <p>
                         Multi agent pathfinding (MAPF) is finding collision-free paths for multiple agents.
-
                     </p>
                 </div>
 
@@ -114,7 +118,8 @@
 
                     <p>
                         Grouping agents in MAPF into teams gives MAPFM, MAPF with matching.
-                        Agents travel to a goal of their team. An assignment of agents to goals is called a matching.
+                        Agents travel to one their team's goals.
+                        An assignment from agents to goals is called a matching.
                     </p>
 
                     <div class="twocolimg web_only rounded">
@@ -147,17 +152,112 @@
                     </div>
                     <p></p>
                 </div>
-
-
             </div>
             <div class="content-item">
                 <div class="block">
-                    test
+                    <h2>M*</h2>
+                    <ul>
+                        <li>
+                            A complete and optimal algorithm to solve MAPF instances.
+                        </li>
+                        <li>
+                            Derived from A*.
+                        </li>
+                        <li>
+                            Tries to separate the planning of agents as much as possible.
+                        </li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <h2>Inmatching</h2>
+                    <figure class="web_only">
+                        <div class="gif rounded">
+                            <img src="assets/inmatchings.gif" class="mapf-image dynamic">
+                            <img src="assets/inmatchings-static.png" class="mapf-image static">
+                        </div>
+                    </figure>
+
+
+                    <figure class="poster_only center-img">
+                        <img src="assets/inmatchings-one.png" class="mapf-image">
+                    </figure>
+
+                    <p>
+                    Inmatching evaluates all matchings simultaneously.
+                    </p>
+                </div>
+                <div class="block">
+                    <h2>Prematching</h2>
+                    <figure class="web_only">
+                        <div class="gif rounded">
+                            <img src="assets/prematchings.gif" class="mapf-image dynamic">
+                            <img src="assets/prematchings-static.png" class="mapf-image static">
+                        </div>
+                    </figure>
+
+                    <div class="threecolimg poster_only">
+                        <figure>
+                            <img src="assets/prematchings-one.png" class="mapf-image">
+                        </figure>
+                        <figure>
+                            <img src="assets/prematchings-two.png" class="mapf-image">
+                        </figure>
+                        <figure>
+                            <img src="assets/prematchings-three.png" class="mapf-image redborder">
+                        </figure>
+                    </div>
+
+                    <p>
+                        Agents search a path to only one of their goals at a time.
+                        All possible assignments of agents to goals are considered.
+                    </p>
                 </div>
             </div>
             <div class="content-item">
                 <div class="block">
-                    test
+                    <h2>Results</h2>
+
+                    <div class="center-img">
+                        <figure>
+                            <img src="assets/graph_inmatch_vs_prematch.png" class="mapf-image">
+                        </figure>
+                        <figure>
+                            <img src="assets/graph_extensions.png" class="mapf-image">
+                        </figure>
+                        <figure>
+                            <img src="assets/graph_comparison.png" class="mapf-image redborder">
+                        </figure>
+                    </div>
+
+                    <p>
+                        Graphs display percentage solved in 2 minutes out of 200 20x20 maps, 25% filled with obstacles.
+                        Agents are split over 3 teams. All maps are guaranteed to be theoretically solvable.
+                    </p>
+                </div>
+                <div class="block">
+                    <h2>Conclusion</h2>
+
+                    <p>
+                        <ul>
+                            <li>
+                                Prematching is generally preferable to Inmatching.
+                            </li>
+                            <li>
+                                Several extensions to M* and to prematching can improve the performance of M*.
+                            </li>
+                            <li>
+                                The performance of M* is comparable to that of other A* derived algorithms.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="block">
+                    <p>
+                        Complete explanations, results and conclusions can be found at
+                        <a href="https://mapf-poster.jdonszelmann.nl/paper">
+                            https://mapf-poster.jdonszelmann.nl/paper</a>.
+                    </p>
                 </div>
             </div>
         </div>
@@ -179,13 +279,20 @@
 
             async function do_print() {
                 const body = document.getElementById("body");
-                document.getElementById("html").classList.remove("mobile");
+                const html = document.getElementById("html");
+
+                const waiting = document.getElementById("waiting-screen")
+                waiting.style.display = "flex"
+
+                html.classList.remove("mobile");
 
                 body.classList.add("poster")
 
-                const dataUrl = await domtoimage.toPng(body)
+                const dataUrl = await domtoimage.toPng(body, {
+                    filter: i => i != waiting
+                })
 
-                // body.classList.remove("poster")
+                body.classList.remove("poster")
 
                 const link = document.createElement('a');
                 link.download = 'poster.png';
@@ -193,6 +300,8 @@
                 link.click();
 
                 resize();
+
+                waiting.style.display = "none"
             }
         </script>
     </body>

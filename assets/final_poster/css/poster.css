@@ -54,14 +54,18 @@ body:not(.poster) .poster_only {
     display: none !important;
 }
 
-.poster p {
+.poster p, .poster ul {
     padding-left: 12mm;
     padding-right: 12mm;
 }
 
+.poster ul {
+    margin-left: 14mm;
+}
+
 .poster .block {
     border-radius: 15mm;
-    margin: 10mm 3mm 3mm;
+    margin: 10mm 5mm 5mm;
 }
 
 #interactive-version {
@@ -72,9 +76,36 @@ body:not(.poster) .poster_only {
     margin-bottom: 10mm;
 }
 
-#interactive-version a {
+a {
     white-space: nowrap;
     color: #00A6D6;
     font-weight: bold;
 }
 
+.center-img {
+    text-align: center;
+}
+
+#waiting-screen {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--dark-gray);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    z-index: 1000;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#waiting-screen h1 {
+    font-size: 3vw !important;
+    color: var(--white);
+}
