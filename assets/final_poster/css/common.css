@@ -53,7 +53,8 @@ body, html {
 .content-item {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: space-between;
+
 }
 
 #content h1 {
@@ -84,7 +85,12 @@ body, html {
     background-color: var(--darker-gray);
     border-radius: 20px;
     border: 1px solid var(--light-gray);
-    margin: 15px 2px 2px;
+
+    margin-top: 15px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+
+    flex: 1;
 }
 
 #names {
@@ -122,7 +128,7 @@ body, html {
 
 
 .nameitem:hover, .author:hover {
-    background-color: var(--accent-2);
+    background-color: var(--dark-gray);
 }
 
 #title {
@@ -135,9 +141,6 @@ body, html {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-}
-
-.tudelft:hover {
     cursor: pointer;
 }
 
@@ -182,3 +185,17 @@ p {
     border-radius: 20px;
 }
 
+.download_button {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--light-gray);
+    margin: 1vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+.download_button:hover {
+    background-color: var(--dark-gray);
+}

@@ -17,23 +17,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/MAPF-matching-long.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/MAPF-matching-long.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/MAPF-matching-short.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/MAPF-matching-short.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/mapf-matching-one.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/mapf-matching-one.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/mapf-matching-two.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/mapf-matching-two.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/matchings-one.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/matchings-one.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/matchings-static.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/matchings-static.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/matchings-two.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/matchings-two.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/matchings.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/matchings.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding-illegal-static.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding-illegal-static.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding-illegal.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding-illegal.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding-static.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding-static.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/assets/multi-agent-pathfinding.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/final_poster/build_container.sh" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/build_container.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/final_poster/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/css/poster.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/css/poster.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/final_poster/css/phone.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/css/phone.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/final_poster/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/matchings/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/matchings/generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/final_poster/matchings/output.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/final_poster/matchings/output.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/absl-src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools/build/_deps/protobuf-src/cmake/install.cmake" afterDir="false" />
@@ -435,7 +422,7 @@
       <workItem from="1623928409090" duration="2610000" />
       <workItem from="1623939043833" duration="84000" />
       <workItem from="1624390258097" duration="6926000" />
-      <workItem from="1624532289703" duration="28967000" />
+      <workItem from="1624532289703" duration="32271000" />
     </task>
     <servers />
   </component>

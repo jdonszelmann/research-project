@@ -16,6 +16,10 @@
     display: block !important;
 }
 
+.mobile .block {
+    margin: 6px 3px;
+}
+
 .mobile .no-mobile-only {
     display: none !important;
 }
@@ -44,11 +48,9 @@
 }
 
 .mobile #content {
-    padding-top: 40px;
     display: block;
 
     height: auto;
-    padding-bottom: 5vw;
 }
 
 .mobile .content-item {
