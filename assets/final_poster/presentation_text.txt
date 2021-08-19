@@ -1,0 +1,112 @@
+
+
+# `
+
+Welcome, I will be talking to you about the research project I did in the past 11 weeks. 
+The title of it is "Matching in MAPF using M*", which really breaks down in 3 parts. Matching,
+Multi-agent pathfinding, and M*. 
+
+
+* welcome
+* title
+
+
+# 1
+
+One part is multi-agent pathfinding. MAPF is a form of pathfinding. 
+Google maps does pathfinding for a single "agent": your car. Multi agent pathfinding is to
+simultatneously find paths for multiple agents and making that the paths are such that agents
+never collide. 
+
+In the firgure you can see two circles (the agents). To get to their goals they need to cross.
+(left:) This is not allowed.
+(right:) But like this is. This is also an optimal solution because the combined time traveled
+is as short as it can be.
+
+# 2
+
+In this project we studied an extension of MAPF called MAPF with matching. In normal MAPF, every 
+agent has a single goal. But in MAPF with matching, agents are grouped into teams. Teams share goals.
+
+So, each agent in a team needs to be matched up with a goal of that team. Just like every circle
+on the top here is matched up with a circle on the bottom there are many possible matchings.
+
+In the problem below there are two. Either one agent can move out of the way, or both agents move on.
+The latter is more efficient.
+
+# 3
+
+To solve MAPF with matching, I extended an existing MAPF algorithm called M*. M* is derived from
+the famous A* algorithm, but tries to be
+more efficient by, whenever possible, separate the planning of agents which do not collide. 
+Without separating the planning of agents, solving MAPF problems can be very slow because all interactions
+of all agents need to be evaluated.
+
+# 4 
+
+So what exactly was I trying to find out?
+
+First, how can M* be extended to solve MAPF with matching? It turns out there are two methods.
+
+Second, do existing improvements to M* also make a difference when doing this matching?
+
+Last, how does this M* with matching compare to the algorithms my peers chose to add matching to.
+
+
+# 5
+
+To add matching to M* there are two strategies.
+
+First there is prematching. With prematching, Every possible matching of agents to goals is 
+calculted in advance. Every matching is a normal MAPF problem in itself. Every MAPF problem can be 
+evaluated independently with M* and the best route is chosen.
+
+So as you can see, it evaluates all routes, and then chooses the gree one.
+
+# 6 
+
+Inmatching is different. With inmatching, all matchings are searched for in one big search. 
+
+This picture shows that happeneing with the three agents moving simultaneously.
+
+However, they do not actually move simultaneously. In practice it's more like lockstep, all agents 
+making a move after one another. The shortest path is still found (green).
+
+So it's comparing one big search with multiple smaller searches. 
+
+# 7
+
+Through experiments (see the top graph) I found out that in fact, prematching is often more 
+efficient (blue line). The graph shows what percentage of randomly generated problems M* is able 
+to solve. Each randomly generated map isguaranteed to be solvable. 
+
+Note that more experiments have been performed than just this one on various map layouts
+and team sizes. This just a sample.
+
+In the middle graph, you see various 
+extensions. The first line is "barebones" M*. Each subsequent line adds an optimization. Some 
+already existing optimizations which are shown to also make M* better on matching problems, 
+and some optimizations (the pruning and sorting) specifically to improve prematching.
+
+
+Lastly, you can see in the bottom graph,
+that M* (light red) performs very comparably with other similar algorithms such as increasing
+cost tree search and variants of A* also
+modified to solve MAPF with matching. 
+
+One algorithm stands out however: Conflict based search with min-cost flow. 
+
+This is in fact true in most experiments I performed. This is because all experiments were 
+performed on relatively small maps. The size of the map makes a very small difference in M* and 
+other A* algorithms. For CBM it does not. On larger map sizes CBM may perform worse.
+
+# 8
+
+So to conclude. I found that M* can be extended to solve matching problems in 2 ways. 
+Prematching and Inmatching. Prematching
+shows a better performance in most cases. Several extensions to M* also make a large difference
+when solving matching problems. But in the end, the performance of M* is very comparable with 
+other similar algorithms.
+
+
+

@@ -33,9 +33,9 @@ def matchings(indices: list[int]) -> Iterator[list[int]]:
 pygame.init()
 
 n = 3
-width = 1000
-height = (width / 4) * n
-node_size = height / (3 * n)
+height = 1000
+width = (height / 7) * n
+node_size = height / (6 * n)
 window = pygame.display.set_mode((int(width), int(height)))
 
 colors = [
@@ -88,7 +88,7 @@ for goals in matchings(starts):
     data = data.swapaxes(0, 1)
     images.append(data)
 
-    clock.tick(2)
+    clock.tick(10)
 
 imageio.mimsave('output.gif', images, fps=2)
 

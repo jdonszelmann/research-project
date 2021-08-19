@@ -10,6 +10,22 @@
       <sourceFolder url="file://$MODULE_DIR$/rust/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/rust/target" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_25percent_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_25percent_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_75percent_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_75percent_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_maze_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_maze_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_obstacle_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/comparison_obstacle_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/extensions_25percent_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/extensions_25percent_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/extensions_75percent_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/extensions_75percent_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/inmatch_vs_prematch_25percent_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/inmatch_vs_prematch_25percent_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/inmatch_vs_prematch_75percent_1teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/inmatch_vs_prematch_75percent_3teams_maps" />
     </content>
     <orderEntry type="jdk" jdkName="Pipenv (research-project)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

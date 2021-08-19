@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/desktop.css">
         <link rel="stylesheet" href="css/columns.css">
         <link rel="stylesheet" href="css/poster.css">
-<!--        <link rel="stylesheet" href="css/presentation.css">-->
+        <link rel="stylesheet" href="css/presentation.css">
 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>M* MAPFM</title>
@@ -21,7 +21,16 @@
         <h1>Creating poster...</h1>
     </div>
 
+    <div id="presentation-background" class="presentation_only">
+    </div>
+
     <body id="body">
+
+        <div class="presentation_only block" id="state0">
+            <h1> Matching in Multi-Agent Pathfinding using M* </h1>
+            <h2> by Jonathan Dönszelmann </h2>
+        </div>
+
         <div id="header">
             <div class="no-mobile-only download_button" onclick="do_print()">Download poster</div>
             <div class="tudelft">
@@ -35,7 +44,7 @@
             <div id="title">
                 <h1>Matching in Multi-Agent Pathfinding using M*</h1>
                 <div id="author-parent">
-                    <div class="author" onclick="location.href = 'mailto://J.B.donszelmann@student.tudelft.nl';">Jonathan Dönselmann <span>&lt;J.B.donszelmann@student.tudelft.nl&gt;</span></div>
+                    <div class="author" onclick="location.href = 'mailto://J.B.Donszelmann@student.tudelft.nl';">Jonathan Dönszelmann <span>&lt;J.B.Donszelmann@student.tudelft.nl&gt;</span></div>
                 </div>
             </div>
 
@@ -54,8 +63,8 @@
         <div id="content">
             <div class="content-item">
 
-                <div class="block">
-                    <h2>Multi-agent pathfinding</h2>
+                <div class="block" id="state1">
+                    <h2>1. Multi-agent pathfinding</h2>
                     <div class="threecolimg poster_only">
                         <figure>
                             <img src="assets/multi_agent_pathfinding_start.png" class="mapf-image">
@@ -90,15 +99,15 @@
 
 
                     <p>
-                        Multi agent pathfinding (MAPF) is finding collision-free paths for multiple agents.
+                        Multi-agent pathfinding (MAPF) is finding collision-free paths for multiple agents.
                     </p>
                 </div>
 
-                <div class="block">
-                    <h2>Matching in MAPF</h2>
+                <div class="block" id="state2">
+                    <h2>2. Matching in MAPF</h2>
 
                     <figure class="web_only">
-                        <div class="gif rounded">
+                        <div class="gif rounded singleimg">
                             <img src="assets/matchings.gif" class="mapf-image dynamic">
                             <img src="assets/matchings-static.png" class="mapf-image static">
                             <figcaption>All matchings between two sets of 3 nodes</figcaption>
@@ -152,10 +161,9 @@
                     </div>
                     <p></p>
                 </div>
-            </div>
-            <div class="content-item">
-                <div class="block">
-                    <h2>M*</h2>
+
+                <div class="block" id="state3">
+                    <h2>3. M*</h2>
                     <ul>
                         <li>
                             A complete and optimal algorithm to solve MAPF instances.
@@ -164,38 +172,41 @@
                             Derived from A*.
                         </li>
                         <li>
-                            Tries to separate the planning of agents as much as possible.
+                            Plan agents independently when possible.
                         </li>
                     </ul>
                 </div>
-                <div class="block">
-                    <h2>Inmatching</h2>
-                    <figure class="web_only">
-                        <div class="gif rounded">
-                            <img src="assets/inmatchings.gif" class="mapf-image dynamic">
-                            <img src="assets/inmatchings-static.png" class="mapf-image static">
-                        </div>
-                    </figure>
+            </div>
+            <div class="content-item">
 
-
-                    <figure class="poster_only center-img">
-                        <img src="assets/inmatchings-one.png" class="mapf-image">
-                    </figure>
-
-                    <p>
-                    Inmatching evaluates all matchings simultaneously.
-                    </p>
+                <div class="block" id="state4">
+                    <h2>4. Research Questions</h2>
+                    <ul>
+                        <li>
+                            How can M* be adapted to also solve MAPFM problems?
+                        </li>
+                        <li>
+                            Do existing improvements of MAPF M* also improve performance when solving MAPFM problems?
+                        </li>
+                        <li>
+                            How does M* compare to other MAPF algorithms adapted to solve MAPFM?
+                        </li>
+                    </ul>
                 </div>
-                <div class="block">
-                    <h2>Prematching</h2>
-                    <figure class="web_only">
+
+                <div class="block" id="state5">
+                    <p id="firstp">
+                        Two techniques were developed to add matching to M*.
+                    </p>
+                    <h2>5. Prematching</h2>
+                    <figure class="web_only singleimg">
                         <div class="gif rounded">
                             <img src="assets/prematchings.gif" class="mapf-image dynamic">
                             <img src="assets/prematchings-static.png" class="mapf-image static">
                         </div>
                     </figure>
 
-                    <div class="threecolimg poster_only">
+                    <div class="threecolimg poster_only separated">
                         <figure>
                             <img src="assets/prematchings-one.png" class="mapf-image">
                         </figure>
@@ -209,15 +220,33 @@
 
                     <p>
                         Agents search a path to only one of their goals at a time.
-                        All possible assignments of agents to goals are considered.
+                        All possible assignments of agents to goals are searched separately.
+                    </p>
+                </div>
+                <div class="block" id="state6">
+                    <h2>6. Inmatching</h2>
+                    <figure class="web_only singleimg">
+                        <div class="gif rounded">
+                            <img src="assets/inmatchings.gif" class="mapf-image dynamic">
+                            <img src="assets/inmatchings-static.png" class="mapf-image static">
+                        </div>
+                    </figure>
+
+
+                    <figure class="poster_only center-img">
+                        <img src="assets/inmatchings-one.png" class="mapf-image">
+                    </figure>
+
+                    <p>
+                        Inmatching searches all matchings at the same time in a single slower search process.
                     </p>
                 </div>
             </div>
             <div class="content-item">
-                <div class="block">
-                    <h2>Results</h2>
+                <div class="block" id="state7">
+                    <h2>7. Results</h2>
 
-                    <div class="center-img">
+                    <div class="center-img" id="resultimgs">
                         <figure>
                             <img src="assets/graph_inmatch_vs_prematch.png" class="mapf-image">
                         </figure>
@@ -231,19 +260,18 @@
 
                     <p>
                         Graphs display percentage solved in 2 minutes out of 200 20x20 maps, 25% filled with obstacles.
-                        Agents are split over 3 teams. All maps are guaranteed to be theoretically solvable.
+                        Agents are split over 3 teams. All maps are guaranteed to be solvable.
                     </p>
                 </div>
-                <div class="block">
-                    <h2>Conclusion</h2>
+                <div class="block" id="state8">
+                    <h2>8. Conclusion</h2>
 
                     <p>
                         <ul>
                             <li>
                                 Prematching is generally preferable to Inmatching.
                             </li>
-                            <li>
-                                Several extensions to M* and to prematching can improve the performance of M*.
+                            <li>Several extensions to M* and to prematching can improve the performance of M*.
                             </li>
                             <li>
                                 The performance of M* is comparable to that of other A* derived algorithms.
@@ -253,10 +281,19 @@
                 </div>
 
                 <div class="block">
+                    <h2>Paper</h2>
                     <p>
                         Complete explanations, results and conclusions can be found at
-                        <a href="https://mapf-poster.jdonszelmann.nl/paper">
-                            https://mapf-poster.jdonszelmann.nl/paper</a>.
+                        <a href="https://mapfm-poster.jdonszelmann.nl/paper.pdf">
+                            https://mapfm-poster.jdonszelmann.nl/paper.pdf</a>.
+                    </p>
+                </div>
+
+                <div class="block presentation_only" id="state9">
+                    <h1> Matching in Multi-Agent Pathfinding using M* </h1>
+                    <h2> by Jonathan Dönszelmann </h2>
+                    <p>
+                        A poster of this presentation can be found at <a>https://mapfm-poster.jdonszelmann.nl</a>
                     </p>
                 </div>
             </div>
@@ -275,6 +312,7 @@
                 }
             }
             window.addEventListener("resize", resize);
+            document.getElementById("state9").style.display = "none";
             resize();
 
             async function do_print() {

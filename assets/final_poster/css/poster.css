@@ -109,3 +109,7 @@ a {
     font-size: 3vw !important;
     color: var(--white);
 }
+
+.separated * + * {
+    border-left: 2px solid var(--accent-2);
+}

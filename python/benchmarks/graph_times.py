@@ -47,7 +47,7 @@ def percentile(l: list[float], perc: float) -> float:
     return v1 * f + v2 * (1 - f)
 
 
-black = True
+black = False
 
 def graph_results(*args,
                   save=True,
