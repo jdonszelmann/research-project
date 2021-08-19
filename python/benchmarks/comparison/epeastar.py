@@ -19,10 +19,13 @@ modules = get_src_modules()
 
 
 class EPEAStar(MapfAlgorithm):
+    def __init__(self, inmatch=False):
+        self.inmatch = inmatch
+
     def solve(self, problem: Problem) -> Solution:
         def solve_epea():
             algorithm = AlgorithmDescriptor(
-                Algorithm.ExhaustiveMatchingSorting,
+                Algorithm.HeuristicMatching if self.inmatch else Algorithm.ExhaustiveMatchingSorting,
                 independence_detection=True,
             )
             solver = Solver(problem, algorithm)

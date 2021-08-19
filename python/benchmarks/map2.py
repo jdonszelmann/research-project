@@ -91,9 +91,6 @@ class MapGenerator2:
                      height: int,
                      num_agents: List[int],
                      obstacle_percentage: float,
-                     min_goal_distance: float = 0.5,
-                     max_goal_distance: float = 1
-
                      ) -> Problem:
 
         grid = [[0 for _ in range(width)] for _ in range(height)]
@@ -105,7 +102,7 @@ class MapGenerator2:
         for _ in range(num_filled):
             self.__fill_one(grid, width, height, total_num_agents)
 
-        starts, goals = self.__generate_agent_positions(grid, width, height, num_agents, min_goal_distance, max_goal_distance)
+        starts, goals = self.__generate_agent_positions(grid, width, height, num_agents)
 
         start_locations: List[MarkedLocation] = []
         goal_locations: List[MarkedLocation] = []
@@ -119,9 +116,7 @@ class MapGenerator2:
 
         return Problem(grid, width, height, start_locations, goal_locations)
 
-    def __generate_agent_positions(self, grid, width, height, num_agents: List[int],
-                                   min_distance: float,
-                                   max_distance: float) -> Tuple[List[Coord], List[Coord]]:
+    def __generate_agent_positions(self, grid, width, height, num_agents: List[int]) -> Tuple[List[Coord], List[Coord]]:
         agent_positions = []
         goal_positions = []
 
@@ -135,59 +130,31 @@ class MapGenerator2:
 
             agent_positions.append(Coord(start_x, start_y))
 
-        for agent in agent_positions:
-            queue = Queue()
-            queue.put((agent, 0))
-            distances, m = self.__compute_heuristic(queue, grid)
-            distance = random.randint(int(m * min_distance), int(m * max_distance))
-            possible_locations = []
-            for y, row in enumerate(distances):
-                for x, value in enumerate(row):
-                    if value == distance and Coord(x, y) not in goal_positions:
-                        possible_locations.append(Coord(x, y))
+        for x in range(sum(num_agents)):
+            start_x = randint(0, width - 1)
+            start_y = randint(0, height - 1)
+            while grid[start_y][start_x] != 0 or Coord(start_x, start_y) in agent_positions:
+                start_x = randint(0, width - 1)
+                start_y = randint(0, height - 1)
 
-            goal_positions.append(random.choice(possible_locations))
+            goal_positions.append(Coord(start_x, start_y))
+
 
         return agent_positions, goal_positions
 
-    def __compute_heuristic(self, queue: Queue, grid: List[List[int]]) -> Tuple[List[List[Number]], int]:
-        visited = set()
-        heuristic = [[float('inf') for _ in range(len(grid[0]))] for _ in range(len(grid))]
-        m = 0
-        while not queue.empty():
-            coord, dist = queue.get()
-            m = max(dist, m)
-            if coord in visited:
-                continue
-            visited.add(coord)
-
-            # Already has a better distance
-            if heuristic[coord.y][coord.x] != float("inf"):
-                continue
-            heuristic[coord.y][coord.x] = dist
-
-            for neighbor in self.__get_neighbors(grid, coord):
-                if neighbor not in visited:
-                    queue.put((neighbor, dist + 1))
-        return heuristic, m
-
-    @staticmethod
-    def __get_neighbors(grid: List[List[int]], coords: Coord):
-        res = list()
-        for dx, dy in [(0, -1), (0, 1), (-1, 0), (1, 0)]:
-            new_coord = coords + Coord(dx, dy)
-            if 0 <= new_coord.y < len(grid) and 0 <= new_coord.x < len(grid[0]) and grid[new_coord.y][new_coord.x] == 0:
-                res.append(new_coord)
-        return res
 
     def generate_map_file(self, name, width: int,
                           height: int,
                           num_agents: List[int],
-                          obstacle_percentage: float,
-                          min_goal_distance: float,
-                          max_goal_distance: float):
-        problem = self.generate_map(width, height, num_agents, obstacle_percentage, min_goal_distance, max_goal_distance)
-        self.__store_map(name, problem)
+                          obstacle_percentage: float):
+
+        file_path = os.path.join(self.map_root, name + ".map")
+        if os.path.exists(file_path):
+            tqdm.write(f"maps {name} already generated")
+        else:
+            problem = self.generate_map(width, height, num_agents, obstacle_percentage)
+            self.__store_map(name, problem)
+
 
     def generate_even_batch(self,
                             amount: int,
@@ -199,15 +166,17 @@ class MapGenerator2:
                             package_name: str = None,
                             file_name: str = None,
                             obstacle_percentage: float = 0.75,
-                            min_goal_distance: float = 0.5,
-                            max_goal_distance: float = 1
                             ):
         package_name = package_name if package_name is not None else f"{prefix}-{width}x{height}-A{agents}_T{teams}"
         file_name = package_name if file_name is None else file_name
         min_team_count = int(agents/teams)
         diff = agents - (min_team_count * teams)
         num_agents = [min_team_count for _ in range(teams)]
-        os.mkdir(os.path.join(self.map_root, package_name))
+        try:
+            os.mkdir(os.path.join(self.map_root, package_name))
+        except FileExistsError:
+            tqdm.write("dir already exists")
+
         for i in range(diff):
             num_agents[i] += 1
 
@@ -218,7 +187,7 @@ class MapGenerator2:
             if int(i) < 100 < amount:
                 i = f"0{i}"
             name = os.path.join(package_name, f"{file_name}-{i}")
-            actions.append((name, width, height, num_agents, obstacle_percentage, min_goal_distance, max_goal_distance))
+            actions.append((name, width, height, num_agents, obstacle_percentage))
 
         with Pool(processes) as p:
             p.starmap(self.generate_map_file, actions)

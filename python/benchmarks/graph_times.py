@@ -56,6 +56,14 @@ def graph_results(*args,
                   graph_times=False,
                   graph_percentage=True,
                   legend=True,
+                  xlabel="number of agents",
+                  ylabel="% solved",
+                  graph_zeros=False,
+                  index_mapping=lambda i: i,
+                  xticks=None,
+                  x_axis_start=0,
+                  title="",
+                  line_thickness=3,
                   ):
     plt.style.use('seaborn-whitegrid')
 
@@ -103,7 +111,7 @@ def graph_results(*args,
             plt.margins(0, 0)
 
     if graph_percentage:
-        percentage.set_title("% solved out of 200 maps")
+        percentage.set_title(title)
     if graph_times:
         if bounds:
             times.set_title("time to solution of solved maps")
@@ -112,13 +120,13 @@ def graph_results(*args,
 
     if graph_percentage:
         percentage.xaxis.set_major_locator(MaxNLocator(integer=True))
-        percentage.set_ylabel("% solved")
+        percentage.set_ylabel(ylabel)
         if not graph_times:
-            percentage.set_xlabel("number of agents")
+            percentage.set_xlabel(xlabel)
 
     if graph_times:
         times.xaxis.set_major_locator(MaxNLocator(integer=True))
-        times.set_xlabel("number of agents")
+        times.set_xlabel(xlabel)
         times.set_ylabel("seconds")
 
     if graph_percentage:
@@ -129,7 +137,10 @@ def graph_results(*args,
 
     plt.tight_layout()
 
-    longest = 0
+    x_limit = 0
+
+    if xticks is not None:
+        plt.xticks(xticks)
 
     for plt_index, (fn, label) in enumerate(args[:-1]):
         with open(fn, "r") as f:
@@ -144,7 +155,6 @@ def graph_results(*args,
                 times90pydata = []
 
             lines = f.readlines()
-            longest = max(longest, len(lines))
             for l in [l.strip() for l in lines if l.strip() != ""]:
                 before, after = l.split(":")
                 after_list = eval(after)
@@ -153,6 +163,7 @@ def graph_results(*args,
                 fraction_solved = (len(after_list) - after_list.count(None)) / len(after_list)
 
                 solved_times = [i for i in after_list if i is not None]
+
 
                 if fraction_solved != 0:
                     if graph_percentage:
@@ -164,9 +175,13 @@ def graph_results(*args,
                         times10pydata.append(percentile(solved_times, 10))
                         times50pydata.append(percentile(solved_times, 50))
                         times90pydata.append(percentile(solved_times, 90))
-                elif len(percentageydata) > 0 and percentageydata[-1] != 0 and graph_percentage:
+                elif (len(percentageydata) > 0 and percentageydata[-1] != 0 and graph_percentage) or graph_percentage and graph_zeros:
                     percentagexdata.append(num_agents)
                     percentageydata.append(0)
+
+            percentagexdata = list(map(index_mapping, percentagexdata))
+
+            x_limit = max(x_limit, max(percentagexdata))
 
             if graph_percentage:
                 percentage.plot(
@@ -174,7 +189,7 @@ def graph_results(*args,
                     percentageydata,
                     color=rgb_to_colour(*colors[plt_index]),
                     label=label,
-                    linewidth=3,
+                    linewidth=line_thickness,
                 )
 
                 if fill_between:
@@ -203,7 +218,7 @@ def graph_results(*args,
                     times50pydata,
                     color=rgb_to_colour(*colors[plt_index]),
                     label=label,
-                    linewidth=3,
+                    linewidth=line_thickness,
                 )
 
                 if bounds:
@@ -215,9 +230,9 @@ def graph_results(*args,
                     )
 
     if graph_percentage:
-        percentage.set_xlim(0, longest + 1)
+        percentage.set_xlim(x_axis_start, x_limit + 1)
     else:
-        times.set_xlim(0, longest + 1)
+        times.set_xlim(x_axis_start, x_limit + 1)
 
     if legend:
         plt.legend()
