@@ -1,4 +1,4 @@
-import os
+import os, sys
 import random
 from multiprocessing import Pool
 from numbers import Number
@@ -13,6 +13,7 @@ from python.coord import Coord
 
 processes = 12
 
+sys.setrecursionlimit(100000)
 
 class MapGenerator2:
 
