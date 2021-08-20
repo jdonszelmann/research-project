@@ -22,18 +22,17 @@ class ICTSInmatching(MapfAlgorithm):
     def solve(self, problem: Problem) -> Solution:
         def solve_icts():
             config = SolverConfig(
-                name="Exh+E+B+O+ID",
+                name="ICTS-m+ID+S+C",
                 combs=3,
                 prune=True,
-                enhanced=True,
-                pruned_child_gen=False,
-                id=False,
+                enhanced=False,
+                pruned_child_gen=True,
+                id=True,
                 conflict_avoidance=True,
-                enumerative=True,
+                enumerative=False,
                 debug=False,
-                sort_matchings=True,
-                budget_search=True,
-            )
+                sort_matchings=False,
+            ),
             return Solver(config, problem)()
 
         solve = solve_with_modules(modules, solve_icts)

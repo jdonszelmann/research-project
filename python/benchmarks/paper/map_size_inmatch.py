@@ -20,7 +20,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "map_size_25percent"
-processes = 12
+processes = 6
 
 map_sizes = list(range(10, 105, 5))
 expected_results = map_sizes
@@ -96,27 +96,27 @@ def main():
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
-    files.append(run(
-        lambda: ConfigurableMStar(
-            Config(
-                operator_decomposition=True,
-                precompute_paths=False,
-                precompute_heuristic=True,
-                collision_avoidance_table=False,
-                recursive=False,
-                matching_strategy=MatchingStrategy.Inmatch,
-                max_memory_usage=3 * GigaByte,
-                debug=False,
-                report_expansions=False,
-            ),
-        ),
-        "M*"
-    ))
-
-    files.append(run(
-        lambda: EPEAStar(inmatch=True),
-        "EPEA*"
-    ))
+    # files.append(run(
+    #     lambda: ConfigurableMStar(
+    #         Config(
+    #             operator_decomposition=True,
+    #             precompute_paths=False,
+    #             precompute_heuristic=True,
+    #             collision_avoidance_table=False,
+    #             recursive=False,
+    #             matching_strategy=MatchingStrategy.Inmatch,
+    #             max_memory_usage=3 * GigaByte,
+    #             debug=False,
+    #             report_expansions=False,
+    #         ),
+    #     ),
+    #     "M*"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: EPEAStar(inmatch=True),
+    #     "EPEA*"
+    # ))
 
     files.append(run(
         lambda: CBM(),
@@ -140,10 +140,10 @@ def main():
         bounds=False,
         legend=True,
         graph_zeros=True,
-        xlabel="map size (n x n)",
+        xlabel="grid size (n x n)",
         index_mapping=lambda i: map_sizes[i-1],
         x_axis_start=10,
-        title="% solved with varying team sizes",
+        title="% solved with varying grid sizes",
         line_thickness=2,
     )
 
