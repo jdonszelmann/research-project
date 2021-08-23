@@ -20,7 +20,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "team_size_0percent"
-processes = 6
+processes =  1
 
 num_teams = [1, 2, 3, 4, 6, 12, 24]
 expected_results = num_teams
