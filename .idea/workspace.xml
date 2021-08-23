@@ -22,8 +22,6 @@
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/or-tools" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/src/high_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/CSE3000-RP/src/high_level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/team_size_25percent.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/team_size_25percent.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_inmatch_0perc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/team_size_inmatch_0perc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,7 +471,7 @@
       <workItem from="1629375678247" duration="312000" />
       <workItem from="1629376150875" duration="565000" />
       <workItem from="1629376835252" duration="44607000" />
-      <workItem from="1629708643896" duration="3929000" />
+      <workItem from="1629708643896" duration="6489000" />
     </task>
     <servers />
   </component>
