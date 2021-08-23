@@ -22,7 +22,7 @@ this_dir = pathlib.Path(__file__).parent.absolute()
 name = "team_size_25percent"
 processes = 6
 
-num_teams = [1, 2, 3, 4, 6, 12, 24]
+num_teams = [1, 2, 3, 4, 6, 12]
 expected_results = num_teams
 timeout = 2 * 60
 
@@ -36,7 +36,6 @@ def generate_maps():
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
     agents = 12
-    num_teams = [1, 2, 3, 4, 6, 12]
 
     for i in tqdm(num_teams):
 
@@ -144,7 +143,7 @@ def main():
         legend=True,
         graph_zeros=True,
         xlabel="team size",
-        index_mapping=lambda i: num_teams[i-1],
+        index_mapping=lambda i: num_teams[-i],
         xticks=num_teams,
         x_axis_start=1,
         title="% solved with varying team sizes",

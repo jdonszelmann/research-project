@@ -20,11 +20,12 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "map_size_25percent"
-processes = 6
+processes = 1
 
 map_sizes = list(range(10, 105, 5))
 expected_results = map_sizes
 timeout = 2 * 60
+
 
 def generate_maps():
     path = this_dir / name
@@ -36,7 +37,6 @@ def generate_maps():
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
     for i in tqdm(map_sizes):
-
         map_generator = MapGenerator2(path)
         map_generator.generate_even_batch(
             100,  # number of maps
@@ -96,27 +96,27 @@ def main():
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
-    # files.append(run(
-    #     lambda: ConfigurableMStar(
-    #         Config(
-    #             operator_decomposition=True,
-    #             precompute_paths=False,
-    #             precompute_heuristic=True,
-    #             collision_avoidance_table=False,
-    #             recursive=False,
-    #             matching_strategy=MatchingStrategy.Inmatch,
-    #             max_memory_usage=3 * GigaByte,
-    #             debug=False,
-    #             report_expansions=False,
-    #         ),
-    #     ),
-    #     "M*"
-    # ))
-    #
-    # files.append(run(
-    #     lambda: EPEAStar(inmatch=True),
-    #     "EPEA*"
-    # ))
+    files.append(run(
+        lambda: ConfigurableMStar(
+            Config(
+                operator_decomposition=True,
+                precompute_paths=False,
+                precompute_heuristic=True,
+                collision_avoidance_table=False,
+                recursive=False,
+                matching_strategy=MatchingStrategy.Inmatch,
+                max_memory_usage=3 * GigaByte,
+                debug=False,
+                report_expansions=False,
+            ),
+        ),
+        "M*"
+    ))
+
+    files.append(run(
+        lambda: EPEAStar(inmatch=True),
+        "EPEA*"
+    ))
 
     files.append(run(
         lambda: CBM(),
@@ -128,10 +128,10 @@ def main():
         "A*-OD-ID"
     ))
 
-    # files.append(run(
-    #     lambda: ICTSInmatch(),
-    #     "ICTS"
-    # ))
+    files.append(run(
+        lambda: ICTSInmatch(),
+        "ICTS"
+    ))
 
     graph_results(
         *files,

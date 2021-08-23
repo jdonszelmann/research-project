@@ -116,10 +116,10 @@ def main():
     #     "M*"
     # ))
     #
-    # files.append(run(
-    #     lambda: EPEAStar(inmatch=True),
-    #     "EPEA*"
-    # ))
+    files.append(run(
+        lambda: EPEAStar(inmatch=True),
+        "EPEA*"
+    ))
 
     files.append(run(
         lambda: CBM(),
@@ -144,7 +144,7 @@ def main():
         legend=True,
         graph_zeros=True,
         xlabel="team size",
-        index_mapping=lambda i: num_teams[i-1],
+        index_mapping=lambda i: num_teams[-i],
         xticks=num_teams,
         x_axis_start=1,
         title="% solved with varying team sizes",
