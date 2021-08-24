@@ -1,4 +1,4 @@
-solver: MCF
+solver: SSP
 
 run-benchmark: no
 

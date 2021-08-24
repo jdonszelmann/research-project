@@ -27,6 +27,10 @@ class CBM(MapfAlgorithm):
 
             return solve(problem, False)
 
+        a = True
+        while a:
+            pass
+
         return solve_with_modules(modules, solve_cbs)
 
     @property
