@@ -42,29 +42,3 @@ class ICTS(MapfAlgorithm):
     @property
     def name(self) -> str:
         return "ICTS* (Thom)"
-
-
-class ICTSInmatch(MapfAlgorithm):
-    def solve(self, problem: Problem) -> Solution:
-        def solve_icts():
-            config = SolverConfig(
-                name="Exh+E+B+O+ID",
-                combs=3,
-                prune=True,
-                enhanced=True,
-                pruned_child_gen=False,
-                id=False,
-                conflict_avoidance=True,
-                enumerative=True,
-                debug=False,
-                sort_matchings=True,
-                budget_search=True,
-            )
-            return Solver(config, problem)()
-
-        solve = solve_with_modules(modules, solve_icts)
-        return Solution.from_paths(solve)
-
-    @property
-    def name(self) -> str:
-        return "ICTS* (Thom)"

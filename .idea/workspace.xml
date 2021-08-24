@@ -19,13 +19,52 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/Astar-OD-ID" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/Astar-OD-ID" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/Astar-OD-ID/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/Astar-OD-ID/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/robbin_env.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/robbin_env.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/icts.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/icts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/icts_inmatching.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/icts_inmatching.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/all_benchmarks.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/all_benchmarks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/map_size_25percent/map_size_25percent.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/map_size_25percent/map_size_25percent.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/map_size_25percent/map_size_25percent.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/map_size_25percent/map_size_25percent.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/map_size_inmatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/map_size_inmatch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/team_size_0percent.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/team_size_0percent.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/team_size_25percent.eps" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/team_size_25percent.eps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team/results_ICTS.txt.part9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team_0perc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team_0perc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team_25perc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/num_agents_inmatch_1_team_25perc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/results_ICTS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/results_ICTS.txt.part1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/results_ICTS.txt.part2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/results_ICTS.txt.part3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/results_ICTS.txt.part4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/results_ICTS.txt.part5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_0percent/results_ICTS.txt.part6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/results_ICTS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/results_ICTS.txt.part1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/results_ICTS.txt.part2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/results_ICTS.txt.part3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/results_ICTS.txt.part4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/results_ICTS.txt.part5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_25percent/results_ICTS.txt.part6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_inmatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/team_size_inmatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_inmatch_0perc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/team_size_inmatch_0perc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/paper/team_size_outmatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/paper/team_size_outmatch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,8 +431,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.map_size_inmatch" />
         <item itemvalue="Python.all_benchmarks (1)" />
+        <item itemvalue="Python.map_size_inmatch" />
         <item itemvalue="Python.team_size_inmatch" />
         <item itemvalue="Python.team_size_inmatch_0perc" />
         <item itemvalue="Python.all_benchmarks" />
@@ -475,7 +514,7 @@
       <workItem from="1629375678247" duration="312000" />
       <workItem from="1629376150875" duration="565000" />
       <workItem from="1629376835252" duration="44607000" />
-      <workItem from="1629708643896" duration="21522000" />
+      <workItem from="1629708643896" duration="31242000" />
     </task>
     <servers />
   </component>
@@ -622,7 +661,7 @@
     <SUITE FILE_PATH="coverage/research_project$comparison_75percent_3teams.coverage" NAME="comparison_75percent_3teams Coverage Results" MODIFIED="1623677095233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams_expansion.coverage" NAME="inmatch_vs_prematch_75percent_1teams_expansion Coverage Results" MODIFIED="1624390449335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$map2.coverage" NAME="map2 Coverage Results" MODIFIED="1629317822962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/research_project$map_size_inmatch.coverage" NAME="map_size_inmatch Coverage Results" MODIFIED="1629815773808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/paper" />
+    <SUITE FILE_PATH="coverage/research_project$map_size_inmatch.coverage" NAME="map_size_inmatch Coverage Results" MODIFIED="1629842560127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/paper" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams.coverage" NAME="inmatch_vs_prematch_75percent_1teams Coverage Results" MODIFIED="1624392096968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$main.coverage" NAME="main Coverage Results" MODIFIED="1624437745715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/research_project$mapcheck.coverage" NAME="mapcheck Coverage Results" MODIFIED="1624532844554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/mampcheck" />
@@ -633,7 +672,7 @@
     <SUITE FILE_PATH="coverage/research_project$mapcheck__1_.coverage" NAME="mapcheck (1) Coverage Results" MODIFIED="1624620880143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/mapcheck" />
     <SUITE FILE_PATH="coverage/research_project$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1624897281031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_maze_1teams.coverage" NAME="comparison_ivar_maze_1teams Coverage Results" MODIFIED="1623761314156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/research_project$all_benchmarks__1_.coverage" NAME="all_benchmarks (1) Coverage Results" MODIFIED="1629814820600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/paper" />
+    <SUITE FILE_PATH="coverage/research_project$all_benchmarks__1_.coverage" NAME="all_benchmarks (1) Coverage Results" MODIFIED="1629846325320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/paper" />
     <SUITE FILE_PATH="coverage/research_project$comparison_75percent_1teams.coverage" NAME="comparison_75percent_1teams Coverage Results" MODIFIED="1624398258829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$all_benchmarks.coverage" NAME="all_benchmarks Coverage Results" MODIFIED="1629376708726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/RP" />
     <SUITE FILE_PATH="coverage/research_project$comparison_25percent_1teams.coverage" NAME="comparison_25percent_1teams Coverage Results" MODIFIED="1624821584874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />

@@ -5,7 +5,6 @@ from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
 from python.benchmarks.comparison import EPEAStar, CBM, AStarODIDInmatch
-from python.benchmarks.comparison.icts import ICTS, ICTSInmatch
 from python.benchmarks.RP.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.RP.inmatch_vs_prematch_75percent_1teams import output_data

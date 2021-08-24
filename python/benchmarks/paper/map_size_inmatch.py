@@ -4,8 +4,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import EPEAStar, CBM, AStarODIDInmatch
-from python.benchmarks.comparison.icts import ICTS, ICTSInmatch
+from python.benchmarks.comparison import EPEAStar, CBM, AStarODIDInmatch, ICTSInmatching
 from python.benchmarks.RP.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.RP.inmatch_vs_prematch_75percent_1teams import output_data
@@ -20,7 +19,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "map_size_25percent"
-processes = 1 
+processes = 5
 
 map_sizes = list(range(10, 105, 5))
 expected_results = map_sizes
@@ -118,18 +117,18 @@ def main():
         "EPEA*"
     ))
 
-    # files.append(run(
-    #     lambda: CBM(),
-    #     "CBM"
-    # ))
-
     files.append(run(
-        lambda: AStarODIDInmatch(),
-        "A*-OD-ID"
+        lambda: CBM(),
+        "CBM"
     ))
 
+    # files.append(run(
+    #     lambda: AStarODIDInmatch(),
+    #     "A*-OD-ID"
+    # ))
+    #
     files.append(run(
-        lambda: ICTSInmatch(),
+        lambda: ICTSInmatching(),
         "ICTS"
     ))
 
