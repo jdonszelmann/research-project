@@ -117,21 +117,21 @@ def main():
         lambda: EPEAStar(inmatch=True),
         "EPEA*"
     ))
-
-    files.append(run(
-        lambda: CBM(),
-        "CBM"
-    ))
-
-    files.append(run(
-        lambda: AStarODIDInmatch(),
-        "A*-OD-ID"
-    ))
-
-    files.append(run(
-        lambda: ICTSInmatch(),
-        "ICTS"
-    ))
+    #
+    # files.append(run(
+    #     lambda: CBM(),
+    #     "CBM"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: AStarODIDInmatch(),
+    #     "A*-OD-ID"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: ICTSInmatch(),
+    #     "ICTS"
+    # ))
 
     graph_results(
         *files,

@@ -19,11 +19,9 @@ from python.mstar.rewrite.config import GigaByte
 from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "team_size_0percent"
-processes =  1
+name = "num_agents_inmatch_1_team"
+processes = 12
 
-num_teams = [1, 2, 3, 4, 6, 12, 24]
-expected_results = num_teams
 timeout = 2 * 60
 
 def generate_maps():
@@ -35,19 +33,16 @@ def generate_maps():
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
-    agents = 12
-    num_teams = [1, 2, 3, 4, 6, 12]
-
-    for i in tqdm(num_teams):
+    for i in tqdm(range(3, 24)):
 
         map_generator = MapGenerator2(path)
         map_generator.generate_even_batch(
             100,  # number of maps
             20, 20,  # size
-            agents,
-            i,  # number of teams
+            i,
+            1,  # number of teams
             prefix=name,
-            obstacle_percentage=0.25
+            obstacle_percentage=0
         )
 
 
@@ -65,7 +60,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
     results: dict[int, list[Optional[float]]] = {}
 
     all_problems = [(n, [i[1] for i in parser.parse_batch(n.name)]) for n in batchdir.iterdir() if n.is_dir()]
-    all_problems.sort(key=lambda i: len({i.color for i in i[1][0].goals}))
+    all_problems.sort(key=lambda i: len(i[1][0].goals))
 
     with Pool(processes) as p:
         for index, (problem_name, problems) in enumerate(tqdm(all_problems)):
@@ -78,7 +73,14 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
                 results[index] = read_from_file(partname, index)
                 continue
 
-            sols = run_with_timeout(p, solver(), problems, timeout)
+
+            if index <= 1 or sum(1 for i in results[index - 1] if i is not None) != 0:
+                sols = run_with_timeout(p, solver(), problems, 2 * 60)
+
+                results[index] = sols
+            else:
+                results[index] = [None for i in range(len(problems))]
+
 
             tqdm.write(f"{bm_name} part {index}: {sols}")
             results[index] = sols
@@ -116,10 +118,10 @@ def main():
     #     "M*"
     # ))
     #
-    files.append(run(
-        lambda: EPEAStar(inmatch=True),
-        "EPEA*"
-    ))
+    # files.append(run(
+    #     lambda: EPEAStar(inmatch=True),
+    #     "EPEA*"
+    # ))
 
     files.append(run(
         lambda: CBM(),
@@ -144,10 +146,10 @@ def main():
         legend=True,
         graph_zeros=True,
         xlabel="team size",
-        index_mapping=lambda i: num_teams[-i-1],
-        xticks=num_teams,
-        x_axis_start=1,
-        title="% solved with varying team sizes",
+        index_mapping=lambda i: i,
+        xticks=list(range(3, 24)),
+        x_axis_start=3,
+        title="% solved with varying number of agents",
         line_thickness=2,
     )
 
