@@ -20,7 +20,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "map_size_25percent"
-processes = 12
+processes = 1 
 
 map_sizes = list(range(10, 105, 5))
 expected_results = map_sizes
