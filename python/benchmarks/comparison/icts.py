@@ -34,10 +34,9 @@ class ICTS(MapfAlgorithm):
                 sort_matchings=True,
                 budget_search=True,
             )
-            return Solver(config, problem)()
+            return Solver(config)(problem)[0]
 
-        solve = solve_with_modules(modules, solve_icts)
-        return Solution.from_paths(solve)
+        return solve_with_modules(modules, solve_icts)
 
     @property
     def name(self) -> str:

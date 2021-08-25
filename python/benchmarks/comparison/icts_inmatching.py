@@ -32,11 +32,9 @@ class ICTSInmatching(MapfAlgorithm):
                 enumerative=False,
                 debug=False,
                 sort_matchings=False,
-            ),
-            return Solver(config, problem)()
-
-        solve = solve_with_modules(modules, solve_icts)
-        return Solution.from_paths(solve)
+            )
+            return Solver(config)(problem)[0]
+        return solve_with_modules(modules, solve_icts)
 
     @property
     def name(self) -> str:

@@ -4,3 +4,6 @@ mapfmclient~=0.2.5
 tqdm~=4.60.0
 numpy~=1.20.3
 matplotlib~=3.4.2
+mapf-branch-and-bound==0.0.3
+mapf-util==0.0.1
+ortools==9.0.9048
