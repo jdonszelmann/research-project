@@ -1,4 +1,6 @@
 import pathlib as pathlib
+
+from mapf_branch_and_bound.bbsolver import solve_bb
 from mapfmclient import MapfBenchmarker, ProgressiveDescriptor, BenchmarkDescriptor, Problem, MarkedLocation
 import pathlib
 
@@ -20,6 +22,9 @@ with open(this_dir / ".." / "token", "r") as f:
     token = f.read()
 
 
+def branch_and_boundify(algorithm: MapfAlgorithm):
+    return lambda problem: solve_bb(problem,lambda x,y: algorithm.solve(x))
+
 def submit(algorithm: MapfAlgorithm):
     benchmarker = MapfBenchmarker(
         token,
@@ -31,11 +36,11 @@ def submit(algorithm: MapfAlgorithm):
         #         num_teams=2,
         #     ),
         # ),cp5
-        81,
-        algorithm.name,
+        93,
+        algorithm.name+" with branch-and-bound",
         algorithm.version,
         True,
-        solver=algorithm.solve,
+        solver=branch_and_boundify(algorithm),
         cores=1,
         baseURL="https://mapf.nl",
     )
@@ -43,23 +48,23 @@ def submit(algorithm: MapfAlgorithm):
 
 
 if __name__ == '__main__':
-    submit(BetterMatchingAStar())
+    # submit(BetterMatchingAStar())
     # submit(RMStarOD())
     # submit(PrematchMStarOD())
     # submit(PrematchMStar())
     # submit(VisualPrematchMStar())
     # submit(MStar())
     # submit(MStarOD())
-    # submit(ConfigurableMStar(Config(
-    #     operator_decomposition=True,
-    #     precompute_paths=False,
-    #     precompute_heuristic=True,
-    #     collision_avoidance_table=False,
-    #     recursive=False,
-    #     matching_strategy=MatchingStrategy.Prematch,
-    #     max_memory_usage=3 * GigaByte,
-    #     debug=False,
-    # )))
+    submit(ConfigurableMStar(Config(
+        operator_decomposition=True,
+        precompute_paths=False,
+        precompute_heuristic=True,
+        collision_avoidance_table=False,
+        recursive=False,
+        matching_strategy=MatchingStrategy.Prematch,
+        max_memory_usage=3 * GigaByte,
+        debug=False,
+    )))
 
     # m = MStar()
     # s = m.solve(Problem(
