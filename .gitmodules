@@ -1,12 +1,12 @@
 [submodule "python/benchmarks/comparison/matching-epea-star"]
 	path = python/benchmarks/comparison/matching-epea-star
-	url = git@github.com:jaapdejong15/matching-epea-star.git
+	url = https://github.com/tbvanderwoude/matching-epea-star
 [submodule "python/benchmarks/comparison/CSE3000-RP"]
 	path = python/benchmarks/comparison/CSE3000-RP
 	url = git@github.com:RobbinBaauw/CSE3000-RP.git
 [submodule "python/benchmarks/comparison/Astar-OD-ID"]
 	path = python/benchmarks/comparison/Astar-OD-ID
-	url = git@github.com:ivardb/Astar-OD-ID.git
+	url = https://github.com/tbvanderwoude/Astar-OD-ID
 [submodule "python/benchmarks/comparison/icts-m"]
 	path = python/benchmarks/comparison/icts-m
-	url = https://github.com/tbvanderwoude/icts-m
+	url = https://github.com/tbvanderwoude/icts-m.git
