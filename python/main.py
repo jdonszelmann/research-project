@@ -25,6 +25,7 @@ with open(this_dir / ".." / "token", "r") as f:
 def branch_and_boundify(algorithm: MapfAlgorithm):
     return lambda problem: solve_bb(problem,lambda x,y: algorithm.solve(x))
 
+
 def submit(algorithm: MapfAlgorithm):
     benchmarker = MapfBenchmarker(
         token,

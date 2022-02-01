@@ -26,8 +26,9 @@
       <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/inmatch_vs_prematch_25percent_3teams_maps" />
       <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/inmatch_vs_prematch_75percent_1teams_maps" />
       <excludeFolder url="file://$MODULE_DIR$/python/benchmarks/RP/inmatch_vs_prematch_75percent_3teams_maps" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Pipenv (research-project)" jdkType="Python SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Python 3.9 interpreter library" level="application" />
   </component>
