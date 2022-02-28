@@ -4,8 +4,8 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import EPEAStar, CBM, AStarODID
-from python.benchmarks.comparison.icts import ICTS
+from python.benchmarks.comparison import BCP #, EPEAStar, CBM, AStarODID,
+#from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.inmatch_vs_prematch_75percent_1teams import output_data
@@ -54,10 +54,10 @@ def generate_maps():
         )
 
 
-def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
+def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = True):
     batchdir = this_dir / name
     parser = MapParser(batchdir)
-
+    
     fname = batchdir / f"results_{bm_name}.txt"
 
     if fname.exists():
@@ -67,12 +67,12 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
     # num agents : solutions
     results: dict[int, list[Optional[float]]] = {}
 
-    all_problems = [[i[1] for i in parser.parse_batch(n.name)] for n in batchdir.iterdir() if n.is_dir()]
-    all_problems.sort(key=lambda i: len(i[0].goals))
+    all_problems = [parser.parse_batch(n.name) for n in batchdir.iterdir() if n.is_dir()]
+    all_problems.sort(key=lambda i: len(i[0][1].goals))
 
     with Pool(processes) as p:
         for problems in tqdm(all_problems):
-            num_agents = len(problems[0].goals)
+            num_agents = len(problems[0][1].goals)
 
             partname = pathlib.Path(str(fname) + f".{num_agents}agents")
             if partname.exists():
@@ -81,7 +81,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str):
                 continue
 
             if num_agents <= 1 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
-                sols_inmatch = run_with_timeout(p, solver(), problems, 2 * 60)
+                sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 5) # test with low timeout
 
                 tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
                 results[num_agents] = sols_inmatch
@@ -104,41 +104,47 @@ def main():
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
-    files.append(run(
-        lambda: ConfigurableMStar(
-            Config(
-                operator_decomposition=True,
-                precompute_paths=False,
-                precompute_heuristic=True,
-                collision_avoidance_table=False,
-                recursive=False,
-                matching_strategy=MatchingStrategy.SortedPruningPrematch,
-                max_memory_usage=3 * GigaByte,
-                debug=False,
-                report_expansions=False,
-            ),
-        ),
-        "M*"
-    ))
+    # files.append(run(
+    #     lambda: ConfigurableMStar(
+    #         Config(
+    #             operator_decomposition=True,
+    #             precompute_paths=False,
+    #             precompute_heuristic=True,
+    #             collision_avoidance_table=False,
+    #             recursive=False,
+    #             matching_strategy=MatchingStrategy.SortedPruningPrematch,
+    #             max_memory_usage=3 * GigaByte,
+    #             debug=False,
+    #             report_expansions=False,
+    #         ),
+    #     ),
+    #     "M*"
+    # ))
+
+    # files.append(run(
+    #     lambda: EPEAStar(),
+    #     "EPEA*"
+    # ))
+
+    # files.append(run(
+    #     lambda: CBM(),
+    #     "CBM"
+    # ))
+
+    # files.append(run(
+    #     lambda: AStarODID(),
+    #     "A*-OD-ID"
+    # ))
+
+    # files.append(run(
+    #     lambda: ICTS(),
+    #     "ICTS"
+    # ))
 
     files.append(run(
-        lambda: EPEAStar(),
-        "EPEA*"
-    ))
-
-    files.append(run(
-        lambda: CBM(),
-        "CBM"
-    ))
-
-    files.append(run(
-        lambda: AStarODID(),
-        "A*-OD-ID"
-    ))
-
-    files.append(run(
-        lambda: ICTS(),
-        "ICTS"
+        lambda: BCP(),
+        "BCP",
+        False
     ))
 
     graph_results(

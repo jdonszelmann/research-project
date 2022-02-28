@@ -16,19 +16,29 @@ def run_problem_with_timeout_star(args):
 def run_problem_with_timeout(
     algorithm: MapfAlgorithm,
     problem: Problem,
+    parse_maps: bool = True,
     timeout: int = 2 * 60,
 ) -> Optional[float]:
 
     start = time.time()
     try:
-        func_timeout(
+        if(parse_maps):
+            func_timeout(
             timeout,
             algorithm.solve,
-            (problem,),
+            (problem[1],),
+        )
+        else:
+            func_timeout(
+            timeout,
+            algorithm.solve,
+            (problem[0],),
         )
     except FunctionTimedOut:
+        print("func timeout exception")
         return None
     except Exception as e:
+        print("exception test")
         print(e)
         return None
 
@@ -40,7 +50,8 @@ def run_problem_with_timeout(
 def run_with_timeout(
     p: Pool,
     algorithm: MapfAlgorithm,
-    problems: list[Problem],
+    problems: list[tuple[str,Problem]],
+    parse_maps: bool = True,
     timeout: int = 2 * 60,
 ) -> list[Optional[float]]:
 
@@ -48,7 +59,7 @@ def run_with_timeout(
         tqdm(
             p.imap(
                 run_problem_with_timeout_star,
-                [(algorithm, problem, timeout) for problem in problems],
+                [(algorithm, problem, parse_maps, timeout) for problem in problems],
             ),
             total=len(problems)
         )
