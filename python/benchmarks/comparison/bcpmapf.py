@@ -8,15 +8,16 @@ import re
 bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
 
 class BCPSolver(MapfAlgorithm):
+
+    
     def solve(self, problem: cProblem) -> Solution:
         # print("Starts: ", problem.starts)
         # print("Goals: ", problem.goals)
         # print("Grid: ", problem.grid)
         # print("width, height: ", problem.width, problem.height)
-
-        
         version_info = "version 1 graph"
-        map_path = "temp.map"
+        map_path = "temp/" + problem.name
+        #map_path = "temp.map"
         num_of_agents = len(problem.starts)
 
         types = {}
@@ -37,10 +38,11 @@ class BCPSolver(MapfAlgorithm):
             goal_node = "({},{})".format(x,y)
             goals.append((goal_node, c))
 
-        scenario_path = "temp.scen"
+        scenario_path = map_path.replace(".map", ".scen")
+        #scenario_path = "temp.scen"
         with open(scenario_path, "w") as f:
             f.write(version_info + "\n")
-            f.write(map_path + "\n")
+            f.write(problem.name + "\n")
             f.write("Num_of_Agents {}\n".format(num_of_agents))
             f.write("types\n")
             for key, val in types.items():
@@ -51,6 +53,7 @@ class BCPSolver(MapfAlgorithm):
             f.write("goals\n")
             for goal in goals:
                 f.write("{} {}\n".format(goal[1], goal[0]))
+            f.close()
 
         with open(map_path, "w") as f:
             f.write("type octile\nheight {}\nwidth {}\nmap\n".format(problem.height, problem.width))
@@ -58,10 +61,16 @@ class BCPSolver(MapfAlgorithm):
                 for cell in line:
                     f.write("@" if cell else ".")
                 f.write("\n")
-                
+            f.close()
+
+        print(scenario_path)
+        print(map_path)
+
         #subprocess.run([bcp_mapf_path, "-f", os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp.scen")])
-        subprocess.run([bcp_mapf_path, "-f", "temp.scen"], stdout=subprocess.DEVNULL).check_returncode()
-        
+
+        exitvalue = subprocess.run([bcp_mapf_path, "-f", scenario_path], timeout = problem.timeout, stdout=subprocess.DEVNULL).returncode
+        print(str(exitvalue))
+
         paths = []
         # with open("/home/jesse/Documents/GitProjects/bcp-mapf/build/outputs/temp.sol", "r") as f:
         #     sol_val = int(f.readline())
