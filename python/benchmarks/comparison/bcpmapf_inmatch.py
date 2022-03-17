@@ -8,8 +8,6 @@ import re
 bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
 
 class BCPSolver(MapfAlgorithm):
-
-    
     def solve(self, problem: cProblem) -> Solution:
         # print("Starts: ", problem.starts)
         # print("Goals: ", problem.goals)
@@ -63,13 +61,13 @@ class BCPSolver(MapfAlgorithm):
                 f.write("\n")
             f.close()
 
-        print(scenario_path)
-        print(map_path)
+        # print(scenario_path)
+        # print(map_path)
 
         #subprocess.run([bcp_mapf_path, "-f", os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp.scen")])
 
-        exitvalue = subprocess.run([bcp_mapf_path, "-f", scenario_path], timeout = problem.timeout, stdout=subprocess.DEVNULL).returncode
-        print(str(exitvalue))
+        subprocess.run([bcp_mapf_path, "-f", scenario_path], timeout = problem.timeout, stdout=subprocess.DEVNULL) #.returncode
+        # print(str(exitvalue))
 
         paths = []
         # with open("/home/jesse/Documents/GitProjects/bcp-mapf/build/outputs/temp.sol", "r") as f:
@@ -92,4 +90,4 @@ class BCPSolver(MapfAlgorithm):
 
     @property
     def name(self) -> str:
-        return "BCP-MAPFM"
+        return "BCP-MAPFM-Inmatch"

@@ -1,6 +1,7 @@
 # from .cbm import CBM
 # from .epeastar import EPEAStar
 # from .astar_od_id import AStarODID
-from .bcpmapf import BCPSolver as BCP
+from .bcpmapf_inmatch import BCPSolver as BCPInmatch
+from .bcpmapf_prematch import BCPSolver as BCPPrematch
 
-__all__ = ["BCP"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]
+__all__ = ["BCPInmatch", "BCPPrematch"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]

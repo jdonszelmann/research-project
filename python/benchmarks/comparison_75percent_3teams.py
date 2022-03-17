@@ -1,10 +1,10 @@
-from multiprocessing import Pool
+# from multiprocessing import Pool
 from typing import Optional, Callable
 
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCP #, EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPPrematch, BCPInmatch #, EPEAStar, CBM, AStarODID,
 #from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
@@ -22,7 +22,7 @@ import os
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "comparison_75percent_3teams_maps"
-processes = 1
+# processes = 1
 
 
 def generate_maps():
@@ -150,9 +150,14 @@ def main():
     # ))
 
     files.append(run(
-        lambda: BCP(),
-        "BCP"
+        lambda: BCPPrematch(),
+        "BCPPrematch"
     ))
+
+    # files.append(run(
+    #     lambda: BCPInmatch(),
+    #     "BCPInmatch"
+    # ))
 
     graph_results(
         *files,
