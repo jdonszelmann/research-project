@@ -1,9 +1,0 @@
-version 1 graph
-temp.map
-Num_of_Agents 1
-types
-0 0
-agents starts
-0 (12,8)
-goals
-0 (10,5)

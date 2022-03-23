@@ -19,10 +19,10 @@ class BCPSolver(MapfAlgorithm):
         #print("Goals: ", problem.goals)
         #print("Grid: ", problem.grid)
         #print("width, height: ", problem.width, problem.height)
-        print("test2")
+
         version_info = "version 1 graph"
         map_path = "temp/" + problem.name
-        print(map_path)
+        # print(map_path)
         num_of_agents = len(problem.starts)
 
         types = {}
@@ -66,32 +66,33 @@ class BCPSolver(MapfAlgorithm):
                     f.write("@" if cell else ".")
                 f.write("\n")
             f.close()
-        print("test3")
+
         args = [bcp_mapf_path, "-f", scenario_path]
         if bound is not None:
             args += ["-u", str(bound + len(problem.starts))]
-            print('gave bound of: ' + str(bound + len(problem.starts)))
-        else:
-            print("Bound is None")
-        subprocess.run(args, timeout = problem.timeout) #.returncode , stdout=subprocess.DEVNULL
-        
+            # print('gave bound of: ' + str(bound + len(problem.starts)))
+        # else:
+            # print("Bound is None")
+
+        subprocess.run(args, timeout = problem.timeout, stdout=subprocess.DEVNULL) #.returncode , stdout=subprocess.DEVNULL
+
         paths = []
-        with open("outputs/temp.sol", "r") as f:
+        with open("outputs/" + problem.name.replace(".map", ".sol"), "r") as f:
             try:
                 sol_val = int(f.readline())
             except:        
                 return None;
-            # f.readline()
-            # re_p = re.compile("(\(\d+,\d+\))")
-            # while True:
-            #     line = f.readline()
-            #     if not line: break
-            #     path = []
-            #     for node in re_p.findall(line):
-            #         node = node.replace("(", "").replace(")", "")
-            #         x, y = node.split(",")
-            #         path.append((int(x), int(y)))
-            #     paths.append(path)
+            f.readline()
+            re_p = re.compile("(\(\d+,\d+\))")
+            while True:
+                line = f.readline()
+                if not line: break
+                path = []
+                for node in re_p.findall(line):
+                    node = node.replace("(", "").replace(")", "")
+                    x, y = node.split(",")
+                    path.append((int(x), int(y)))
+                paths.append(path)
             # print(paths)
 
         #print(Solution.from_paths(paths).serialize())
