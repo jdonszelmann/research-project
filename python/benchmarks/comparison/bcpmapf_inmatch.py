@@ -4,8 +4,8 @@ import subprocess
 import os
 import re
 
-#bcp_mapf_path = "/home/jessemulderij/bcp-mapf/build/bcp-mapf"
-bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
+bcp_mapf_path = "/home/jessemulderij/bcp-mapf/build/bcp-mapf"
+#bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
 
 class BCPSolver(MapfAlgorithm):
     def solve(self, problem: cProblem) -> Solution:
