@@ -12,7 +12,7 @@ bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
 
 class BCPSolver(MapfAlgorithm):
     def solve(self, problem : cProblem) -> Solution:
-        solve_bb(problem,self.solve_internal)
+        return solve_bb(problem,self.solve_internal)
     
     def solve_internal(self, problem: cProblem, bound) -> Solution:
         #print("Starts: ", problem.starts)
