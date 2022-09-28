@@ -7,8 +7,8 @@ import os
 import re
 
 
-cbs_path = "/home/jesse/Documents/GitProjects/CBS/CBSH2-RTC-main/cbs"
-#"/home/jessemulderij/CBS/build/.cbs"
+#cbs_path = "/home/jesse/Documents/GitProjects/CBS/CBSH2-RTC-main/cbs"
+cbs_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/cbs-inmatch/cbs-inmatch"
 class CBSSolver(MapfAlgorithm):        
     def solve(self, problem: cProblem) -> Solution:
         # print("Starts: ", problem.starts)
@@ -42,6 +42,7 @@ class CBSSolver(MapfAlgorithm):
 
         args = [cbs_path, "-m", map_path]
         args += ["-a", scenario_path]
+        args += ["-t", str(problem.timeout*2)]
         args += ["-o", "test.csv"]
         args += ["--outputPaths=paths.txt"]
         args += ["-k", str(num_of_agents)]

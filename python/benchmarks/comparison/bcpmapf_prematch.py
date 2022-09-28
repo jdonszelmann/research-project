@@ -9,7 +9,8 @@ import re
 
 #bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
 # bcp_mapf_path = "/home/koos/bcp-mapf/build/bcp-mapf"
-bcp_mapf_path = "/home/jessemulderij/bcp-mapf/build/bcp-mapf"
+bcp_mapf_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/bcp-prematch/bcp-prematch"
+
 
 class BCPSolver(MapfAlgorithm):
     def solve(self, problem : cProblem) -> Solution:

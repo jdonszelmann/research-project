@@ -85,8 +85,8 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
             results[num_agents] = read_from_file(partname, num_agents)
             continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
-            #sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
             sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 10) # test with low timeout
+            #sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 120) # test with low timeout
 
             tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
             results[num_agents] = sols_inmatch
@@ -151,20 +151,20 @@ def main():
     #     "ICTS"
     # ))
 
-    # files.append(run(
-    #     lambda: BCPPrematch(),
-    #     "BCPPrematch"
-    # ))
+    files.append(run(
+        lambda: BCPPrematch(),
+        "BCPPrematch"
+    ))
 
-    #files.append(run(
-    #    lambda: BCPInmatch(),
-    #    "BCPInmatch"
-    #))
+    files.append(run(
+        lambda: BCPInmatch(),
+        "BCPInmatch"
+    ))
 
-    # files.append(run(
-    #     lambda: CBSPrematch(),
-    #     "CBSPrematch"
-    # ))
+    files.append(run(
+        lambda: CBSPrematch(),
+        "CBSPrematch"
+    ))
 
     files.append(run(
         lambda: CBSInmatch(),

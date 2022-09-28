@@ -4,7 +4,7 @@ import subprocess
 import os
 import re
 
-bcp_mapf_path = "/home/jessemulderij/bcp-mapf/build/bcp-mapf"
+bcp_mapf_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/bcp-inmatch/bcp-inmatch"
 #bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
 
 class BCPSolver(MapfAlgorithm):

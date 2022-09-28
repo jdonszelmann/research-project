@@ -1,0 +1,17 @@
+version 1
+goals
+0	12	0
+0	13	17
+0	8	5
+1	16	7
+1	15	3
+2	11	1
+2	11	0
+agents
+0	temp/comparison_75percent_3teams_maps-20x20-A7_T3-109.map	20	20	10	14	0	0
+1	temp/comparison_75percent_3teams_maps-20x20-A7_T3-109.map	20	20	12	10	0	1
+2	temp/comparison_75percent_3teams_maps-20x20-A7_T3-109.map	20	20	10	12	0	2
+3	temp/comparison_75percent_3teams_maps-20x20-A7_T3-109.map	20	20	7	12	1	3
+4	temp/comparison_75percent_3teams_maps-20x20-A7_T3-109.map	20	20	14	4	1	4
+5	temp/comparison_75percent_3teams_maps-20x20-A7_T3-109.map	20	20	2	6	2	5
+6	temp/comparison_75percent_3teams_maps-20x20-A7_T3-109.map	20	20	8	12	2	6

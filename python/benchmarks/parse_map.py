@@ -31,6 +31,7 @@ class MapParser:
             x = int(start_line[0])
             y = int(start_line[1])
             color = int(start_line[2])
+            print(x, y, color)
             starts.append(MarkedLocation(color, x, y))
 
         goals = []
