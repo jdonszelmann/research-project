@@ -1,8 +1,6 @@
 from __future__ import annotations
 from enum import Enum
 
-import resource
-
 class MatchingStrategy(Enum):
     Prematch = 0,
     PruningPrematch = 1,
@@ -65,11 +63,3 @@ class Config:
     @property
     def inmatch(self) -> bool:
         return self.matching_strategy == MatchingStrategy.Inmatch
-
-    def memory_usage_ok(self) -> bool:
-        usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-
-        if self.debug:
-            print(f"{usage / MegaByte} megabytes used out of {self.max_memory_usage / MegaByte}")
-
-        return usage < self.max_memory_usage

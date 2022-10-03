@@ -12,7 +12,9 @@ cbs_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/cbs-prematch/cbs-
 
 class CBSSolver(MapfAlgorithm):
     def solve(self, problem: cProblem) -> Solution:
-        return solve_bb(problem,self.solve_internal)
+        res = solve_bb(problem,self.solve_internal)
+        print(res)
+        return res
         
     def solve_internal(self, problem: cProblem, bound) -> Solution:
         version_info = "version 1"
