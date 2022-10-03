@@ -68,7 +68,7 @@ class CBSSolver(MapfAlgorithm):
         #         paths.append(path)
         #     print(paths)
 
-        #print(Solution.from_paths(paths).serialize())
+        print(Solution.from_paths(paths).serialize())
         return Solution.from_paths(paths)
 
     @property

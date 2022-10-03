@@ -81,8 +81,6 @@ class BCPSolver(MapfAlgorithm):
                     path.append((int(x),int(y)))
                 paths.append(path)
             #print(paths)
-                    
-        print(Solution.from_paths(paths).serialize())   	
         return Solution.from_paths(paths)
 	    	
 

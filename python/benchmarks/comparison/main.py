@@ -4,7 +4,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch #, EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch, CBM #, EPEAStar, CBM, AStarODID,
 #from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
@@ -96,10 +96,10 @@ def main():
     #     "EPEA*"
     # ))
 
-    #files.append(run(
-    #    lambda: CBM(),
-    #    "CBM"
-    #))
+    files.append(run(
+       lambda: CBM(),
+       "CBM"
+    ))
 
     # files.append(run(
     #     lambda: AStarODID(),
@@ -111,20 +111,20 @@ def main():
     #     "ICTS"
     # ))
 
-    files.append(run(
-        lambda: BCPPrematch(),
-        "BCPPrematch"
-    ))
+    # files.append(run(
+    #     lambda: BCPPrematch(),
+    #     "BCPPrematch"
+    # ))
 
     # files.append(run(
     #     lambda: BCPInmatch(),
     #     "BCPInmatch"
     # ))
     #
-    files.append(run(
-        lambda: CBSPrematch(),
-        "CBSPrematch"
-    ))
+    # files.append(run(
+    #     lambda: CBSPrematch(),
+    #     "CBSPrematch"
+    # ))
     #
     # files.append(run(
     #     lambda: CBSInmatch(),
