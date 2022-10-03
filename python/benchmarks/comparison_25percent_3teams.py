@@ -4,7 +4,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch #, EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch, CBM #, EPEAStar, CBM, AStarODID,
 #from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.extensions_25percent_3teams import read_from_file
 from python.benchmarks.graph_times import graph_results
@@ -21,7 +21,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 import os
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps"
+name = "comparison_25percent_3teams_maps_preview_2"
 # processes = 10
 
 
@@ -32,7 +32,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 25
+    num = 50
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -45,7 +45,7 @@ def generate_maps():
 
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
-            200,  # number of maps
+            10,  # number of maps
             20, 20,  # size
             i,  # number of agents
             3,  # number of teams
@@ -86,7 +86,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
             continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
             #sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 1 * 1) # test with low timeout
+            sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 60) # test with low timeout
 
             tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
             results[num_agents] = sols_inmatch
@@ -134,10 +134,10 @@ def main():
     #     "EPEA*"
     # ))
 
-    # files.append(run(
-    #     lambda: CBM(),
-    #     "CBM"
-    # ))
+    #files.append(run(
+    #    lambda: CBM(),
+    #    "CBM"
+    #))
 
     # files.append(run(
     #     lambda: AStarODID(),
@@ -149,20 +149,20 @@ def main():
     #     "ICTS"
     # ))
 
-    # files.append(run(
-    #     lambda: BCPPrematch(),
-    #     "BCPPrematch"
-    # ))
+    files.append(run(
+        lambda: BCPPrematch(),
+        "BCPPrematch"
+    ))
 
-    # files.append(run(
-    #     lambda: BCPInmatch(),
-    #     "BCPInmatch"
-    # ))
+    files.append(run(
+        lambda: BCPInmatch(),
+        "BCPInmatch"
+    ))
 
-    # files.append(run(
-    #     lambda: CBSPrematch(),
-    #     "CBSPrematch"
-    # ))
+    files.append(run(
+        lambda: CBSPrematch(),
+        "CBSPrematch"
+    ))
 
     files.append(run(
         lambda: CBSInmatch(),

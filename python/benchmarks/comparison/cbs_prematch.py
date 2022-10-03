@@ -15,11 +15,6 @@ class CBSSolver(MapfAlgorithm):
         return solve_bb(problem,self.solve_internal)
         
     def solve_internal(self, problem: cProblem, bound) -> Solution:
-        print("Starts: ", problem.starts)
-        print("Goals: ", problem.goals)
-        print("Grid: ", problem.grid)
-        print("width, height: ", problem.width, problem.height)
-
         version_info = "version 1"
         map_path = "temp/" + problem.name
         num_of_agents = len(problem.starts)
@@ -46,13 +41,12 @@ class CBSSolver(MapfAlgorithm):
 
         args = [cbs_path, "-m", map_path]
         args += ["-a", scenario_path]
-        args += ["-t", str(roblem.timeout*2)]
+        args += ["-t", str(problem.timeout*2)]
         args += ["-o", "test.csv"]
         args += ["--outputPaths=paths.txt"]
         args += ["-k", str(num_of_agents)]
         if bound is not None:
             args += ["-u", str(bound )] #+ len(problem.starts)
-        print(str(args))
         subprocess.run(args, timeout = problem.timeout) #.returncode , stdout=subprocess.DEVNULL
 
         paths = []

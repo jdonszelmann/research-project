@@ -1,0 +1,124 @@
+maps for 1 agents already generated
+maps for 2 agents already generated
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 20 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-0.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 3 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-7.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 4 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-9.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 28 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-5.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 12 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-4.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 19 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-3.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 11 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-6.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 2 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-2.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 17 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-1.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0] 34 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A1_T3-8.map
+CBSPrematch with 1 agents: [None, None, None, None, None, None, None, None, None, None]
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 38 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-9.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 36 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-6.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 30 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-1.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 12 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-8.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 23 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-0.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 9 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-2.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 51 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-7.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 45 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-3.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 11 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-4.map
+Computing shortest paths
+Computing BB root cost
+Generating bb nodes
+[0, 1] 34 None
+TEST
+comparison_25percent_3teams_maps_preview-20x20-A2_T3-5.map
+CBSPrematch with 2 agents: [None, None, None, None, None, None, None, None, None, None]

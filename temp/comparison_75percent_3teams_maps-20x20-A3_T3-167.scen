@@ -1,9 +1,0 @@
-version 1
-goals
-0	2	19
-1	10	15
-2	2	9
-agents
-0	temp/comparison_75percent_3teams_maps-20x20-A3_T3-167.map	20	20	4	19	0	0
-1	temp/comparison_75percent_3teams_maps-20x20-A3_T3-167.map	20	20	9	14	1	1
-2	temp/comparison_75percent_3teams_maps-20x20-A3_T3-167.map	20	20	16	10	2	2
