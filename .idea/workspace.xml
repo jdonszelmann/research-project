@@ -16,56 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/astar/astar_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/astar/astar_grid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/astar/astar_low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/astar/astar_solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/astar_base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/benchmark.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/benchmarks/graph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/benchmarks/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_ctnode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_graph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_grid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_high_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_paths.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/cbm_ssp_ilp_solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/ilp/cbm_ilp_gurobi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/ilp/cbm_ilp_low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/ilp/cbm_ilp_solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/ssp/cbm_ssp_low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/cbm/ssp/cbm_ssp_solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/ctnode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/data/agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/data/conflicts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/data/constraints.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/data/vertex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/debug/constraint_tree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/debug/ct_viz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/debug/debug.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/debug/nf_drawer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/debug/profiling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/example.env.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/grid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/high_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/paths.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/research-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/research-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/bcpmapf.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/bcpmapf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/bcpmapf_prematch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/bcpmapf_prematch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_prematch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_prematch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/robbin_env.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/robbin_env.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_benchmark.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_benchmark.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -518,7 +470,7 @@
       <workItem from="1664789085654" duration="2020000" />
       <workItem from="1664791266630" duration="1347000" />
       <workItem from="1664793755855" duration="4337000" />
-      <workItem from="1664802677435" duration="2338000" />
+      <workItem from="1664802677435" duration="2514000" />
     </task>
     <task id="LOCAL-00001" summary="Removed more files and set up a test environment for prematching algortihms">
       <created>1664792188282</created>
@@ -534,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664792595205</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add test setup for CBM, should work if the correct ortools is installed">
+      <created>1664805376524</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664805376524</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +515,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed more files and set up a test environment for prematching algortihms" />
     <MESSAGE value="add the map" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the map" />
+    <MESSAGE value="Add test setup for CBM, should work if the correct ortools is installed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test setup for CBM, should work if the correct ortools is installed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2627" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1664790834406">
@@ -567,30 +527,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="715" y="224" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805269714" />
-    <state x="2455" y="111" key="CommitChangelistDialog2" timestamp="1664792592861">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="535" y="111" key="CommitChangelistDialog2" timestamp="1664805372534">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="535" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664792223872" />
+    <state x="535" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805372534" />
     <state x="2455" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792592861" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1664805345158">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1664805502944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805345158" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805502944" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625454" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1664805345157">
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1664805502944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805345157" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805502944" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625454" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1664805345157">
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1664805502944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805345157" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805502944" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625453" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1664805345158">
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1664805502944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805345158" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805502944" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625454" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1664805273311">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -620,10 +580,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1664792596326">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1664805378218">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664792190214" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805378218" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792596326" />
     <state x="1920" y="0" width="1343" height="717" maximized="true" key="dock-window-1" timestamp="1664790629012">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -776,7 +736,7 @@
     <SUITE FILE_PATH="coverage/research_project$generate_inmatchings.coverage" NAME="generate inmatchings Coverage Results" MODIFIED="1624800971697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assets/final_poster/inmatchings" />
     <SUITE FILE_PATH="coverage/research_project$mapcheck__1_.coverage" NAME="mapcheck (1) Coverage Results" MODIFIED="1624620880143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/mapcheck" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_1teams_expansion.coverage" NAME="inmatch_vs_prematch_25percent_1teams_expansion Coverage Results" MODIFIED="1624390443966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/BCP_paper$test.coverage" NAME="main Coverage Results" MODIFIED="1664805345152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/comparison" />
+    <SUITE FILE_PATH="coverage/BCP_paper$test.coverage" NAME="main Coverage Results" MODIFIED="1664805502938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/comparison" />
     <SUITE FILE_PATH="coverage/research_project$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1624821589273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_25percent_1teams.coverage" NAME="comparison_25percent_1teams Coverage Results" MODIFIED="1624821584874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_25percent_1teams.coverage" NAME="inmatch_vs_prematch_25percent_1teams Coverage Results" MODIFIED="1624392090951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />

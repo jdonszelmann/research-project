@@ -23,7 +23,10 @@ class CBM(MapfAlgorithm):
                 yaml_dict = yaml.load(file, Loader=yaml.FullLoader)
                 env_vars = EnvVariables(yaml_dict)
                 set_env(env_vars)
-
+            try:
+                solve(problem, False, False)
+            except Exception as e:
+                print(e)
             return solve(problem, False, False)
 
         return solve_with_modules(modules, solve_cbs)
