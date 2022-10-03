@@ -1,3 +1,4 @@
+import os
 import time
 from multiprocessing import Pool
 from typing import Optional
@@ -15,32 +16,59 @@ def run_problem_with_timeout_star(args):
 
 def run_problem_with_timeout(
     algorithm: MapfAlgorithm,
-    problem: Problem,
+    problem: tuple[str,Problem],
+    parse_maps: bool = True,
     timeout: int = 2 * 60,
 ) -> Optional[float]:
-
+    
     start = time.time()
+    problem[1].timeout = timeout
     try:
-        func_timeout(
+        if(parse_maps):
+            func_timeout(
             timeout,
             algorithm.solve,
-            (problem,),
+            (problem[1],),
+        )
+        else:
+            func_timeout(
+            timeout,
+            algorithm.solve,
+            (problem[0],),
         )
     except FunctionTimedOut:
+        print("func timeout exception")
         return None
     except Exception as e:
-        print(e)
+        print(problem[0])
         return None
-
+    #finally:
+        #print("removing map/scen file" + problem[1].name)
+        #os.remove(problem[1].name)
+        #os.remove(problem[1].name.replace(".map", ".scen"))
     end = time.time()
 
     return end - start
 
 
+
 def run_with_timeout(
+    algorithm: MapfAlgorithm,
+    problems: list[tuple[str,Problem]],
+    parse_maps: bool = True,
+    timeout: int = 2 * 60,
+) -> list[Optional[float]]:
+
+    return list(           
+        [run_problem_with_timeout_star([algorithm, problem, parse_maps, timeout]) for problem in tqdm(problems)]  
+    )
+
+
+def run_with_timeout_and_Pool(
     p: Pool,
     algorithm: MapfAlgorithm,
-    problems: list[Problem],
+    problems: list[tuple[str,Problem]],
+    parse_maps: bool = True,
     timeout: int = 2 * 60,
 ) -> list[Optional[float]]:
 
@@ -48,7 +76,7 @@ def run_with_timeout(
         tqdm(
             p.imap(
                 run_problem_with_timeout_star,
-                [(algorithm, problem, timeout) for problem in problems],
+                [(algorithm, problem, parse_maps, timeout) for problem in problems],
             ),
             total=len(problems)
         )

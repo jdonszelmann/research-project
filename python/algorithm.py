@@ -8,6 +8,10 @@ class MapfAlgorithm(ABC):
     def solve(self, problem: Problem) -> Solution:
         raise NotImplemented
 
+    @abstractmethod
+    def solve(self, map_path : str) -> Solution:
+        raise NotImplemented
+
     @property
     @abstractmethod
     def name(self) -> str:

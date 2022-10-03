@@ -21,7 +21,7 @@ class MapParser:
         height = int(height_line[1])
         grid = []
         for i in range(height):
-            grid.append([int(c == "@") for c in lines[2 + i]])
+            grid.append([int(c == "@") for c in lines[2 + i] if c != "\n"])
         agents = int(lines[2 + height])
         starts = []
         starting_line = 3 + height
