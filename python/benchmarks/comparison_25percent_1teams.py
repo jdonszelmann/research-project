@@ -1,27 +1,20 @@
-from multiprocessing import Pool
+import os
+import pathlib
 from typing import Optional, Callable
 
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch #, EPEAStar, CBM, AStarODID,
-#from python.benchmarks.comparison.icts import ICTS
-from python.benchmarks.extensions_25percent_3teams import read_from_file
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSInmatch  # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.graph_times import graph_results
-from python.benchmarks.inmatch_vs_prematch_75percent_1teams import output_data
 from python.benchmarks.map import MapGenerator
-import pathlib
-
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
-from python.mstar.rewrite import Config, MatchingStrategy
-from python.mstar.rewrite.config import GigaByte
-from python.solvers.configurable_mstar_solver import ConfigurableMStar
-
-import os
+# from python.benchmarks.comparison.icts import ICTS
+from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_1teams_maps"
+name = "comparison_25percent_1teams_maps_preview"
 processes = 1
 
 
@@ -32,7 +25,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 25
+    num = 50
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -45,7 +38,7 @@ def generate_maps():
 
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
-            200,  # number of maps
+            10,  # number of maps
             20, 20,  # size
             i,  # number of agents
             1,  # number of teams
@@ -56,10 +49,10 @@ def generate_maps():
         )
 
 
-def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = True):
+def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = True):
     batchdir = this_dir / name
     parser = MapParser(batchdir)
-    
+
     fname = batchdir / f"results_{bm_name}.txt"
 
     if fname.exists():
@@ -75,18 +68,18 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
         for problem in problem_list:
             problem[1].name = problem[0]
 
-    #with Pool(processes = 1) as p:
+    # with Pool(processes = 1) as p:
     for problems in tqdm(all_problems):
         num_agents = len(problems[0][1].goals)
-        
+
         partname = pathlib.Path(str(fname) + f".{num_agents}agents")
         if partname.exists():
             print(f"found data for part {num_agents}")
             results[num_agents] = read_from_file(partname, num_agents)
             continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
-            #sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 1 * 1) # test with low timeout
+            # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
+            sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 1 * 1)  # test with low timeout
 
             tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
             results[num_agents] = sols_inmatch
@@ -103,7 +96,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
     output_data(fname, results)
 
     return fname, bm_name
-
 
 
 def main():
@@ -157,6 +149,16 @@ def main():
     files.append(run(
         lambda: BCPInmatch(),
         "BCPInmatch"
+    ))
+
+    # files.append(run(
+    #     lambda: CBSPrematch(),
+    #     "CBSPrematch"
+    # ))
+
+    files.append(run(
+        lambda: CBSInmatch(),
+        "CBSInmatch"
     ))
 
     graph_results(

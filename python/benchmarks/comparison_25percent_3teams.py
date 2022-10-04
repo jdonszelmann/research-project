@@ -6,9 +6,8 @@ from tqdm import tqdm
 from python.algorithm import MapfAlgorithm
 from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch #, EPEAStar, CBM, AStarODID,
 #from python.benchmarks.comparison.icts import ICTS
-from python.benchmarks.extensions_25percent_3teams import read_from_file
+from python.benchmarks.util import read_from_file, output_data
 from python.benchmarks.graph_times import graph_results
-from python.benchmarks.inmatch_vs_prematch_75percent_1teams import output_data
 from python.benchmarks.map import MapGenerator
 import pathlib
 

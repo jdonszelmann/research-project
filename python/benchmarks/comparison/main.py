@@ -1,32 +1,25 @@
 # from multiprocessing import Pool
+import os
+import pathlib
 from typing import Optional, Callable
 
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch, CBM #, EPEAStar, CBM, AStarODID,
-#from python.benchmarks.comparison.icts import ICTS
-from python.benchmarks.extensions_25percent_3teams import read_from_file
-from python.benchmarks.graph_times import graph_results
-from python.benchmarks.inmatch_vs_prematch_75percent_1teams import output_data
-from python.benchmarks.map import MapGenerator
-import pathlib
-
+from python.benchmarks.comparison import CBM  # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
-from python.mstar.rewrite import Config, MatchingStrategy
-from python.mstar.rewrite.config import GigaByte
-from python.solvers.configurable_mstar_solver import ConfigurableMStar
-
-import os
+# from python.benchmarks.comparison.icts import ICTS
+from python.benchmarks.util import output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "main"
 
-def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = True):
+
+def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = True):
     batchdir = this_dir / name
     parser = MapParser(batchdir)
-    
+
     fname = batchdir / f"results_{bm_name}.txt"
 
     # if fname.exists():
@@ -42,16 +35,16 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
         for problem in problem_list:
             problem[1].name = problem[0]
 
-    #with Pool(processes = 1) as p:
+    # with Pool(processes = 1) as p:
     for problems in all_problems:
         num_agents = len(problems[0][1].goals)
-        
+
         partname = pathlib.Path(str(fname) + f".{num_agents}agents")
         # if partname.exists():
         #     print(f"found data for part {num_agents}")
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
-        sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 60) # test with low timeout
+        sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
 
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         results[num_agents] = sols_inmatch
@@ -66,7 +59,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
     output_data(fname, results)
 
     return fname, bm_name
-
 
 
 def main():
@@ -97,8 +89,8 @@ def main():
     # ))
 
     files.append(run(
-       lambda: CBM(),
-       "CBM"
+        lambda: CBM(),
+        "CBM"
     ))
 
     # files.append(run(
