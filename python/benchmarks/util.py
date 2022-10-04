@@ -1,5 +1,5 @@
 import pathlib
-
+from typing import Optional
 
 def read_from_file(filename: pathlib.Path, wanted_num_agents: int) -> list[Optional[float]]:
     with open(filename, "r") as f:

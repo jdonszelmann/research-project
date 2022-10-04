@@ -1,17 +1,20 @@
-import sys
 import pathlib
+import sys
+
 import yaml
-
-from python.benchmarks.comparison.util import get_src_modules, solve_with_modules
-
-this_dir = pathlib.Path(__file__).parent.absolute()
 from mapfmclient import Problem, Solution
+
 from python.algorithm import MapfAlgorithm
 
+this_dir = pathlib.Path(__file__).parent.absolute()
+print(sys.path)
 sys.path.insert(0, str(this_dir / "src"))
-from python.benchmarks.comparison.src.env import set_env, EnvVariables
-from python.benchmarks.comparison.src.main import solve
+from src.env import set_env, EnvVariables
+from src.main import solve
+
 sys.path.pop(0)
+
+from python.benchmarks.comparison.util import get_src_modules, solve_with_modules
 
 modules = get_src_modules()
 

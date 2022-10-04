@@ -51,7 +51,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
 
         output_data(partname, results)
     # clean-up
-    for file in os.listdir("temp"):
+    for file in os.listdir("comparison/temp"):
         os.remove("temp/" + file)
 
     tqdm.write(str(results))
