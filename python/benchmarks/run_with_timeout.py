@@ -37,7 +37,6 @@ def run_problem_with_timeout(
             (problem[0],),
         )
     except FunctionTimedOut:
-        print("func timeout exception")
         return None
     except Exception as e:
         print(problem[0])

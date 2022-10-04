@@ -15,7 +15,6 @@ bcp_mapf_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/bcp-prematch
 class BCPSolver(MapfAlgorithm):
     def solve(self, problem : cProblem) -> Solution:
         res = solve_bb(problem,self.solve_internal)
-        print(res)
         return res
     
     def solve_internal(self, problem: cProblem, bound) -> Solution:
@@ -99,7 +98,7 @@ class BCPSolver(MapfAlgorithm):
                 paths.append(path)
             # print(paths)
 
-        print(Solution.from_paths(paths).serialize())
+        #print(Solution.from_paths(paths).serialize())
         return Solution.from_paths(paths)
 
     @property
