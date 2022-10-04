@@ -1,15 +1,15 @@
-from mapf_branch_and_bound.bbsolver import solve_bb
-from mapfmclient import MapfBenchmarker, ProgressiveDescriptor, BenchmarkDescriptor, MarkedLocation, \
-    Problem as cProblem, Solution
-from python.algorithm import MapfAlgorithm
+from mapfmclient import Problem as cProblem, Solution
 import subprocess
-import os
-import re
 
+from mapfmclient import Problem as cProblem, Solution
 
-#cbs_path = "/home/jesse/Documents/GitProjects/CBS/CBSH2-RTC-main/cbs"
+from python.algorithm import MapfAlgorithm
+
+# cbs_path = "/home/jesse/Documents/GitProjects/CBS/CBSH2-RTC-main/cbs"
 cbs_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/cbs-inmatch/cbs-inmatch"
-class CBSSolver(MapfAlgorithm):        
+
+
+class CBSSolver(MapfAlgorithm):
     def solve(self, problem: cProblem) -> Solution:
         # print("Starts: ", problem.starts)
         # print("Goals: ", problem.goals)
@@ -31,7 +31,8 @@ class CBSSolver(MapfAlgorithm):
                 c = start.color
                 sx = start.x
                 sy = start.y
-                f.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(i, map_path, problem.height, problem.width, sx, sy, c, i))
+                f.write(
+                    "{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(i, map_path, problem.height, problem.width, sx, sy, c, i))
 
         with open(map_path, "w") as f:
             f.write("type octile\nheight {}\nwidth {}\nmap\n".format(problem.height, problem.width))
@@ -42,12 +43,13 @@ class CBSSolver(MapfAlgorithm):
 
         args = [cbs_path, "-m", map_path]
         args += ["-a", scenario_path]
-        args += ["-t", str(problem.timeout*2)]
+        args += ["-t", str(problem.timeout * 2)]
         args += ["-o", "test.csv"]
         args += ["--outputPaths=paths.txt"]
         args += ["-k", str(num_of_agents)]
-        #print(str(args))
-        subprocess.run(args, timeout = problem.timeout, stdout=subprocess.DEVNULL) #.returncode , stdout=subprocess.DEVNULL
+        # print(str(args))
+        subprocess.run(args, timeout=problem.timeout,
+                       stdout=subprocess.DEVNULL)  # .returncode , stdout=subprocess.DEVNULL
 
         paths = []
 
@@ -66,7 +68,7 @@ class CBSSolver(MapfAlgorithm):
         #         paths.append(path)
         #     print(paths)
 
-        #print(Solution.from_paths(paths).serialize())
+        # print(Solution.from_paths(paths).serialize())
         return Solution.from_paths(paths)
 
     @property
