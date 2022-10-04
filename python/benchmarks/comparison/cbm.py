@@ -9,8 +9,8 @@ from mapfmclient import Problem, Solution
 from python.algorithm import MapfAlgorithm
 
 sys.path.insert(0, str(this_dir / "src"))
-from src.env import set_env, EnvVariables
-from src.main import solve
+from python.benchmarks.comparison.src.env import set_env, EnvVariables
+from python.benchmarks.comparison.src.main import solve
 sys.path.pop(0)
 
 modules = get_src_modules()
