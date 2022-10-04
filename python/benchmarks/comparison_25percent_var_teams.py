@@ -34,6 +34,7 @@ def natural_keys(text):
 
 def generate_maps():
     path = this_dir / name
+    print(path)
     try:
         path.mkdir(parents=True)
     except FileExistsError:
