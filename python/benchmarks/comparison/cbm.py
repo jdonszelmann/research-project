@@ -7,7 +7,6 @@ from mapfmclient import Problem, Solution
 from python.algorithm import MapfAlgorithm
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-print(sys.path)
 sys.path.insert(0, str(this_dir / "src"))
 from src.env import set_env, EnvVariables
 from src.main import solve

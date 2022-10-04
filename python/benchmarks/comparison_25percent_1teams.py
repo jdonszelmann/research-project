@@ -5,7 +5,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSInmatch  # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSInmatch, CBM  # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.map import MapGenerator
 from python.benchmarks.parse_map import MapParser
@@ -126,10 +126,10 @@ def main():
     #     "EPEA*"
     # ))
 
-    # files.append(run(
-    #     lambda: CBM(),
-    #     "CBM"
-    # ))
+    files.append(run(
+        lambda: CBM(),
+        "CBM"
+    ))
 
     # files.append(run(
     #     lambda: AStarODID(),

@@ -15,7 +15,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_var_teams_maps_preview"
+name = "comparison_25percent_var_teams_maps_preview_2"
 processes = 1
 
 
@@ -40,11 +40,11 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 12
+    num = 24
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
-    for i in tqdm([1, 2, 3, 4, 6, 12]):
+    for i in tqdm([1, 2, 3, 4, 6, 12, 24]):
         if any(f"T{i}" in dirname for dirname in dirnames):
             tqdm.write(f"maps for {i} agents already generated")
             continue

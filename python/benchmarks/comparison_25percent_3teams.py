@@ -4,7 +4,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch #, EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPPrematch, BCPInmatch, CBSInmatch, CBSPrematch, CBM #, EPEAStar, CBM, AStarODID,
 #from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.util import read_from_file, output_data
 from python.benchmarks.graph_times import graph_results
@@ -20,7 +20,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 import os
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps_preview_3"
+name = "comparison_25percent_3teams_maps_preview_2"
 # processes = 10
 
 
@@ -31,7 +31,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 2
+    num = 50
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -61,9 +61,9 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
     
     fname = batchdir / f"results_{bm_name}.txt"
 
-    # if fname.exists():
-    #     print(f"data exists for {bm_name}")
-    #     return fname, bm_name
+    if fname.exists():
+        print(f"data exists for {bm_name}")
+        return fname, bm_name
 
     # num agents : solutions
     results: dict[int, list[Optional[float]]] = {}
@@ -79,10 +79,10 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps : bool = T
         num_agents = len(problems[0][1].goals)
         
         partname = pathlib.Path(str(fname) + f".{num_agents}agents")
-        # if partname.exists():
-        #     print(f"found data for part {num_agents}")
-        #     results[num_agents] = read_from_file(partname, num_agents)
-        #     continue
+        if partname.exists():
+            print(f"found data for part {num_agents}")
+            results[num_agents] = read_from_file(partname, num_agents)
+            continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
             #sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
             sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 60) # test with low timeout
@@ -133,10 +133,10 @@ def main():
     #     "EPEA*"
     # ))
 
-    #files.append(run(
-    #    lambda: CBM(),
-    #    "CBM"
-    #))
+    files.append(run(
+       lambda: CBM(),
+       "CBM"
+    ))
 
     # files.append(run(
     #     lambda: AStarODID(),
@@ -153,20 +153,20 @@ def main():
         "BCPPrematch"
     ))
 
-    # files.append(run(
-    #     lambda: BCPInmatch(),
-    #     "BCPInmatch"
-    # ))
-    #
     files.append(run(
-        lambda: CBSPrematch(),
-        "CBSPrematch"
+        lambda: BCPInmatch(),
+        "BCPInmatch"
     ))
     #
     # files.append(run(
-    #     lambda: CBSInmatch(),
-    #     "CBSInmatch"
+    #     lambda: CBSPrematch(),
+    #     "CBSPrematch"
     # ))
+    #
+    files.append(run(
+        lambda: CBSInmatch(),
+        "CBSInmatch"
+    ))
 
     graph_results(
         *files,
