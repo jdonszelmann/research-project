@@ -15,7 +15,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_var_teams_maps_preview"
+name = "comparison_25percent_var_maps_size_preview"
 processes = 1
 
 
@@ -34,19 +34,16 @@ def natural_keys(text):
 
 def generate_maps():
     path = this_dir / name
-    print(path)
     try:
         path.mkdir(parents=True)
     except FileExistsError:
         pass
 
-    num = 24
-
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
-    for i in tqdm([1, 2, 3, 4, 6, 12, 24]):
-        if any(f"T{i}" in dirname for dirname in dirnames):
-            tqdm.write(f"maps for {i} teams already generated")
+    for i in tqdm(range(10, 101, 5)):
+        if any(f"{i}x{i}" in dirname for dirname in dirnames):
+            tqdm.write(f"maps for {i}x{i} size already generated")
             continue
         else:
             tqdm.write(f"generating {path}")
@@ -54,9 +51,9 @@ def generate_maps():
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
             10,  # number of maps
-            20, 20,  # size
-            num,  # number of agents
-            i,  # number of teams
+            i, i,  # size
+            12,  # number of agents
+            3,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
@@ -85,21 +82,24 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
 
     # with Pool(processes = 1) as p:
     for problems in tqdm(all_problems):
-        teams = problems[0][1].goals[-1].color + 1
-        partname = pathlib.Path(str(fname) + f".{teams}teams")
+        size = len(problems[0][1].grid)
+        partname = pathlib.Path(str(fname) + f".{size}x{size}")
         if partname.exists():
-            print(f"found data for part {teams}")
-            results[teams] = read_from_file(partname, teams)
+            print(f"found data for part {size}x{size}")
+            results[size] = read_from_file(partname, size)
             continue
-        prev_team = [1, 2, 3, 4, 6, 12, 24][[1, 2, 3, 4, 6, 12, 24].index(teams) - 1]
-        if teams == 1 or sum(1 for i in results[prev_team] if i is not None) != 0:
+        if size == 10 or sum(1 for i in results[size - 5] if i is not None) != 0:
             # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
+            if size < 40:
+                timeout = 60
+            else:
+                timeout = (size // 20) * 60
+            sols_inmatch = run_with_timeout(solver(), problems, parse_maps, timeout)  # test with low timeout
 
-            tqdm.write(f"{bm_name} with {teams} teams: {sols_inmatch}")
-            results[teams] = sols_inmatch
+            tqdm.write(f"{bm_name} with {size} teams: {sols_inmatch}")
+            results[size] = sols_inmatch
         else:
-            results[teams] = [None for i in range(len(problems))]
+            results[size] = [None for i in range(len(problems))]
 
         output_data(partname, results)
     # clean-up

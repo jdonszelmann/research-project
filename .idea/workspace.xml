@@ -15,16 +15,188 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="New test">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps_preview/results_CBM.txt" afterDir="false" />
+    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_mapsize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2.black.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps_preview/comparison_25percent_1teams_maps_preview.black.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams_maps_preview/comparison_25percent_1teams_maps_preview.black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/comparison_25percent_3teams_maps_preview_2.black.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/comparison_25percent_3teams_maps_preview_2.black.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview.black.png" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview.black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-0.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-1.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-2.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-3.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-4.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-5.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-6.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-7.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-8.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T1/comparison_25percent_var_teams_maps_preview-20x20-A12_T1-9.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-0.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-1.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-2.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-3.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-4.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-5.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-6.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-7.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-8.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T12/comparison_25percent_var_teams_maps_preview-20x20-A12_T12-9.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-0.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-1.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-2.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-3.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-4.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-5.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-6.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-7.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-8.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T2/comparison_25percent_var_teams_maps_preview-20x20-A12_T2-9.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-0.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-1.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-2.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-3.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-4.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-5.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-6.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-7.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-8.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T3/comparison_25percent_var_teams_maps_preview-20x20-A12_T3-9.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-0.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-1.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-2.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-3.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-4.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-5.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-6.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-7.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-8.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T4/comparison_25percent_var_teams_maps_preview-20x20-A12_T4-9.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-0.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-1.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-2.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-3.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-4.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-5.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-6.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-7.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-8.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview-20x20-A12_T6/comparison_25percent_var_teams_maps_preview-20x20-A12_T6-9.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview.black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.12teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.12teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.1teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.1teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.2teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.2teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.3teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.3teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.4teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.4teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.6teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.6teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.12teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.12teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.1teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.1teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.2teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.2teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.3teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.3teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.4teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.4teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.6teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.6teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.12teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.12teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.1teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.1teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.2teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.2teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.3teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.3teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.4teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.4teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.6teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.6teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-0.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-2.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-3.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-4.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-5.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-6.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-6.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-7.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-8.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-8.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T1-9.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-0.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-2.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-3.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-4.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-5.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-6.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-6.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-7.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-8.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-8.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T12-9.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-0.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-2.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-3.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-4.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-5.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-6.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-6.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-7.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-8.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-8.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T2-9.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-0.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-2.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-3.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-4.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-5.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-6.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-6.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-7.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-8.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-8.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T24-9.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-0.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-2.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-3.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-4.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-5.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-6.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-6.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-7.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-8.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-8.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T3-9.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-0.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-2.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-3.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-4.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-5.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-6.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-6.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-7.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-8.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-8.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T4-9.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-0.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-2.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-3.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-4.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-5.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-6.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-6.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-7.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-8.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-8.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6/comparison_25percent_var_teams_maps_preview_2-20x20-A24_T6-9.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/comparison_25percent_var_teams_maps_preview_2.black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt.12teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt.1teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt.24teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPInmatch.txt.24teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt.2teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt.3teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt.4teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPInmatch.txt.6teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt.12teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt.1teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt.24teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_BCPPrematch.txt.24teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt.2teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt.3teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt.4teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_BCPPrematch.txt.6teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt.12teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt.1teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt.24teams" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview/results_CBSInmatch.txt.24teams" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt.2teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt.3teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt.4teams" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_teams_maps_preview_2/results_CBSInmatch.txt.6teams" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +251,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,13 +271,6 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_3teams_maps_preview_2" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison" />
-      <recent name="$PROJECT_DIR$/assets/final_poster/assets" />
-      <recent name="$PROJECT_DIR$/assets/final_poster/css" />
-      <recent name="$PROJECT_DIR$/assets/final_poster" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_1teams_maps_preview" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
@@ -113,8 +278,15 @@
       <recent name="$PROJECT_DIR$/assets/final_poster/graph_comparison.png" />
       <recent name="$PROJECT_DIR$/python/benchmarks/comparison" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_3teams_maps_preview_2" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison" />
+      <recent name="$PROJECT_DIR$/assets/final_poster/assets" />
+      <recent name="$PROJECT_DIR$/assets/final_poster/css" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.comparison_25percent_1teams">
+  <component name="RunManager" selected="Python.comparison_25percent_var_mapsize">
     <configuration name="comparison_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,6 +323,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="comparison_25percent_var_mapsize" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="research-project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/benchmarks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_mapsize.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -227,9 +421,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.comparison_25percent_var_mapsize" />
+        <item itemvalue="Python.comparison_25percent_var_teams" />
         <item itemvalue="Python.comparison_25percent_1teams" />
         <item itemvalue="Python.comparison_25percent_3teams" />
-        <item itemvalue="Python.comparison_25percent_var_teams" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +513,9 @@
       <workItem from="1664903381504" duration="140000" />
       <workItem from="1664903863547" duration="245000" />
       <workItem from="1664904139676" duration="31000" />
-      <workItem from="1664904986047" duration="77000" />
+      <workItem from="1664904986047" duration="118000" />
+      <workItem from="1664918697668" duration="65000" />
+      <workItem from="1665135121525" duration="1380000" />
     </task>
     <task id="LOCAL-00001" summary="Removed more files and set up a test environment for prematching algortihms">
       <created>1664792188282</created>
@@ -376,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664896266451</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="New test">
+      <created>1664905073462</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664905073462</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +608,8 @@
     <MESSAGE value="Small fixes" />
     <MESSAGE value="Last changes" />
     <MESSAGE value="results of 1 teams and setup for varying team sizes" />
-    <option name="LAST_COMMIT_MESSAGE" value="results of 1 teams and setup for varying team sizes" />
+    <MESSAGE value="New test" />
+    <option name="LAST_COMMIT_MESSAGE" value="New test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -419,54 +624,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664872345136" />
-    <state x="715" y="224" key="#xdebugger.evaluate" timestamp="1664805269714">
+    <state x="715" y="224" key="#xdebugger.evaluate" timestamp="1665136008929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="715" y="224" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664805269714" />
-    <state x="535" y="111" key="CommitChangelistDialog2" timestamp="1664905059920">
+    <state x="715" y="224" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136008929" />
+    <state x="535" y="111" key="CommitChangelistDialog2" timestamp="1664905067040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="535" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664905059920" />
+    <state x="535" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664905067040" />
     <state x="2455" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664873381404" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1664904170078">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1665136207550">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664903522403" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136207550" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664904170078" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1664904170078">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1665136207550">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664903522403" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136207550" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664904170078" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1664904170077">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1665136207550">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664903522403" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136207550" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664904170077" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1664904170078">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1665136207550">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664903522403" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136207550" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664904170078" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1664887693535">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1665136015091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664887693535" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136015091" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625454" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1664887693535">
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1665136015091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664887693535" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136015091" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625454" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1664887693535">
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1665136015090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664887693535" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136015090" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625454" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1664887693535">
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1665136015091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664887693535" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136015091" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664792625454" />
     <state x="745" y="231" key="RollbackChangesDialog" timestamp="1664903501958">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -621,12 +826,13 @@
     <SUITE FILE_PATH="coverage/research_project$comparison_75percent_3teams.coverage" NAME="comparison_75percent_3teams Coverage Results" MODIFIED="1623677095233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_obstacle_3teams.coverage" NAME="comparison_ivar_obstacle_3teams Coverage Results" MODIFIED="1623688931448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_maze_3teams.coverage" NAME="comparison_ivar_maze_3teams Coverage Results" MODIFIED="1623928874546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams.coverage" NAME="comparison_25percent_var_teams Coverage Results" MODIFIED="1664902568903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams.coverage" NAME="comparison_25percent_var_teams Coverage Results" MODIFIED="1665135886628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_obstacle_1teams.coverage" NAME="comparison_ivar_obstacle_1teams Coverage Results" MODIFIED="1623688911598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1664873528278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1664904044344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams__1_.coverage" NAME="comparison_25percent_var_teams (1) Coverage Results" MODIFIED="1664886823475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$symlink.coverage" NAME="symlink Coverage Results" MODIFIED="1623844216762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/all_plots" />
+    <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_mapsize.coverage" NAME="comparison_25percent_var_mapsize Coverage Results" MODIFIED="1665136189045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$extensions_25percent_3teams.coverage" NAME="extensions_25percent_3teams Coverage Results" MODIFIED="1624821326568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$inmatch_vs_prematch_75percent_1teams.coverage" NAME="inmatch_vs_prematch_75percent_1teams Coverage Results" MODIFIED="1624392096968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$generate__1_.coverage" NAME="generate prematchings Coverage Results" MODIFIED="1624800352083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assets/final_poster/prematchings" />
