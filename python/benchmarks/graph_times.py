@@ -215,7 +215,7 @@ def graph_results(*args,
                     )
 
     if graph_percentage:
-        percentage.set_xlim(0, longest + 1)
+        percentage.set_xlim(0, 100)
     else:
         times.set_xlim(0, longest + 1)
 

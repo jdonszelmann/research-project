@@ -6,7 +6,7 @@ from typing import Optional, Callable
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import CBM  # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch  # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
@@ -88,10 +88,10 @@ def main():
     #     "EPEA*"
     # ))
 
-    files.append(run(
-        lambda: CBM(),
-        "CBM"
-    ))
+    # files.append(run(
+    #     lambda: CBM(),
+    #     "CBM"
+    # ))
 
     # files.append(run(
     #     lambda: AStarODID(),
@@ -103,16 +103,16 @@ def main():
     #     "ICTS"
     # ))
 
-    # files.append(run(
-    #     lambda: BCPPrematch(),
-    #     "BCPPrematch"
-    # ))
+    files.append(run(
+        lambda: BCPPrematch(),
+        "BCPPrematch"
+    ))
 
-    # files.append(run(
-    #     lambda: BCPInmatch(),
-    #     "BCPInmatch"
-    # ))
-    #
+    files.append(run(
+        lambda: BCPInmatch(),
+        "BCPInmatch"
+    ))
+
     # files.append(run(
     #     lambda: CBSPrematch(),
     #     "CBSPrematch"

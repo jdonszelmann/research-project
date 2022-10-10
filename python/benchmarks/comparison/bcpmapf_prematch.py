@@ -1,4 +1,4 @@
-from mapf_branch_and_bound.bbsolver import solve_bb
+from mapf_branch_and_bound.bbsolver import solve_bb, compute_sol_cost
 from mapfmclient import MapfBenchmarker, ProgressiveDescriptor, BenchmarkDescriptor, MarkedLocation, \
     Problem as cProblem, Solution
 from python.algorithm import MapfAlgorithm
@@ -99,7 +99,10 @@ class BCPSolver(MapfAlgorithm):
             # print(paths)
 
         #print(Solution.from_paths(paths).serialize())
-        return Solution.from_paths(paths)
+        sol = Solution.from_paths(paths)
+        print(sol)
+        print(compute_sol_cost(sol))
+        return sol
 
     @property
     def name(self) -> str:
