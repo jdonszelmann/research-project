@@ -3,6 +3,7 @@ import os
 import pathlib
 from typing import Optional, Callable
 
+from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
@@ -21,13 +22,15 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     parser = MapParser(batchdir)
 
     fname = batchdir / f"results_{bm_name}.txt"
+    fname2 = batchdir / f"actual_results_{bm_name}.txt"
 
     # if fname.exists():
     #     print(f"data exists for {bm_name}")
     #     return fname, bm_name
 
     # num agents : solutions
-    results: dict[int, list[Optional[float]]] = {}
+    results: dict[int, list[Optional[int]]] = {}
+    times: dict[int, list[Optional[float]]] = {}
 
     all_problems = [parser.parse_batch(n.name) for n in batchdir.iterdir() if n.is_dir()]
     all_problems.sort(key=lambda i: len(i[0][1].goals))
@@ -44,19 +47,27 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     print(f"found data for part {num_agents}")
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
-        sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 10)  # test with low timeout
-
-        tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
-        results[num_agents] = sols_inmatch
-
-        output_data(partname, results)
+        print(run_with_timeout(solver(), problems, parse_maps, 10))
+        all_results = run_with_timeout(solver(), problems, parse_maps, 10)  # test with low timeout
+        time, sols_inmatch = zip(*all_results)
+        tqdm.write(f"{bm_name} with {num_agents} agents: {time}")
+        times[num_agents] = time
+        costs = []
+        for sol in sols_inmatch:
+            if sol:
+                costs.append(compute_sol_cost(sol))
+            else:
+                costs.append(None)
+        results[num_agents] = costs
+        output_data(partname, times)
     # clean-up
-    for file in os.listdir("comparison/temp"):
+    for file in os.listdir("temp"):
         os.remove("temp/" + file)
 
     tqdm.write(str(results))
 
-    output_data(fname, results)
+    output_data(fname, times)
+    output_data(fname2, results)
 
     return fname, bm_name
 

@@ -1,21 +1,18 @@
-from mapfmclient import MapfBenchmarker, ProgressiveDescriptor, BenchmarkDescriptor, MarkedLocation, Problem as cProblem, Solution
-from python.algorithm import MapfAlgorithm
 import subprocess
-import os
-import re
+
+from mapfmclient import Problem as cProblem, Solution
+
+from python.algorithm import MapfAlgorithm
 
 bcp_mapf_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/bcp-inmatch/bcp-inmatch"
-#bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
+
+
+# bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
 
 class BCPSolver(MapfAlgorithm):
     def solve(self, problem: cProblem) -> Solution:
-        # print("Starts: ", problem.starts)
-        # print("Goals: ", problem.goals)
-        # print("Grid: ", problem.grid)
-        # print("width, height: ", problem.width, problem.height)
         version_info = "version 1 graph"
         map_path = "temp/" + problem.name
-        #map_path = "temp.map"
         num_of_agents = len(problem.starts)
 
         types = {}
@@ -25,7 +22,7 @@ class BCPSolver(MapfAlgorithm):
             x = start.x
             y = start.y
             c = start.color
-            start_node = "({},{})".format(x,y)
+            start_node = "({},{})".format(x, y)
             starts.append(start_node)
             if not c in types: types[c] = []
             types[c].append(i)
@@ -33,11 +30,10 @@ class BCPSolver(MapfAlgorithm):
             x = goal.x
             y = goal.y
             c = goal.color
-            goal_node = "({},{})".format(x,y)
+            goal_node = "({},{})".format(x, y)
             goals.append((goal_node, c))
 
         scenario_path = map_path.replace(".map", ".scen")
-        #scenario_path = "temp.scen"
         with open(scenario_path, "w") as f:
             f.write(version_info + "\n")
             f.write(problem.name + "\n")
@@ -64,9 +60,10 @@ class BCPSolver(MapfAlgorithm):
         # print(scenario_path)
         # print(map_path)
 
-        #subprocess.run([bcp_mapf_path, "-f", os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp.scen")])
+        # subprocess.run([bcp_mapf_path, "-f", os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp.scen")])
 
-        subprocess.run([bcp_mapf_path, "-f", scenario_path], timeout = problem.timeout, stdout=subprocess.DEVNULL) #.returncode
+        subprocess.run([bcp_mapf_path, "-f", scenario_path], timeout=problem.timeout,
+                       stdout=subprocess.DEVNULL)  # .returncode
         # print(str(exitvalue))
 
         paths = []
@@ -84,8 +81,7 @@ class BCPSolver(MapfAlgorithm):
         #             path.append((int(x),int(y)))
         #         paths.append(path)
         #     #print(paths)
-                    
-        # print(Solution.from_paths(paths).serialize())   	
+
         return Solution.from_paths(paths)
 
     @property

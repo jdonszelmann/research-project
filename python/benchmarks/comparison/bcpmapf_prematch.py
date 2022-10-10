@@ -18,14 +18,8 @@ class BCPSolver(MapfAlgorithm):
         return res
     
     def solve_internal(self, problem: cProblem, bound) -> Solution:
-        #print("Starts: ", problem.starts)
-        #print("Goals: ", problem.goals)
-        #print("Grid: ", problem.grid)
-        #print("width, height: ", problem.width, problem.height)
-
         version_info = "version 1 graph"
         map_path = "temp/" + problem.name
-        # print(map_path)
         num_of_agents = len(problem.starts)
 
         types = {}
@@ -73,9 +67,6 @@ class BCPSolver(MapfAlgorithm):
         args = [bcp_mapf_path, "-f", scenario_path]
         if bound is not None:
             args += ["-u", str(bound + len(problem.starts))]
-            # print('gave bound of: ' + str(bound + len(problem.starts)))
-        # else:
-            # print("Bound is None")
 
         subprocess.run(args, timeout = problem.timeout, stdout=subprocess.DEVNULL) #.returncode , stdout=subprocess.DEVNULL
 
@@ -96,13 +87,7 @@ class BCPSolver(MapfAlgorithm):
                     x, y = node.split(",")
                     path.append((int(x), int(y)))
                 paths.append(path)
-            # print(paths)
-
-        #print(Solution.from_paths(paths).serialize())
-        sol = Solution.from_paths(paths)
-        print(sol)
-        print(compute_sol_cost(sol))
-        return sol
+        return Solution.from_paths(paths)
 
     @property
     def name(self) -> str:
