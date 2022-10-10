@@ -94,8 +94,8 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
                 timeout = 60
             else:
                 timeout = (size // 20) * 60
-            sols_inmatch = run_with_timeout(solver(), problems, parse_maps, timeout)  # test with low timeout
-
+            all_results = run_with_timeout(solver(), problems, parse_maps, timeout)  # test with low timeout
+            sols_inmatch, costs = zip(*all_results)
             tqdm.write(f"{bm_name} with {size} teams: {sols_inmatch}")
             results[size] = sols_inmatch
         else:
@@ -166,10 +166,10 @@ def main():
         "BCPInmatch"
     ))
 
-    # files.append(run(
-    #     lambda: CBSPrematch(),
-    #     "CBSPrematch"
-    # ))
+    files.append(run(
+        lambda: CBSPrematch(),
+        "CBSPrematch"
+    ))
 
     files.append(run(
         lambda: CBSInmatch(),
