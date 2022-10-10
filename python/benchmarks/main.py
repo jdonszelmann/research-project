@@ -7,7 +7,7 @@ from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch  # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch  # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
@@ -47,7 +47,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     print(f"found data for part {num_agents}")
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
-        print(run_with_timeout(solver(), problems, parse_maps, 10))
         all_results = run_with_timeout(solver(), problems, parse_maps, 10)  # test with low timeout
         time, sols_inmatch = zip(*all_results)
         tqdm.write(f"{bm_name} with {num_agents} agents: {time}")
@@ -55,6 +54,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         costs = []
         for sol in sols_inmatch:
             if sol:
+                print(sol.serialize())
                 costs.append(compute_sol_cost(sol))
             else:
                 costs.append(None)
@@ -114,25 +114,25 @@ def main():
     #     "ICTS"
     # ))
 
-    files.append(run(
-        lambda: BCPPrematch(),
-        "BCPPrematch"
-    ))
-
-    files.append(run(
-        lambda: BCPInmatch(),
-        "BCPInmatch"
-    ))
-
     # files.append(run(
-    #     lambda: CBSPrematch(),
-    #     "CBSPrematch"
+    #     lambda: BCPPrematch(),
+    #     "BCPPrematch"
     # ))
     #
     # files.append(run(
-    #     lambda: CBSInmatch(),
-    #     "CBSInmatch"
+    #     lambda: BCPInmatch(),
+    #     "BCPInmatch"
     # ))
+
+    files.append(run(
+        lambda: CBSPrematch(),
+        "CBSPrematch"
+    ))
+
+    files.append(run(
+        lambda: CBSInmatch(),
+        "CBSInmatch"
+    ))
 
 
 if __name__ == '__main__':
