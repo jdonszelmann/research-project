@@ -57,23 +57,17 @@ class CBSSolver(MapfAlgorithm):
             print(e)
 
         paths = []
-        try:
-            with open("paths.txt", "r") as f:
-                sol_val = int(f.readline())
-                re_p = re.compile("(\(\d+,\d+\))")
-                while True:
-                    line = f.readline()
-                    print(line)
-                    if not line: break
-                    path = []
-                    for node in re_p.findall(line):
-                        node = node.replace("(", "").replace(")", "")
-                        print(node)
-                        x, y = node.split(",")
-                        path.append((int(x), int(y)))
-                    paths.append(path)
-        except Exception as e:
-            print(e)
+        with open("paths.txt", "r") as f:
+            re_p = re.compile("(\(\d+,\d+\))")
+            while True:
+                line = f.readline()
+                if not line: break
+                path = []
+                for node in re_p.findall(line):
+                    node = node.replace("(", "").replace(")", "")
+                    x, y = node.split(",")
+                    path.append((int(x), int(y)))
+                paths.append(path)
         return Solution.from_paths(paths)
 
     @property

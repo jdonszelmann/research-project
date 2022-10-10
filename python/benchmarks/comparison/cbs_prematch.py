@@ -1,5 +1,5 @@
 import subprocess
-from typing import re
+import re
 
 from mapf_branch_and_bound.bbsolver import solve_bb
 from mapfmclient import Problem as cProblem, Solution
@@ -55,7 +55,6 @@ class CBSSolver(MapfAlgorithm):
         paths = []
 
         with open("paths.txt", "r") as f:
-            sol_val = int(f.readline())
             re_p = re.compile("(\(\d+,\d+\))")
             while True:
                 line = f.readline()
