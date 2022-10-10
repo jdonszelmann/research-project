@@ -44,7 +44,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     print(f"found data for part {num_agents}")
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
-        sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
+        sols_inmatch = run_with_timeout(solver(), problems, parse_maps, 10)  # test with low timeout
 
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         results[num_agents] = sols_inmatch
