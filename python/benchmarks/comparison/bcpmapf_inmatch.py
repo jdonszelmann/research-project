@@ -1,3 +1,4 @@
+import re
 import subprocess
 
 from mapfmclient import Problem as cProblem, Solution
@@ -67,20 +68,22 @@ class BCPSolver(MapfAlgorithm):
         # print(str(exitvalue))
 
         paths = []
-        # with open("/home/jesse/Documents/GitProjects/bcp-mapf/build/outputs/temp.sol", "r") as f:
-        #     sol_val = int(f.readline())
-        #     f.readline()
-        #     re_p = re.compile("(\(\d+,\d+\))")
-        #     while True:
-        #         line = f.readline()
-        #         if not line: break
-        #         path = []
-        #         for node in re_p.findall(line):
-        #             node = node.replace("(", "").replace(")","")
-        #             x,y = node.split(",")
-        #             path.append((int(x),int(y)))
-        #         paths.append(path)
-        #     #print(paths)
+        with open("outputs/" + problem.name.replace(".map", ".sol"), "r") as f:
+            try:
+                sol_val = int(f.readline())
+            except:
+                return None;
+            f.readline()
+            re_p = re.compile("(\(\d+,\d+\))")
+            while True:
+                line = f.readline()
+                if not line: break
+                path = []
+                for node in re_p.findall(line):
+                    node = node.replace("(", "").replace(")", "")
+                    x, y = node.split(",")
+                    path.append((int(x), int(y)))
+                paths.append(path)
 
         return Solution.from_paths(paths)
 

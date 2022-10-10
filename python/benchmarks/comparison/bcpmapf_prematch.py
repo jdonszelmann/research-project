@@ -4,7 +4,6 @@ from mapfmclient import MapfBenchmarker, ProgressiveDescriptor, BenchmarkDescrip
 from python.algorithm import MapfAlgorithm
 
 import subprocess
-import os
 import re
 
 #bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"
