@@ -50,21 +50,25 @@ class CBSSolver(MapfAlgorithm):
         args += ["--outputPaths=paths.txt"]
         args += ["-k", str(num_of_agents)]
         # print(str(args))
-        subprocess.run(args, timeout=problem.timeout,
+        try:
+            subprocess.run(args, timeout=problem.timeout,
                        stdout=subprocess.DEVNULL)  # .returncode , stdout=subprocess.DEVNULL
+        except Exception as e:
+            print(e)
 
         paths = []
 
         with open("paths.txt", "r") as f:
             sol_val = int(f.readline())
-            #print(sol_val)
             re_p = re.compile("(\(\d+,\d+\))")
             while True:
                 line = f.readline()
+                print(line)
                 if not line: break
                 path = []
                 for node in re_p.findall(line):
                     node = node.replace("(", "").replace(")", "")
+                    print(node)
                     x, y = node.split(",")
                     path.append((int(x), int(y)))
                 paths.append(path)
