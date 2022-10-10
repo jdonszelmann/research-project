@@ -50,7 +50,7 @@ class CBSSolver(MapfAlgorithm):
         args += ["-k", str(num_of_agents)]
         if bound is not None:
             args += ["-u", str(bound)]  # + len(problem.starts)
-        subprocess.run(args, timeout=problem.timeout)  # .returncode , stdout=subprocess.DEVNULL
+        subprocess.run(args, timeout=problem.timeout, stdout=subprocess.DEVNULL)  # .returncode , stdout=subprocess.DEVNULL
 
         paths = []
 

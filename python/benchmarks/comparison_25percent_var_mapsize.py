@@ -15,7 +15,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_var_maps_size_preview_4"
+name = "comparison_25percent_var_maps_size_preview_3"
 processes = 1
 
 
@@ -53,7 +53,7 @@ def generate_maps():
             10,  # number of maps
             i, i,  # size
             25,  # number of agents
-            1,  # number of teams
+            5,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
