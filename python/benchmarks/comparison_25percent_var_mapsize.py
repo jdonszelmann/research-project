@@ -92,25 +92,23 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
             print(f"found data for part {size}x{size}")
             results[size] = read_from_file(partname, size)
             continue
-        if size == 10 or sum(1 for i in results[size - 5] if i is not None) != 0:
-            # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            if size < 40:
-                timeout = 60
-            else:
-                timeout = (size // 20) * 60
-            all_results = run_with_timeout(solver(), problems, parse_maps, timeout)  # test with low timeout
-            sols_inmatch, sols_costs = zip(*all_results)
-            costs = []
-            for sol in sols_costs:
-                if sol:
-                    costs.append(compute_sol_cost(sol))
-                else:
-                    costs.append(None)
-            tqdm.write(f"{bm_name} with {size} teams: {sols_inmatch}")
-            results[size] = sols_inmatch
-            results_costs[size] = costs
+        # Just run it anyway because smaller maps are more difficult xD
+        # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
+        if size < 40:
+            timeout = 60
         else:
-            results[size] = [None for i in range(len(problems))]
+            timeout = (size // 20) * 60
+        all_results = run_with_timeout(solver(), problems, parse_maps, timeout)  # test with low timeout
+        sols_inmatch, sols_costs = zip(*all_results)
+        costs = []
+        for sol in sols_costs:
+            if sol:
+                costs.append(compute_sol_cost(sol))
+            else:
+                costs.append(None)
+        tqdm.write(f"{bm_name} with {size} teams: {sols_inmatch}")
+        results[size] = sols_inmatch
+        results_costs[size] = costs
 
         output_data(partname, results)
         output_data(partname2, results_costs)
