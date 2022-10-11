@@ -179,6 +179,7 @@ def main():
     graph_results(
         *files,
         batchdir / f"{name}",
+        under="number of teams",
         save=True,
         bounds=False,
         legend=False,

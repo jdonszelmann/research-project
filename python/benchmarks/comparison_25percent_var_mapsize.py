@@ -3,6 +3,7 @@ import pathlib
 import re
 from typing import Optional, Callable
 
+from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
@@ -15,7 +16,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_var_maps_size_preview_3"
+name = "comparison_25percent_var_maps_size_preview_5"
 processes = 1
 
 
@@ -52,8 +53,8 @@ def generate_maps():
         map_generator.generate_even_batch(
             10,  # number of maps
             i, i,  # size
-            25,  # number of agents
-            5,  # number of teams
+            36,  # number of agents
+            6,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
@@ -66,6 +67,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     parser = MapParser(batchdir)
 
     fname = batchdir / f"results_{bm_name}.txt"
+    fname2 = batchdir / f"results_costs_{bm_name}.txt"
 
     if fname.exists():
         print(f"data exists for {bm_name}")
@@ -73,6 +75,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
 
     # num agents : solutions
     results: dict[int, list[Optional[float]]] = {}
+    results_costs: dict[int, list[Optional[float]]] = {}
 
     all_problems = [parser.parse_batch(n.name) for n in batchdir.iterdir() if n.is_dir()]
     all_problems.sort(key=lambda i: natural_keys(i[0][0]))
@@ -84,6 +87,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     for problems in tqdm(all_problems):
         size = len(problems[0][1].grid)
         partname = pathlib.Path(str(fname) + f".{size}x{size}")
+        partname2 = pathlib.Path(str(fname2) + f".{size}x{size}")
         if partname.exists():
             print(f"found data for part {size}x{size}")
             results[size] = read_from_file(partname, size)
@@ -95,13 +99,21 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
             else:
                 timeout = (size // 20) * 60
             all_results = run_with_timeout(solver(), problems, parse_maps, timeout)  # test with low timeout
-            sols_inmatch, costs = zip(*all_results)
+            sols_inmatch, sols_costs = zip(*all_results)
+            costs = []
+            for sol in sols_costs:
+                if sol:
+                    costs.append(compute_sol_cost(sol))
+                else:
+                    costs.append(None)
             tqdm.write(f"{bm_name} with {size} teams: {sols_inmatch}")
             results[size] = sols_inmatch
+            results_costs[size] = costs
         else:
             results[size] = [None for i in range(len(problems))]
 
         output_data(partname, results)
+        output_data(partname2, results_costs)
     # clean-up
     for file in os.listdir("temp"):
         os.remove("temp/" + file)
@@ -109,6 +121,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     tqdm.write(str(results))
 
     output_data(fname, results)
+    output_data(fname2, results)
 
     return fname, bm_name
 
@@ -179,6 +192,7 @@ def main():
     graph_results(
         *files,
         batchdir / f"{name}",
+        under="map size",
         save=True,
         bounds=False,
         legend=False,

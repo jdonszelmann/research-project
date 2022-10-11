@@ -49,7 +49,7 @@ def percentile(l: list[float], perc: float) -> float:
 
 black = True
 
-def graph_results(*args,
+def graph_results(*args, under,
                   save=True,
                   bounds=True,
                   fill_between=False,
@@ -114,7 +114,7 @@ def graph_results(*args,
         percentage.xaxis.set_major_locator(MaxNLocator(integer=True))
         percentage.set_ylabel("% solved")
         if not graph_times:
-            percentage.set_xlabel("number of agents")
+            percentage.set_xlabel(under)
 
     if graph_times:
         times.xaxis.set_major_locator(MaxNLocator(integer=True))
@@ -144,7 +144,7 @@ def graph_results(*args,
                 times90pydata = []
 
             lines = f.readlines()
-            longest = max(longest, len(lines))
+            longest = int(lines[-1].split(":")[0])
             for l in [l.strip() for l in lines if l.strip() != ""]:
                 before, after = l.split(":")
                 after_list = eval(after)
@@ -215,7 +215,7 @@ def graph_results(*args,
                     )
 
     if graph_percentage:
-        percentage.set_xlim(0, 100)
+        percentage.set_xlim(0, longest)
     else:
         times.set_xlim(0, longest + 1)
 

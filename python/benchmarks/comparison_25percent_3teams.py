@@ -167,6 +167,7 @@ def main():
     graph_results(
         *files,
         batchdir / f"{name}",
+        under="number of agents",
         save=True,
         bounds=False,
         legend=False,
