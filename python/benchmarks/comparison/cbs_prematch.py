@@ -7,7 +7,7 @@ from mapfmclient import Problem as cProblem, Solution
 from python.algorithm import MapfAlgorithm
 
 # cbs_path = "/home/jesse/Documents/GitProjects/CBS/CBSH2-RTC-main/cbs"
-cbs_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/cbs-prematch/cbs-prematch"
+cbs_path = "/data/BCP-paper/python/benchmarks/comparison/cbs-prematch/cbs-prematch"
 
 
 class CBSSolver(MapfAlgorithm):
@@ -45,7 +45,6 @@ class CBSSolver(MapfAlgorithm):
         args = [cbs_path, "-m", map_path]
         args += ["-a", scenario_path]
         args += ["-t", str(problem.timeout * 2)]
-        args += ["-o", "test.csv"]
         args += ["--outputPaths=paths.txt"]
         args += ["-k", str(num_of_agents)]
         if bound is not None:

@@ -119,7 +119,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     tqdm.write(str(results))
 
     output_data(fname, results)
-    output_data(fname2, results)
+    output_data(fname2, results_costs)
 
     return fname, bm_name
 

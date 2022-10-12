@@ -5,7 +5,7 @@ from mapfmclient import Problem as cProblem, Solution
 
 from python.algorithm import MapfAlgorithm
 
-bcp_mapf_path = "/home/jdonszelmann/rp/python/benchmarks/comparison/bcp-inmatch/bcp-inmatch"
+bcp_mapf_path = "/data/BCP-paper/python/benchmarks/comparison/bcp-inmatch/bcp-inmatch"
 
 
 # bcp_mapf_path = "/home/jesse/Documents/GitProjects/bcp-mapf/build/bcp-mapf"

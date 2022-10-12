@@ -17,58 +17,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.10agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.11agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.12agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.13agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.14agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.15agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.16agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.17agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.18agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.19agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.1agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.20agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.21agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.22agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.23agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.24agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.25agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.26agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.27agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.28agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.29agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.30agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.31agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.32agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.33agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.34agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.35agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.36agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.37agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.38agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.39agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.3agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.40agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.41agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.42agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.43agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.44agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.45agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.46agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.47agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.48agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.49agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.50agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.5agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.6agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.7agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.8agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_2/results_CBSPrematch.txt.9agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/comparison_25percent_var_maps_size_preview_5.black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPInmatch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/bcpmapf_inmatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/bcpmapf_inmatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/bcpmapf_prematch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/bcpmapf_prematch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_inmatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_inmatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_prematch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_prematch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPInmatch.txt.100x100" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPInmatch.txt.10x10" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPInmatch.txt.15x15" beforeDir="false" />
@@ -88,7 +40,6 @@
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPInmatch.txt.85x85" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPInmatch.txt.90x90" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPInmatch.txt.95x95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPPrematch.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPPrematch.txt.100x100" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPPrematch.txt.10x10" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_BCPPrematch.txt.15x15" beforeDir="false" />
@@ -148,7 +99,7 @@
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_CBSPrematch.txt.85x85" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_CBSPrematch.txt.90x90" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_CBSPrematch.txt.95x95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt.100x100" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt.10x10" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt.15x15" beforeDir="false" />
@@ -168,7 +119,7 @@
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt.85x85" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt.90x90" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPInmatch.txt.95x95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPPrematch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPPrematch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPPrematch.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPPrematch.txt.100x100" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPPrematch.txt.10x10" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_var_maps_size_preview_5/results_costs_BCPPrematch.txt.15x15" beforeDir="false" />
@@ -576,7 +527,8 @@
       <workItem from="1665349984089" duration="345000" />
       <workItem from="1665393889905" duration="82000" />
       <workItem from="1665394131472" duration="6762000" />
-      <workItem from="1665500884663" duration="2245000" />
+      <workItem from="1665500884663" duration="2319000" />
+      <workItem from="1665568514362" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="Removed more files and set up a test environment for prematching algortihms">
       <created>1664792188282</created>
@@ -732,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665501503783</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Make change I should have made earlier">
+      <created>1665515153697</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1665515153698</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -774,7 +733,8 @@
     <MESSAGE value="add try except" />
     <MESSAGE value="This should work" />
     <MESSAGE value="New test setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="New test setup" />
+    <MESSAGE value="Make change I should have made earlier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make change I should have made earlier" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -793,10 +753,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="715" y="224" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665136008929" />
-    <state x="314" y="111" key="CommitChangelistDialog2" timestamp="1665515145655">
+    <state x="314" y="111" key="CommitChangelistDialog2" timestamp="1665515153181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="314" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665515145655" />
+    <state x="314" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665515153181" />
     <state x="2455" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400877108" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1665421684955">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -847,10 +807,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1665501547434">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1665515161709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665501547434" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665515161709" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400881444" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -864,10 +824,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2076" y="0" width="1211" height="717" maximized="true" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665401185415" />
-    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1665514175448">
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1665568880123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665514175448" />
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665568880123" />
     <state x="2576" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1664895493872" />
   </component>
   <component name="XDebuggerManager">
