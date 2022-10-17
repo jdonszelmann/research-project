@@ -147,18 +147,9 @@ class SATSolverColored(MapfAlgorithm):
         for clause in solver.get_model():
             if clause in convert:
                 path.add(convert[clause])
-        res = [[] for _ in range(mu + 1)]
+        res = [[] for _ in range(self.n_agents)]
         for key in sorted(path, key=lambda x: (x[0], x[2])):
-            res[key[0]].append(key[1])
-        cost = (mu + 1) * self.n_agents
-        waiting = {i for i in range(self.n_agents)}
-        goals = res[-1]
-        for locations in reversed(res):
-            for a in range(len(locations)):
-                if a in waiting and locations[a] == goals[a]:
-                    cost -= 1
-                if a in waiting and locations[a] != goals[a]:
-                    waiting.remove(a)
+            res[key[2]].append(key[1])
         return res
 
     def generate_cnf(self, upperbound):

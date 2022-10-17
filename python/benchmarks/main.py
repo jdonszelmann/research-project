@@ -4,6 +4,7 @@ import pathlib
 import re
 from typing import Optional, Callable
 
+import pysat
 from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
@@ -134,10 +135,10 @@ def main():
         "CBSInmatch"
     ))
 
-    files.append(run(
-        lambda: SATInmatch(),
-        "SATInmatch"
-    ))
+    # files.append(run(
+    #     lambda: SATInmatch(),
+    #     "SATInmatch"
+    # ))
 
 
 if __name__ == '__main__':
