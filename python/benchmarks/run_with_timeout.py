@@ -39,7 +39,7 @@ def run_problem_with_timeout(
     except FunctionTimedOut:
         return None, None
     except Exception as e:
-        print(problem[0])
+        print(e)
         return None, None
     #finally:
         #print("removing map/scen file" + problem[1].name)

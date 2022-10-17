@@ -1,3 +1,5 @@
+pysat
+scipy
 pygame~=2.0.1
 imageio~=2.9.0
 mapfmclient~=0.2.5
