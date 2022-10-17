@@ -17,9 +17,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/SATSolverColored.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/SATSolverColored.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/actual_results_BCPInmatch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main/actual_results_BCPInmatch.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A4_T1/comparison_25percent_1teams_maps_preview-20x20-A4_T1-0.map" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A4_T1/comparison_25percent_1teams_maps_preview-20x20-A4_T1-0.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,19 +88,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_1teams_maps_preview" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison\src" />
-      <recent name="$PROJECT_DIR$/assets/final_poster/graph_comparison.png" />
-      <recent name="$PROJECT_DIR$/python/benchmarks/comparison" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\main" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_3teams_maps_preview_2" />
       <recent name="$PROJECT_DIR$/assets/final_poster/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_1teams_maps_preview" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison\src" />
+      <recent name="$PROJECT_DIR$/assets/final_poster/graph_comparison.png" />
+      <recent name="$PROJECT_DIR$/python/benchmarks/comparison" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (1)">
@@ -608,46 +609,46 @@
     </state>
     <state x="314" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666001790420" />
     <state x="2455" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400877108" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1666003037622">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1666005804723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666003037622" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400517936" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1666003037622">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005804723" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291029" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1666005804723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666003037622" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400517936" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1666003037622">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005804723" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291029" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1666005804723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666003037622" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400517936" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1666003037622">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005804723" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291029" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1666005804723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666003037622" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400517936" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1666001577754">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005804723" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291029" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1666005654605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666001577754" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400520819" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1666001577754">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005654605" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291030" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1666005654605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666001577754" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400520819" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1666001577754">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005654605" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291030" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1666005654605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666001577754" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400520819" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1666001577754">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005654605" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291030" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1666005654605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666001577754" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400520819" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005654605" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005291030" />
     <state x="2665" y="231" key="RollbackChangesDialog" timestamp="1665398725604">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -670,14 +671,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666003156734" />
-    <state x="2533" y="0" width="613" height="1027" maximized="true" key="dock-window-1" timestamp="1665397933361">
+    <state x="2192" y="0" width="687" height="717" maximized="true" key="dock-window-1" timestamp="1666005056191">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2533" y="0" width="613" height="1027" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665397933361" />
-    <state x="2076" y="0" width="1211" height="717" maximized="true" key="dock-window-2" timestamp="1665401185415">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="2192" y="0" width="687" height="717" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005056191" />
+    <state x="484" y="-18" width="1399" height="717" maximized="true" key="dock-window-2" timestamp="1666005385910">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2076" y="0" width="1211" height="717" maximized="true" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1665401185415" />
+    <state x="484" y="-18" width="1399" height="717" maximized="true" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1666005385910" />
+    <state x="1920" y="0" width="1863" height="717" maximized="true" key="dock-window-3" timestamp="1666005621379">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="1863" height="717" maximized="true" key="dock-window-3/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005621379" />
+    <state x="1920" y="0" width="1482" height="651" maximized="true" key="dock-window-4" timestamp="1666005621379">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="1482" height="651" maximized="true" key="dock-window-4/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666005621379" />
     <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1665998735901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -809,7 +819,7 @@
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams.coverage" NAME="comparison_25percent_var_teams Coverage Results" MODIFIED="1665421319150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_obstacle_1teams.coverage" NAME="comparison_ivar_obstacle_1teams Coverage Results" MODIFIED="1623688911598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1665421078610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/BCP_paper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1666003037618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/BCP_paper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1666005804717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams__1_.coverage" NAME="comparison_25percent_var_teams (1) Coverage Results" MODIFIED="1664886823475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$symlink.coverage" NAME="symlink Coverage Results" MODIFIED="1623844216762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/all_plots" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_mapsize.coverage" NAME="comparison_25percent_var_mapsize Coverage Results" MODIFIED="1665421204378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
