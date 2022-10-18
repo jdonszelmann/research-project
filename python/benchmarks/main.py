@@ -9,7 +9,7 @@ from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch, SATInmatch # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch, SATInmatch, SATPrematch # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
@@ -139,6 +139,11 @@ def main():
     files.append(run(
         lambda: SATInmatch(),
         "SATInmatch"
+    ))
+
+    files.append(run(
+        lambda: SATPrematch(),
+        "SATPrematch"
     ))
 
 

@@ -1,5 +1,3 @@
-from heapq import heappush, heappop
-
 import numpy as np
 from mapfmclient import Problem as cProblem, Solution
 from pysat.card import CardEnc
@@ -9,55 +7,18 @@ from scipy.optimize import linear_sum_assignment
 
 from MDD import MDD
 from python.algorithm import MapfAlgorithm
-
-
-def convert_grid_dict_ints(graph):
-    grap_new = {}
-    height = len(graph)
-    width = len(graph[0])
-    coord_to_int = {}
-    int_to_coord = {}
-    for i in range(len(graph)):
-        for j in range(len(graph[0])):
-            if graph[i][j] == 0:
-                current = width * i + j
-                coord_to_int[(j, i)] = current
-                int_to_coord[current] = (j, i)
-                neighbours = []
-                if i != 0 and graph[i - 1][j] == 0:
-                    neighbours.append(width * (i - 1) + j)
-                if j != 0 and graph[i][j - 1] == 0:
-                    neighbours.append(width * i + j - 1)
-                if i != height - 1 and graph[i + 1][j] == 0:
-                    neighbours.append(width * (i + 1) + j)
-                if j != width - 1 and graph[i][j + 1] == 0:
-                    neighbours.append(width * i + j + 1)
-                grap_new[current] = neighbours
-    return grap_new, coord_to_int, int_to_coord
-
-
-def dijkstra_distance(G, source):
-    dist = {}  # dictionary of final distances
-    seen = {source: 0}
-    c = 1
-    fringe = []  # use heapq with (distance,label) tuples
-    heappush(fringe, (0, c, source))
-    while fringe:
-        (d, _, v) = heappop(fringe)
-        if v in dist:
-            continue  # already searched this node.
-        dist[v] = d
-        neighbours = G[v]
-        for neighbour in neighbours:
-            vw_dist = d + 1
-            if neighbour not in seen or vw_dist < seen[neighbour]:
-                seen[neighbour] = vw_dist
-                c += 1
-                heappush(fringe, (vw_dist, c, neighbour))
-    return dist
+from python.benchmarks.comparison.util import convert_grid_dict_ints, dijkstra_distance
 
 
 class SATSolverColored(MapfAlgorithm):
+    n_agents: int
+    graph: dict
+    heuristics: list
+    min_makespan: int
+    starts: list
+    delta: int
+    mdd: dict
+    options: dict
 
     def solve(self, problem: cProblem) -> Solution:
         self.n_agents = len(problem.starts)
@@ -79,9 +40,9 @@ class SATSolverColored(MapfAlgorithm):
         distances = {}
         for vertex in self.graph:
             distances[vertex] = dijkstra_distance(self.graph, vertex)
-        self.options = {}
         self.heuristics = []
         makespans = []
+        self.options = {}
         for team in zip(problem_starts, problem_goals):
             for start in team[0]:
                 self.options[start] = team[1]
@@ -112,10 +73,10 @@ class SATSolverColored(MapfAlgorithm):
                     break
         self.min_makespan = max(makespans)
         self.starts = [item for sublist in problem_starts for item in sublist]
-        self.delta = 0
         self.mdd = {}
         for a in range(self.n_agents):
             self.mdd[a] = MDD(self.graph, a, self.starts[a], self.options[self.starts[a]], self.min_makespan)
+        self.delta = 0
         paths = self.solve_cnf()
         for path in paths:
             for i, loc in enumerate(path):
