@@ -5,7 +5,7 @@ from pysat.formula import CNF
 from pysat.solvers import Glucose3
 from scipy.optimize import linear_sum_assignment
 
-from MDD import MDD
+from python.benchmarks.comparison.MDD import MDD
 from python.algorithm import MapfAlgorithm
 from python.benchmarks.comparison.util import convert_grid_dict_ints, dijkstra_distance
 
