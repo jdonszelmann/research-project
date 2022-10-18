@@ -36,7 +36,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
 
     all_problems = [parser.parse_batch(n.name) for n in batchdir.iterdir() if n.is_dir()]
     all_problems.sort(key=lambda i: len(i[0][1].goals))
-    print(all_problems)
     for problem_list in all_problems:
         for problem in problem_list:
             problem[1].name = problem[0]
