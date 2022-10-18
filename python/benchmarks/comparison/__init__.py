@@ -5,6 +5,6 @@ from .bcpmapf_inmatch import BCPSolver as BCPInmatch
 from .bcpmapf_prematch import BCPSolver as BCPPrematch
 from .cbs_inmatch import CBSSolver as CBSInmatch
 from .cbs_prematch import CBSSolver as CBSPrematch
-# from .SATSolverColored import SATSolverColored as SATInmatch
+from .SATSolverColored import SATSolverColored as SATInmatch
 
-__all__ = ["BCPInmatch", "BCPPrematch", "CBSInmatch", "CBSPrematch"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]
+__all__ = ["BCPInmatch", "BCPPrematch", "CBSInmatch", "CBSPrematch", "SATInmatch"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]

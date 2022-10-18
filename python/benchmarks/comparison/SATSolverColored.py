@@ -21,8 +21,8 @@ def convert_grid_dict_ints(graph):
         for j in range(len(graph[0])):
             if graph[i][j] == 0:
                 current = width * i + j
-                coord_to_int[(i, j)] = current
-                int_to_coord[current] = (i, j)
+                coord_to_int[(j, i)] = current
+                int_to_coord[current] = (j, i)
                 neighbours = []
                 if i != 0 and graph[i - 1][j] == 0:
                     neighbours.append(width * (i - 1) + j)
@@ -117,12 +117,9 @@ class SATSolverColored(MapfAlgorithm):
         for a in range(self.n_agents):
             self.mdd[a] = MDD(self.graph, a, self.starts[a], self.options[self.starts[a]], self.min_makespan)
         paths = self.solve_cnf()
-        print(paths)
         for path in paths:
             for i, loc in enumerate(path):
                 path[i] = int_to_coord[loc]
-        print(paths)
-
         return Solution.from_paths(paths)
 
     @property
