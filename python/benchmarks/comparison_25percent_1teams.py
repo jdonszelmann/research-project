@@ -31,7 +31,7 @@ def generate_maps():
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
     for i in tqdm(range(1, num + 1)):
-        if any(f"A{i}" in dirname for dirname in dirnames):
+        if any(f"A{i}_" in dirname for dirname in dirnames):
             tqdm.write(f"maps for {i} agents already generated")
             continue
         else:
