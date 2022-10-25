@@ -1,0 +1,18 @@
+version 1 graph
+comparison_25percent_1teams_maps_preview_test-40x40-A4_T1-6-0.map
+Num_of_Agents 4
+types
+1 0
+0 1
+2 2
+3 3
+agents starts
+0 (12,27)
+1 (14,12)
+2 (21,30)
+3 (20,37)
+goals
+0 (8,9)
+1 (1,32)
+2 (28,21)
+3 (39,4)
