@@ -26,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 100
+    num = 99
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -66,9 +66,10 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     results_costs: dict[int, list[Optional[float]]] = {}
 
     all_problems = [parser.parse_batch(n.name) for n in batchdir.iterdir() if n.is_dir()]
+    lst = list(range(1,101))
     for problems in all_problems:
-        print(problems)
-        print(len(problems[0][1].goals))
+        lst.remove(len(problems[0][1].goals))
+    print(lst, len(all_problems))
     all_problems.sort(key=lambda i: len(i[0][1].goals))
     for problem_list in all_problems:
         for problem in problem_list:
