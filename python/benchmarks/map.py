@@ -25,11 +25,23 @@ class MapGenerator:
                      open_factor: float = 0.75,
                      max_neighbors: int = 1,
                      min_goal_distance: float = 0.5,
-                     max_goal_distance: float = 1
-
+                     max_goal_distance: float = 1,
+                     file=None
                      ) -> Problem:
         while True:
-            grid = self.__generate_maze(width, height, open_factor=open_factor, max_neighbors=max_neighbors)
+            if not file:
+                grid = self.generate_maze(width, height, open_factor=open_factor, max_neighbors=max_neighbors)
+            else:
+                with open(file) as f:
+                    grid = []
+                    for line in f.read().splitlines():
+                        row = []
+                        for value in line:
+                            if value == '@':
+                                row.append(1)
+                            else:
+                                row.append(0)
+                        grid.append(row)
             count_traversable = 0
             for y in range(height):
                 count_traversable += width - sum(grid[y])
@@ -62,8 +74,9 @@ class MapGenerator:
                           open_factor: float = 0.75,
                           max_neighbors: int = 1,
                           min_goal_distance: float = 0.5,
-                          max_goal_distance: float = 1):
-        problem = self.generate_map(width, height, num_agents, open_factor, max_neighbors, min_goal_distance, max_goal_distance)
+                          max_goal_distance: float = 1,
+                          file=None):
+        problem = self.generate_map(width, height, num_agents, open_factor, max_neighbors, min_goal_distance, max_goal_distance, file)
         self.__store_map(name, problem)
 
     def generate_even_batch(self,
@@ -78,7 +91,8 @@ class MapGenerator:
                             open_factor: float = 0.75,
                             max_neighbors: int = 1,
                             min_goal_distance: float = 0.5,
-                            max_goal_distance: float = 1
+                            max_goal_distance: float = 1,
+                            file=None
                             ):
         package_name = package_name if package_name is not None else f"{prefix}-{width}x{height}-A{agents}_T{teams}"
         file_name = package_name if file_name is None else file_name
@@ -96,7 +110,7 @@ class MapGenerator:
             if int(i) < 100 < amount:
                 i = f"0{i}"
             name = os.path.join(package_name, f"{file_name}-{i}")
-            actions.append((name, width, height, num_agents, open_factor, max_neighbors, min_goal_distance, max_goal_distance))
+            actions.append((name, width, height, num_agents, open_factor, max_neighbors, min_goal_distance, max_goal_distance, file))
 
         with Pool(processes) as p:
             p.starmap(self.generate_map_file, actions)
@@ -180,7 +194,7 @@ class MapGenerator:
         return res
 
     @staticmethod
-    def __generate_maze(width: int, height: int, open_factor: float, max_neighbors: int) -> List[List[int]]:
+    def generate_maze(width: int, height: int, open_factor: float, max_neighbors: int) -> List[List[int]]:
         grid: List[List[int]] = []
         for x in range(height):
             grid.append([1] * width)
@@ -233,7 +247,3 @@ class MapGenerator:
 
             for goal in problem.goals:
                 f.write(f'{goal.x} {goal.y} {goal.color}\n')
-
-
-
-

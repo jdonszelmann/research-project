@@ -1,23 +1,53 @@
 # from multiprocessing import Pool
 import os
 import pathlib
-import re
 from typing import Optional, Callable
 
-import pysat
 from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
+from map import MapGenerator
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch, SATInmatch, SATPrematch # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import SATInmatch, SATPrematch  # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.util import output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "main"
+name = "main_maze"
 
+
+def generate_maps():
+    path = this_dir / name
+    try:
+        path.mkdir(parents=True)
+    except FileExistsError:
+        pass
+
+    num = 3
+
+    dirnames = [n.name for n in path.iterdir() if n.is_dir()]
+
+    for i in tqdm(range(1, num + 1)):
+        if any(f"A{i}" in dirname for dirname in dirnames):
+            tqdm.write(f"maps for {i} agents already generated")
+            continue
+        else:
+            tqdm.write(f"generating {path}")
+
+        map_generator = MapGenerator(path)
+        map_generator.generate_even_batch(
+            10,  # number of maps
+            128, 128,  # size
+            i,  # number of agents
+            3,  # number of teams
+            prefix=name,
+            min_goal_distance=0,
+            open_factor=0.65,
+            max_neighbors=3,
+            file="maps/maze-128-128-1.map"
+        )
 
 def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = True):
     batchdir = this_dir / name
@@ -147,4 +177,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    generate_maps()
+

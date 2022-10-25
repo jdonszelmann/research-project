@@ -16,7 +16,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps_preview_40"
+name = "comparison_25percent_3teams_maps_preview_maze"
 
 
 # processes = 10
@@ -42,14 +42,15 @@ def generate_maps():
 
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
-            10,  # number of maps
-            40, 40,  # size
+            5,  # number of maps
+            128, 128,  # size
             i,  # number of agents
             3,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
+            file="maps/maze-128-128-1.map"
         )
 
 
@@ -87,7 +88,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
             continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
             # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            all_results = run_with_timeout(solver(), problems, parse_maps, 120)  # test with low timeout
+            all_results = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
             sols_inmatch, sols_costs = zip(*all_results)
             costs = []
             for sol in sols_costs:
@@ -106,6 +107,9 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     # clean-up
     for file in os.listdir("temp"):
         os.remove("temp/" + file)
+
+    for file in os.listdir("outputs"):
+        os.remove("outputs/" + file)
 
     tqdm.write(str(results))
 
@@ -176,16 +180,6 @@ def main():
     files.append(run(
         lambda: CBSInmatch(),
         "CBSInmatch"
-    ))
-
-    files.append(run(
-        lambda: SATInmatch(),
-        "SATInmatch"
-    ))
-
-    files.append(run(
-        lambda: SATPrematch(),
-        "SATPrematch"
     ))
 
     graph_results(

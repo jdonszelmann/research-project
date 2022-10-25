@@ -26,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 50
+    num = 100
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -102,6 +102,9 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     # clean-up
     for file in os.listdir("temp"):
         os.remove("temp/" + file)
+
+    for file in os.listdir("outputs"):
+        os.remove("outputs/" + file)
 
     tqdm.write(str(results))
 
