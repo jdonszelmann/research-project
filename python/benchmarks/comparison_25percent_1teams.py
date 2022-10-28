@@ -15,7 +15,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_1teams_maps_preview_40"
+name = "comparison_25percent_1teams_maps_preview_maze_2"
 processes = 1
 
 
@@ -26,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 99
+    num = 30
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -39,7 +39,7 @@ def generate_maps():
 
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
-            10,  # number of maps
+            20,  # number of maps
             40, 40,  # size
             i,  # number of agents
             1,  # number of teams
@@ -47,6 +47,7 @@ def generate_maps():
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
+            file = "maps/maze-128-128-1.map"
         )
 
 
@@ -55,7 +56,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     parser = MapParser(batchdir)
 
     fname = batchdir / f"results_{bm_name}.txt"
-    fname2 = batchdir / f"results_costs_{bm_name}.txt"
 
     if fname.exists():
         print(f"data exists for {bm_name}")
@@ -63,7 +63,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
 
     # num agents : solutions
     results: dict[int, list[Optional[float]]] = {}
-    results_costs: dict[int, list[Optional[float]]] = {}
 
     all_problems = [parser.parse_batch(n.name) for n in batchdir.iterdir() if n.is_dir()]
     all_problems.sort(key=lambda i: len(i[0][1].goals))
@@ -76,29 +75,20 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         num_agents = len(problems[0][1].goals)
 
         partname = pathlib.Path(str(fname) + f".{num_agents}agents")
-        partname2 = pathlib.Path(str(fname2) + f".{num_agents}agents")
         if partname.exists():
             print(f"found data for part {num_agents}")
             results[num_agents] = read_from_file(partname, num_agents)
             continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
             # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            all_results = run_with_timeout(solver(), problems, parse_maps, 120)  # test with low timeout
-            sols_inmatch, sols_costs = zip(*all_results)
-            costs = []
-            for sol in sols_costs:
-                if sol:
-                    costs.append(compute_sol_cost(sol))
-                else:
-                    costs.append(None)
+            all_results = run_with_timeout(solver(), problems, parse_maps, 180)  # test with low timeout
+            sols_inmatch, _ = zip(*all_results)
             tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
             results[num_agents] = sols_inmatch
-            results_costs[num_agents] = costs
         else:
             results[num_agents] = [None for i in range(len(problems))]
 
         output_data(partname, results)
-        output_data(partname2, results_costs)
     # clean-up
     for file in os.listdir("temp"):
         os.remove("temp/" + file)
@@ -109,7 +99,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     tqdm.write(str(results))
 
     output_data(fname, results)
-    output_data(fname2, results_costs)
 
     return fname, bm_name
 
