@@ -40,14 +40,14 @@ def generate_maps():
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
             10,  # number of maps
-            128, 128,  # size
+            65, 81,  # size
             i,  # number of agents
             1,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
-            file = "maps/maze-128-128-1.map"
+            file = "maps/den312d.map"
         )
 
 
