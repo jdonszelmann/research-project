@@ -16,7 +16,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps_preview_maze_2"
+name = "comparison_25percent_3teams_maps_preview_DAO"
 
 
 # processes = 10
