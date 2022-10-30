@@ -81,7 +81,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
             continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
             # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            all_results = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
+            all_results = run_with_timeout(solver(), problems, parse_maps, 180)  # test with low timeout
             sols_inmatch, _ = zip(*all_results)
             tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
             results[num_agents] = sols_inmatch
