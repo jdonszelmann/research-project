@@ -18,211 +18,6 @@
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.10agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.11agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.12agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.13agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.14agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.15agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.16agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.17agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.18agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.19agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.1agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.20agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.21agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.22agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.23agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.24agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.25agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.26agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.27agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.28agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.29agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.30agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.31agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.32agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.33agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.34agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.35agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.36agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.37agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.38agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.39agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.3agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.40agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.41agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.42agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.43agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.44agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.45agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.46agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.47agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.48agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.49agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.50agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.5agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.6agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.7agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.8agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPInmatch.txt.9agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.10agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.11agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.12agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.13agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.14agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.15agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.16agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.17agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.18agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.19agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.1agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.20agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.21agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.22agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.23agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.24agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.25agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.26agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.27agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.28agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.29agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.30agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.31agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.32agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.33agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.34agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.35agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.36agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.37agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.38agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.39agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.3agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.40agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.41agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.42agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.43agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.44agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.45agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.46agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.47agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.48agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.49agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.50agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.5agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.6agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.7agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.8agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_BCPPrematch.txt.9agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.10agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.11agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.12agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.13agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.14agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.15agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.16agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.17agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.18agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.19agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.1agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.20agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.21agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.22agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.23agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.24agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.25agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.26agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.27agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.28agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.29agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.30agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.31agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.32agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.33agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.34agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.35agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.36agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.37agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.38agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.39agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.3agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.40agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.41agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.42agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.43agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.44agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.45agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.46agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.47agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.48agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.49agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.50agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.5agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.6agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.7agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.8agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSInmatch.txt.9agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.10agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.11agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.12agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.13agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.14agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.15agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.16agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.17agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.18agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.19agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.1agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.20agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.21agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.22agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.23agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.24agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.25agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.26agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.27agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.28agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.29agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.30agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.31agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.32agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.33agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.34agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.35agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.36agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.37agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.38agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.39agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.3agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.40agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.41agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.42agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.43agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.44agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.45agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.46agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.47agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.48agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.49agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.50agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.5agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.6agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.7agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.8agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_maze/results_costs_CBSPrematch.txt.9agents" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -576,7 +371,8 @@
       <workItem from="1666689158886" duration="3297000" />
       <workItem from="1666692556288" duration="219000" />
       <workItem from="1666693215305" duration="2347000" />
-      <workItem from="1666951752826" duration="424000" />
+      <workItem from="1666951752826" duration="692000" />
+      <workItem from="1667129403101" duration="91000" />
     </task>
     <task id="LOCAL-00001" summary="Removed more files and set up a test environment for prematching algortihms">
       <created>1664792188282</created>
@@ -872,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666694943435</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="More maze experiments">
+      <created>1666952235850</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1666952235850</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Simple test cases" />
     <MESSAGE value="Fixing the tabs" />
     <MESSAGE value="add try except" />
     <MESSAGE value="This should work" />
@@ -917,7 +719,8 @@
     <MESSAGE value="debugging method 3.0" />
     <MESSAGE value="debugging method 4.0" />
     <MESSAGE value="This should have fixed everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="This should have fixed everything" />
+    <MESSAGE value="More maze experiments" />
+    <option name="LAST_COMMIT_MESSAGE" value="More maze experiments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -937,10 +740,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666693619716" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1666694943079">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1666952235250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666694943079" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666952235250" />
     <state x="2455" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400877108" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1666698785746">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -991,10 +794,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1666694944351">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1666952236914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666694944351" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1666952236914" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400881444" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
