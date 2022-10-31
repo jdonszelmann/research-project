@@ -26,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 30
+    num = 10
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
