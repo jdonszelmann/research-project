@@ -45,8 +45,8 @@ class MapGenerator:
             count_traversable = 0
             for y in range(height):
                 count_traversable += width - sum(grid[y])
-            if count_traversable < (open_factor * width * height * 0.25 * max_neighbors) or self.__num_3neighbors(grid) < sum(
-                    num_agents) - 1:
+            if (count_traversable < (open_factor * width * height * 0.25 * max_neighbors) or self.__num_3neighbors(grid) < sum(
+                    num_agents) - 1) and file is None:
                 tqdm.write("Not enough traversable cells or not solvable, running again!")
             else:
                 result = None
