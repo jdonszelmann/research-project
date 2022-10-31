@@ -6,16 +6,17 @@ from typing import Optional, Callable
 from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
+from graph_times import graph_results
 from map import MapGenerator
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import SATInmatch, SATPrematch  # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
-from python.benchmarks.util import output_data
+from python.benchmarks.util import output_data, read_from_file
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "main_maze"
+name = "comparison_25percent_3teams_maps_preview_maze_2"
 
 
 def generate_maps():
@@ -25,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 3
+    num = 99
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -56,9 +57,9 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     fname = batchdir / f"results_{bm_name}.txt"
     fname2 = batchdir / f"actual_results_{bm_name}.txt"
 
-    # if fname.exists():
-    #     print(f"data exists for {bm_name}")
-    #     return fname, bm_name
+    if fname.exists():
+        print(f"data exists for {bm_name}")
+        return fname, bm_name
 
     # num agents : solutions
     results: dict[int, list[Optional[int]]] = {}
@@ -75,10 +76,10 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         num_agents = len(problems[0][1].goals)
 
         partname = pathlib.Path(str(fname) + f".{num_agents}agents")
-        # if partname.exists():
-        #     print(f"found data for part {num_agents}")
-        #     results[num_agents] = read_from_file(partname, num_agents)
-        #     continue
+        if partname.exists():
+            print(f"found data for part {num_agents}")
+            results[num_agents] = read_from_file(partname, num_agents)
+            continue
         all_results = run_with_timeout(solver(), problems, parse_maps, 1000000)  # test with low timeout
         sols_inmatch, sols_costs = zip(*all_results)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
@@ -108,74 +109,37 @@ def main():
 
     files: list[tuple[pathlib.Path, str]] = []
 
-    # files.append(run(
-    #     lambda: ConfigurableMStar(
-    #         Config(
-    #             operator_decomposition=True,
-    #             precompute_paths=False,
-    #             precompute_heuristic=True,
-    #             collision_avoidance_table=False,
-    #             recursive=False,
-    #             matching_strategy=MatchingStrategy.SortedPruningPrematch,
-    #             max_memory_usage=3 * GigaByte,
-    #             debug=False,
-    #             report_expansions=False,
-    #         ), 
-    #     ),
-    #     "M*"
-    # ))
-
-    # files.append(run(
-    #     lambda: EPEAStar(),
-    #     "EPEA*"
-    # ))
-
-    # files.append(run(
-    #     lambda: CBM(),
-    #     "CBM"
-    # ))
-
-    # files.append(run(
-    #     lambda: AStarODID(),
-    #     "A*-OD-ID"
-    # ))
-
-    # files.append(run(
-    #     lambda: ICTS(),
-    #     "ICTS"
-    # ))
-
-    # files.append(run(
-    #     lambda: BCPPrematch(),
-    #     "BCPPrematch"
-    # ))
-    #
-    # files.append(run(
-    #     lambda: BCPInmatch(),
-    #     "BCPInmatch"
-    # ))
-    #
-    # files.append(run(
-    #     lambda: CBSPrematch(),
-    #     "CBSPrematch"
-    # ))
-    #
-    # files.append(run(
-    #     lambda: CBSInmatch(),
-    #     "CBSInmatch"
-    # ))
-
     files.append(run(
-        lambda: SATInmatch(),
-        "SATInmatch"
+        lambda: BCPPrematch(),
+        "BCPPrematch"
     ))
 
     files.append(run(
-        lambda: SATPrematch(),
-        "SATPrematch"
+        lambda: BCPInmatch(),
+        "BCPInmatch"
     ))
+
+    files.append(run(
+        lambda: CBSPrematch(),
+        "CBSPrematch"
+    ))
+
+    files.append(run(
+        lambda: CBSInmatch(),
+        "CBSInmatch"
+    ))
+
+    graph_results(
+        *files,
+        batchdir / f"{name}",
+        under="number of agents",
+        save=False,
+        bounds=False,
+        legend=False,
+        limit=30,
+    )
 
 
 if __name__ == '__main__':
-    generate_maps()
+    main()
 

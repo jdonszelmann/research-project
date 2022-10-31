@@ -56,9 +56,9 @@ def graph_results(*args, under,
                   graph_times=False,
                   graph_percentage=True,
                   legend=True,
+                  limit=float("inf")
                   ):
     plt.style.use('seaborn-whitegrid')
-
     if black:
         plt.rcParams['axes.facecolor'] = rgb_to_colour(*background)
         plt.rcParams['axes.edgecolor'] = '#FFFFFF'
@@ -149,7 +149,8 @@ def graph_results(*args, under,
                 before, after = l.split(":")
                 after_list = eval(after)
                 num_agents = int(before)
-
+                if limit is not None:
+                    after_list = [x if x is None or x <= limit else None for x in after_list]
                 fraction_solved = (len(after_list) - after_list.count(None)) / len(after_list)
 
                 solved_times = [i for i in after_list if i is not None]
