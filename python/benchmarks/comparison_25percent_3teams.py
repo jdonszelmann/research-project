@@ -50,7 +50,7 @@ def generate_maps():
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
-            file="maps/warehouse1.map.map"
+            file="maps/warehouse1.map"
         )
 
 
