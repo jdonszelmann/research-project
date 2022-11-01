@@ -16,7 +16,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/maps/warehouse2.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/warehouse1.map" beforeDir="false" afterPath="$PROJECT_DIR$/maps/warehouse1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,19 +88,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\main\comparison_25percent_1teams_maps_preview-20x20-A4_T1" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\backup" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\maps" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\maps" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\backup" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\main\comparison_25percent_1teams_maps_preview-20x20-A4_T1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\main\comparison_25percent_1teams_maps_preview-20x20-A4_T1" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\backup" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (1)">
@@ -378,13 +382,9 @@
       <workItem from="1667205222810" duration="752000" />
       <workItem from="1667206056629" duration="1728000" />
       <workItem from="1667237736425" duration="181000" />
-    </task>
-    <task id="LOCAL-00004" summary="See if error is the same">
-      <created>1664805522640</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1664805522640</updated>
+      <workItem from="1667240734041" duration="1215000" />
+      <workItem from="1667294648289" duration="611000" />
+      <workItem from="1667308328110" duration="66000" />
     </task>
     <task id="LOCAL-00005" summary="Setup for 1 team tests">
       <created>1664872522937</created>
@@ -722,7 +722,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667237903586</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="remove final results">
+      <created>1667240757800</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1667240757800</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -742,7 +749,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move some maps to backup" />
     <MESSAGE value="Add back the maps" />
     <MESSAGE value="Lets get SAT to work on the server" />
     <MESSAGE value="Test SAT Prematching on server" />
@@ -767,7 +773,8 @@
     <MESSAGE value="Fixed the bug related to widths and heights" />
     <MESSAGE value="Fixed the number of runs" />
     <MESSAGE value="go up to 30 agents" />
-    <option name="LAST_COMMIT_MESSAGE" value="go up to 30 agents" />
+    <MESSAGE value="remove final results" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove final results" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -787,10 +794,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667205831454" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667237903162">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667240757253">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667237903162" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667240757253" />
     <state x="2455" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400877108" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1667207799883">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -841,10 +848,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667237904599">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667240758972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667237904599" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667240758972" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665400881444" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />

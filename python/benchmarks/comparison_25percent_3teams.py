@@ -16,7 +16,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps_preview_DAO"
+name = "comparison_25percent_3teams_maps_preview_warehouse3"
 
 
 # processes = 10
@@ -29,7 +29,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 30
+    num = 50
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -43,14 +43,14 @@ def generate_maps():
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
             10,  # number of maps
-            65, 81,  # size
+            20, 20,  # size
             i,  # number of agents
             3,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
-            file="maps/den312d.map"
+            file="maps/warehouse1.map.map"
         )
 
 
@@ -85,7 +85,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
             continue
         if num_agents <= 2 or sum(1 for i in results[num_agents - 1] if i is not None) != 0:
             # sols_inmatch = run_with_timeout(p, solver(), problems, parse_maps, 1 * 1) # test with low timeout
-            all_results = run_with_timeout(solver(), problems, parse_maps, 180)  # test with low timeout
+            all_results = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
             sols_inmatch, _ = zip(*all_results)
             tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
             results[num_agents] = sols_inmatch
