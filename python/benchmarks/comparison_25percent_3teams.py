@@ -43,7 +43,7 @@ def generate_maps():
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
             10,  # number of maps
-            20, 20,  # size
+            40, 40,  # size
             i,  # number of agents
             3,  # number of teams
             prefix=name,
