@@ -7,7 +7,7 @@ from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch, SATInmatch, SATPrematch # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.map import MapGenerator
 from python.benchmarks.parse_map import MapParser
@@ -16,7 +16,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps_preview_warehouse3"
+name = "comparison_25percent_3teams_maps_preview_warehouse2"
 
 
 # processes = 10
@@ -50,7 +50,7 @@ def generate_maps():
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
-            file="maps/warehouse1.map"
+            file="maps/warehouse2.map"
         )
 
 

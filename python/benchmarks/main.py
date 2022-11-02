@@ -16,7 +16,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import output_data, read_from_file
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps_preview_maze_2"
+name = "comparison_25percent_1teams_maps_preview_warehouse1"
 
 
 def generate_maps():
@@ -26,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 99
+    num = 2
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -39,15 +39,14 @@ def generate_maps():
 
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
-            10,  # number of maps
-            128, 128,  # size
+            1,  # number of maps
+            10, 10,  # size
             i,  # number of agents
-            3,  # number of teams
+            1,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
-            file="maps/maze-128-128-1.map"
         )
 
 def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = True):
