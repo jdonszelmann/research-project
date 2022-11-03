@@ -15,7 +15,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_1teams_maps_preview_warehouse2"
+name = "comparison_25percent"
 processes = 1
 
 
@@ -26,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 50
+    num = 1
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -40,14 +40,13 @@ def generate_maps():
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
             10,  # number of maps
-            40, 40,  # size
+            20, 20,  # size
             i,  # number of agents
             1,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
             max_neighbors=3,
-            file="maps/warehouse2.map"
         )
 
 
@@ -164,6 +163,26 @@ def main():
     files.append(run(
         lambda: CBSInmatch(),
         "CBSInmatch"
+    ))
+
+    files.append(run(
+        lambda: BCPPrematch(),
+        "BCPPrematch_1"
+    ))
+
+    files.append(run(
+        lambda: BCPInmatch(),
+        "BCPInmatch_1"
+    ))
+
+    files.append(run(
+        lambda: CBSPrematch(),
+        "CBSPrematch_1"
+    ))
+
+    files.append(run(
+        lambda: CBSInmatch(),
+        "CBSInmatch_1"
     ))
 
     # files.append(run(
