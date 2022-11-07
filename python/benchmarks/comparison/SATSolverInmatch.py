@@ -37,8 +37,11 @@ class SATSolverColored(MapfAlgorithm):
             if color + 1 > len(problem_goals):
                 problem_goals.append([])
             problem_goals[color].append(loc)
+        all_goals = []
+        for goal in problem.goals:
+            all_goals.append(coord_to_int[goal.x, goal.y])
         distances = {}
-        for vertex in self.graph:
+        for vertex in all_goals:
             distances[vertex] = dijkstra_distance(self.graph, vertex)
         self.heuristics = []
         makespans = []
@@ -97,6 +100,7 @@ class SATSolverColored(MapfAlgorithm):
                 cnf, convert = self.generate_cnf(mu)
                 solver = Glucose3()
                 solver.append_formula(cnf)
+                print("start solving")
                 solver.solve()
                 if solver.get_model() is not None:
                     break
