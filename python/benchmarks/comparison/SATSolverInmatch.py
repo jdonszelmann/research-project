@@ -100,7 +100,6 @@ class SATSolverColored(MapfAlgorithm):
                 cnf, convert = self.generate_cnf(mu)
                 solver = Glucose3()
                 solver.append_formula(cnf)
-                print("start solving")
                 solver.solve()
                 if solver.get_model() is not None:
                     break
