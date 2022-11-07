@@ -6,7 +6,7 @@ from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch # , EPEAStar, CBM, AStarODID,
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch, CBM # , EPEAStar, CBM, AStarODID,
 from python.benchmarks.graph_times import graph_results
 from python.benchmarks.map import MapGenerator
 from python.benchmarks.parse_map import MapParser
@@ -15,7 +15,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent"
+name = "comparison_25percent_1teams_maps_preview"
 processes = 1
 
 
@@ -26,7 +26,7 @@ def generate_maps():
     except FileExistsError:
         pass
 
-    num = 1
+    num = 50
 
     dirnames = [n.name for n in path.iterdir() if n.is_dir()]
 
@@ -130,10 +130,10 @@ def main():
     #     "EPEA*"
     # ))
 
-    # files.append(run(
-    #     lambda: CBM(),
-    #     "CBM"
-    # ))
+    files.append(run(
+        lambda: CBM(),
+        "CBM"
+    ))
 
     # files.append(run(
     #     lambda: AStarODID(),

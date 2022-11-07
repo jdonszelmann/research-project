@@ -17,31 +17,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/actual_results_BCPInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/actual_results_BCPPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/actual_results_CBSInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/actual_results_CBSPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/actual_results_SATInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/actual_results_SATPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_BCPInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_BCPInmatch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_BCPInmatch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_BCPPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_BCPPrematch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_BCPPrematch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_CBSInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_CBSInmatch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_CBSInmatch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_CBSPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_CBSPrematch.txt.2agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_CBSPrematch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_SATInmatch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_SATInmatch.txt.4agents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_SATPrematch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/results_SATPrematch.txt.4agents" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,21 +389,7 @@
       <workItem from="1667473889810" duration="18000" />
       <workItem from="1667477598853" duration="29000" />
       <workItem from="1667482074580" duration="1732000" />
-      <workItem from="1667818955413" duration="2874000" />
-    </task>
-    <task id="LOCAL-00016" summary="Maybe this code is actually needed">
-      <created>1665398005668</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1665398005668</updated>
-    </task>
-    <task id="LOCAL-00017" summary="This code should make CBS work as well">
-      <created>1665398214019</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1665398214019</updated>
+      <workItem from="1667818955413" duration="3293000" />
     </task>
     <task id="LOCAL-00018" summary="Simple test cases">
       <created>1665398537071</created>
@@ -756,7 +720,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667824551218</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="And this">
+      <created>1667825021146</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1667825021146</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Change all the imports with replace">
+      <created>1667825142029</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1667825142029</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -776,7 +754,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debugging method 2.0" />
     <MESSAGE value="debugging method 3.0" />
     <MESSAGE value="debugging method 4.0" />
     <MESSAGE value="This should have fixed everything" />
@@ -801,7 +778,8 @@
     <MESSAGE value="Debugging with commits" />
     <MESSAGE value="See if this works" />
     <MESSAGE value="And this" />
-    <option name="LAST_COMMIT_MESSAGE" value="And this" />
+    <MESSAGE value="Change all the imports with replace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change all the imports with replace" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -821,10 +799,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667825020644">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667825461072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825020644" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825461072" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667398627386" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1667824925360">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -875,10 +853,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667825022260">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667825143337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825022260" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825143337" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667398628905" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
