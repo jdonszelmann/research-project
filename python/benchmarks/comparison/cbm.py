@@ -6,9 +6,7 @@ from mapfmclient import Problem, Solution
 
 from python.algorithm import MapfAlgorithm
 
-this_dir = pathlib.Path(__file__).parent.absolute()
-print(this_dir)
-sys.path.insert(0, str(this_dir / "src"))
+sys.path.insert(0, "/data/BCP-paper/python/benchmarks/comparison/src")
 from src.env import set_env, EnvVariables
 from src.main import solve
 
@@ -22,7 +20,7 @@ modules = get_src_modules()
 class CBM(MapfAlgorithm):
     def solve(self, problem: Problem) -> Solution:
         def solve_cbs():
-            with open(this_dir / "robbin_env.yaml") as file:
+            with open("/data/BCP-paper/python/benchmarks/comparison/robbin_env.yaml") as file:
                 yaml_dict = yaml.load(file, Loader=yaml.FullLoader)
                 env_vars = EnvVariables(yaml_dict)
                 set_env(env_vars)

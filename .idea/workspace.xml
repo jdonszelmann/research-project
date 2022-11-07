@@ -18,7 +18,6 @@
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,14 +387,7 @@
       <workItem from="1667473889810" duration="18000" />
       <workItem from="1667477598853" duration="29000" />
       <workItem from="1667482074580" duration="1732000" />
-      <workItem from="1667818955413" duration="1774000" />
-    </task>
-    <task id="LOCAL-00013" summary="Add the test file">
-      <created>1665395026131</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1665395026131</updated>
+      <workItem from="1667818955413" duration="2051000" />
     </task>
     <task id="LOCAL-00014" summary="Better test cases">
       <created>1665395262430</created>
@@ -733,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667823457161</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Debugging with commits">
+      <created>1667823923209</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1667823923209</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -753,7 +752,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Set up test for maze and more agents for 1 team large maps experiments" />
     <MESSAGE value="move maps to root folder" />
     <MESSAGE value="debugging method" />
     <MESSAGE value="debugging method 2.0" />
@@ -778,7 +776,8 @@
     <MESSAGE value="add the image" />
     <MESSAGE value="See if CBM works now" />
     <MESSAGE value="Change run_benchmark.sh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change run_benchmark.sh" />
+    <MESSAGE value="Debugging with commits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debugging with commits" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -798,10 +797,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667205831454" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667823456775">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667823922501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667823456775" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667823922501" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667398627386" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1667823908675">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -852,10 +851,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667823458229">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667823924058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667823458229" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667823924058" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667398628905" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
