@@ -165,26 +165,6 @@ def main():
         "CBSInmatch"
     ))
 
-    files.append(run(
-        lambda: BCPPrematch(),
-        "BCPPrematch_1"
-    ))
-
-    files.append(run(
-        lambda: BCPInmatch(),
-        "BCPInmatch_1"
-    ))
-
-    files.append(run(
-        lambda: CBSPrematch(),
-        "CBSPrematch_1"
-    ))
-
-    files.append(run(
-        lambda: CBSInmatch(),
-        "CBSInmatch_1"
-    ))
-
     # files.append(run(
     #     lambda: SATInmatch(),
     #     "SATInmatch"
