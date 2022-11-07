@@ -6,18 +6,18 @@ import gurobipy as gp
 from gurobipy import GRB, Var, Constr
 from pygraphviz import AGraph
 
-from src.cbm.cbm_graph import GraphManager, NodeId, EdgeId, ConstraintContext, Time
-from src.cbm.cbm_grid import CBMGrid
-from src.cbm.cbm_low_level import CBMLowLevelSolver, CBMLowLevelAgentSolver
-from src.cbm.ilp.cbm_ilp_gurobi import get_env
-from src.ctnode import CTNode
-from src.data.constraints import Constraint
-from src.cbm.cbm_agent import CBMTeam
-from src.cbm.cbm_paths import CBMAgentSolution
-from src.data.vertex import Vertex
-from src.debug.nf_drawer import draw_nf_graph
-from src.grid import Grid
-from src.util import range_incl
+from python.benchmarks.comparison.src.cbm.cbm_graph import GraphManager, NodeId, EdgeId, ConstraintContext, Time
+from python.benchmarks.comparison.src.cbm.cbm_grid import CBMGrid
+from python.benchmarks.comparison.src.cbm.cbm_low_level import CBMLowLevelSolver, CBMLowLevelAgentSolver
+from python.benchmarks.comparison.src.cbm.ilp.cbm_ilp_gurobi import get_env
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.data.constraints import Constraint
+from python.benchmarks.comparison.src.cbm.cbm_agent import CBMTeam
+from python.benchmarks.comparison.src.cbm.cbm_paths import CBMAgentSolution
+from python.benchmarks.comparison.src.data.vertex import Vertex
+from python.benchmarks.comparison.src.debug.nf_drawer import draw_nf_graph
+from python.benchmarks.comparison.src.grid import Grid
+from python.benchmarks.comparison.src.util import range_incl
 
 
 class ILPGraphManager(GraphManager):

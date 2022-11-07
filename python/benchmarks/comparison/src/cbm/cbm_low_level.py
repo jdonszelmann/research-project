@@ -2,13 +2,13 @@ from typing import Optional, Set, Union
 
 import logging
 
-from src.cbm.cbm_agent import CBMTeam, CBMSingleAgentAstar
-from src.cbm.cbm_grid import CBMGrid
-from src.cbm.cbm_paths import CBMMakespanFullSolution, CBMAgentSolution, CBMSICFullSolution
-from src.ctnode import CTNode
-from src.data.constraints import Constraint
-from src.low_level import LowLevelSolver
-from src.paths import FullSolution, AgentSolution
+from python.benchmarks.comparison.src.cbm.cbm_agent import CBMTeam, CBMSingleAgentAstar
+from python.benchmarks.comparison.src.cbm.cbm_grid import CBMGrid
+from python.benchmarks.comparison.src.cbm.cbm_paths import CBMMakespanFullSolution, CBMAgentSolution, CBMSICFullSolution
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.data.constraints import Constraint
+from python.benchmarks.comparison.src.low_level import LowLevelSolver
+from python.benchmarks.comparison.src.paths import FullSolution, AgentSolution
 
 
 class CBMLowLevelAgentSolver:

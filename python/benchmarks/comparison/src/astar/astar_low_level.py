@@ -4,14 +4,14 @@ from collections import defaultdict
 from queue import Queue
 from typing import Optional, Dict, Set
 
-from src.astar.astar_agent import AstarAgent
-from src.astar.astar_grid import AstarGrid
-from src.astar_base import AstarBase, AstarNode
-from src.ctnode import CTNode
-from src.data.constraints import Constraint, VertexConstraint, EdgeConstraint
-from src.data.vertex import Vertex
-from src.low_level import LowLevelSolver
-from src.paths import AgentSolution
+from python.benchmarks.comparison.src.astar.astar_agent import AstarAgent
+from python.benchmarks.comparison.src.astar.astar_grid import AstarGrid
+from python.benchmarks.comparison.src.astar_base import AstarBase, AstarNode
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.data.constraints import Constraint, VertexConstraint, EdgeConstraint
+from python.benchmarks.comparison.src.data.vertex import Vertex
+from python.benchmarks.comparison.src.low_level import LowLevelSolver
+from python.benchmarks.comparison.src.paths import AgentSolution
 
 
 class AstarLowLevelAgentSolver(AstarBase):

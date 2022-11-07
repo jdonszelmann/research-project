@@ -9,7 +9,7 @@ from mapfmclient.local_solver import LocalSolver
 from pathlib import Path
 from time import time
 
-from src.env import get_env, CurrentSolver
+from python.benchmarks.comparison.src.env import get_env, CurrentSolver
 
 ProblemResult = Tuple[str, Optional[float], Optional[int], Optional[int],
                       Optional[int], CurrentSolver]

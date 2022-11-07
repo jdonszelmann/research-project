@@ -2,12 +2,12 @@ import logging
 
 from mapfmclient import Problem
 
-from src.cbm.cbm_low_level import CBMLowLevelSolver
-from src.cbm.cbm_paths import CBMMakespanFullSolution
-from src.ctnode import CTNode
-from src.debug.constraint_tree import ConstraintTree
-from src.high_level import HighLevelSolver
-from src.paths import FullSolution
+from python.benchmarks.comparison.src.cbm.cbm_low_level import CBMLowLevelSolver
+from python.benchmarks.comparison.src.cbm.cbm_paths import CBMMakespanFullSolution
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.debug.constraint_tree import ConstraintTree
+from python.benchmarks.comparison.src.high_level import HighLevelSolver
+from python.benchmarks.comparison.src.paths import FullSolution
 
 
 class CBMHighLevelSolver(HighLevelSolver):

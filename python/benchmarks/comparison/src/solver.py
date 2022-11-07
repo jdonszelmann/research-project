@@ -1,7 +1,7 @@
-from src.low_level import LowLevelSolver
-from src.high_level import HighLevelSolver
-from src.grid import Grid
-from src.ctnode import CTNode
+from python.benchmarks.comparison.src.low_level import LowLevelSolver
+from python.benchmarks.comparison.src.high_level import HighLevelSolver
+from python.benchmarks.comparison.src.grid import Grid
+from python.benchmarks.comparison.src.ctnode import CTNode
 
 
 class Solver:

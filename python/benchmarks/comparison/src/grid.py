@@ -3,8 +3,8 @@ from typing import List, TypeVar, Generic, Dict, Optional
 
 from mapfmclient import Problem
 
-from src.data.agent import Agent
-from src.data.vertex import Vertex
+from python.benchmarks.comparison.src.data.agent import Agent
+from python.benchmarks.comparison.src.data.vertex import Vertex
 
 A = TypeVar("A", bound=Agent)
 

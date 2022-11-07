@@ -4,13 +4,13 @@ import logging
 from collections import defaultdict
 from typing import Optional, Dict, Set, List, Callable, Tuple
 
-from src.cbm.cbm_agent import CBMTeam
-from src.cbm.cbm_paths import CBMAgentSolution
-from src.data.constraints import Constraint, VertexConstraint, EdgeConstraint
-from src.data.vertex import Vertex
-from src.env import get_env
-from src.grid import Grid
-from src.util import range_incl
+from python.benchmarks.comparison.src.cbm.cbm_agent import CBMTeam
+from python.benchmarks.comparison.src.cbm.cbm_paths import CBMAgentSolution
+from python.benchmarks.comparison.src.data.constraints import Constraint, VertexConstraint, EdgeConstraint
+from python.benchmarks.comparison.src.data.vertex import Vertex
+from python.benchmarks.comparison.src.env import get_env
+from python.benchmarks.comparison.src.grid import Grid
+from python.benchmarks.comparison.src.util import range_incl
 
 NodeId = int
 EdgeId = int

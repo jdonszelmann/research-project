@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Optional, TypeVar, Generic
 
-from src.ctnode import CTNode
-from src.data.agent import Agent
-from src.grid import Grid
-from src.paths import StandardFullSolution, AgentSolution, FullSolution
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.data.agent import Agent
+from python.benchmarks.comparison.src.grid import Grid
+from python.benchmarks.comparison.src.paths import StandardFullSolution, AgentSolution, FullSolution
 
 A = TypeVar("A", bound=Agent)
 

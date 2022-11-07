@@ -6,13 +6,13 @@ from copy import copy
 
 from mapfmclient import Problem
 
-from src.data.conflicts import VertexConflict, EdgeConflict
-from src.data.constraints import VertexConstraint, EdgeConstraint
-from src.debug.debug import high_level_debug_hook
-from src.env import get_env
-from src.low_level import LowLevelSolver
-from src.ctnode import CTNode
-from src.paths import FullSolution
+from python.benchmarks.comparison.src.data.conflicts import VertexConflict, EdgeConflict
+from python.benchmarks.comparison.src.data.constraints import VertexConstraint, EdgeConstraint
+from python.benchmarks.comparison.src.debug.debug import high_level_debug_hook
+from python.benchmarks.comparison.src.env import get_env
+from python.benchmarks.comparison.src.low_level import LowLevelSolver
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.paths import FullSolution
 
 
 class HighLevelSolver:

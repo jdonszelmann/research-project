@@ -3,9 +3,9 @@ from __future__ import annotations
 from queue import PriorityQueue
 from typing import Set, Optional, List
 
-from src.data.vertex import Vertex
-from src.grid import Grid
-from src.paths import StandardAgentSolution
+from python.benchmarks.comparison.src.data.vertex import Vertex
+from python.benchmarks.comparison.src.grid import Grid
+from python.benchmarks.comparison.src.paths import StandardAgentSolution
 
 
 class AstarNode:

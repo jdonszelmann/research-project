@@ -1,4 +1,4 @@
-from src.ctnode import CTNode
+from python.benchmarks.comparison.src.ctnode import CTNode
 
 
 class CBMMakespanCTNode(CTNode):

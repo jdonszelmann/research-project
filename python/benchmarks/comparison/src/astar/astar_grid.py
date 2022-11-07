@@ -2,9 +2,9 @@ from typing import List
 
 from mapfmclient import Problem, MarkedLocation
 
-from src.astar.astar_agent import AstarAgent
-from src.data.vertex import Vertex
-from src.grid import Grid
+from python.benchmarks.comparison.src.astar.astar_agent import AstarAgent
+from python.benchmarks.comparison.src.data.vertex import Vertex
+from python.benchmarks.comparison.src.grid import Grid
 
 
 class AstarGrid(Grid[AstarAgent]):

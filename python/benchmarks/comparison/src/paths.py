@@ -3,11 +3,11 @@ from typing import List, Dict, Optional
 
 from mapfmclient import Solution, Problem
 
-from src.data.agent import Agent
-from src.data.conflicts import Conflict
-from src.data.vertex import Vertex
-from src.grid import Grid
-from src.util import get_first_conflict, to_mapf_tuples
+from python.benchmarks.comparison.src.data.agent import Agent
+from python.benchmarks.comparison.src.data.conflicts import Conflict
+from python.benchmarks.comparison.src.data.vertex import Vertex
+from python.benchmarks.comparison.src.grid import Grid
+from python.benchmarks.comparison.src.util import get_first_conflict, to_mapf_tuples
 
 
 class AgentSolution:

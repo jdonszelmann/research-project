@@ -6,7 +6,7 @@ from typing import Optional
 
 from pathlib import Path
 
-from src.data.constraints import Constraint
+from python.benchmarks.comparison.src.data.constraints import Constraint
 
 
 class ConstraintTree:

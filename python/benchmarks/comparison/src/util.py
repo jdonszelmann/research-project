@@ -1,9 +1,9 @@
 from itertools import combinations
 from typing import List, Optional, Tuple, Iterable, TypeVar, Callable
 
-from src.data.agent import Agent
-from src.data.conflicts import Conflict, VertexConflict, EdgeConflict
-from src.data.vertex import Vertex
+from python.benchmarks.comparison.src.data.agent import Agent
+from python.benchmarks.comparison.src.data.conflicts import Conflict, VertexConflict, EdgeConflict
+from python.benchmarks.comparison.src.data.vertex import Vertex
 
 T = TypeVar("T")
 

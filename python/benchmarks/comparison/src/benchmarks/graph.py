@@ -9,7 +9,7 @@ import scipy.stats as st
 
 import matplotlib.pyplot as plt
 
-from src.benchmarks.parser import BenchmarkResult, Field
+from python.benchmarks.comparison.src.benchmarks.parser import BenchmarkResult, Field
 
 
 class GraphSetting:

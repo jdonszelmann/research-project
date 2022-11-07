@@ -5,7 +5,7 @@ from pathlib import Path
 import time
 from pygraphviz import AGraph
 
-from src.env import get_env
+from python.benchmarks.comparison.src.env import get_env
 
 
 def draw_nf_graph(add_nodes_edges: Callable[[AGraph]]):

@@ -2,17 +2,17 @@ import logging
 
 from mapfmclient import Problem
 
-from src.cbm.cbm_ctnode import CBMMakespanCTNode
-from src.cbm.cbm_grid import CBMGrid
-from src.cbm.cbm_low_level import CBMLowLevelSolver
-from src.cbm.cbm_paths import CBMMakespanFullSolution
-from src.cbm.ilp.cbm_ilp_low_level import CBMILPLowLevelSolver
-from src.cbm.ssp.cbm_ssp_low_level import CBMSSPLowLevelSolver
-from src.ctnode import CTNode
-from src.debug.constraint_tree import ConstraintTree
-from src.high_level import HighLevelSolver
-from src.paths import FullSolution
-from src.solver import Solver
+from python.benchmarks.comparison.src.cbm.cbm_ctnode import CBMMakespanCTNode
+from python.benchmarks.comparison.src.cbm.cbm_grid import CBMGrid
+from python.benchmarks.comparison.src.cbm.cbm_low_level import CBMLowLevelSolver
+from python.benchmarks.comparison.src.cbm.cbm_paths import CBMMakespanFullSolution
+from python.benchmarks.comparison.src.cbm.ilp.cbm_ilp_low_level import CBMILPLowLevelSolver
+from python.benchmarks.comparison.src.cbm.ssp.cbm_ssp_low_level import CBMSSPLowLevelSolver
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.debug.constraint_tree import ConstraintTree
+from python.benchmarks.comparison.src.high_level import HighLevelSolver
+from python.benchmarks.comparison.src.paths import FullSolution
+from python.benchmarks.comparison.src.solver import Solver
 
 
 class CBMSSPILPHighLevelSolver(HighLevelSolver):

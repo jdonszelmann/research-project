@@ -5,15 +5,15 @@ from typing import Optional, Set, Dict, Tuple
 from ortools.graph import pywrapgraph
 from pygraphviz import AGraph
 
-from src.cbm.cbm_graph import GraphManager, NodeId, ConstraintContext, EdgeId, Time
-from src.cbm.cbm_grid import CBMGrid
-from src.cbm.cbm_low_level import CBMLowLevelSolver, CBMLowLevelAgentSolver
-from src.ctnode import CTNode
-from src.cbm.cbm_agent import CBMTeam
-from src.cbm.cbm_paths import CBMAgentSolution, CBMMakespanFullSolution
-from src.data.constraints import Constraint
-from src.debug.nf_drawer import draw_nf_graph
-from src.grid import Grid
+from python.benchmarks.comparison.src.cbm.cbm_graph import GraphManager, NodeId, ConstraintContext, EdgeId, Time
+from python.benchmarks.comparison.src.cbm.cbm_grid import CBMGrid
+from python.benchmarks.comparison.src.cbm.cbm_low_level import CBMLowLevelSolver, CBMLowLevelAgentSolver
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.cbm.cbm_agent import CBMTeam
+from python.benchmarks.comparison.src.cbm.cbm_paths import CBMAgentSolution, CBMMakespanFullSolution
+from python.benchmarks.comparison.src.data.constraints import Constraint
+from python.benchmarks.comparison.src.debug.nf_drawer import draw_nf_graph
+from python.benchmarks.comparison.src.grid import Grid
 
 
 class SSPGraphManager(GraphManager):

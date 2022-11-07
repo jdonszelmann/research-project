@@ -5,10 +5,10 @@ from typing import Optional
 
 import time
 
-from src.ctnode import CTNode
-from src.debug.constraint_tree import draw_constraint_graph
-from src.env import get_env
-from src.paths import FullSolution
+from python.benchmarks.comparison.src.ctnode import CTNode
+from python.benchmarks.comparison.src.debug.constraint_tree import draw_constraint_graph
+from python.benchmarks.comparison.src.env import get_env
+from python.benchmarks.comparison.src.paths import FullSolution
 
 intermediates_dir = Path(__file__).parent / "intermediates"
 

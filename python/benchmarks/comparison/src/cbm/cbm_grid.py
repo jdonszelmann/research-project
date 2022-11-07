@@ -2,8 +2,8 @@ from typing import List
 
 from mapfmclient import Problem
 
-from src.cbm.cbm_agent import CBMAgent, CBMTeam
-from src.grid import Grid
+from python.benchmarks.comparison.src.cbm.cbm_agent import CBMAgent, CBMTeam
+from python.benchmarks.comparison.src.grid import Grid
 
 
 class CBMGrid(Grid[CBMTeam]):

@@ -3,10 +3,10 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import List, Dict
 
-from src.astar_base import AstarBase, AstarNode
-from src.data.agent import Agent
-from src.data.vertex import Vertex
-from src.grid import Grid
+from python.benchmarks.comparison.src.astar_base import AstarBase, AstarNode
+from python.benchmarks.comparison.src.data.agent import Agent
+from python.benchmarks.comparison.src.data.vertex import Vertex
+from python.benchmarks.comparison.src.grid import Grid
 
 
 class CBMAgent(Agent):

@@ -1,6 +1,6 @@
-from src.astar.astar_grid import AstarGrid
-from src.astar.astar_low_level import AstarLowLevelSolver
-from src.solver import Solver
+from python.benchmarks.comparison.src.astar.astar_grid import AstarGrid
+from python.benchmarks.comparison.src.astar.astar_low_level import AstarLowLevelSolver
+from python.benchmarks.comparison.src.solver import Solver
 
 
 class AstarSolver(Solver):

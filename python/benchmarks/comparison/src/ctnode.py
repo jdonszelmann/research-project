@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Set, Optional
 
-from src.data.agent import Agent
-from src.data.constraints import Constraint
-from src.paths import FullSolution, AgentSolution
-from src.debug.constraint_tree import ConstraintTree
+from python.benchmarks.comparison.src.data.agent import Agent
+from python.benchmarks.comparison.src.data.constraints import Constraint
+from python.benchmarks.comparison.src.paths import FullSolution, AgentSolution
+from python.benchmarks.comparison.src.debug.constraint_tree import ConstraintTree
 
 
 class CTNode:

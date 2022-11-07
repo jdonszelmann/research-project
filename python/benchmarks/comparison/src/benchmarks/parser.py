@@ -6,7 +6,7 @@ from enum import Enum
 from pathlib import Path
 from typing import Union, Optional, Tuple, List, TypeVar, Callable, Dict, Any
 
-from src.env import CurrentSolver
+from python.benchmarks.comparison.src.env import CurrentSolver
 
 # Map, runtime, solver
 BasicCSVLayout = Tuple[str, str, str]
