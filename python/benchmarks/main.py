@@ -3,17 +3,17 @@ import os
 import pathlib
 from typing import Optional, Callable
 
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch, CBM
 from tqdm import tqdm
 
 from graph_times import graph_results
 from map import MapGenerator
 from python.algorithm import MapfAlgorithm
+from python.benchmarks.comparison import CBM
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.util import output_data, read_from_file
-from ortools.linear_solver import pywraplp
+
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "comparison_25percent_1teams_maps_preview_40"
 
@@ -47,6 +47,7 @@ def generate_maps():
             open_factor=0.65,
             max_neighbors=3,
         )
+
 
 def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = True):
     batchdir = this_dir / name
@@ -135,6 +136,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    solver = pywraplp.Solver.CreateSolver('GLOP')
-
+    main()
