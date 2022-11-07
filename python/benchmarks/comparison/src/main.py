@@ -1,38 +1,22 @@
 import logging
-
-from datetime import datetime
-
-from mapfmclient import MapfBenchmarker, Problem, Solution
 import subprocess
-
+from datetime import datetime
 from typing import Type, Union
 
-from src.astar.astar_solver import AstarSolver
-from src.benchmark import run_benchmark, ProblemSolution
-from src.cbm.cbm_graph import GraphManager
-from src.cbm.cbm_ssp_ilp_solver import CBMSSPILPSolver
-from src.cbm.ilp.cbm_ilp_solver import CBMILPSolver
-from src.cbm.ssp.cbm_ssp_low_level import CBMSSPLowLevelSolver
-from src.cbm.ssp.cbm_ssp_solver import CBMSSPSolver
+from mapfmclient import MapfBenchmarker, Problem, Solution
 
-from src.debug.constraint_tree import ConstraintTree
-from src.debug.debug import load_intermediate_solution
-
-from src.debug.profiling import profile
-from src.env import load_env, get_env, CurrentSolver
-from src.solver import Solver
+from python.benchmarks.comparison.src.benchmark import run_benchmark, ProblemSolution
+from python.benchmarks.comparison.src.cbm.cbm_graph import GraphManager
+from python.benchmarks.comparison.src.cbm.ssp.cbm_ssp_solver import CBMSSPSolver
+from python.benchmarks.comparison.src.debug.constraint_tree import ConstraintTree
+from python.benchmarks.comparison.src.debug.debug import load_intermediate_solution
+from python.benchmarks.comparison.src.debug.profiling import profile
+from python.benchmarks.comparison.src.env import load_env, get_env
+from python.benchmarks.comparison.src.solver import Solver
 
 
 def get_solver() -> Type[Solver]:
-    solver = get_env().solver
-    if solver == CurrentSolver.ILP:
-        return CBMILPSolver
-    elif solver == CurrentSolver.SSP or solver == CurrentSolver.SSP_RESET:
-        return CBMSSPSolver
-    elif solver == CurrentSolver.SSP_ILP:
-        return CBMSSPILPSolver
-    else:
-        return AstarSolver
+    return CBMSSPSolver
 
 
 def solve(problem: Problem, reset_teg: bool,
@@ -94,12 +78,14 @@ if __name__ == '__main__':
 
     logging.getLogger().setLevel(env.debug.print_level)
 
+
     def solve_fn(problem: Problem,
                  reset_teg: bool = False,
                  disappearing_agents: bool = True):
         if get_env().debug.profile:
             return profile(solve, problem, reset_teg, disappearing_agents)
         return solve(problem, reset_teg, disappearing_agents)
+
 
     if env.run_benchmark:
         run_benchmark(solve_fn)
