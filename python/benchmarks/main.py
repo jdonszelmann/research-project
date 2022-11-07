@@ -3,20 +3,19 @@ import os
 import pathlib
 from typing import Optional, Callable
 
-from mapf_branch_and_bound.bbsolver import compute_sol_cost
+from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch, CBM
 from tqdm import tqdm
 
 from graph_times import graph_results
 from map import MapGenerator
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import BCPInmatch, BCPPrematch, CBSPrematch, CBSInmatch
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
 from python.benchmarks.util import output_data, read_from_file
-
+from ortools.linear_solver import pywraplp
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_1teams_maps_preview_warehouse1"
+name = "comparison_25percent_1teams_maps_preview_40"
 
 
 def generate_maps():
@@ -54,7 +53,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     parser = MapParser(batchdir)
 
     fname = batchdir / f"results_{bm_name}.txt"
-    fname2 = batchdir / f"actual_results_{bm_name}.txt"
 
     if fname.exists():
         print(f"data exists for {bm_name}")
@@ -80,16 +78,9 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
             results[num_agents] = read_from_file(partname, num_agents)
             continue
         all_results = run_with_timeout(solver(), problems, parse_maps, 1000000)  # test with low timeout
-        sols_inmatch, sols_costs = zip(*all_results)
+        sols_inmatch, _ = zip(*all_results)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         times[num_agents] = sols_inmatch
-        costs = []
-        for sol in sols_costs:
-            if sol:
-                costs.append(compute_sol_cost(sol))
-            else:
-                costs.append(None)
-        results[num_agents] = costs
         output_data(partname, times)
     # clean-up
     for file in os.listdir("temp"):
@@ -98,7 +89,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     tqdm.write(str(results))
 
     output_data(fname, times)
-    output_data(fname2, results)
 
     return fname, bm_name
 
@@ -108,24 +98,29 @@ def main():
 
     files: list[tuple[pathlib.Path, str]] = []
 
+    # files.append(run(
+    #     lambda: BCPPrematch(),
+    #     "BCPPrematch"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: BCPInmatch(),
+    #     "BCPInmatch"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: CBSPrematch(),
+    #     "CBSPrematch"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: CBSInmatch(),
+    #     "CBSInmatch"
+    # ))
+    #
     files.append(run(
-        lambda: BCPPrematch(),
-        "BCPPrematch"
-    ))
-
-    files.append(run(
-        lambda: BCPInmatch(),
-        "BCPInmatch"
-    ))
-
-    files.append(run(
-        lambda: CBSPrematch(),
-        "CBSPrematch"
-    ))
-
-    files.append(run(
-        lambda: CBSInmatch(),
-        "CBSInmatch"
+        lambda: CBM(),
+        "CBM"
     ))
 
     graph_results(
@@ -135,10 +130,11 @@ def main():
         save=False,
         bounds=False,
         legend=False,
-        limit=30,
+        limit=100,
     )
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    solver = pywraplp.Solver.CreateSolver('GLOP')
 
