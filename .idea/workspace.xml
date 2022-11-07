@@ -17,9 +17,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,11 +82,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_3teams_maps_preview" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\maps" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\maps" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\backup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent" />
@@ -389,14 +386,7 @@
       <workItem from="1667473889810" duration="18000" />
       <workItem from="1667477598853" duration="29000" />
       <workItem from="1667482074580" duration="1732000" />
-      <workItem from="1667818955413" duration="3293000" />
-    </task>
-    <task id="LOCAL-00018" summary="Simple test cases">
-      <created>1665398537071</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1665398537071</updated>
+      <workItem from="1667818955413" duration="3600000" />
     </task>
     <task id="LOCAL-00019" summary="Fixing the tabs">
       <created>1665399303904</created>
@@ -734,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667825142029</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Test CBM on the simple 20x20 grids">
+      <created>1667825477084</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1667825477084</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +751,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debugging method 3.0" />
     <MESSAGE value="debugging method 4.0" />
     <MESSAGE value="This should have fixed everything" />
     <MESSAGE value="More maze experiments" />
@@ -779,7 +775,8 @@
     <MESSAGE value="See if this works" />
     <MESSAGE value="And this" />
     <MESSAGE value="Change all the imports with replace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change all the imports with replace" />
+    <MESSAGE value="Test CBM on the simple 20x20 grids" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test CBM on the simple 20x20 grids" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -799,10 +796,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667825461072">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1667825476687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825461072" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825476687" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667398627386" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1667824925360">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -853,10 +850,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667825143337">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667825478195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825143337" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667825478195" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667398628905" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
