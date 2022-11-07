@@ -8,7 +8,7 @@ from tqdm import tqdm
 from graph_times import graph_results
 from map import MapGenerator
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import CBM
+from python.benchmarks.comparison import CBM, SATInmatch, SATPrematch
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
@@ -78,7 +78,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     print(f"found data for part {num_agents}")
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
-        all_results = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
+        all_results = run_with_timeout(solver(), problems, parse_maps, 1)  # test with low timeout
         sols_inmatch, _ = zip(*all_results)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         times[num_agents] = sols_inmatch
@@ -118,10 +118,20 @@ def main():
     #     lambda: CBSInmatch(),
     #     "CBSInmatch"
     # ))
-    #
+
+    # files.append(run(
+    #     lambda: CBM(),
+    #     "CBM"
+    # ))
+
     files.append(run(
-        lambda: CBM(),
-        "CBM"
+        lambda: SATInmatch(),
+        "SATInmatch"
+    ))
+
+    files.append(run(
+        lambda: SATPrematch(),
+        "SATPrematch"
     ))
 
     # graph_results(
