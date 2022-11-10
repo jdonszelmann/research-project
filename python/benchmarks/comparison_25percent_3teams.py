@@ -75,6 +75,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     # with Pool(processes = 1) as p:
     for problems in tqdm(all_problems):
         num_agents = len(problems[0][1].goals)
+        print(num_agents)
 
         partname = pathlib.Path(str(fname) + f".{num_agents}agents")
 
