@@ -16,7 +16,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "comparison_25percent_3teams_maps_preview"
+name = "comparison_25percent_3teams_maps_8x8"
 
 
 # processes = 10
@@ -43,7 +43,7 @@ def generate_maps():
         map_generator = MapGenerator(path)
         map_generator.generate_even_batch(
             10,  # number of maps
-            20, 20,  # size
+            8, 8,  # size
             i,  # number of agents
             3,  # number of teams
             prefix=name,
@@ -75,7 +75,6 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
     # with Pool(processes = 1) as p:
     for problems in tqdm(all_problems):
         num_agents = len(problems[0][1].goals)
-        print(num_agents)
 
         partname = pathlib.Path(str(fname) + f".{num_agents}agents")
 
@@ -135,10 +134,10 @@ def main():
     #     "EPEA*"
     # ))
 
-    files.append(run(
-        lambda: CBM(),
-        "CBM"
-    ))
+    # files.append(run(
+    #     lambda: CBM(),
+    #     "CBM"
+    # ))
 
     # files.append(run(
     #     lambda: AStarODID(),
@@ -170,15 +169,15 @@ def main():
         "CBSInmatch"
     ))
 
-    files.append(run(
-        lambda: SATInmatch(),
-        "SATInmatch"
-    ))
-
-    files.append(run(
-        lambda: SATPrematch(),
-        "SATPrematch"
-    ))
+    # files.append(run(
+    #     lambda: SATInmatch(),
+    #     "SATInmatch"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: SATPrematch(),
+    #     "SATPrematch"
+    # ))
 
     graph_results(
         *files,

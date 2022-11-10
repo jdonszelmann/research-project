@@ -15,8 +15,61 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
+    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="And push all changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/comparison_25percent_3teams_maps_preview.black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.10agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.11agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.12agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.13agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.14agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.15agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.16agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.17agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.18agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.19agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.1agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.20agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.21agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.22agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.23agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.24agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.25agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.26agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.27agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.28agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.29agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.2agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.30agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.31agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.32agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.33agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.34agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.35agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.36agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.37agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.38agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.39agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.3agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.40agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.41agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.42agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.43agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.44agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.45agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.46agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.47agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.48agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.49agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.4agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.50agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.5agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.6agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.7agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.8agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview/results_CBM.txt.9agents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_40/comparison_25percent_3teams_maps_preview_40.black.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run_benchmark.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_benchmark.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +115,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/python/benchmarks/comparison_25percent_3teams_maps_preview_40" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,6 +135,13 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_3teams_maps_preview_40" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\main" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_3teams_maps_preview" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent" />
+      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper" />
@@ -89,15 +149,8 @@
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\main\comparison_25percent_1teams_maps_preview-20x20-A4_T1" />
       <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\backup" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\main" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent_3teams_maps_preview" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks\comparison_25percent" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\python\benchmarks" />
-      <recent name="C:\Users\Jeroen\Documents\research\BCP-paper\maps" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.comparison_25percent_3teams">
     <configuration name="comparison_25percent_1teams" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="research-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,9 +307,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.comparison_25percent_3teams" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.comparison_25percent_1teams" />
-        <item itemvalue="Python.comparison_25percent_3teams" />
         <item itemvalue="Python.comparison_25percent_var_teams" />
         <item itemvalue="Python.comparison_25percent_var_mapsize" />
       </list>
@@ -390,13 +443,15 @@
       <workItem from="1667818955413" duration="3884000" />
       <workItem from="1667828162346" duration="503000" />
       <workItem from="1667829042233" duration="1398000" />
-    </task>
-    <task id="LOCAL-00026" summary="Push map change">
-      <created>1666005838669</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1666005838669</updated>
+      <workItem from="1667830478297" duration="29000" />
+      <workItem from="1667830526250" duration="15000" />
+      <workItem from="1667831716296" duration="5592000" />
+      <workItem from="1667903515409" duration="5012000" />
+      <workItem from="1667994564364" duration="736000" />
+      <workItem from="1668083343385" duration="6000" />
+      <workItem from="1668083500059" duration="14000" />
+      <workItem from="1668100704453" duration="1078000" />
+      <workItem from="1668105333465" duration="82000" />
     </task>
     <task id="LOCAL-00027" summary="Re add the 10 testing maps">
       <created>1666006398108</created>
@@ -734,7 +789,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667830442422</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="And push all changes">
+      <created>1667830489633</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1667830489633</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +816,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changes map folder" />
     <MESSAGE value="one day width and height will work in one go" />
     <MESSAGE value="Fixed the bug related to widths and heights" />
     <MESSAGE value="Fixed the number of runs" />
@@ -779,7 +840,8 @@
     <MESSAGE value="dots for the win" />
     <MESSAGE value="Lets see if this works" />
     <MESSAGE value="Setup real experiments for SAT and hope it works now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup real experiments for SAT and hope it works now" />
+    <MESSAGE value="And push all changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="And push all changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -799,35 +861,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="2102" y="111" key="CommitChangelistDialog2" timestamp="1667830442005">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668101135442">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830259150" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668101135442" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830442005" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1667829045544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667829045544" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1667830451393">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1667999354834">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830183145" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830451393" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1667830451393">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667910625608" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1667999354834">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830183145" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830451393" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1667830451393">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667910625608" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1667999354834">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830183145" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830451393" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1667830451393">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667910625608" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1667999354834">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830183145" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830451393" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667910625608" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1667830451394">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -848,19 +910,19 @@
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830183145" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830451394" />
-    <state x="745" y="231" key="RollbackChangesDialog" timestamp="1667206793993">
+    <state x="745" y="231" key="RollbackChangesDialog" timestamp="1668101134605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="745" y="231" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667206793993" />
+    <state x="745" y="231" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668101134605" />
     <state x="2665" y="231" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1665398725604" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1664788228858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667830443794">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1667830490802">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830260924" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667830490802" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830443794" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -1017,8 +1079,8 @@
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_maze_3teams.coverage" NAME="comparison_ivar_maze_3teams Coverage Results" MODIFIED="1623928874546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams.coverage" NAME="comparison_25percent_var_teams Coverage Results" MODIFIED="1665421319150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_obstacle_1teams.coverage" NAME="comparison_ivar_obstacle_1teams Coverage Results" MODIFIED="1623688911598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1667205901404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1667830183135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1667999293059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams__1_.coverage" NAME="comparison_25percent_var_teams (1) Coverage Results" MODIFIED="1664886823475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$symlink.coverage" NAME="symlink Coverage Results" MODIFIED="1623844216762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/all_plots" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_mapsize.coverage" NAME="comparison_25percent_var_mapsize Coverage Results" MODIFIED="1665421204378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
