@@ -16,7 +16,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison_25percent_1teams.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -400,14 +399,7 @@
       <workItem from="1668100704453" duration="1078000" />
       <workItem from="1668105333465" duration="128000" />
       <workItem from="1668105798694" duration="12000" />
-      <workItem from="1668117634973" duration="89000" />
-    </task>
-    <task id="LOCAL-00028" summary="Move some maps to backup">
-      <created>1666006618482</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1666006618482</updated>
+      <workItem from="1668117634973" duration="109000" />
     </task>
     <task id="LOCAL-00029" summary="Add back the maps">
       <created>1666006789574</created>
@@ -745,7 +737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668105425161</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="One team as in the paper">
+      <created>1668117736606</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1668117736607</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -765,7 +764,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed the bug related to widths and heights" />
     <MESSAGE value="Fixed the number of runs" />
     <MESSAGE value="go up to 30 agents" />
     <MESSAGE value="remove final results" />
@@ -790,7 +788,8 @@
     <MESSAGE value="Setup real experiments for SAT and hope it works now" />
     <MESSAGE value="And push all changes" />
     <MESSAGE value="8x8 grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="8x8 grid" />
+    <MESSAGE value="One team as in the paper" />
+    <option name="LAST_COMMIT_MESSAGE" value="One team as in the paper" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -810,10 +809,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668105424490">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668117735919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668105424490" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668117735919" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830442005" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1667829045544">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -868,10 +867,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668105426344">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668117738737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668105426344" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668117738737" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667830443794" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />

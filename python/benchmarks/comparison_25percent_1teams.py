@@ -130,11 +130,6 @@ def main():
     #     "EPEA*"
     # ))
 
-    files.append(run(
-        lambda: CBM(),
-        "CBM"
-    ))
-
     # files.append(run(
     #     lambda: AStarODID(),
     #     "A*-OD-ID"
@@ -165,15 +160,15 @@ def main():
         "CBSInmatch"
     ))
 
-    files.append(run(
-        lambda: SATInmatch(),
-        "SATInmatch"
-    ))
-
-    files.append(run(
-        lambda: SATPrematch(),
-        "SATPrematch"
-    ))
+    # files.append(run(
+    #     lambda: SATInmatch(),
+    #     "SATInmatch"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: SATPrematch(),
+    #     "SATPrematch"
+    # ))
 
     graph_results(
         *files,
