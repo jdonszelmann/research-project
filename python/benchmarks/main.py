@@ -4,6 +4,7 @@ import pathlib
 from typing import Optional, Callable
 
 import yaml
+from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from graph_times import graph_results
@@ -79,15 +80,21 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     print(f"found data for part {num_agents}")
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
-        all_results = run_with_timeout(solver(), problems, parse_maps, 1000000)  # test with low timeout
+        all_results = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
         sols_inmatch, test = zip(*all_results)
+        res = []
+        for i in test:
+            if i.is_integer():
+                res.append(i)
+            elif i is not None:
+                res.append(compute_sol_cost(test))
         print(test)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         times[num_agents] = sols_inmatch
         output_data(partname, times)
     # clean-up
-    # for file in os.listdir("temp"):
-    #     os.remove("temp/" + file)
+    for file in os.listdir("temp"):
+        os.remove("temp/" + file)
 
     tqdm.write(str(results))
 
@@ -101,20 +108,20 @@ def main():
 
     files: list[tuple[pathlib.Path, str]] = []
 
-    files.append(run(
-        lambda: BCPPrematch(),
-        "BCPPrematch"
-    ))
-
-    files.append(run(
-        lambda: BCPInmatch(),
-        "BCPInmatch"
-    ))
-
-    files.append(run(
-        lambda: CBSPrematch(),
-        "CBSPrematch"
-    ))
+    # files.append(run(
+    #     lambda: BCPPrematch(),
+    #     "BCPPrematch"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: BCPInmatch(),
+    #     "BCPInmatch"
+    # ))
+    #
+    # files.append(run(
+    #     lambda: CBSPrematch(),
+    #     "CBSPrematch"
+    # ))
 
     files.append(run(
         lambda: CBSInmatch(),

@@ -19,6 +19,7 @@ class CBSSolver(MapfAlgorithm):
         # print("width, height: ", problem.width, problem.height)
 
         map_path = "temp/" + problem.name
+        print(map_path)
         num_of_agents = len(problem.starts)
         obstacles = []
         for h in range(problem.height):
