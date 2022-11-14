@@ -1,4 +1,5 @@
 import re
+import time
 
 from mapfmclient import Problem as cProblem, Solution
 import subprocess
@@ -8,7 +9,7 @@ from mapfmclient import Problem as cProblem, Solution
 from python.algorithm import MapfAlgorithm
 
 # cbs_path = "/home/jesse/Documents/GitProjects/CBS/CBSH2-RTC-main/cbs"
-cbs_ta_path = "/home//jeroendijk/BCP-paper/python/benchmarks/comparison/cbs-ta/cbs_ta"
+cbs_ta_path = "/home/jeroendijk/BCP-paper/python/benchmarks/comparison/cbs-ta/cbs_ta"
 
 
 class CBSSolver(MapfAlgorithm):
@@ -17,9 +18,9 @@ class CBSSolver(MapfAlgorithm):
         # print("Goals: ", problem.goals)
         # print("Grid: ", problem.grid)
         # print("width, height: ", problem.width, problem.height)
-
+        start = time.time()
+        print(start)
         map_path = "temp/" + problem.name
-        print(map_path)
         num_of_agents = len(problem.starts)
         obstacles = []
         for h in range(problem.height):
@@ -47,7 +48,8 @@ class CBSSolver(MapfAlgorithm):
                 f.write("      - {}".format(list(g)))
                 f.write("\n")
         f.close()
-
+        print(time.time() - start)
+        print("Done preprocessing")
         args = [cbs_ta_path, "-i", scenario_path, "-o", "output.yaml"]
         try:
             subprocess.run(args, timeout=problem.timeout,
