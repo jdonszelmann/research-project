@@ -34,7 +34,7 @@ class CBSSolver(MapfAlgorithm):
         f.write("  dimensions: {}\n".format([problem.width, problem.height]))
         f.write("  obstacles:\n")
         for o in obstacles:
-            f.write("      - {}\n".format(list(o)))
+            f.write("    - {}\n".format(list(o)))
         f.write("agents:\n")
         for i in range(num_of_agents):
             start = [problem.starts[i].x, problem.starts[i].y]

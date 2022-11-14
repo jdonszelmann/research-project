@@ -17,8 +17,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/temp/mapfta_simple1_a1.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_ta.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_ta.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -406,14 +405,7 @@
       <workItem from="1668171885518" duration="863000" />
       <workItem from="1668174604193" duration="197000" />
       <workItem from="1668176007866" duration="255000" />
-      <workItem from="1668423553806" duration="8922000" />
-    </task>
-    <task id="LOCAL-00039" summary="debugging method 2.0">
-      <created>1666694231325</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1666694231325</updated>
+      <workItem from="1668423553806" duration="9620000" />
     </task>
     <task id="LOCAL-00040" summary="debugging method 3.0">
       <created>1666694483438</created>
@@ -751,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668433897434</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Maybe this works">
+      <created>1668434088097</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1668434088097</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -816,35 +815,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668433896997">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668434087717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668433896997" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434087717" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668430746153" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1668172754147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668172754147" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1668434075676">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1668436656523">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434075676" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1668434075676">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436656523" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1668436656523">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434075676" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1668434075676">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436656523" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1668436656523">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434075676" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1668434075676">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436656523" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1668436656523">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434075676" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1667999354834" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436656523" />
     <state width="1877" height="354" key="GridCell.Tab.1.bottom" timestamp="1668426150357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -874,10 +873,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668433898647">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668434088857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668433898647" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434088857" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668430747341" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -1035,7 +1034,7 @@
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams.coverage" NAME="comparison_25percent_var_teams Coverage Results" MODIFIED="1665421319150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$comparison_ivar_obstacle_1teams.coverage" NAME="comparison_ivar_obstacle_1teams Coverage Results" MODIFIED="1623688911598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_3teams.coverage" NAME="comparison_25percent_3teams Coverage Results" MODIFIED="1667999293059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
-    <SUITE FILE_PATH="coverage/BCP_paper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1668434075671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
+    <SUITE FILE_PATH="coverage/BCP_paper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1668436656497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_teams__1_.coverage" NAME="comparison_25percent_var_teams (1) Coverage Results" MODIFIED="1664886823475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
     <SUITE FILE_PATH="coverage/research_project$symlink.coverage" NAME="symlink Coverage Results" MODIFIED="1623844216762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks/all_plots" />
     <SUITE FILE_PATH="coverage/BCP_paper$comparison_25percent_var_mapsize.coverage" NAME="comparison_25percent_var_mapsize Coverage Results" MODIFIED="1665421204378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/benchmarks" />
