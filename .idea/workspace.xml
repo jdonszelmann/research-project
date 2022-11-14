@@ -405,14 +405,7 @@
       <workItem from="1668171885518" duration="863000" />
       <workItem from="1668174604193" duration="197000" />
       <workItem from="1668176007866" duration="255000" />
-      <workItem from="1668423553806" duration="11547000" />
-    </task>
-    <task id="LOCAL-00047" summary="Simple DAO map">
-      <created>1667159717401</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1667159717401</updated>
+      <workItem from="1668423553806" duration="11819000" />
     </task>
     <task id="LOCAL-00048" summary="changes map folder">
       <created>1667159776085</created>
@@ -750,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668438559746</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Im an idiot">
+      <created>1668438591054</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1668438591054</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,7 +770,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="See if this works" />
     <MESSAGE value="And this" />
     <MESSAGE value="Change all the imports with replace" />
     <MESSAGE value="Test CBM on the simple 20x20 grids" />
@@ -795,7 +794,8 @@
     <MESSAGE value="See values" />
     <MESSAGE value="Run them all" />
     <MESSAGE value="Test for costs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test for costs" />
+    <MESSAGE value="Im an idiot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Im an idiot" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -815,10 +815,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668438559418">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668438590661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438559418" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438590661" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436712444" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1668172754147">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -873,10 +873,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668438560517">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668438591817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438560517" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438591817" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436713614" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
