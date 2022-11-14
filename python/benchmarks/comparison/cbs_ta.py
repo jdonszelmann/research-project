@@ -1,6 +1,3 @@
-import re
-import time
-
 from mapfmclient import Problem as cProblem, Solution
 import subprocess
 import yaml
@@ -18,7 +15,6 @@ class CBSSolver(MapfAlgorithm):
         # print("Goals: ", problem.goals)
         # print("Grid: ", problem.grid)
         # print("width, height: ", problem.width, problem.height)
-        starttime = time.time()
         map_path = "temp/" + problem.name
         num_of_agents = len(problem.starts)
         obstacles = []
@@ -47,17 +43,14 @@ class CBSSolver(MapfAlgorithm):
                 f.write("      - {}".format(list(g)))
                 f.write("\n")
         f.close()
-        print(time.time() - starttime)
-        print("Done preprocessing")
         args = [cbs_ta_path, "-i", scenario_path, "-o", "output.yaml"]
         try:
             subprocess.run(args, timeout=problem.timeout,
                        stdout=subprocess.DEVNULL)  # .returncode , stdout=subprocess.DEVNULL
         except Exception as e:
             print(e)
-        print(time.time() - starttime)
-        print("Done Running The Subprocess")
         with open("output.yaml") as output_file:
+            print(yaml.safe_load(output_file)["statistics"]["runtime"])
             return yaml.safe_load(output_file)["statistics"]["cost"]
 
     @property
