@@ -9,7 +9,7 @@ from tqdm import tqdm
 from graph_times import graph_results
 from map import MapGenerator
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import CBSTA, CBSPrematch
+from python.benchmarks.comparison import CBSTA, CBSPrematch, CBSInmatch, BCPPrematch, BCPInmatch
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
@@ -101,25 +101,25 @@ def main():
 
     files: list[tuple[pathlib.Path, str]] = []
 
-    # files.append(run(
-    #     lambda: BCPPrematch(),
-    #     "BCPPrematch"
-    # ))
-    #
-    # files.append(run(
-    #     lambda: BCPInmatch(),
-    #     "BCPInmatch"
-    # ))
-    #
+    files.append(run(
+        lambda: BCPPrematch(),
+        "BCPPrematch"
+    ))
+
+    files.append(run(
+        lambda: BCPInmatch(),
+        "BCPInmatch"
+    ))
+
     files.append(run(
         lambda: CBSPrematch(),
         "CBSPrematch"
     ))
-    #
-    # files.append(run(
-    #     lambda: CBSInmatch(),
-    #     "CBSInmatch"
-    # ))
+
+    files.append(run(
+        lambda: CBSInmatch(),
+        "CBSInmatch"
+    ))
 
     files.append(run(
         lambda: CBSTA(),
