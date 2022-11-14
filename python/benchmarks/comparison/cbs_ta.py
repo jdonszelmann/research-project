@@ -50,9 +50,9 @@ class CBSSolver(MapfAlgorithm):
         except Exception as e:
             print(e)
         with open("output.yaml") as output_file:
-            print(yaml.safe_load(output_file)["statistics"]["runtime"])
-            print(yaml.safe_load(output_file)["statistics"]["cost"])
-            return yaml.safe_load(output_file)["statistics"]["cost"]
+            output = yaml.safe_load(output_file)
+            print(output["statistics"]["runtime"])
+            return output["statistics"]["cost"]
 
     @property
     def name(self) -> str:

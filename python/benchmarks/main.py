@@ -139,5 +139,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # a = yaml.safe_load(pathlib.Path("temp/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-0.yaml"))
     main()
