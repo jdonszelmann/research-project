@@ -43,7 +43,7 @@ class CBSSolver(MapfAlgorithm):
       start: {}\n""".format(i, start))
             f.write("      potentialGoals:\n")
             for g in goal:
-                f.write("          - {}".format(list(g)))
+                f.write("        - {}".format(list(g)))
                 f.write("\n")
         f.close()
 
