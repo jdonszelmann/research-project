@@ -9,7 +9,7 @@ from tqdm import tqdm
 from graph_times import graph_results
 from map import MapGenerator
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import CBSTA
+from python.benchmarks.comparison import CBSTA, CBSPrematch
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
@@ -80,7 +80,8 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
         all_results = run_with_timeout(solver(), problems, parse_maps, 1000000)  # test with low timeout
-        sols_inmatch, _ = zip(*all_results)
+        sols_inmatch, test = zip(*all_results)
+        print(test)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         times[num_agents] = sols_inmatch
         output_data(partname, times)
@@ -110,10 +111,10 @@ def main():
     #     "BCPInmatch"
     # ))
     #
-    # files.append(run(
-    #     lambda: CBSPrematch(),
-    #     "CBSPrematch"
-    # ))
+    files.append(run(
+        lambda: CBSPrematch(),
+        "CBSPrematch"
+    ))
     #
     # files.append(run(
     #     lambda: CBSInmatch(),
@@ -124,16 +125,6 @@ def main():
         lambda: CBSTA(),
         "CBS-TA"
     ))
-
-    # files.append(run(
-    #     lambda: SATInmatch(),
-    #     "SATInmatch"
-    # ))
-    #
-    # files.append(run(
-    #     lambda: SATPrematch(),
-    #     "SATPrematch"
-    # ))
 
     # graph_results(
     #     *files,
