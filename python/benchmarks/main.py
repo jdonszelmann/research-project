@@ -3,6 +3,7 @@ import os
 import pathlib
 from typing import Optional, Callable
 
+import yaml
 from tqdm import tqdm
 
 from graph_times import graph_results
@@ -84,8 +85,8 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         times[num_agents] = sols_inmatch
         output_data(partname, times)
     # clean-up
-    for file in os.listdir("temp"):
-        os.remove("temp/" + file)
+    # for file in os.listdir("temp"):
+    #     os.remove("temp/" + file)
 
     tqdm.write(str(results))
 

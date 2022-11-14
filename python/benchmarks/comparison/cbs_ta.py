@@ -40,8 +40,8 @@ class CBSSolver(MapfAlgorithm):
             start = [problem.starts[i].x, problem.starts[i].y]
             goal = goals[problem.starts[i].color]
             f.write("""    - name: agent{}
-        start: {}\n""".format(i, start))
-            f.write("        potentialGoals:\n")
+      start: {}\n""".format(i, start))
+            f.write("      potentialGoals:\n")
             for g in goal:
                 f.write("          - {}".format(list(g)))
                 f.write("\n")
