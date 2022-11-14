@@ -84,7 +84,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         sols_inmatch, test = zip(*all_results)
         res = []
         for i in test:
-            if i.is_integer():
+            if isinstance(i, int):
                 res.append(i)
             elif i is not None:
                 res.append(compute_sol_cost(test))

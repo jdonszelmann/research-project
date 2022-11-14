@@ -15,40 +15,9 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="Test for costs">
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-0.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-1.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-2.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-3.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-4.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-5.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-6.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-7.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-8.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_1teams_maps_preview-20x20-A6_T1/comparison_25percent_1teams_maps_preview-20x20-A6_T1-9.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-0.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-1.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-2.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-3.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-4.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-5.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-6.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-7.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-8.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_preview-20x20-A9_T3/comparison_25percent_3teams_maps_preview-20x20-A9_T3-9.map" afterDir="false" />
+    <list default="true" id="6d791f3f-5e83-4ffa-87a6-3bb6d4737ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_ta.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/comparison/cbs_ta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/benchmarks/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/benchmarks/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-0.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-1.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-2.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-3.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-4.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-5.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-6.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-7.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-8.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/benchmarks/main/comparison_25percent_3teams_maps_8x8-8x8-A2_T3/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-9.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,14 +405,7 @@
       <workItem from="1668171885518" duration="863000" />
       <workItem from="1668174604193" duration="197000" />
       <workItem from="1668176007866" duration="255000" />
-      <workItem from="1668423553806" duration="11465000" />
-    </task>
-    <task id="LOCAL-00045" summary="change timeout">
-      <created>1667137143598</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1667137143599</updated>
+      <workItem from="1668423553806" duration="11517000" />
     </task>
     <task id="LOCAL-00046" summary="re run BCP inmatch">
       <created>1667149487433</created>
@@ -781,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668438081258</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Test for costs">
+      <created>1668438506588</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1668438506588</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -801,7 +770,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Debugging with commits" />
     <MESSAGE value="See if this works" />
     <MESSAGE value="And this" />
     <MESSAGE value="Change all the imports with replace" />
@@ -826,7 +794,8 @@
     <MESSAGE value="Am I this stupid" />
     <MESSAGE value="See values" />
     <MESSAGE value="Run them all" />
-    <option name="LAST_COMMIT_MESSAGE" value="Run them all" />
+    <MESSAGE value="Test for costs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for costs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -846,10 +815,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668438455239">
+    <state x="263" y="111" key="CommitChangelistDialog2" timestamp="1668438506217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438455239" />
+    <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438506217" />
     <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436712444" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1668172754147">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -904,10 +873,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668438082031">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668438507397">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438082031" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668438507397" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436713614" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
