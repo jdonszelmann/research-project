@@ -18,8 +18,8 @@ class CBSSolver(MapfAlgorithm):
         # print("Goals: ", problem.goals)
         # print("Grid: ", problem.grid)
         # print("width, height: ", problem.width, problem.height)
-        start = time.time()
-        print(start)
+        starttime = time.time()
+        print(starttime)
         map_path = "temp/" + problem.name
         num_of_agents = len(problem.starts)
         obstacles = []
@@ -48,7 +48,7 @@ class CBSSolver(MapfAlgorithm):
                 f.write("      - {}".format(list(g)))
                 f.write("\n")
         f.close()
-        print(time.time() - start)
+        print(time.time() - starttime)
         print("Done preprocessing")
         args = [cbs_ta_path, "-i", scenario_path, "-o", "output.yaml"]
         try:
