@@ -19,7 +19,6 @@ class CBSSolver(MapfAlgorithm):
         # print("Grid: ", problem.grid)
         # print("width, height: ", problem.width, problem.height)
         starttime = time.time()
-        print(starttime)
         map_path = "temp/" + problem.name
         num_of_agents = len(problem.starts)
         obstacles = []
@@ -56,7 +55,8 @@ class CBSSolver(MapfAlgorithm):
                        stdout=subprocess.DEVNULL)  # .returncode , stdout=subprocess.DEVNULL
         except Exception as e:
             print(e)
-
+        print(time.time() - starttime)
+        print("Done Running The Subprocess")
         with open("output.yaml") as output_file:
             return yaml.safe_load(output_file)["statistics"]["cost"]
 
