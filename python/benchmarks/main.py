@@ -82,14 +82,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
         all_results = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
-        sols_inmatch, test = zip(*all_results)
-        res = []
-        for i in test:
-            if isinstance(i, int):
-                res.append(i)
-            elif i is not None:
-                res.append(compute_sol_cost(i))
-        print(res)
+        sols_inmatch, _ = zip(*all_results)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         times[num_agents] = sols_inmatch
         output_data(partname, times)
