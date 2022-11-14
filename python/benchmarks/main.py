@@ -2,6 +2,7 @@
 import os
 import pathlib
 from typing import Optional, Callable
+import cProfile
 
 import yaml
 from mapf_branch_and_bound.bbsolver import compute_sol_cost
@@ -93,8 +94,8 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         times[num_agents] = sols_inmatch
         output_data(partname, times)
     # clean-up
-    for file in os.listdir("temp"):
-        os.remove("temp/" + file)
+    # for file in os.listdir("temp"):
+    #     os.remove("temp/" + file)
 
     tqdm.write(str(results))
 
@@ -146,4 +147,4 @@ def main():
 
 if __name__ == '__main__':
     # a = yaml.safe_load(pathlib.Path("temp/comparison_25percent_3teams_maps_8x8-8x8-A2_T3-0.yaml"))
-    main()
+    cProfile.run("main()")
