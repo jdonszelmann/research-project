@@ -87,7 +87,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
             if isinstance(i, int):
                 res.append(i)
             elif i is not None:
-                res.append(compute_sol_cost(test))
+                res.append(compute_sol_cost(i))
         print(test)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         times[num_agents] = sols_inmatch
