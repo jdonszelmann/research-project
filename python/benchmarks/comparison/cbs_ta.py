@@ -8,7 +8,7 @@ from mapfmclient import Problem as cProblem, Solution
 from python.algorithm import MapfAlgorithm
 
 # cbs_path = "/home/jesse/Documents/GitProjects/CBS/CBSH2-RTC-main/cbs"
-cbs_ta_path = "/data/BCP-paper/python/benchmarks/comparison/cbs-ta/cbs_ta"
+cbs_ta_path = "BCP-paper/python/benchmarks/comparison/cbs-ta/cbs_ta"
 
 
 class CBSSolver(MapfAlgorithm):
