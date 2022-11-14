@@ -4,5 +4,5 @@
 
 
 # JESSE_DIR=/home/jesse/Documents/GitProjects/research-project
-JONA_DIR=/home/jeroendijk
+JONA_DIR=/home/jeroendijk/BCP-paper
 PYTHONPATH=$JONA_DIR:$PYTHONPATH python3.9 $JONA_DIR/python/benchmarks/main.py | tee comparison_25percent_1teams.txt
