@@ -1,4 +1,3 @@
-from .cbm import CBM
 # from .epeastar import EPEAStar
 # from .astar_od_id import AStarODID
 from .bcpmapf_inmatch import BCPSolver as BCPInmatch
@@ -7,4 +6,4 @@ from .cbs_inmatch import CBSSolver as CBSInmatch
 from .cbs_prematch import CBSSolver as CBSPrematch
 from .cbs_ta import CBSSolver as CBSTA
 
-__all__ = ["BCPInmatch", "BCPPrematch", "CBSInmatch", "CBSPrematch", "CBM", "CBSTA"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]
+__all__ = ["BCPInmatch", "BCPPrematch", "CBSInmatch", "CBSPrematch", "CBSTA"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]
