@@ -123,10 +123,10 @@ def main():
     #     "CBSPrematch"
     # ))
 
-    files.append(run(
-        lambda: CBSInmatch(),
-        "CBSInmatch"
-    ))
+    #files.append(run(
+    #    lambda: CBSInmatch(),
+    #    "CBSInmatch"
+    #))
 
     files.append(run(
         lambda: CBSTA(),
