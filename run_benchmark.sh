@@ -4,4 +4,5 @@
 
 
 # JESSE_DIR=/home/jesse/Documents/GitProjects/research-project
-PYTHONPATH=python3.9 python/benchmarks/main.py | tee comparison_25percent_1teams.txt
+JONA_DIR=/home/jeroendijk
+PYTHONPATH=$JONA_DIR:$PYTHONPATH python3.9 $JONA_DIR/python/benchmarks/main.py | tee comparison_25percent_1teams.txt
