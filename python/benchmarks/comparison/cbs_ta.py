@@ -51,6 +51,7 @@ class CBSSolver(MapfAlgorithm):
             print(e)
         with open("output.yaml") as output_file:
             print(yaml.safe_load(output_file)["statistics"]["runtime"])
+            print(yaml.safe_load(output_file)["statistics"]["cost"])
             return yaml.safe_load(output_file)["statistics"]["cost"]
 
     @property
