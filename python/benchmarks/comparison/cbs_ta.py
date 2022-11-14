@@ -36,18 +36,18 @@ class CBSSolver(MapfAlgorithm):
         for o in obstacles:
             f.write("    - {}\n".format(list(o)))
         f.write("agents:\n")
-    #     for i in range(num_of_agents):
-    #         start = [problem.starts[i].x, problem.starts[i].y]
-    #         goal = goals[problem.starts[i].color]
-    #         f.write("""  - name: agent{}
-    # start: {}\n""".format(i, start))
-    #         f.write("    potentialGoals:\n")
-    #         for g in goal:
-    #             f.write("      - {}".format(list(g)))
-    #             f.write("\n")
+        for i in range(num_of_agents):
+            start = [problem.starts[i].x, problem.starts[i].y]
+            goal = goals[problem.starts[i].color]
+            f.write("""  - name: agent{}
+    start: {}\n""".format(i, start))
+            f.write("    potentialGoals:\n")
+            for g in goal:
+                f.write("      - {}".format(list(g)))
+                f.write("\n")
         f.close()
 
-        args = [cbs_ta_path, "-i", map_path, "-o", "output.yaml"]
+        args = [cbs_ta_path, "-i", scenario_path, "-o", "output.yaml"]
         try:
             subprocess.run(args, timeout=problem.timeout,
                        stdout=subprocess.DEVNULL)  # .returncode , stdout=subprocess.DEVNULL

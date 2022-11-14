@@ -405,14 +405,7 @@
       <workItem from="1668171885518" duration="863000" />
       <workItem from="1668174604193" duration="197000" />
       <workItem from="1668176007866" duration="255000" />
-      <workItem from="1668423553806" duration="9669000" />
-    </task>
-    <task id="LOCAL-00041" summary="debugging method 4.0">
-      <created>1666694824662</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1666694824662</updated>
+      <workItem from="1668423553806" duration="10785000" />
     </task>
     <task id="LOCAL-00042" summary="This should have fixed everything">
       <created>1666694943435</created>
@@ -750,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668436666574</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Just try the first part">
+      <created>1668436712854</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1668436712854</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,7 +770,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Combination of 1 and 3 teams" />
     <MESSAGE value="add the image" />
     <MESSAGE value="See if CBM works now" />
     <MESSAGE value="Change run_benchmark.sh" />
@@ -795,7 +794,8 @@
     <MESSAGE value="just dont import cbm" />
     <MESSAGE value="Valid YAMLs" />
     <MESSAGE value="Maybe this works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maybe this works" />
+    <MESSAGE value="Just try the first part" />
+    <option name="LAST_COMMIT_MESSAGE" value="Just try the first part" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664886841808">
@@ -815,11 +815,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="448" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1667824935096" />
-    <state x="2102" y="111" key="CommitChangelistDialog2" timestamp="1668436666215">
+    <state x="2102" y="111" key="CommitChangelistDialog2" timestamp="1668436712444">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="263" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434087717" />
-    <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436666215" />
+    <state x="2102" y="111" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436712444" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1668172754147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -873,11 +873,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1664788228858" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668436667478">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1668436713614">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1668434088857" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436667478" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1668436713614" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1664885714765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
