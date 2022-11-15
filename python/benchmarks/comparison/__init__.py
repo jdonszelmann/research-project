@@ -5,5 +5,6 @@ from .bcpmapf_prematch import BCPSolver as BCPPrematch
 from .cbs_inmatch import CBSSolver as CBSInmatch
 from .cbs_prematch import CBSSolver as CBSPrematch
 from .cbs_ta import CBSSolver as CBSTA
+from .cbm import CBM as CBM
 
-__all__ = ["BCPInmatch", "BCPPrematch", "CBSInmatch", "CBSPrematch", "CBSTA"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]
+__all__ = ["BCPInmatch", "BCPPrematch", "CBSInmatch", "CBSPrematch", "CBSTA", "CBM"] #["EPEAStar", "CBM", "AStarODID", "ICTS"]

@@ -5,13 +5,12 @@ from typing import Optional, Callable
 import cProfile
 
 import yaml
-from mapf_branch_and_bound.bbsolver import compute_sol_cost
 from tqdm import tqdm
 
 from graph_times import graph_results
 from map import MapGenerator
 from python.algorithm import MapfAlgorithm
-from python.benchmarks.comparison import CBSTA, CBSPrematch, CBSInmatch, BCPPrematch, BCPInmatch
+from python.benchmarks.comparison import CBSTA, CBM, CBSPrematch, CBSInmatch, BCPPrematch, BCPInmatch
 from python.benchmarks.parse_map import MapParser
 from python.benchmarks.run_with_timeout import run_with_timeout
 # from python.benchmarks.comparison.icts import ICTS
@@ -121,6 +120,11 @@ def main():
     #    lambda: CBSInmatch(),
     #    "CBSInmatch"
     #))
+
+    files.append(run(
+       lambda: CBM(),
+       "CBM"
+    ))
 
     files.append(run(
         lambda: CBSTA(),
