@@ -1,7 +1,0 @@
-version 1
-goals
-0	4	14
-1	14	5
-agents
-0	temp/32x32_3-32x32-A2_T3-00.map	32	32	23	21	0	0
-1	temp/32x32_3-32x32-A2_T3-00.map	32	32	9	4	1	1
