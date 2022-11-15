@@ -126,10 +126,10 @@ def main():
        "CBM"
     ))
 
-    files.append(run(
-        lambda: CBSTA(),
-        "CBS-TA"
-    ))
+    # files.append(run(
+    #     lambda: CBSTA(),
+    #     "CBS-TA"
+    # ))
 
     # graph_results(
     #     *files,

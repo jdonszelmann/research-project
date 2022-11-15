@@ -1,0 +1,15 @@
+version 1
+goals
+0	11	3
+0	19	0
+0	13	4
+0	19	2
+0	0	1
+0	14	15
+agents
+0	temp/comparison_25percent_1teams_maps_preview-20x20-A6_T1-0.map	20	20	0	11	0	0
+1	temp/comparison_25percent_1teams_maps_preview-20x20-A6_T1-0.map	20	20	10	12	0	1
+2	temp/comparison_25percent_1teams_maps_preview-20x20-A6_T1-0.map	20	20	2	17	0	2
+3	temp/comparison_25percent_1teams_maps_preview-20x20-A6_T1-0.map	20	20	6	16	0	3
+4	temp/comparison_25percent_1teams_maps_preview-20x20-A6_T1-0.map	20	20	16	10	0	4
+5	temp/comparison_25percent_1teams_maps_preview-20x20-A6_T1-0.map	20	20	15	19	0	5

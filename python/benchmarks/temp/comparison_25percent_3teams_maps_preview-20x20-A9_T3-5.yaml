@@ -1,0 +1,89 @@
+map:
+  dimensions: [20, 20]
+  obstacles:
+    - [7, 0]
+    - [11, 1]
+    - [19, 2]
+    - [12, 3]
+    - [18, 3]
+    - [19, 3]
+    - [19, 4]
+    - [3, 5]
+    - [9, 5]
+    - [13, 5]
+    - [14, 6]
+    - [2, 7]
+    - [19, 7]
+    - [4, 8]
+    - [13, 8]
+    - [19, 8]
+    - [19, 9]
+    - [4, 10]
+    - [9, 10]
+    - [8, 11]
+    - [2, 12]
+    - [13, 12]
+    - [16, 13]
+    - [3, 14]
+    - [9, 14]
+    - [8, 16]
+    - [13, 16]
+    - [16, 16]
+    - [15, 17]
+    - [14, 18]
+    - [17, 19]
+agents:
+  - name: agent0
+    start: [10, 1]
+    potentialGoals:
+      - [6, 15]
+      - [3, 8]
+      - [4, 16]
+  - name: agent1
+    start: [14, 2]
+    potentialGoals:
+      - [6, 15]
+      - [3, 8]
+      - [4, 16]
+  - name: agent2
+    start: [10, 2]
+    potentialGoals:
+      - [6, 15]
+      - [3, 8]
+      - [4, 16]
+  - name: agent3
+    start: [6, 9]
+    potentialGoals:
+      - [19, 15]
+      - [11, 8]
+      - [6, 16]
+  - name: agent4
+    start: [1, 18]
+    potentialGoals:
+      - [19, 15]
+      - [11, 8]
+      - [6, 16]
+  - name: agent5
+    start: [7, 3]
+    potentialGoals:
+      - [19, 15]
+      - [11, 8]
+      - [6, 16]
+  - name: agent6
+    start: [4, 15]
+    potentialGoals:
+      - [5, 15]
+      - [8, 0]
+      - [13, 6]
+  - name: agent7
+    start: [11, 7]
+    potentialGoals:
+      - [5, 15]
+      - [8, 0]
+      - [13, 6]
+  - name: agent8
+    start: [0, 13]
+    potentialGoals:
+      - [5, 15]
+      - [8, 0]
+      - [13, 6]
