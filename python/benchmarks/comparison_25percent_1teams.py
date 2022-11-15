@@ -15,7 +15,7 @@ from python.benchmarks.run_with_timeout import run_with_timeout
 from python.benchmarks.util import read_from_file, output_data
 
 this_dir = pathlib.Path(__file__).parent.absolute()
-name = "32x32_1"
+name = "32x32_6"
 processes = 1
 
 
@@ -42,7 +42,7 @@ def generate_maps():
             30,  # number of maps
             32, 32,  # size
             i,  # number of agents
-            1,  # number of teams
+            6,  # number of teams
             prefix=name,
             min_goal_distance=0,
             open_factor=0.65,
