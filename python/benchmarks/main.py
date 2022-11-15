@@ -4,7 +4,6 @@ import pathlib
 from typing import Optional, Callable
 import cProfile
 
-import yaml
 from tqdm import tqdm
 
 from graph_times import graph_results
@@ -126,10 +125,10 @@ def main():
        "CBM"
     ))
 
-    files.append(run(
-        lambda: CBSTA(),
-        "CBS-TA"
-    ))
+    # files.append(run(
+    #     lambda: CBSTA(),
+    #     "CBS-TA"
+    # ))
 
     # graph_results(
     #     *files,
