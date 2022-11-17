@@ -1,0 +1,18 @@
+version 1 graph
+32x32_12-32x32-A4_T12-09.map
+Num_of_Agents 4
+types
+0 0
+1 1
+2 2
+3 3
+agents starts
+0 (6,17)
+1 (24,5)
+2 (4,14)
+3 (15,21)
+goals
+0 (29,8)
+1 (8,7)
+2 (28,30)
+3 (2,0)

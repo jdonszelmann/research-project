@@ -1,0 +1,15 @@
+version 1 graph
+32x32_12-32x32-A3_T12-27.map
+Num_of_Agents 3
+types
+0 0
+1 1
+2 2
+agents starts
+0 (13,10)
+1 (0,7)
+2 (30,20)
+goals
+0 (22,30)
+1 (1,24)
+2 (30,19)
