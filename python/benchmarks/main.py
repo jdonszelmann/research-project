@@ -79,7 +79,7 @@ def run(solver: Callable[[], MapfAlgorithm], bm_name: str, parse_maps: bool = Tr
         #     print(f"found data for part {num_agents}")
         #     results[num_agents] = read_from_file(partname, num_agents)
         #     continue
-        all_results = run_with_timeout(solver(), problems, parse_maps, 60)  # test with low timeout
+        all_results = run_with_timeout(solver(), problems, parse_maps, 10)  # test with low timeout
         sols_inmatch, _ = zip(*all_results)
         tqdm.write(f"{bm_name} with {num_agents} agents: {sols_inmatch}")
         times[num_agents] = sols_inmatch
@@ -104,12 +104,12 @@ def main():
     #     lambda: BCPPrematch(),
     #     "BCPPrematch"
     # ))
-    #
+
     # files.append(run(
     #     lambda: BCPInmatch(),
     #     "BCPInmatch"
     # ))
-    #
+
     # files.append(run(
     #     lambda: CBSPrematch(),
     #     "CBSPrematch"
@@ -120,15 +120,15 @@ def main():
     #    "CBSInmatch"
     #))
 
-    files.append(run(
-       lambda: CBM(),
-       "CBM"
-    ))
-
     # files.append(run(
-    #     lambda: CBSTA(),
-    #     "CBS-TA"
+    #    lambda: CBM(),
+    #    "CBM"
     # ))
+
+    files.append(run(
+        lambda: CBSTA(),
+        "CBS-TA"
+    ))
 
     # graph_results(
     #     *files,
