@@ -2,7 +2,6 @@
 import os
 import pathlib
 from typing import Optional, Callable
-import cProfile
 
 from tqdm import tqdm
 
@@ -121,24 +120,19 @@ def main():
     #))
 
     # files.append(run(
-    #    lambda: CBM(),
-    #    "CBM"
+    #     lambda: CBM(),
+    #     "CBM"
     # ))
 
-    files.append(run(
-        lambda: CBSTA(),
-        "CBS-TA"
-    ))
-
-    # graph_results(
-    #     *files,
-    #     batchdir / f"{name}",
-    #     under="number of agents",
-    #     save=False,
-    #     bounds=False,
-    #     legend=False,
-    #     limit=100,
-    # )
+    graph_results(
+        *files,
+        batchdir / f"{name}",
+        under="number of agents",
+        save=True,
+        bounds=False,
+        legend=True,
+        limit=100,
+    )
 
 
 if __name__ == '__main__':

@@ -47,8 +47,6 @@ def percentile(l: list[float], perc: float) -> float:
     return v1 * f + v2 * (1 - f)
 
 
-black = True
-
 def graph_results(*args, under,
                   save=True,
                   bounds=True,
@@ -58,32 +56,15 @@ def graph_results(*args, under,
                   legend=True,
                   limit=float("inf")
                   ):
-    plt.style.use('seaborn-whitegrid')
-    if black:
-        plt.rcParams['axes.facecolor'] = rgb_to_colour(*background)
-        plt.rcParams['axes.edgecolor'] = '#FFFFFF'
-        plt.rcParams['axes.labelcolor'] = '#FFFFFF'
-        plt.rcParams['figure.facecolor'] = rgb_to_colour(*background)
-        plt.rcParams['xtick.color'] = '#FFFFFF'
-        plt.rcParams['ytick.color'] = '#FFFFFF'
-        plt.grid(color='#FFFFFF', linestyle='-', linewidth=0.7)
-        plt.rcParams['font.size'] = '20'
-        plt.rcParams['legend.frameon'] = 'True'
-
+    plt.style.use('seaborn-white')
+    plt.rcParams["axes.grid"] = True
 
     if graph_times and graph_percentage:
-        if black:
-            plt.rcParams["figure.figsize"] = (9, 5)
-        else:
-            plt.rcParams["figure.figsize"] = (7, 5)
-
+        plt.rcParams["figure.figsize"] = (7, 5)
         fig, (percentage, times) = plt.subplots(2, 1, sharex=True)
-    elif graph_times or graph_percentage:
-        if black:
-            plt.rcParams["figure.figsize"] = (8, 4)
-        else:
-            plt.rcParams["figure.figsize"] = (7, 3)
 
+    elif graph_times or graph_percentage:
+        plt.rcParams["figure.figsize"] = (6, 4)
         fig, (subplt) = plt.subplots(1, 1)
         if graph_percentage:
             percentage = subplt
@@ -92,23 +73,12 @@ def graph_results(*args, under,
     else:
         assert False, "should graph something"
 
-    if not black:
-        plt.rcParams['font.size'] = '14'
-
+    plt.rcParams['font.size'] = '14'
 
     if graph_percentage and graph_times:
-        if not black:
-            plt.subplots_adjust(hspace=0.3)
-            plt.tight_layout(pad=0)
-            plt.margins(0, 0)
-
-    if graph_percentage:
-        percentage.set_title("% solved out of 200 maps")
-    if graph_times:
-        if bounds:
-            times.set_title("time to solution of solved maps")
-        else:
-            times.set_title("mean time to solution of solved maps")
+        plt.subplots_adjust(hspace=0.3)
+        plt.tight_layout(pad=0)
+        plt.margins(0, 0)
 
     if graph_percentage:
         percentage.xaxis.set_major_locator(MaxNLocator(integer=True))
@@ -224,14 +194,8 @@ def graph_results(*args, under,
         times.set_xlim(0, longest + 1)
 
     if legend:
-        plt.legend()
-    if black:
-        plt.legend(facecolor=rgb_to_colour(*background), labelcolor='w', prop={'size': 13})
+        plt.legend(facecolor='white', framealpha=1, frameon=True, edgecolor="black")
     plt.show()
     if save:
-        if black:
-            # fig.savefig(f"{save_location}.black.eps", bbox_inches="tight", pad_inches=0, format='eps')
-            fig.savefig(f"{save_location}.black.png", bbox_inches="tight", pad_inches=0, format='png')
-        else:
-            fig.savefig(f"{save_location}.eps", bbox_inches="tight", pad_inches=0, format='eps')
-            fig.savefig(f"{save_location}.png", bbox_inches="tight", pad_inches=0, format='png')
+        # fig.savefig(f"{save_location}.eps", bbox_inches="tight", pad_inches=0, format='eps')
+        fig.savefig(f"{save_location}.png", pad_inches=0, format='png')
