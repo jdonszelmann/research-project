@@ -19,7 +19,7 @@ from python.solvers.configurable_mstar_solver import ConfigurableMStar
 
 this_dir = pathlib.Path(__file__).parent.absolute()
 name = "team_size_0percent"
-processes =  1
+processes = 6
 
 num_teams = [1, 2, 3, 4, 6, 12, 24]
 expected_results = num_teams
@@ -98,23 +98,23 @@ def main():
     generate_maps()
     files: list[tuple[pathlib.Path, str]] = []
 
-    # files.append(run(
-    #     lambda: ConfigurableMStar(
-    #         Config(
-    #             operator_decomposition=True,
-    #             precompute_paths=False,
-    #             precompute_heuristic=True,
-    #             collision_avoidance_table=False,
-    #             recursive=False,
-    #             matching_strategy=MatchingStrategy.Inmatch,
-    #             max_memory_usage=3 * GigaByte,
-    #             debug=False,
-    #             report_expansions=False,
-    #         ),
-    #     ),
-    #     "M*"
-    # ))
-    #
+    files.append(run(
+        lambda: ConfigurableMStar(
+            Config(
+                operator_decomposition=True,
+                precompute_paths=False,
+                precompute_heuristic=True,
+                collision_avoidance_table=False,
+                recursive=False,
+                matching_strategy=MatchingStrategy.Inmatch,
+                max_memory_usage=3 * GigaByte,
+                debug=False,
+                report_expansions=False,
+            ),
+        ),
+        "M*"
+    ))
+
     files.append(run(
         lambda: EPEAStar(inmatch=True),
         "EPEA*"
